@@ -8,7 +8,7 @@ module.exports = {
   },
   // extends: ['plugin:react/recommended', 'standard'],
   extends: ["plugin:react/recommended"],
-  // parser: 'babel-eslint',
+  parser: 'babel-eslint',
   parserOptions: {
     // ecmaVersion: 6,
     ecmaVersion: 2018,

@@ -8,8 +8,9 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    //'plugin:prettier/recommended',
-    //'prettier/babel',
+    // 'prettier',
+    // 'plugin:prettier/recommended',
+    // 'prettier/babel',
     // 'prettier/react'
   ],
   parserOptions: {
@@ -19,10 +20,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    'react',
-    // 'prettier'
-  ],
+  plugins: ['react'],
   settings: {
     // Allow absolute paths in imports, e.g. import Button from 'components/Button'
     // https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers
@@ -42,7 +40,7 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   rules: {
-    //'prettier/prettier': 0,
+    //'prettier/prettier': ['error'],
     quotes: ['warn', 'single', { avoidEscape: true }],
     'spaced-comment': 2,
     'no-unused-vars': 2,

@@ -10,13 +10,10 @@ module.exports = {
     // 'react-app', // for editor - REQUIRES INSTALLATION OF TYPESCRIPT
     'eslint:recommended',
     'plugin:react/recommended',
-    // 'plugin:import/errors',
-    // 'plugin:import/warnings',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     // 'plugin:css-modules/recommended',
     'plugin:eslint-comments/recommended',
-    'plugin:prettier/recommended',
-    // 'prettier/babel',
-    'prettier/react',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -30,9 +27,11 @@ module.exports = {
   plugins: [
     'react',
     'react-hooks',
-    // 'jsx-a11y'
-    // 'import',
-    // 'eslint-comments',
+    'babel', // NEEDED ??
+    'node',
+    'jsx-a11y',
+    'import',
+    'eslint-comments',
     // 'emotion',
     // 'css-modules',
     // 'prettier',
@@ -40,13 +39,14 @@ module.exports = {
   settings: {
     // Allow absolute paths in imports, e.g. import Button from 'components/Button'
     // https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers
-    // 'import/resolver': {
-    //   node: {
-    //     moduleDirectory: ['node_modules', 'src'],
-    //     extensions: ['.js', '.jsx'],
-    //   },
-    //   'babel-module': {},
-    // },
+    // DIFFERENCT FROM jsconfig.json SETTING ???
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src'],
+        extensions: ['.js', '.jsx'],
+      },
+      'babel-module': {},
+    },
     react: {
       version: 'detect',
     },
@@ -65,28 +65,5 @@ module.exports = {
     'spaced-comment': 0,
     'no-unused-vars': 2,
     'eslint-comments/no-unused-disable': 'error',
-    'prettier/prettier': [
-      'error',
-      {
-        'arrowFunctionParens': 'always',
-        'arrowParens': 'always',
-        'bracketSpacing': true,
-        'endOfLine': 'lf',
-        'javascriptEnable': ['javascript', 'javascriptreact'],
-        'jsonEnable': ['json'],
-        'jsxBracketSameLine': false,
-        'jsxSingleQuote': false,
-        'printWidth': 120,
-        'quoteProps': 'preserve',
-        'rangeStart': 0,
-        'semi': true,
-        'singleQuote': true,
-        'spaceBeforeFunctionParen': true,
-        'statusBar': true,
-        'tabWidth': 2,
-        'trailingComma': 'es5',
-        'useTabs': false,
-      },
-    ],
   },
 };

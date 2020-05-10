@@ -3,18 +3,16 @@
 
 const {
   // addDecoratorsLegacy,
-  // disableEsLint,
-  // useEslintRc,
   // addBundleVisualizer,
   // addWebpackAlias,
   // adjustWorkbox
   override,
-  disableEsLint,
-  useBabelRc,
+  // disableEsLint,
+  // useBabelRc,
   useEslintRc,
   overrideDevServer,
   watchAll,
-} = require("customize-cra");
+} = require('customize-cra');
 
 module.exports = {
   webpack: override(
@@ -25,7 +23,7 @@ module.exports = {
   ),
   devServer: overrideDevServer(
     // dev server plugin
-    //disableEsLint(),
+    // disableEsLint(),
     watchAll()
   ),
 };

@@ -8,19 +8,33 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    // 'prettier',
+    // 'plugin:import/errors',
+    // 'plugin:import/warnings',
+    // 'plugin:css-modules/recommended',
+    // 'plugin:eslint-comments/recommended',
     // 'plugin:prettier/recommended',
     // 'prettier/babel',
-    // 'prettier/react'
+    // 'prettier/react',
   ],
+  parser: 'babel-eslint',
   parserOptions: {
+    // ecmaVersion: 6,
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: 'module', // IMPORTANT !!
     ecmaFeatures: {
       jsx: true,
     },
   },
-  plugins: ['react'],
+  plugins: [
+    'react',
+    'react-hooks',
+    // 'jsx-a11y'
+    // 'import',
+    // 'eslint-comments',
+    // 'emotion',
+    // 'css-modules',
+    // 'prettier',
+  ],
   settings: {
     // Allow absolute paths in imports, e.g. import Button from 'components/Button'
     // https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers
@@ -36,13 +50,15 @@ module.exports = {
     },
   },
   globals: {
+    __DEV__: true,
+    fetch: true,
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   rules: {
     //'prettier/prettier': ['error'],
-    quotes: ['warn', 'single', { avoidEscape: true }],
-    'spaced-comment': 2,
+    quotes: ['error', 'single', { avoidEscape: true }],
+    'spaced-comment': 0,
     'no-unused-vars': 2,
   },
 };

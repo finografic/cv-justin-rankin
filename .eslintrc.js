@@ -7,11 +7,13 @@ module.exports = {
     jest: true,
   },
   extends: [
+    // 'react-app', // for editor - REQUIRES INSTALLATION OF TYPESCRIPT
+    'eslint:recommended',
     'plugin:react/recommended',
     // 'plugin:import/errors',
     // 'plugin:import/warnings',
     // 'plugin:css-modules/recommended',
-    // 'plugin:eslint-comments/recommended',
+    'plugin:eslint-comments/recommended',
     // 'plugin:prettier/recommended',
     // 'prettier/babel',
     // 'prettier/react',
@@ -60,5 +62,6 @@ module.exports = {
     quotes: ['error', 'single', { avoidEscape: true }],
     'spaced-comment': 0,
     'no-unused-vars': 2,
+    'eslint-comments/no-unused-disable': 'error',
   },
 };

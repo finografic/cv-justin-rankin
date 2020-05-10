@@ -34,7 +34,7 @@ module.exports = {
   //   SharedArrayBuffer: "readonly",
   // },
   rules: {
-    quotes: ["warn", "single", { avoidEscape: true }],
+    quotes: ["error", "single", { avoidEscape: true }],
     "spaced-comment": 2,
     "no-unused-vars": 2,
   },

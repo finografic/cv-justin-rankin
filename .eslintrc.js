@@ -48,6 +48,10 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
       'babel-module': {},
+      'babel-plugin-root-import': {
+        rootPathPrefix: '~',
+        rootPathSuffix: 'src',
+      },
     },
     react: {
       version: 'detect',

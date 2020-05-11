@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "config": "./config",
+          "lib": "./lib",
+          "data": "./data",
+          "__mocks__": "./__mocks__"
+        }
+      }
+    ]
+  ]
+}

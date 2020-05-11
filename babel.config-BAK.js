@@ -1,6 +1,6 @@
 module.exports = {
   presets: [
-    // "react-app",
+    'react-app', // NEEDED ??
     [
       '@babel/preset-env',
       {
@@ -18,8 +18,8 @@ module.exports = {
         },
       },
     ],
-    // 'babel-preset-react-app',
-    // "@babel/preset-react",
+    //'babel-preset-react-app',
+    '@babel/preset-react',
     // "@emotion/babel-preset-css-prop",
   ],
   plugins: [

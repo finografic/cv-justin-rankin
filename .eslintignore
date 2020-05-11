@@ -24,3 +24,9 @@ build/
 .temp
 .idea
 
+# temp
+*-ORIG*
+*-BAK*
+*-bak*
+src/config/
+

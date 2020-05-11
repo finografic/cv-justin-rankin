@@ -1,0 +1,78 @@
+// Variable overrides
+
+$color-accent: #a8886a;
+$color-accent-light: lighten($color-accent,10%);
+$color-accent-dark: darken($color-accent,15%);
+
+$color-text:#444444;
+$color-text-light:#777777;
+$color-text-xlight: #999999;
+$color-text-xxlight: #bbbbbb;
+$color-title:#777777;
+$color-title-light:#999999;
+
+$color-text-accent: #090;
+$color-success: lighten(#00ae00,6%);
+
+/*********************************** // BOOTSTRAP // ***************************************/
+
+// $break-xs: 0px;    // 1 COL
+// $break-sm: 600px;  // 1 COL
+// $break-md: 960px;  // 2 COLS
+// $break-lg: 1200px; // 2 COLS
+// $break-xl: 1600px; // 2 COLS
+
+$break-xs: 0px;    // 1 COL
+$break-sm: 320px;  // 1 COL
+$break-md: 768px;  // 2 COLS
+$break-lg: 1200px; // 2 COLS
+$break-xl: 1600px; // 2 COLS
+
+// Grid breakpoints
+$grid-breakpoints: (
+
+  // ORIG
+  // xs: 0,
+  // sm: 5 color: $color-accent-light;76px,
+  // md: 768px,
+  // lg: 992px,
+  // xl: 1200px
+
+  // NEW
+  xs: $break-xs,
+  sm: $break-sm,
+  md: $break-md,
+  lg: $break-lg,
+  xl: $break-xl
+
+) !default;
+
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+
+  // ORIG
+  // sm: 540px,   // -36
+  // md: 720px,   // -48
+  // lg: 960px,   // -32
+  // xl: 1140px   // -60
+
+  // NEW
+  sm: $break-sm - 36,  // -36
+  md: $break-md - 48,  // -48
+  lg: $break-lg - 32,  // -32
+  xl: $break-xl - 60   // -60
+
+) !default;
+
+.container{
+  @media only screen and (min-width: $break-xs) {max-width: 89vw!important;}
+  @media only screen and (min-width: $break-sm+1) {max-width: 89vw!important;}
+  @media only screen and (min-width: $break-md) {max-width: 89vw!important;}
+  @media only screen and (min-width: $break-lg) {max-width: 90vw!important;}
+  @media only screen and (min-width: $break-xl) {max-width: $break-xl - 300!important;}
+}
+
+// Grid columns
+$grid-columns:        12   !default;
+$grid-gutter-width:   30px !default;

@@ -39,6 +39,10 @@ module.exports = {
       {
         root: ['.'],
         alias: {
+          'scss': './src/scss',
+          'assets': './src/assets',
+          'config': './src/config',
+          'lib': './src/lib',
           'components': './src/components',
         },
       },

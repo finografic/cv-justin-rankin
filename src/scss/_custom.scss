@@ -1,0 +1,506 @@
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700');
+
+/*********************************** // OVERRIDES & CORE // ***************************************/
+
+
+.app{
+  background: #ffffff;
+}
+
+#page-wrap {
+  overflow: auto;
+  @media only screen and (min-width: $break-xs) {padding-top: 0px;}
+  @media only screen and (min-width: $break-sm+1) {padding-top: 0px;}
+  @media only screen and (min-width: $break-md) {padding-top: 50px;}
+  @media only screen and (min-width: $break-lg) {padding-top: 50px;}
+  @media only screen and (min-width: $break-xl) {padding-top: 50px;}
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; // 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
+  color: $color-text;
+}
+
+h1, h2, h3, h4, h5{
+  &, & * {
+    font-family: Raleway, sans-serif;
+    color: $color-accent;
+    font-weight: 300; // 100,200,300,400,500,600
+    text-transform: uppercase;
+    margin-bottom: 0.33em;
+
+    svg {
+      font-size: 1.33em !important;
+      vertical-align: top !important;
+      margin-top: -0.033em !important;
+      margin-left: 1px !important;
+      margin-right: 1rem !important;
+    }
+  }
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h2{
+  font-size: 20px;
+  font-weight: 500; // 100,200,300,400,500,600
+  margin-top: 2em;
+  margin-bottom: 1em;
+  background-position: 0% 100%;
+  background-image: linear-gradient(to right, rgba($color-accent,0.5) 30%, transparent 0%);
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+  padding-bottom: 0.5em;
+}
+
+h3{
+  // font-family: 'Roboto', sans-serif; // 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
+  // font-weight: 700;
+  font-family: Raleway, sans-serif; ; // 100,200,300,400,500,600
+  font-weight: 600;
+  font-size: 16px;
+  color: $color-text-xlight;
+  margin-top: 5px;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.33em;
+  white-space: nowrap;
+}
+
+p,
+ul,
+span{
+  line-height: 1.66;
+  transition: all 250ms ease;
+  @media only screen and (min-width: $break-xs)   {font-size: 12px;}
+  @media only screen and (min-width: $break-sm+1) {font-size: 14px;}
+  @media only screen and (min-width: $break-md)   {font-size: 14px;}
+  @media only screen and (min-width: $break-lg)   {font-size: 16px;}
+  strong{
+    font-weight: 700;
+  }
+  i{
+    color: $color-text-xlight!important;
+  }
+}
+
+a{
+  color: $color-accent-dark!important;
+  text-decoration: none!important;
+  &:hover, &:active{ color:$color-accent!important; }
+}
+
+.accent{
+  color: darken($color-accent, 5%);
+}
+
+hr{
+  margin: 0.25rem 0;
+}
+
+ul.no-bullets{
+  list-style-type:none!important;
+}
+
+/*********************************** // LAYOUT + STRUCTURE // ***************************************/
+
+.contain-fluid{
+  padding: 0 15px!important;
+}
+
+.app-body{
+  margin-top: 0px!important;
+
+  // XXS SCREENS (iPhone5 etc...)
+
+  @media only screen and (max-height: 600px) {
+    .content-main{
+      padding-left: 0px!important;
+      padding-right: 0px!important;
+    }
+    .container-fluid{
+      padding-left: 15px!important;
+      padding-right: 15px!important;
+    }
+
+    @media only screen and (max-width: $break-sm) {
+      .cv-header{
+        padding-top:30px;
+      }
+    }
+  }
+
+  // XS SCREENS (iPhone5 etc...)
+  @media only screen and (min-width: $break-xs) {
+    .content-main{
+      padding-left: 0px!important;
+      padding-right: 0px!important;
+    }
+    .container-fluid{
+      padding-left: 20px!important;
+      padding-right: 20px!important;
+    }
+    .cv-header{
+      padding-top:30px;
+    }
+    footer .row{
+      margin: 0 15px!important;
+    }
+  }
+
+    // SM SCREENS (modern mobiles)
+    @media only screen and (min-width: $break-sm+1) {
+      .container-fluid{
+        padding-left: 25px!important;
+        padding-right: 25px!important;
+      }
+      .cv-header{
+        padding-top:30px;
+      }
+      footer .row{
+        margin: 0 15px!important;
+      }
+    }
+
+
+  // MD SCREENS
+  @media only screen and (min-width: $break-md) {
+    .container-fluid{
+      padding-left: 25px!important;
+      padding-right: 25px!important;
+    }
+    .cv-header{
+      padding-top:30px;
+    }
+    footer .row{
+      margin: 0 15px!important;
+    }
+  }
+
+}
+
+// FOOTER
+@media only screen and (max-width: $break-md) {
+  footer > .container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  footer > .container > .row{
+    margin: 0px!important;
+    .col:nth-of-type(1){padding-left: 5px;}
+    .col:nth-of-type(2){padding-right: 5px;}
+  }
+}
+
+
+.content-main{
+  padding-bottom:6rem;
+  ul{
+    margin-left: 1.2em;
+    padding-left: 2px;
+    list-style:none;
+    margin-bottom: 0px;
+    white-space: pre-wrap;
+  }
+  ul:not(.no-bullets) li::before {
+    color: rgba($color-text, 0.5);
+    content: "\2022";
+    font-size: 1em;
+    padding-right: 0.75em;
+    position: relative;
+    top: 0em;
+  }
+  ul li{
+    list-style-position: outside;
+    white-space: pre-wrap;
+    text-indent: -1.2em;
+  }
+  ul.pills li{
+    padding: 6px 0px;
+  }
+
+  .col:nth-of-type(1){
+    @media only screen and (min-width: $break-xs) {padding-right:5px;}
+    @media only screen and (min-width: $break-sm+1) {padding-right:5px;}
+    @media only screen and (min-width: $break-md) {padding-right:5px;}
+    @media only screen and (min-width: 900px) {padding-right:15px;}
+    @media only screen and (min-width: $break-lg) {padding-right:15px;}
+    @media only screen and (min-width: $break-xl) {padding-right:15px;}
+  }
+  .col:nth-of-type(2){
+    @media only screen and (min-width: $break-xs) {padding-left:15px;}
+    @media only screen and (min-width: $break-sm+1) {padding-left:15px;}
+    @media only screen and (min-width: $break-md) {padding-left:30px;}
+    @media only screen and (min-width: 900px) {padding-left:50px;}
+    @media only screen and (min-width: $break-lg) {padding-left:50px;}
+    @media only screen and (min-width: $break-xl) {padding-left:50px;}
+  }
+
+  .padded-false{
+    padding-top: 0px;
+  }
+
+  .padded-true{
+    // padding-top: 110px;
+    @media only screen and (min-width: $break-xs) {padding-top: 70px;}
+    @media only screen and (min-width: $break-sm+1) {padding-top: 70px;}
+    @media only screen and (min-width: $break-md) {padding-top: 130px;}
+    @media only screen and (min-width: $break-lg) {padding-top: 130px;}
+    @media only screen and (min-width: $break-xl) {padding-top: 130px;}
+  }
+}
+
+.app-header.navbar{
+  border-bottom: 0px;
+  background:transparent;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: $break-lg){
+  .app-header {
+      position: fixed;
+      z-index: 1020;
+      width: 100%;
+      text-align: center;
+      background-color: #fff;
+      top: 0;
+  }
+}
+
+/*********************************** // COMPONENTS ETC // ***************************************/
+
+
+.pill{
+  border: 1px solid $color-accent;
+  border-radius: 4px;
+  padding: 6px 10px 5px 10px;
+  line-height: 1.4;
+  color: $color-accent;
+  list-style-type: none!important;
+  display: inline-block;
+  margin: 4px 8px 4px 0px;
+  font-weight: 500;
+  &:first-of-type{
+    margin-left: 0px;
+  }
+  @media only screen and (min-width: $break-xs) {font-weight: 700; color: $color-accent-light;}
+  @media only screen and (min-width: $break-sm+1) {font-weight: 700; color: $color-accent-light;}
+  @media only screen and (min-width: $break-md) {font-weight: 500;}
+  @media only screen and (min-width: $break-lg) {font-weight: 500;}
+  @media only screen and (min-width: $break-xl) {font-weight: 500;}
+}
+
+
+.icon-bullet{
+  display: inline-block;
+  width: 1.5em!important;
+  margin-left: -3px;
+  margin-right: 12px;
+  text-align: center;
+  * { color: darken($color-text-xlight,3%)!important; }
+
+}
+
+.icon-www{
+  display: inline-block;
+  margin-left: 12px!important;
+  margin-top: 4px!important;
+  margin-right: 12px;
+  text-align: center;
+  font-size: 14px!important;
+  transition: opacity 250ms ease;
+  opacity: 0.5;
+  * { color: $color-text-xlight!important; }
+}
+
+a:hover .icon-www{
+  opacity: 0.9;
+}
+
+.navbar-toggler {
+    //display: block!important;
+    width: 26px;
+    height: 26px;
+    margin-top: 0px;
+    margin-right: 3px;
+}
+
+.cv-header{
+
+  @media only screen and (max-width: $break-md) {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    -moz-box-shadow:    0px 10px 3px 2px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 0px 10px 3px 2px rgba(255,255,255,0.75);
+    box-shadow:         0px 10px 3px 2px rgba(255,255,255,0.75);
+  }
+  @media only screen and (min-width: $break-md) {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    -moz-box-shadow:    0px 15px 3px 2px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 0px 15px 3px 2px rgba(255,255,255,0.75);
+    box-shadow:         0px 15px 3px 2px rgba(255,255,255,0.75);
+  }
+  margin-bottom: 15px;
+  background: #ffffff;
+  // -webkit-box-shadow:0px 10px 10px 10px rgba(255,255,255,1);
+  // -moz-box-shadow:0px 10px 10px 10px rgba(255,255,255,1);
+  // box-shadow: 0px 10px 10px 10px rgba(255,255,255,1);
+
+  .col-photo{
+
+    max-width: 100px;
+    flex-grow: 0!important;
+    padding-right: 15px;
+    @media only screen and (min-width: $break-xs) {padding-right: 2px!important;}
+    @media only screen and (min-width: $break-sm+1) {padding-right: 3px!important;}
+    @media only screen and (min-width: $break-md) {padding-right: 0.8vw!important;}
+    @media only screen and (min-width: $break-lg) {padding-right: 15px!important;}
+    @media only screen and (min-width: $break-xl) {padding-right: 15px!important;}
+
+    img.me{
+      border-radius: 6px;
+      transition: all 250ms ease;
+      @media only screen and (min-width: $break-xs) {width: 40px; height: 40px;}
+      @media only screen and (min-width: $break-sm+1) {width: 50px; height: 50px;}
+      @media only screen and (min-width: $break-md) {width: 60px; height: 60px;}
+      @media only screen and (min-width: $break-lg) {width: 70px; height: 70px;}
+      @media only screen and (min-width: $break-xl) {width: 80px; height: 80px;}
+    }
+  }
+
+  .col-title{
+    transition: all 250ms ease;
+    padding-right: 0px;
+    @media only screen and (min-width: $break-xs) {padding-top: 2px; padding-left: 7px!important;}
+    @media only screen and (min-width: $break-sm+1) {padding-top: 4px; padding-left: 2vw!important;}
+    @media only screen and (min-width: $break-md) {padding-top: 4px; padding-left: 10px!important;}
+    @media only screen and (min-width: 900px) {padding-top: 3px; padding-left: 15px!important;}
+    @media only screen and (min-width: $break-lg) {padding-top: 4px; padding-left: 10px!important;}
+    @media only screen and (min-width: $break-xl) {padding-top: 4px; padding-left: 15px;}
+
+    h1{
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      color: rgba($color-text,0.75);
+      transition: all 250ms ease;
+      @media only screen and (min-width: $break-xs) {font-size: 16px; margin-bottom: 3px;}
+      @media only screen and (min-width: $break-sm+1) {font-size: 18px; margin-bottom: 2px;}
+      @media only screen and (min-width: $break-md) {font-size: 22px; margin-bottom: 2px;}
+      @media only screen and (min-width: 900px) {font-size: 22px; margin-bottom: 2px;}
+      @media only screen and (min-width: $break-lg) {font-size: 26px; margin-bottom: 2px;}
+      @media only screen and (min-width: $break-xl) {font-size: 30px; margin-bottom: 2px;}
+    }
+
+    h2{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-bottom: 10px;
+      white-space: nowrap;
+      background-image: none!important;
+      color: $color-accent;
+      transition: all 250ms ease;
+      @media only screen and (min-width: $break-xs) { font-size: 14px; font-weight: 600; }
+      @media only screen and (min-width: $break-sm+1) { font-size: 16px; font-weight: 600; }
+      @media only screen and (min-width: $break-md) {font-size: 18px; }
+      @media only screen and (min-width: 900px) {font-size: 22px; margin-bottom: 2px;}
+      @media only screen and (min-width: $break-lg) {font-size: 22px; }
+      @media only screen and (min-width: $break-xl) {font-size: 24px; }
+    }
+
+  }
+
+}
+
+.header-filters{
+  .select__control,
+  .select__control .select__value-container--has-value,
+  .select__menu{
+    font-weight: 700;
+    font-size: 18px;
+
+  }
+  &:first-of-type{
+    margin-bottom: 1rem;
+  }
+}
+
+// .yPos-0 .padded-true{
+//   padding-top: 0px;
+// }
+
+
+footer{
+  background:transparent;
+  border-top: 1px solid #eeeeee;
+  padding: 8px 0px;
+  @media only screen and (max-width: $break-sm) {font-size: 12px;}
+  a{
+    color: $color-accent!important;
+    font-weight: 400;
+  }
+  .col:nth-of-type(1){text-align: left;}
+  .col:nth-of-type(2){text-align: right;}
+}
+
+@keyframes fadeOutIn {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+.locale-transition{
+  animation-name: fadeOutIn;
+  animation-duration: 500ms; /* or: Xms */
+}
+
+/*********************************** // VISUALISATION via MEDIAQUERY // ***************************************/
+
+.hide{
+  display: none;
+}
+
+.xs-hide{
+  @media only screen and (min-width: $break-xs) {display: none;}
+  @media only screen and (min-width: $break-sm+1) {display: flex;}
+}
+.xs-show{
+  @media only screen and (min-width: $break-xs) {display: flex;}
+  @media only screen and (min-width: $break-sm+1) {display: none;}
+}
+
+.hide-sm-down{
+  @media only screen and (max-width: $break-sm) {display: none;}
+}
+
+.hide-sm-up{
+  @media only screen and (min-width: $break-sm+1) {display: none;}
+}
+
+.hide-md{
+  @media only screen and (min-width: $break-xs) {display: block;}
+  @media only screen and (min-width: $break-md) {display: none;}
+  @media only screen and (min-width: $break-lg) {display: block;}
+}
+
+.show-md{
+  @media only screen and (min-width: $break-xs) {display: none;}
+  @media only screen and (min-width: $break-md) {display: block;}
+  @media only screen and (min-width: $break-lg) {display: none;}
+}
+
+.hide-md-down{
+  @media only screen and (max-width: $break-md) {display: none;}
+}
+
+.hide-md-up{
+  @media only screen and (min-width: $break-md+1) {display: none;}
+}

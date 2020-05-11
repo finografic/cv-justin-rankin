@@ -12,6 +12,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
+    'plugin:json/recommended',
+    'plugin:i18n-json/recommended',
     // 'plugin:css-modules/recommended',
     'plugin:eslint-comments/recommended',
   ],
@@ -51,12 +53,12 @@ module.exports = {
       version: 'detect',
     },
   },
-  globals: {
-    __DEV__: true,
-    fetch: true,
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
+  // globals: {
+  //   __DEV__: true,
+  //   fetch: true,
+  //   Atomics: 'readonly',
+  //   SharedArrayBuffer: 'readonly',
+  // },
   rules: {
     //'prettier/prettier': ['error'],
     quotes: ['error', 'single', { avoidEscape: true }],

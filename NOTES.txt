@@ -1,0 +1,80 @@
+
+# =======================================================
+# BABEL
+
+#  installed
+@babel/cli
+@babel/core
+@babel/preset-env
+@babel/runtime babel-eslint
+@babel/preset-react
+
+babel-eslint
+
+@babel/plugin-proposal-class-properties
+@babel/plugin-proposal-decorators
+@babel/plugin-proposal-export-default-from
+@babel/plugin-proposal-object-rest-spread
+@babel/plugin-syntax-dynamic-import
+@babel/plugin-transform-arrow-functions
+@babel/plugin-transform-runtime
+babel-plugin-import
+babel-plugin-import-graphql
+babel-plugin-module-resolver
+babel-plugin-react-intl
+babel-plugin-root-import
+
+# NEEDED ???
+"babel-plugin-react-require": "^3.1.3",
+"babel-preset-react-app": "^9.1.2",
+"@babel/plugin-syntax-jsx": "^7.8.3", (included in preset-react)
+"@babel/plugin-proposal-optional-chaining": "^7.9.0",
+"babel-plugin-styled-components": "^1.10.7",
+
+# consider:
+babel
+@babel/register
+babel-plugin-root-import
+react-hot-loader (add to babel plugins: ["react-hot-loader/babel"])
+
+
+# =======================================================
+# ESLLINT
+
+
+# devDependencies
+eslint
+eslint-loader
+eslint-config-react-app
+eslint-config-prettier
+# eslint-config-standard
+# eslint-config-standard-react
+
+# eslint-plugin-flowtype
+# eslint-plugin-promise
+# eslint-plugin-standard
+eslint-plugin-babel
+eslint-plugin-css-modules
+eslint-plugin-emotion
+eslint-plugin-eslint-comments
+eslint-plugin-import
+eslint-plugin-json
+eslint-plugin-i18n-json
+eslint-plugin-jsx-a11y
+eslint-plugin-node
+eslint-plugin-prettier
+eslint-plugin-react
+eslint-plugin-react-hooks
+
+# consider
+eslint-watch
+eslint-config-airbnb
+eslint-config-standard
+eslint-plugin-standard
+eslint-plugin-css-modules
+eslint-plugin-postcss-modules
+eslint-plugin-eslint-comments
+eslint-plugin-flowtype
+eslint-import-resolver-node
+
+

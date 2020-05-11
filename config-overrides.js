@@ -8,7 +8,7 @@ const {
   // adjustWorkbox
   override,
   // disableEsLint,
-  // useBabelRc,
+  useBabelRc,
   useEslintRc,
   overrideDevServer,
   watchAll,
@@ -18,7 +18,7 @@ module.exports = {
   webpack: override(
     // usual webpack plugin
     // disableEsLint()
-    // useBabelRc()
+    useBabelRc(),
     useEslintRc()
   ),
   devServer: overrideDevServer(

@@ -1,31 +1,33 @@
-# cv2-v2
+# CV Justin Rankin <span style="color:#AAAAAA">(v2)</span>
 
-Empty project.
-
-## Building and running on localhost
-
-First install dependencies:
+### Initialize, installing dependencies:
 
 ```sh
-npm install
+yarn
 ```
 
-To run in hot module reloading mode:
+### Run local development mode:
 
 ```sh
-npm start
+# watch code + eslint watch
+yarn go
+
+# watch code only
+yarn start
 ```
 
-To create a production build:
+### Create production build:
 
 ```sh
-npm run build-prod
+# build only
+yarn build
+
+# build + serve on localhost:5000
+yarn serve
 ```
 
-## Running
+---
 
-Open the file `dist/index.html` in your browser
-
-## Credits
+**Credits**
 
 Made with [createapp.dev](https://createapp.dev/)

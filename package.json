@@ -14,13 +14,25 @@
     "go": "concurrently \"yarn lint:watch\" \"yarn start\"",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "build2": "cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
+    "build3": "cross-env GENERATE_SOURCEMAP=false react-app-rewired build && node minify.js",
     "test": "react-app-rewired test — env=jsdom",
     "clean": "rm yarn.lock && rm node_modules -fr && yarn",
     "lint:watch": "esw --watch --clear",
-    "serve": "yarn build && serve build",
+    "serve": "react-app-rewired build && serve build",
     "deploy": "NODE_DEBUG=gh-pages gh-pages --dist build",
+    "deploy:full": "cross-env GENERATE_SOURCEMAP=false react-app-rewired build && NODE_DEBUG=gh-pages gh-pages --dist build",
     "deploy-help": "gh-pages --help",
     "predeploy": "rm build -fr && yarn build"
+  },
+  "scripts-TEST": {
+    "lint:test": "prettier --check  \"src/**/*.js\" \"src/**/*.jsx\"",
+    "lint:write": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
+    "delete-maps": "yarn run delete-map-files && yarn run delete-references-to-map-files",
+    "delete-map-files": "find ./build -name '*.map' -delete",
+    "delete-references-to-map-files": "find ./build -regex '.*\\.\\(js\\|css\\)' -exec sed -i -E '\\/[\\*\\/]#\\ssourceMappingURL=main(\\.[0-9a-f]+)?\\.(css|js)\\.map(\\*\\/)?/g' {} +",
+    "build:finografic": "cross-env GENERATE_SOURCEMAP=false react-scripts build && node minify.js && rm finografic.com -fr && cp -r build finografic.com",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "dependencies": {
     "@reach/router": "^1.3.3",

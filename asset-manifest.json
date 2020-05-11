@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cv-justin-rankin/static/css/main.25db0b79.chunk.css",
+    "main.js": "/cv-justin-rankin/static/js/main.40da9167.chunk.js",
+    "main.js.map": "/cv-justin-rankin/static/js/main.40da9167.chunk.js.map",
+    "runtime-main.js": "/cv-justin-rankin/static/js/runtime-main.e392cc14.js",
+    "runtime-main.js.map": "/cv-justin-rankin/static/js/runtime-main.e392cc14.js.map",
+    "static/js/2.9b267b69.chunk.js": "/cv-justin-rankin/static/js/2.9b267b69.chunk.js",
+    "static/js/2.9b267b69.chunk.js.map": "/cv-justin-rankin/static/js/2.9b267b69.chunk.js.map",
+    "index.html": "/cv-justin-rankin/index.html",
+    "precache-manifest.3dfef95f4d4d4ea6a96734c9fd3c4e45.js": "/cv-justin-rankin/precache-manifest.3dfef95f4d4d4ea6a96734c9fd3c4e45.js",
+    "service-worker.js": "/cv-justin-rankin/service-worker.js",
+    "static/css/main.25db0b79.chunk.css.map": "/cv-justin-rankin/static/css/main.25db0b79.chunk.css.map",
+    "static/js/2.9b267b69.chunk.js.LICENSE.txt": "/cv-justin-rankin/static/js/2.9b267b69.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/cv-justin-rankin/static/media/logo.be622899.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e392cc14.js",
+    "static/js/2.9b267b69.chunk.js",
+    "static/css/main.25db0b79.chunk.css",
+    "static/js/main.40da9167.chunk.js"
+  ]
+}

@@ -17,9 +17,10 @@
     "test": "react-app-rewired test — env=jsdom",
     "clean": "rm yarn.lock && rm node_modules -fr && yarn",
     "lint:watch": "esw --watch --clear",
-    "predeploy": "rm build -fr && yarn build",
+    "serve": "yarn build && serve build",
     "deploy": "NODE_DEBUG=gh-pages gh-pages --dist build",
-    "deploy-help": "gh-pages --help"
+    "deploy-help": "gh-pages --help",
+    "predeploy": "rm build -fr && yarn build"
   },
   "dependencies": {
     "@reach/router": "^1.3.3",
@@ -78,7 +79,9 @@
     "node-sass": "^4.14.1",
     "react-app-rewire-emotion": "^4.0.0",
     "react-app-rewired": "^2.1.6",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "serve": "^11.3.0",
+    "yarn": "^1.22.4"
   },
   "devDependencies-LATER": {
     "eslint-config-prettier": "^6.11.0",

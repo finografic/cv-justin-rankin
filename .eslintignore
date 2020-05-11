@@ -1,0 +1,26 @@
+# main eslint config
+# !.eslintrc.js
+
+# dependencies
+node_modules
+
+# production
+# /dist
+dist/
+public/
+build/
+
+# cache
+/.cache
+
+# coverage
+/coverage
+
+# types
+/flow-typed/npm
+
+# misc
+.git
+.temp
+.idea
+

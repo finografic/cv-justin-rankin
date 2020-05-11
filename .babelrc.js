@@ -1,4 +1,5 @@
 module.exports = {
+  // ================================================ //
   presets: [
     //'react-app', // NEEDED ??
     [
@@ -20,9 +21,8 @@ module.exports = {
     ],
     ['@babel/preset-react'],
   ],
-  ////////////////////////////////////////////////////////
+  // ================================================ //
   plugins: [
-    ///////////////////////
     [
       '@babel/plugin-transform-runtime',
       {
@@ -39,34 +39,22 @@ module.exports = {
       {
         root: ['.'],
         alias: {
-          'config': './config',
-          'lib': './lib',
-          'data': './data',
-          '__mocks__': './__mocks__',
+          'components': './src/components',
         },
       },
     ],
     [
       'babel-plugin-root-import',
       {
-        paths: [
-          {
-            'rootPathSuffix': './src/components',
-            'rootPathPrefix': '~/',
-          },
-          {
-            'rootPathSuffix': './src/utils',
-            'rootPathPrefix': '!/',
-          },
-        ],
+        'rootPathSuffix': './',
+        'rootPathPrefix': '~/',
       },
     ],
     ['@babel/plugin-syntax-dynamic-import'],
     ['@babel/plugin-transform-arrow-functions'],
-    ['@babel/plugin-proposal-decorators', { 'legacy': true }],
     ['@babel/plugin-proposal-class-properties', { 'loose': true }],
+    ['@babel/plugin-proposal-decorators', { 'legacy': true }],
     ['@babel/plugin-proposal-export-default-from'],
     ['@babel/plugin-proposal-object-rest-spread'],
-    //////////////////////
   ],
 };

@@ -18,7 +18,7 @@ module.exports = {
   webpack: override(
     // usual webpack plugin
     // disableEsLint()
-    useBabelRc(),
+    useBabelRc('babel.config.js'),
     useEslintRc()
   ),
   devServer: overrideDevServer(

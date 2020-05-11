@@ -45,13 +45,9 @@ module.exports = {
     'import/resolver': {
       node: {
         moduleDirectory: ['node_modules', 'src'],
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx'], // ALLOW OMMISION OF THESE EXTENSIONS :)
       },
-      'babel-module': {},
-      'babel-plugin-root-import': {
-        rootPathPrefix: '~',
-        rootPathSuffix: 'src',
-      },
+      // 'babel-module': {},
     },
     react: {
       version: 'detect',
@@ -68,8 +64,12 @@ module.exports = {
     quotes: ['error', 'single', { avoidEscape: true }],
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'spaced-comment': 0,
+    'spaced-comment': 1,
     'no-unused-vars': 2,
     'eslint-comments/no-unused-disable': 'error',
+    // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/namespace
+    // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/no-unresolved
+    // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/named
+    // [1]   Line 6:21:  Unable to resolve path to module './components/Testss'  import/no-unresolved
   },
 };

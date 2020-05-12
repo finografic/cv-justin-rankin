@@ -14,6 +14,9 @@ import { IntlProvider } from 'react-intl';
 import messages_en from 'config/locales/en.json';
 import messages_es from 'config/locales/es.json';
 
+// TESTING:
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+
 // addLocaleData([...locale_en, ...locale_es]);
 const messages = {
   'en': messages_en,
@@ -32,7 +35,8 @@ function App(props) {
   };
   return (
     <React.Fragment>
-      <IntlProvider locale={state.locale} messages={messages[state.locale]} textComponent={React.Fragment}>
+      {/* <IntlProvider locale={state.locale} messages={messages[state.locale]} textComponent={React.Fragment}> */}
+      <IntlProvider locale="en">
         <header className="cv-header">
           <div className="col-photo">
             <img src={photo} alt="Jusitn Rankin" className="me" />

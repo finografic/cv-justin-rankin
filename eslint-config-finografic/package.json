@@ -42,7 +42,7 @@
     "verify"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": ".eslintrc.js",
   "peerDependencies": {
     "eslint": ">=6.2.2",
     "eslint-plugin-import": ">=2.18.0",

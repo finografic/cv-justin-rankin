@@ -63,11 +63,8 @@ module.exports = {
   //   SharedArrayBuffer: 'readonly',
   // },
   rules: {
-    //'prettier/prettier': ['error'],
-    // 'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    // 'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'eslint-comments/no-unused-disable': 'error',
-    'no-console': 0,
+    // 'prettier/prettier': ['error'],
+    // 'eslint-comments/no-unused-disable': 'error',
     // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/namespace
     // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/no-unresolved
     // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/named

@@ -17,6 +17,15 @@ import messages_es from 'config/locales/es.json';
 // TESTING:
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
+const url_1 = 'https://gist.github.com/finografic/251d6d610f0c19ba6b83029c4d620826';
+const url_2 =
+  'https://gist.githubusercontent.com/finografic/251d6d610f0c19ba6b83029c4d620826/raw/1612c51ea4129d4866c690145a9d9dd3aa48039e/cv-content_en.json';
+
+fetch(url_1).then((data) => {
+  console.log('>>> GIST FETCH >>>');
+  console.log(data);
+});
+
 // addLocaleData([...locale_en, ...locale_es]);
 const messages = {
   'en': messages_en,

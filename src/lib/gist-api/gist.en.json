@@ -1,0 +1,112 @@
+{
+  "url": "https://api.github.com/gists/251d6d610f0c19ba6b83029c4d620826",
+  "forks_url": "https://api.github.com/gists/251d6d610f0c19ba6b83029c4d620826/forks",
+  "commits_url": "https://api.github.com/gists/251d6d610f0c19ba6b83029c4d620826/commits",
+  "id": "251d6d610f0c19ba6b83029c4d620826",
+  "node_id": "MDQ6R2lzdDI1MWQ2ZDYxMGYwYzE5YmE2YjgzMDI5YzRkNjIwODI2",
+  "git_pull_url": "https://gist.github.com/251d6d610f0c19ba6b83029c4d620826.git",
+  "git_push_url": "https://gist.github.com/251d6d610f0c19ba6b83029c4d620826.git",
+  "html_url": "https://gist.github.com/251d6d610f0c19ba6b83029c4d620826",
+  "files": {
+    "cv-content_en.json": {
+      "filename": "cv-content_en.json",
+      "type": "application/json",
+      "language": "JSON",
+      "raw_url": "https://gist.githubusercontent.com/finografic/251d6d610f0c19ba6b83029c4d620826/raw/918f7816c48498fe0fa27380f32f9dcb593e9441/cv-content_en.json",
+      "size": 10626,
+      "truncated": false,
+      "content": "{\n  \"words\":\"-------------------------------------------------------------\",\n  \"words.Technologies\":\"Technologies\",\n  \"Sidebar\":\"-----------------------------------------------------------\",\n  \"Sidebar.nav.list\":[\n    {\n      \"label\": \"Profile\",\n      \"url\": \"profile\"\n    },\n    {\n      \"label\": \"Technologies\",\n      \"url\": \"technologies\"\n    },\n    {\n      \"label\": \"Principles\",\n      \"url\": \"principles\"\n    },\n    {\n      \"label\": \"Work Experience\",\n      \"url\": \"work-experience\"\n    },\n    {\n      \"label\": \"University Education\",\n      \"url\": \"education\"\n    },\n    {\n      \"label\": \"My Stack\",\n      \"url\": \"my-stack\"\n    },\n    {\n      \"label\": \"Example Projects\",\n      \"url\": \"example-projects\"\n    },\n    {\n      \"label\": \"Connected Study\",\n      \"url\": \"connected-study\"\n    },\n    {\n      \"label\": \"Languages\",\n      \"url\": \"languages\"\n    }\n  ],\n  \"Contact\":\"-----------------------------------------------------------\",\n  \"Contact.title\": \"CONTACT\",\n  \"Profile\":\"-----------------------------------------------------------\",\n  \"Profile.title\": \"PROFILE\",\n  \"Profile.text\": [\n    \"Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.\",\n    \"Study, testing, and adoption of new technologies, coding best practices, and design trends, ensure projects are modern and future-proofed.\",\n    \"University education in design and communication, provide additional perspective to development, product structure, UX and design.\"\n  ],\n  \"Technologies\":\"---------------------------------------------------------\",\n  \"Technologies.title\": \"TECHNOLOGIES\",\n  \"Technologies.proficient\": \"Proficient\",\n  \"Technologies.proficient.list\": [\n      \"Node.js\",\n      \"React\",\n      \"Javascript: vanilla + ES6\",\n      \"PHP\",\n      \"MongoDB\",\n      \"MySQL\",\n      \"HTML5\",\n      \"CSS3 + SASS\",\n      \"CSS3 animations\",\n      \"RESTful services\",\n      \"SEO\",\n      \"Git\",\n      \"Linux Terminal\"\n    ],\n  \"Technologies.experienced\": \"Experienced\",\n  \"Technologies.experienced.list\": [\n    \"AngularJS v6\",\n    \"TypeScript\",\n    \"GraphQL\",\n    \"Ruby\",\n    \"Webpack\",\n    \"SysOps (Linux server)\",\n    \"AWS\",\n    \"Jenkins\",\n    \"Docker\",\n    \"i18n\",\n    \"OAuth\",\n    \"JWT\",\n    \"Google Analytics\",\n    \"Markdown\"\n  ],\n  \"Principles\":\"-----------------------------------------------------------\",\n  \"Principles.title\": \"PRINCIPLES\",\n  \"Principles.list\": [\n    \"SCRUM agile team framework\",\n    \"Atlassian suite: JIRA, Confluence, Bitbucket\",\n    \"Best practices, naming-conventions, linting\",\n    \"Symantic variable, function, and file names\",\n    \"Code comments, annotations and TODOs\",\n    \"Reusable code, modules, and components\",\n    \"Product future-proofing\",\n    \"Tidy, standardized, project structures\",\n    \"Clear UX with evident function. Reduce clicks!\"\n  ],\n  \"Connected\":\"-----------------------------------------------------------\",\n  \"Connected.title\": \"CONNECTED STUDY\",\n  \"Connected.text\": \"Following framework updates, news on security breaches and political decisions affecting the tech industry, articles on top design and UX trends; even pop culture, all affect how I think about my development process and code, and thus stay connected.\",\n  \"Connected.resources\": \"Resources used to study + connect :\",\n  \"Connected.list\": [\n    {\"label\": \"Podcasts: ie. \\\"Syntax\\\" with Wes Bos\"},\n    {\"label\": \"github.com\"},\n    {\"label\": \"Medium\"},\n    {\"label\": \"alligator.io\"},\n    {\"label\": \"dev.to\"},\n    {\"label\": \"stackoverflow.com\"},\n    {\"label\": \"codesandbox.io\"},\n    {\"label\": \"caniuse.com\"},\n    {\"label\": \"csstricks.com\"},\n    {\"label\": \"webdesignerdepot.com\"},\n    {\"label\": \"awwwards.com\"}\n  ],\n  \"Experience\":\"-----------------------------------------------------------\",\n  \"Experience.title\": \"WORK EXPERIENCE\",\n  \"Experience.list\": [\n    {\n      \"company\": \"PANGEALAND S.L. / exoticca.com\",\n      \"url\": \"https://www.exoticca.com\",\n      \"position\": \"Senior full-stack Developer\",\n      \"time\": \"2019 - 2018\",\n      \"location\": \"Barcelona, Spain\",\n      \"text\": [\n        \"Back-end development and maintenance of company internal dashboard used by 50+ employees, across multiple departments. Apart from response to Jira requests, often took personal initiative, both identifying possible improvements, and adding new functionality.\",\n        \"Development of front-end client and APIs, including a big project refactor to prepare client and server for adding locales as per global market expansion.\"\n      ],\n      \"technologies\": \"Node.js, Javacript vanilla + ES6/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps.\"\n    },\n    {\n      \"company\": \"DIGITAL DIMENSION SPAIN / ECONOCOM\",\n      \"url\": \"https://www.econocom.com/en\",\n      \"position\": \"Full-stack Developer / UX + UI Designer\",\n      \"time\": \"2016 - 2017\",\n      \"location\": \"Barcelona, Spain\",\n      \"text\": [\n        \"Front-end and back-end development of SaaS application (serving France and Spain), including integration of multiple service APIs, parsing the JSON response data to display in React. Fluid workflow within dynamic SCRUM team framework.\",\n        \"Dashboard design, project refactor and UX improvement.\"\n      ],\n      \"technologies\": \"Node.js, React, Javacript vanilla + ES6/Babel, Docker, RESTful API services, SASS.\"\n    },\n    {\n      \"company\": \"70 MAIN STREET STUDIOS\",\n      \"url\": \"http://www.70mainstreet.com\",\n      \"position\": \"Front-end Developer / UX + UI Designer\",\n      \"time\": \"2015 - 2016\",\n      \"location\": \"Toronto, Canada\",\n      \"text\": [\n        \"Development, design, and UX of websites. Coded Angular components for integration into existing products.  Newsletter design, development, and testing.\",\n        \"Fluid team collaboration via Slack, JIRA, and GitLab.\",\n        \"International clients: Scotiabank, TD Bank, Rogers, Nickelodeon.\"\n      ],\n      \"technologies\": \"Node.js, Javascript vanilla + ES6/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins.\"\n    },\n    {\n      \"company\": \"APPLE UK & SPAIN\",\n      \"url\": \"https://www.apple.com/uk\",\n      \"position\": \"Full-stack developer, Tech Support + Sales\",\n      \"time\": \"2010 - 2012\",\n      \"location\": \"Barcelona, Spain\",\n      \"text\": [\n        \"Promoted to IT team, for my initiative to code new call-tracker app, from initial position of tech support and sales.\",\n        \"The new app was initially meant for personal use, replacing the existing tool that of one with superior UX design, improving workflow speed, and providing additional statistics on calls and orders.\",\n        \"Management decided to adopt the app for use by 300+ employees on Black Friday (highest volume of the year). Important data and statistics, previously unavailable, were now accessible to team managers.\"\n      ],\n      \"technologies\": \"PHP, CSS3, Javacript vanilla + jQuery, MySQL\"\n    },\n    {\n      \"company\": \"METROPOLIS MEDIA GROUP SL\",\n      \"url\": \"http://metropolismedia.us\",\n      \"position\": \"Full-stack developer, Designer, Project Manager\",\n      \"time\": \"2003 - 2014\",\n      \"location\": \"Barcelona, Spain\",\n      \"text\": [\n        \"Trusted regular contractor for front-end and back-end web development, UX design, and product management. Print and layout design of an upscale monthly lifestyle magazine.\"\n      ],\n      \"technologies\": \"PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps\"\n    }\n  ],\n  \"Education\":\"------------------------------------------------------------\",\n  \"Education.title\": \"UNIVERSITY EDUCATION\",\n  \"Education.university\": {\n    \"name\": \"Ontario College of Art and Design University (OCADU)\",\n    \"url\": \"https://www.ocadu.ca/\"\n  },\n  \"Education.diploma\": \"Design, Advertising Art Direction\",\n  \"Education.location\": \"Toronto, Canada\",\n  \"Education.text\": \"Multidisciplinary program based on core design principles, graphic design, multimedia, and communication in advertising. Focus on critical thinking, conceptual development and collaboration.\",\n  \"Projects\":\"-------------------------------------------------------------\",\n  \"Projects.title\": \"EXAMPLE PROJECTS\",\n  \"Projects.list\": [\n    {\n      \"name\": \"Personal CV\",\n      \"text\": [\n        \"curriculum vitae designed and developed as mobile-first single-page app in React.\", \"Multi-locale (EN + ES) with option to download PDF version in either language.\"\n      ]\n    },\n    {\n      \"name\": \"NodeJS + PM2 cron manager\",\n      \"text\": [\n        \"cron job admin with human-readable schedules, optional categorization and batch time-offset. Logs and suggestions to avoid simultaneous jobs and lower server CPU load.\"\n      ]\n    },\n    {\n      \"name\": \"Call Tracker\",\n      \"text\": [\n        \"intranet application for call centres. Data storage of call metadata, customer info, sales data, and opportunity status, used for follow-up calls. Performance reports - team and individuals. Live stats for sales incentive contests etc.\"\n      ]\n    },\n    {\n      \"name\": \"Custom CMS platform\",\n      \"text\": [\n        \"lightweight, effortless installation and configuration. Offering the client a more tailored administrative experience, and a streamlined alternative to other CMS platforms.\"\n      ]\n    },\n    {\n      \"name\": \"Aggregated Social Feed\",\n      \"text\": [\n        \"for portfolio site, combining posts from various social media accounts, parsing data from connected APIs, creating a single, unified feed, with custom look and feel. Data cached in database for fast loading.\"\n      ]\n    },\n    {\n      \"name\": \"Online store\",\n      \"text\": [\n        \"developed and designed without any framework, in an era before Shopify etc. Front-end: shopping cart, share with a friend, PayPal gateway. Back-end: customized CMS platform (mentioned above) provided the ability to administer item info categorize items into collections, and discount system.\"\n      ]\n    }\n  ],\n  \"Languages\":\"------------------------------------------------------------\",\n  \"Languages.title\": \"LANGUAGES\",\n  \"Languages.list\": [\n    {\"language\": \"English\", \"level\": \"native language\" },\n    {\"language\": \"Spanish\", \"level\": \"fluent, spoken + written\" },\n    {\"language\": \"Catalan\", \"level\": \"basic, spoken + written\" }\n  ],\n  \"Stack\":\"---------------------------------------------------------------\",\n  \"Stack.title\": \"MY STACK\",\n  \"Stack.list\": [\n    \"Linux Kubuntu\",\n    \"MacOS\",\n    \"VSCode\",\n    \"Node.js\",\n    \"Node SASS\",\n    \"Babel\",\n    \"MongoDB\",\n    \"Postman\",\n    \"ESLint\",\n    \"Prettier\",\n    \"ZSH shell\"\n  ],\n  \"\":\"--------------------------------------------------------------------\"\n}\n"
+    }
+  },
+  "public": true,
+  "created_at": "2020-05-11T21:44:35Z",
+  "updated_at": "2020-05-12T13:10:06Z",
+  "description": "cv-content: EN",
+  "comments": 0,
+  "user": null,
+  "comments_url": "https://api.github.com/gists/251d6d610f0c19ba6b83029c4d620826/comments",
+  "owner": {
+    "login": "finografic",
+    "id": 1534104,
+    "node_id": "MDQ6VXNlcjE1MzQxMDQ=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1534104?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/finografic",
+    "html_url": "https://github.com/finografic",
+    "followers_url": "https://api.github.com/users/finografic/followers",
+    "following_url": "https://api.github.com/users/finografic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/finografic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/finografic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/finografic/subscriptions",
+    "organizations_url": "https://api.github.com/users/finografic/orgs",
+    "repos_url": "https://api.github.com/users/finografic/repos",
+    "events_url": "https://api.github.com/users/finografic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/finografic/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "forks": [],
+  "history": [
+    {
+      "user": {
+        "login": "finografic",
+        "id": 1534104,
+        "node_id": "MDQ6VXNlcjE1MzQxMDQ=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1534104?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/finografic",
+        "html_url": "https://github.com/finografic",
+        "followers_url": "https://api.github.com/users/finografic/followers",
+        "following_url": "https://api.github.com/users/finografic/following{/other_user}",
+        "gists_url": "https://api.github.com/users/finografic/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/finografic/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/finografic/subscriptions",
+        "organizations_url": "https://api.github.com/users/finografic/orgs",
+        "repos_url": "https://api.github.com/users/finografic/repos",
+        "events_url": "https://api.github.com/users/finografic/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/finografic/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "c02918698e7974976c7abcc375a6a88f75e675eb",
+      "committed_at": "2020-05-12T13:10:06Z",
+      "change_status": {
+        "total": 0,
+        "additions": 0,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/251d6d610f0c19ba6b83029c4d620826/c02918698e7974976c7abcc375a6a88f75e675eb"
+    },
+    {
+      "user": {
+        "login": "finografic",
+        "id": 1534104,
+        "node_id": "MDQ6VXNlcjE1MzQxMDQ=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1534104?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/finografic",
+        "html_url": "https://github.com/finografic",
+        "followers_url": "https://api.github.com/users/finografic/followers",
+        "following_url": "https://api.github.com/users/finografic/following{/other_user}",
+        "gists_url": "https://api.github.com/users/finografic/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/finografic/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/finografic/subscriptions",
+        "organizations_url": "https://api.github.com/users/finografic/orgs",
+        "repos_url": "https://api.github.com/users/finografic/repos",
+        "events_url": "https://api.github.com/users/finografic/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/finografic/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "1612c51ea4129d4866c690145a9d9dd3aa48039e",
+      "committed_at": "2020-05-11T21:44:35Z",
+      "change_status": {
+        "total": 254,
+        "additions": 254,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/251d6d610f0c19ba6b83029c4d620826/1612c51ea4129d4866c690145a9d9dd3aa48039e"
+    }
+  ],
+  "truncated": false
+}

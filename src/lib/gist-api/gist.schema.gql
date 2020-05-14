@@ -1,0 +1,59 @@
+{
+  "data": {
+    "__type": {
+      "name": "Gist",
+      "kind": "OBJECT",
+      "description": "A Gist.",
+      "fields": [
+        {
+          "name": "comments"
+        },
+        {
+          "name": "createdAt"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "files"
+        },
+        {
+          "name": "forks"
+        },
+        {
+          "name": "id"
+        },
+        {
+          "name": "isFork"
+        },
+        {
+          "name": "isPublic"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "owner"
+        },
+        {
+          "name": "pushedAt"
+        },
+        {
+          "name": "resourcePath"
+        },
+        {
+          "name": "stargazers"
+        },
+        {
+          "name": "updatedAt"
+        },
+        {
+          "name": "url"
+        },
+        {
+          "name": "viewerHasStarred"
+        }
+      ]
+    }
+  }
+}

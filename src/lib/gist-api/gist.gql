@@ -1,0 +1,247 @@
+{
+  "name": "Gist",
+  "kind": "OBJECT",
+  "description": "A Gist.",
+  "fields": [
+    {
+      "name": "comments"
+    },
+    {
+      "name": "createdAt"
+    },
+    {
+      "name": "description"
+    },
+    {
+      "name": "files"
+    },
+    {
+      "name": "forks"
+    },
+    {
+      "name": "id"
+    },
+    {
+      "name": "isFork"
+    },
+    {
+      "name": "isPublic"
+    },
+    {
+      "name": "name"
+    },
+    {
+      "name": "owner"
+    },
+    {
+      "name": "pushedAt"
+    },
+    {
+      "name": "resourcePath"
+    },
+    {
+      "name": "stargazers"
+    },
+    {
+      "name": "updatedAt"
+    },
+    {
+      "name": "url"
+    },
+    {
+      "name": "viewerHasStarred"
+    }
+  ]
+},
+{
+  "name": "GistComment",
+  "kind": "OBJECT",
+  "description": "Represents a comment on an Gist.",
+  "fields": [
+    {
+      "name": "author"
+    },
+    {
+      "name": "authorAssociation"
+    },
+    {
+      "name": "body"
+    },
+    {
+      "name": "bodyHTML"
+    },
+    {
+      "name": "bodyText"
+    },
+    {
+      "name": "createdAt"
+    },
+    {
+      "name": "createdViaEmail"
+    },
+    {
+      "name": "databaseId"
+    },
+    {
+      "name": "editor"
+    },
+    {
+      "name": "gist"
+    },
+    {
+      "name": "id"
+    },
+    {
+      "name": "includesCreatedEdit"
+    },
+    {
+      "name": "isMinimized"
+    },
+    {
+      "name": "lastEditedAt"
+    },
+    {
+      "name": "minimizedReason"
+    },
+    {
+      "name": "publishedAt"
+    },
+    {
+      "name": "updatedAt"
+    },
+    {
+      "name": "userContentEdits"
+    },
+    {
+      "name": "viewerCanDelete"
+    },
+    {
+      "name": "viewerCanMinimize"
+    },
+    {
+      "name": "viewerCanUpdate"
+    },
+    {
+      "name": "viewerCannotUpdateReasons"
+    },
+    {
+      "name": "viewerDidAuthor"
+    }
+  ]
+},
+{
+  "name": "GistCommentConnection",
+  "kind": "OBJECT",
+  "description": "The connection type for GistComment.",
+  "fields": [
+    {
+      "name": "edges"
+    },
+    {
+      "name": "nodes"
+    },
+    {
+      "name": "pageInfo"
+    },
+    {
+      "name": "totalCount"
+    }
+  ]
+},
+{
+  "name": "GistCommentEdge",
+  "kind": "OBJECT",
+  "description": "An edge in a connection.",
+  "fields": [
+    {
+      "name": "cursor"
+    },
+    {
+      "name": "node"
+    }
+  ]
+},
+{
+  "name": "GistConnection",
+  "kind": "OBJECT",
+  "description": "The connection type for Gist.",
+  "fields": [
+    {
+      "name": "edges"
+    },
+    {
+      "name": "nodes"
+    },
+    {
+      "name": "pageInfo"
+    },
+    {
+      "name": "totalCount"
+    }
+  ]
+},
+{
+  "name": "GistEdge",
+  "kind": "OBJECT",
+  "description": "An edge in a connection.",
+  "fields": [
+    {
+      "name": "cursor"
+    },
+    {
+      "name": "node"
+    }
+  ]
+},
+{
+  "name": "GistFile",
+  "kind": "OBJECT",
+  "description": "A file in a gist.",
+  "fields": [
+    {
+      "name": "encodedName"
+    },
+    {
+      "name": "encoding"
+    },
+    {
+      "name": "extension"
+    },
+    {
+      "name": "isImage"
+    },
+    {
+      "name": "isTruncated"
+    },
+    {
+      "name": "language"
+    },
+    {
+      "name": "name"
+    },
+    {
+      "name": "size"
+    },
+    {
+      "name": "text"
+    }
+  ]
+},
+{
+  "name": "GistOrder",
+  "kind": "INPUT_OBJECT",
+  "description": "Ordering options for gist connections",
+  "fields": null
+},
+{
+  "name": "GistOrderField",
+  "kind": "ENUM",
+  "description": "Properties by which gist connections can be ordered.",
+  "fields": null
+},
+{
+  "name": "GistPrivacy",
+  "kind": "ENUM",
+  "description": "The privacy of a Gist",
+  "fields": null
+},

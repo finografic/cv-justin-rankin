@@ -1,0 +1,254 @@
+{
+  "words":"-------------------------------------------------------------",
+  "words.Technologies":"Technologies",
+  "Sidebar":"-----------------------------------------------------------",
+  "Sidebar.nav.list":[
+    {
+      "label": "Profile",
+      "url": "profile"
+    },
+    {
+      "label": "Technologies",
+      "url": "technologies"
+    },
+    {
+      "label": "Principles",
+      "url": "principles"
+    },
+    {
+      "label": "Work Experience",
+      "url": "work-experience"
+    },
+    {
+      "label": "University Education",
+      "url": "education"
+    },
+    {
+      "label": "My Stack",
+      "url": "my-stack"
+    },
+    {
+      "label": "Example Projects",
+      "url": "example-projects"
+    },
+    {
+      "label": "Connected Study",
+      "url": "connected-study"
+    },
+    {
+      "label": "Languages",
+      "url": "languages"
+    }
+  ],
+  "Contact":"-----------------------------------------------------------",
+  "Contact.title": "CONTACT",
+  "Profile":"-----------------------------------------------------------",
+  "Profile.title": "PROFILE",
+  "Profile.text": [
+    "Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.",
+    "Study, testing, and adoption of new technologies, coding best practices, and design trends, ensure projects are modern and future-proofed.",
+    "University education in design and communication, provide additional perspective to development, product structure, UX and design."
+  ],
+  "Technologies":"---------------------------------------------------------",
+  "Technologies.title": "TECHNOLOGIES",
+  "Technologies.proficient": "Proficient",
+  "Technologies.proficient.list": [
+      "Node.js",
+      "React",
+      "Javascript: vanilla + ES6",
+      "PHP",
+      "MongoDB",
+      "MySQL",
+      "HTML5",
+      "CSS3 + SASS",
+      "CSS3 animations",
+      "RESTful services",
+      "SEO",
+      "Git",
+      "Linux Terminal"
+    ],
+  "Technologies.experienced": "Experienced",
+  "Technologies.experienced.list": [
+    "AngularJS v6",
+    "TypeScript",
+    "GraphQL",
+    "Ruby",
+    "Webpack",
+    "SysOps (Linux server)",
+    "AWS",
+    "Jenkins",
+    "Docker",
+    "i18n",
+    "OAuth",
+    "JWT",
+    "Google Analytics",
+    "Markdown"
+  ],
+  "Principles":"-----------------------------------------------------------",
+  "Principles.title": "PRINCIPLES",
+  "Principles.list": [
+    "SCRUM agile team framework",
+    "Atlassian suite: JIRA, Confluence, Bitbucket",
+    "Best practices, naming-conventions, linting",
+    "Symantic variable, function, and file names",
+    "Code comments, annotations and TODOs",
+    "Reusable code, modules, and components",
+    "Product future-proofing",
+    "Tidy, standardized, project structures",
+    "Clear UX with evident function. Reduce clicks!"
+  ],
+  "Connected":"-----------------------------------------------------------",
+  "Connected.title": "CONNECTED STUDY",
+  "Connected.text": "Following framework updates, news on security breaches and political decisions affecting the tech industry, articles on top design and UX trends; even pop culture, all affect how I think about my development process and code, and thus stay connected.",
+  "Connected.resources": "Resources used to study + connect :",
+  "Connected.list": [
+    {"label": "Podcasts: ie. \"Syntax\" with Wes Bos"},
+    {"label": "github.com"},
+    {"label": "Medium"},
+    {"label": "alligator.io"},
+    {"label": "dev.to"},
+    {"label": "stackoverflow.com"},
+    {"label": "codesandbox.io"},
+    {"label": "caniuse.com"},
+    {"label": "csstricks.com"},
+    {"label": "webdesignerdepot.com"},
+    {"label": "awwwards.com"}
+  ],
+  "Experience":"-----------------------------------------------------------",
+  "Experience.title": "WORK EXPERIENCE",
+  "Experience.list": [
+    {
+      "company": "PANGEALAND S.L. / exoticca.com",
+      "url": "https://www.exoticca.com",
+      "position": "Senior full-stack Developer",
+      "time": "2019 - 2018",
+      "location": "Barcelona, Spain",
+      "text": [
+        "Back-end development and maintenance of company internal dashboard used by 50+ employees, across multiple departments. Apart from response to Jira requests, often took personal initiative, both identifying possible improvements, and adding new functionality.",
+        "Development of front-end client and APIs, including a big project refactor to prepare client and server for adding locales as per global market expansion."
+      ],
+      "technologies": "Node.js, Javacript vanilla + ES6/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps."
+    },
+    {
+      "company": "DIGITAL DIMENSION SPAIN / ECONOCOM",
+      "url": "https://www.econocom.com/en",
+      "position": "Full-stack Developer / UX + UI Designer",
+      "time": "2016 - 2017",
+      "location": "Barcelona, Spain",
+      "text": [
+        "Front-end and back-end development of SaaS application (serving France and Spain), including integration of multiple service APIs, parsing the JSON response data to display in React. Fluid workflow within dynamic SCRUM team framework.",
+        "Dashboard design, project refactor and UX improvement."
+      ],
+      "technologies": "Node.js, React, Javacript vanilla + ES6/Babel, Docker, RESTful API services, SASS."
+    },
+    {
+      "company": "70 MAIN STREET STUDIOS",
+      "url": "http://www.70mainstreet.com",
+      "position": "Front-end Developer / UX + UI Designer",
+      "time": "2015 - 2016",
+      "location": "Toronto, Canada",
+      "text": [
+        "Development, design, and UX of websites. Coded Angular components for integration into existing products.  Newsletter design, development, and testing.",
+        "Fluid team collaboration via Slack, JIRA, and GitLab.",
+        "International clients: Scotiabank, TD Bank, Rogers, Nickelodeon."
+      ],
+      "technologies": "Node.js, Javascript vanilla + ES6/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins."
+    },
+    {
+      "company": "APPLE UK & SPAIN",
+      "url": "https://www.apple.com/uk",
+      "position": "Full-stack developer, Tech Support + Sales",
+      "time": "2010 - 2012",
+      "location": "Barcelona, Spain",
+      "text": [
+        "Promoted to IT team, for my initiative to code new call-tracker app, from initial position of tech support and sales.",
+        "The new app was initially meant for personal use, replacing the existing tool that of one with superior UX design, improving workflow speed, and providing additional statistics on calls and orders.",
+        "Management decided to adopt the app for use by 300+ employees on Black Friday (highest volume of the year). Important data and statistics, previously unavailable, were now accessible to team managers."
+      ],
+      "technologies": "PHP, CSS3, Javacript vanilla + jQuery, MySQL"
+    },
+    {
+      "company": "METROPOLIS MEDIA GROUP SL",
+      "url": "http://metropolismedia.us",
+      "position": "Full-stack developer, Designer, Project Manager",
+      "time": "2003 - 2014",
+      "location": "Barcelona, Spain",
+      "text": [
+        "Trusted regular contractor for front-end and back-end web development, UX design, and product management. Print and layout design of an upscale monthly lifestyle magazine."
+      ],
+      "technologies": "PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps"
+    }
+  ],
+  "Education":"------------------------------------------------------------",
+  "Education.title": "UNIVERSITY EDUCATION",
+  "Education.university": {
+    "name": "Ontario College of Art and Design University (OCADU)",
+    "url": "https://www.ocadu.ca/"
+  },
+  "Education.diploma": "Design, Advertising Art Direction",
+  "Education.location": "Toronto, Canada",
+  "Education.text": "Multidisciplinary program based on core design principles, graphic design, multimedia, and communication in advertising. Focus on critical thinking, conceptual development and collaboration.",
+  "Projects":"-------------------------------------------------------------",
+  "Projects.title": "EXAMPLE PROJECTS",
+  "Projects.list": [
+    {
+      "name": "Personal CV",
+      "text": [
+        "curriculum vitae designed and developed as mobile-first single-page app in React.", "Multi-locale (EN + ES) with option to download PDF version in either language."
+      ]
+    },
+    {
+      "name": "NodeJS + PM2 cron manager",
+      "text": [
+        "cron job admin with human-readable schedules, optional categorization and batch time-offset. Logs and suggestions to avoid simultaneous jobs and lower server CPU load."
+      ]
+    },
+    {
+      "name": "Call Tracker",
+      "text": [
+        "intranet application for call centres. Data storage of call metadata, customer info, sales data, and opportunity status, used for follow-up calls. Performance reports - team and individuals. Live stats for sales incentive contests etc."
+      ]
+    },
+    {
+      "name": "Custom CMS platform",
+      "text": [
+        "lightweight, effortless installation and configuration. Offering the client a more tailored administrative experience, and a streamlined alternative to other CMS platforms."
+      ]
+    },
+    {
+      "name": "Aggregated Social Feed",
+      "text": [
+        "for portfolio site, combining posts from various social media accounts, parsing data from connected APIs, creating a single, unified feed, with custom look and feel. Data cached in database for fast loading."
+      ]
+    },
+    {
+      "name": "Online store",
+      "text": [
+        "developed and designed without any framework, in an era before Shopify etc. Front-end: shopping cart, share with a friend, PayPal gateway. Back-end: customized CMS platform (mentioned above) provided the ability to administer item info categorize items into collections, and discount system."
+      ]
+    }
+  ],
+  "Languages":"------------------------------------------------------------",
+  "Languages.title": "LANGUAGES",
+  "Languages.list": [
+    {"language": "English", "level": "native language" },
+    {"language": "Spanish", "level": "fluent, spoken + written" },
+    {"language": "Catalan", "level": "basic, spoken + written" }
+  ],
+  "Stack":"---------------------------------------------------------------",
+  "Stack.title": "MY STACK",
+  "Stack.list": [
+    "Linux Kubuntu",
+    "MacOS",
+    "VSCode",
+    "Node.js",
+    "Node SASS",
+    "Babel",
+    "MongoDB",
+    "Postman",
+    "ESLint",
+    "Prettier",
+    "ZSH shell"
+  ],
+  "":"--------------------------------------------------------------------"
+}

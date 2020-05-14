@@ -1,8 +1,8 @@
 {
-  "words":"-------------------------------------------------------------",
-  "words.Technologies":"Technologies",
-  "Sidebar":"-----------------------------------------------------------",
-  "Sidebar.nav.list":[
+  "words": "-------------------------------------------------------------",
+  "words.Technologies": "Technologies",
+  "Sidebar": "-----------------------------------------------------------",
+  "Sidebar.nav.list": [
     {
       "label": "Profile",
       "url": "profile"
@@ -40,33 +40,37 @@
       "url": "languages"
     }
   ],
-  "Contact":"-----------------------------------------------------------",
-  "Contact.title": "CONTACT",
-  "Profile":"-----------------------------------------------------------",
-  "Profile.title": "PROFILE",
-  "Profile.text": [
-    "Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.",
-    "Study, testing, and adoption of new technologies, coding best practices, and design trends, ensure projects are modern and future-proofed.",
-    "University education in design and communication, provide additional perspective to development, product structure, UX and design."
-  ],
-  "Technologies":"---------------------------------------------------------",
+  "Contact": {
+    "title": "CONTACT",
+    "_end": "-----------------------------------------------"
+  },
+  "Profile": {
+    "title": "PROFILE",
+    "text": [
+      "Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.",
+      "Study, testing, and adoption of new technologies, coding best practices, and design trends, ensure projects are modern and future-proofed.",
+      "University education in design and communication, provide additional perspective to development, product structure, UX and design."
+    ],
+    "_end": "-----------------------------------------------"
+  },
+  "Technologies": "---------------------------------------------------------",
   "Technologies.title": "TECHNOLOGIES",
   "Technologies.proficient": "Proficient",
   "Technologies.proficient.list": [
-      "Node.js",
-      "React",
-      "Javascript: vanilla + ES6",
-      "PHP",
-      "MongoDB",
-      "MySQL",
-      "HTML5",
-      "CSS3 + SASS",
-      "CSS3 animations",
-      "RESTful services",
-      "SEO",
-      "Git",
-      "Linux Terminal"
-    ],
+    "Node.js",
+    "React",
+    "Javascript: vanilla + ES6",
+    "PHP",
+    "MongoDB",
+    "MySQL",
+    "HTML5",
+    "CSS3 + SASS",
+    "CSS3 animations",
+    "RESTful services",
+    "SEO",
+    "Git",
+    "Linux Terminal"
+  ],
   "Technologies.experienced": "Experienced",
   "Technologies.experienced.list": [
     "AngularJS v6",
@@ -84,7 +88,7 @@
     "Google Analytics",
     "Markdown"
   ],
-  "Principles":"-----------------------------------------------------------",
+  "Principles": "-----------------------------------------------------------",
   "Principles.title": "PRINCIPLES",
   "Principles.list": [
     "SCRUM agile team framework",
@@ -97,24 +101,24 @@
     "Tidy, standardized, project structures",
     "Clear UX with evident function. Reduce clicks!"
   ],
-  "Connected":"-----------------------------------------------------------",
+  "Connected": "-----------------------------------------------------------",
   "Connected.title": "CONNECTED STUDY",
   "Connected.text": "Following framework updates, news on security breaches and political decisions affecting the tech industry, articles on top design and UX trends; even pop culture, all affect how I think about my development process and code, and thus stay connected.",
   "Connected.resources": "Resources used to study + connect :",
   "Connected.list": [
-    {"label": "Podcasts: ie. \"Syntax\" with Wes Bos"},
-    {"label": "github.com"},
-    {"label": "Medium"},
-    {"label": "alligator.io"},
-    {"label": "dev.to"},
-    {"label": "stackoverflow.com"},
-    {"label": "codesandbox.io"},
-    {"label": "caniuse.com"},
-    {"label": "csstricks.com"},
-    {"label": "webdesignerdepot.com"},
-    {"label": "awwwards.com"}
+    { "label": "Podcasts: ie. \"Syntax\" with Wes Bos" },
+    { "label": "github.com" },
+    { "label": "Medium" },
+    { "label": "alligator.io" },
+    { "label": "dev.to" },
+    { "label": "stackoverflow.com" },
+    { "label": "codesandbox.io" },
+    { "label": "caniuse.com" },
+    { "label": "csstricks.com" },
+    { "label": "webdesignerdepot.com" },
+    { "label": "awwwards.com" }
   ],
-  "Experience":"-----------------------------------------------------------",
+  "Experience": "-----------------------------------------------------------",
   "Experience.title": "WORK EXPERIENCE",
   "Experience.list": [
     {
@@ -179,7 +183,7 @@
       "technologies": "PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps"
     }
   ],
-  "Education":"------------------------------------------------------------",
+  "Education": "------------------------------------------------------------",
   "Education.title": "UNIVERSITY EDUCATION",
   "Education.university": {
     "name": "Ontario College of Art and Design University (OCADU)",
@@ -188,13 +192,14 @@
   "Education.diploma": "Design, Advertising Art Direction",
   "Education.location": "Toronto, Canada",
   "Education.text": "Multidisciplinary program based on core design principles, graphic design, multimedia, and communication in advertising. Focus on critical thinking, conceptual development and collaboration.",
-  "Projects":"-------------------------------------------------------------",
+  "Projects": "-------------------------------------------------------------",
   "Projects.title": "EXAMPLE PROJECTS",
   "Projects.list": [
     {
       "name": "Personal CV",
       "text": [
-        "curriculum vitae designed and developed as mobile-first single-page app in React.", "Multi-locale (EN + ES) with option to download PDF version in either language."
+        "curriculum vitae designed and developed as mobile-first single-page app in React.",
+        "Multi-locale (EN + ES) with option to download PDF version in either language."
       ]
     },
     {
@@ -228,14 +233,14 @@
       ]
     }
   ],
-  "Languages":"------------------------------------------------------------",
+  "Languages": "------------------------------------------------------------",
   "Languages.title": "LANGUAGES",
   "Languages.list": [
-    {"language": "English", "level": "native language" },
-    {"language": "Spanish", "level": "fluent, spoken + written" },
-    {"language": "Catalan", "level": "basic, spoken + written" }
+    { "language": "English", "level": "native language" },
+    { "language": "Spanish", "level": "fluent, spoken + written" },
+    { "language": "Catalan", "level": "basic, spoken + written" }
   ],
-  "Stack":"---------------------------------------------------------------",
+  "Stack": "---------------------------------------------------------------",
   "Stack.title": "MY STACK",
   "Stack.list": [
     "Linux Kubuntu",
@@ -250,5 +255,5 @@
     "Prettier",
     "ZSH shell"
   ],
-  "":"--------------------------------------------------------------------"
+  "": "--------------------------------------------------------------------"
 }

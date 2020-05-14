@@ -126,6 +126,7 @@ function App(props) {
         <h2>
           <FormattedMessage id="Profile.title" />
         </h2>
+        <FormattedMessage id="Profile">{(profile) => <h2>{profile}</h2>}</FormattedMessage>
         <Counter />
       </RawIntlProvider>
     </React.Fragment>

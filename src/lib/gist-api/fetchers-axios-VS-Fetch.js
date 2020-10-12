@@ -37,8 +37,8 @@ axios
 
 // fetch() //////////////////////////////////////////////////////////
 
-const url = 'http://localhost/test.htm';
-const options = {
+const urlFetch = 'http://localhost/test.htm';
+const optionsFetch = {
   method: 'POST',
   headers: {
     'Accept': 'application/json',
@@ -50,6 +50,6 @@ const options = {
   }),
 };
 
-fetch(url, options).then((response) => {
+fetch(urlFetch, optionsFetch).then((response) => {
   console.log(response.status);
 });

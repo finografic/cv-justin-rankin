@@ -14,6 +14,7 @@
     })
 
     // Filter and sort the gists.
+    /* eslint-disable no-prototype-builtins */
     .then(function (data) {
       return new window.Promise(function (resolve, reject) {
         var posts = data
@@ -41,6 +42,7 @@
         resolve(posts);
       });
     })
+    /* eslint-enable no-prototype-builtins */
 
     // Fetch file contents from each gist.
     .then(function (gists) {

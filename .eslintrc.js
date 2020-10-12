@@ -1,4 +1,3 @@
-const { rules } = require('./eslint-config-finografic');
 module.exports = {
   env: {
     browser: true,
@@ -81,12 +80,6 @@ module.exports = {
   //   SharedArrayBuffer: 'readonly',
   // },
   rules: {
-    // 'prettier/prettier': ['error'],
-    // 'eslint-comments/no-unused-disable': 'error',
-    // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/namespace
-    // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/no-unresolved
-    // [1]   Line 1:1:   Resolve error: unable to load resolver "babel-module"   import/named
-    // [1]   Line 6:21:  Unable to resolve path to module './components/Testss'  import/no-unresolved
     // ...rules,
     ...require('./eslint-config-finografic').rules,
     'import/no-unresolved': 0,

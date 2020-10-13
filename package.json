@@ -18,13 +18,23 @@
     "build2": "GENERATE_SOURCEMAP=false react-app-rewired build && node minify.js",
     "test": "react-app-rewired test — env=jsdom",
     "clean": "rm yarn.lock && rm node_modules -fr && yarn",
-    "lint:watch": "esw --watch --clear",
     "serve": "react-app-rewired build && serve build",
     "deploy": "NODE_DEBUG=gh-pages gh-pages --dist build",
     "deploy:full": "npm run build && npm run deploy",
     "deploy-help": "gh-pages --help",
     "predeploy": "rm build -fr && npm run build && GENERATE_SOURCEMAP=false react-app-rewired build",
-    "postinstall": "sleep 1 && DIR_COLOR=\"[Desktop Entry]\nIcon=folder-grey\" && echo \"${DIR_COLOR}\" > node_modules/.directory && echo \"${DIR_COLOR}\" > .git/.directory"
+    "postinstall": "sleep 1 && DIR_COLOR=\"[Desktop Entry]\nIcon=folder-grey\" && echo \"${DIR_COLOR}\" > node_modules/.directory && echo \"${DIR_COLOR}\" > .git/.directory",
+    "·········· LINTING": "··················································",
+    "lint": "esw --color",
+    "lintORIG": "npm run lint:js && npm run lint:css",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern ./scripts",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern ./scripts --fix",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:css": "stylelint app/**/*.js",
+    "lint:watch": "esw --watch --color",
+    "lint:watch:fix": "esw --color --fix",
+    "lint:staged": "lint-staged",
+    "prettify": "prettier --write ."
   },
   "scripts-TEST": {
     "lint:test": "prettier --check  \"src/**/*.js\" \"src/**/*.jsx\"",
@@ -62,31 +72,10 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@emotion/babel-preset-css-prop": "^10.0.27",
-
-
-
-
-
-
-
-
-
-
     "babel-eslint": "^10.1.0",
-
-
     "babel-plugin-module-resolver": "^4.0.0",
-
-
-
-
-
-
-
-    
     "concurrently": "^5.2.0",
     "customize-cra": "^1.0.0",
-
     "eslint": "^6.6.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
@@ -98,12 +87,13 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "eslint-watch": "^7.0.0",
-
     "gh-pages": "^2.2.0",
     "lint-staged": "^10.2.13",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.1.1",
     "react-app-rewired": "^2.1.6",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
@@ -115,9 +105,17 @@
     "yarn": "^1.22.4",
     "yarn-upgrade-all": "^0.5.4"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:eslint",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
   },
+  "pre-commit": "lint:staged",
   "browserslist": {
     "production": [
       ">0.2%",

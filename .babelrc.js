@@ -20,6 +20,13 @@ module.exports = {
       },
     ],
     ['@babel/preset-react'],
+    [
+      '@emotion/babel-preset-css-prop',
+      {
+        autoLabel: true,
+        labelFormat: '[local]',
+      },
+    ],
   ],
   // ================================================ //
   plugins: [
@@ -41,24 +48,28 @@ module.exports = {
         alias: {
           'scss': './src/scss',
           'assets': './src/assets',
+          '_config': './src/_config',
           'config': './src/config',
           'lib': './src/lib',
+          'store': './src/store',
+          'utils': './src/utils',
           'components': './src/components',
+          'containers': './src/containers',
         },
       },
     ],
-    [
-      'babel-plugin-root-import',
-      {
-        'rootPathSuffix': './',
-        'rootPathPrefix': '~/',
-      },
-    ],
-    ['@babel/plugin-syntax-dynamic-import'],
-    ['@babel/plugin-transform-arrow-functions'],
+    // [
+    //   'babel-plugin-root-import',
+    //   {
+    //     'rootPathSuffix': './',
+    //     'rootPathPrefix': '~/',
+    //   },
+    // ],
+    // ['@babel/plugin-syntax-dynamic-import'],
+    // ['@babel/plugin-transform-arrow-functions'],
     ['@babel/plugin-proposal-class-properties', { 'loose': true }],
-    ['@babel/plugin-proposal-decorators', { 'legacy': true }],
-    ['@babel/plugin-proposal-export-default-from'],
-    ['@babel/plugin-proposal-object-rest-spread'],
+    // ['@babel/plugin-proposal-decorators', { 'legacy': true }],
+    // ['@babel/plugin-proposal-export-default-from'],
+    // ['@babel/plugin-proposal-object-rest-spread'],
   ],
 };

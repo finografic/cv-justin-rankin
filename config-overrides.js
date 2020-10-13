@@ -4,16 +4,12 @@
 const { override, useBabelRc, useEslintRc, overrideDevServer, watchAll } = require('customize-cra');
 const path = require('path');
 
+/* eslint-disable react-hooks/rules-of-hooks */
 module.exports = {
   webpack: override(
-    // usual webpack plugin
-    // disableEsLint()
-    useBabelRc(path.resolve(__dirname, '.babelrc.js')),
-    useEslintRc(path.resolve(__dirname, '.eslintrc.js'))
+    useBabelRc(path.resolve(__dirname, 'babel.config.js')),
+    useEslintRc(path.resolve(__dirname, '.eslintrc.js')),
   ),
-  devServer: overrideDevServer(
-    // dev server plugin
-    // disableEsLint(),
-    watchAll()
-  ),
+  devServer: overrideDevServer(watchAll()),
 };
+/* eslint-enable react-hooks/rules-of-hooks */

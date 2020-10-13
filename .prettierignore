@@ -1,23 +1,6 @@
-# dependencies
-node_modules
-
-# production
-/build
-/dist
-
-# cache
-/.cache
-
-# coverage
-/coverage
-
-# types
-/flow-typed/npm
-
-# misc
-/.temp
-/.idea
-yarn-error.log
+build/
+node_modules/
+scripts/
+package-lock.json
 yarn.lock
-LICENSE
-Makefile
+package.json

@@ -1,27 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/favicon/apple-touch-icon.png" />
-    <link rel="mask-icon" href="%PUBLIC_URL%/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="description" content="CV Justin Rankin - full-stack developer;  mobile-first app, coded in React" />
-    <meta name="author" content="Justin Rankin" />
-    <meta
-      name="keyword"
-      content="Developer, React, Node.js, Javascript, ES6, MongoDB, MySQL, HTML, CSS, SASS, SCSS,CV, Curriculum Vitae"
-    />
+    <meta name="description" content="CV: Justin Rankin - full-stack developer;  mobile-first app, coded in React">
+    <meta name="author" content="Justin Rankin">
+    <meta name="keyword" content="Developer, React, Node.js, Javascript, ES6, MongoDB, MySQL, HTML, CSS, SASS, SCSS,CV, Curriculum Vitae">
+    <title>Justin Rankin : full-stack developer</title>
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>CV Justin Rankin : full-stack developer</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/assets/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/assets/favicon/apple-touch-icon.png" />
+    <link rel="mask-icon" href="%PUBLIC_URL%/assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="CRA Rewired Starter App" />
+    <meta name="keyword" content="React, Node.js, Javascript, ES6, HTML5, CSS3, SASS" />
+    <meta name="author" content="Justin Rankin, finografic.com" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <div id="app"></div>
+    <div id="modal"></div>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga('create', 'UA-XXXXX-Y', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('set', 'transport', 'beacon');
+      ga('send', 'pageview');
+    </script>
+
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>
 </html>

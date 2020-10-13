@@ -1,3 +1,8 @@
+// POLYFILLS
+import 'regenerator-runtime/runtime';
+import 'react-app-polyfill/ie11'; // NECESSARY ??
+import 'react-app-polyfill/stable'; // NECESSARY ??
+
 // import './lib/polyfills'; NEEDED ??
 import React from 'react';
 import ReactDOM from 'react-dom';

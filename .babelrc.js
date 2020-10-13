@@ -65,6 +65,7 @@ module.exports = {
     //     'rootPathPrefix': '~/',
     //   },
     // ],
+    ['styled-components'],
     // ['@babel/plugin-syntax-dynamic-import'],
     // ['@babel/plugin-transform-arrow-functions'],
     ['@babel/plugin-proposal-class-properties', { 'loose': true }],

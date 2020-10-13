@@ -7,7 +7,7 @@ const path = require('path');
 /* eslint-disable react-hooks/rules-of-hooks */
 module.exports = {
   webpack: override(
-    useBabelRc(path.resolve(__dirname, 'babel.config.js')),
+    useBabelRc(path.resolve(__dirname, '.babelrc.js')),
     useEslintRc(path.resolve(__dirname, '.eslintrc.js')),
   ),
   devServer: overrideDevServer(watchAll()),

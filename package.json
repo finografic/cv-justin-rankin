@@ -14,17 +14,16 @@
   "scripts": {
     "go": "concurrently \"yarn lint:watch\" \"yarn start\"",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "build2": "GENERATE_SOURCEMAP=false react-app-rewired build",
-    "build3": "GENERATE_SOURCEMAP=false react-app-rewired build && node minify.js",
+    "build": "GENERATE_SOURCEMAP=false  react-app-rewired build",
+    "build2": "GENERATE_SOURCEMAP=false react-app-rewired build && node minify.js",
     "test": "react-app-rewired test — env=jsdom",
     "clean": "rm yarn.lock && rm node_modules -fr && yarn",
     "lint:watch": "esw --watch --clear",
     "serve": "react-app-rewired build && serve build",
     "deploy": "NODE_DEBUG=gh-pages gh-pages --dist build",
-    "deploy:full": "GENERATE_SOURCEMAP=false react-app-rewired build && NODE_DEBUG=gh-pages gh-pages --dist build",
+    "deploy:full": "npm run build && npm run deploy",
     "deploy-help": "gh-pages --help",
-    "predeploy": "rm build -fr && GENERATE_SOURCEMAP=false react-app-rewired build",
+    "predeploy": "rm build -fr && npm run build && GENERATE_SOURCEMAP=false react-app-rewired build",
     "postinstall": "sleep 1 && DIR_COLOR=\"[Desktop Entry]\nIcon=folder-grey\" && echo \"${DIR_COLOR}\" > node_modules/.directory && echo \"${DIR_COLOR}\" > .git/.directory"
   },
   "scripts-TEST": {

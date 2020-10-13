@@ -21,10 +21,15 @@
     "dev:watch": "nodemon --quiet --exec 'react-app-rewired start'",
     "dev:consoles": "./scripts/open-konsoles.sh",
     "dev:browser": "nodemon ./scripts/development.js",
+    "checknodenpmversions": "node ./scripts/checkNodeNpmVersions.js",
     "serve": "react-app-rewired build && serve build",
+    "·········· HOOKS": "··················································",
+    "preinstall": "npm run checknodenpmversions",
+    "prebuild": "npm run clean:build",
+    "pretest": "npm run test:clean && npm run lint",
+    "predeploy": "rimraf ./build && npm run build && GENERATE_SOURCEMAP=false react-app-rewired build",
     "·········· BUILD": "··················································",
     "build": "GENERATE_SOURCEMAP=false react-app-rewired build",
-    "clean": "rimraf ./node_modules && rimraf ./build rm yarn.lock && yarn",
     "clean:build": "rimraf ./build",
     "clean:all": "npm run test:clean && npm run clean:build",
     "·········· DEPLOY": "··················································",
@@ -46,11 +51,6 @@
     "test": "react-app-rewired test — env=jsdom",
     "test:jest": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "·········· HOOKS": "··················································",
-    "preinstall": "npm run checknodenpmversions",
-    "prebuild": "npm run clean:build",
-    "pretest": "npm run test:clean && npm run lint",
-    "predeploy": "rimraf ./build && npm run build && GENERATE_SOURCEMAP=false react-app-rewired build",
     "···················": "··················································",
     "                   ": "                                                  "
   },
@@ -129,33 +129,16 @@
     "yarn-upgrade-all": "^0.5.4"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run lint:eslint",
-      "git add --force"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add --force"
-    ]
+    "*.js": ["npm run lint:eslint", "git add --force"],
+    "*.json": ["prettier --write", "git add --force"]
   },
   "pre-commit": "lint:staged",
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   },
   "yarn-upgrade-all": {
-    "ignore": [
-      "eslint",
-      "history"
-    ]
+    "ignore": ["eslint", "history"]
   },
   "engines": {
     "node": ">= 12.0.0",
@@ -167,13 +150,5 @@
   },
   "proxy": "http://localhost:3000",
   "homepage": "https://finografic.github.io/cv-justin-rankin",
-  "keywords": [
-    "CV",
-    "curriculum vitae",
-    "Justin Rankin",
-    "developer",
-    "javascript",
-    "NodeJS",
-    "React"
-  ]
+  "keywords": ["CV", "curriculum vitae", "Justin Rankin", "developer", "javascript", "NodeJS", "React"]
 }

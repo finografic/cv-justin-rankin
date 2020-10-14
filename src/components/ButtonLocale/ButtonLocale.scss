@@ -1,0 +1,158 @@
+@import "../../scss/variables";
+
+.select-locale {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6em;
+  height: 2em;
+  background: transparent;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  z-index: 99;
+  transition: all 500ms ease;
+  // border: 1px solid red;
+  *{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; // 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
+    font-size: 12px;
+    @media only screen and (min-width: $break-xs) {
+      font-size: 12px;
+    }
+    @media only screen and (min-width: $break-sm+1) {
+      font-size: 13px;
+    }
+    @media only screen and (min-width: $break-md) {
+      font-size: 16px;
+    }
+    @media only screen and (min-width: $break-lg) {
+      font-size: 16px;
+    }
+  }
+
+  span {
+    align-self: center;
+    color: $color-text-light;
+    opacity: 0.2;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    padding: 10px 10px;
+    outline: none;
+    color: $color-text-light;
+    opacity: 0.35!important;
+    transition: all 500ms ease;
+    &:hover, &:active { opacity: 0.7; }
+    &.active{
+      color: $color-accent;
+      opacity: 0.8!important;
+    }
+    // border: 1px solid red;
+  }
+
+  @media only screen and (min-width: $break-xs) {
+    top: 12px;
+    right: 21px;
+  }
+  @media only screen and (min-width: $break-sm+1) {
+    top: 18px;
+    // right: 32px;
+    right: 1.8em;
+  }
+  @media only screen and (min-width: $break-md) {
+    // top: 19px;
+    right: 0px;
+  }
+  @media only screen and (min-width: $break-lg) {
+    // top: 19px;
+    right: 0px;
+    //transform: translateX(100%);
+  }
+}
+
+
+/*
+
+  &.flags{
+    width: 40px;
+    height: 30px;
+    right: 0px;
+    // border: 1px solid red;
+
+    .select-locale-flags.horizontal{
+      border: 1px solid cyan;
+      @media only screen and (min-width: $break-xs) {
+        top: 10px;
+        right: 36px;
+        transform: scale(0.90);
+      }
+      @media only screen and (min-width: $break-sm+1) {
+        top: 17px;
+        right: 58px;
+        transform: scale(1.2);
+      }
+      @media only screen and (min-width: $break-md) {
+        top: 17px;
+        right: 44px;
+      transform: scale(1.2);
+      }
+      @media only screen and (min-width: $break-lg) {
+        top: 17px;
+        right: 49px;
+        transform: scale(1.2);
+      }
+    }
+
+    .select-locale-flags.vertical{
+      border: 1px solid pink;
+      @media only screen and (min-width: $break-xs) {
+        top: 10px;
+        right: 36px;
+        transform: scale(0.90);
+      }
+      @media only screen and (min-width: $break-sm+1) {
+        top: 17px;
+        right: 15px;
+        transform: scale(1.2);
+      }
+      @media only screen and (min-width: $break-md) {
+        top: 17px;
+        right: 44px;
+      transform: scale(1.2);
+      }
+      @media only screen and (min-width: $break-lg) {
+        top: 17px;
+        right: 49px;
+        transform: scale(1.2);
+      }
+    }
+
+    .flag{
+      width: 20px;
+      padding: 10px;
+    }
+
+
+    .flag.flag-en{
+      display: block;
+      transform: scaleY(1.33);
+    }
+    .flag-es{
+      display: none;
+    }
+  }
+
+*/
+
+.app.sidebar-true {
+  .select-locale,
+  .select-locale-iso,
+  .select-locale-flags{
+    opacity: 0;
+    button {cursor: default!important; }
+  }
+}
+

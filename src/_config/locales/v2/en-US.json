@@ -19,7 +19,7 @@
     "title": "CONTACT",
     "_end": "-----------------------------------------------"
   },
-  "Profile": {
+  "PROFILE": {
     "title": "PROFILE",
     "text": [
       "Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.",
@@ -66,19 +66,20 @@
     "Google Analytics",
     "Markdown"
   ],
-  "Principles": "-----------------------------------------------------------",
-  "Principles.title": "PRINCIPLES",
-  "Principles.list": [
-    "SCRUM agile team framework",
-    "Atlassian suite: JIRA, Confluence, Bitbucket",
-    "Best practices, naming-conventions, linting",
-    "Symantic variable, function, and file names",
-    "Code comments, annotations and TODOs",
-    "Reusable code, modules, and components",
-    "Product future-proofing",
-    "Tidy, standardized, project structures",
-    "Clear UX with evident function. Reduce clicks!"
-  ],
+  "PRICIPLES": {
+    "title": "PRINCIPLES",
+    "list": [
+      "SCRUM agile team framework",
+      "Atlassian suite: JIRA, Confluence, Bitbucket",
+      "Best practices, naming-conventions, linting",
+      "Symantic variable, function, and file names",
+      "Code comments, annotations and TODOs",
+      "Reusable code, modules, and components",
+      "Product future-proofing",
+      "Tidy, standardized, project structures",
+      "Clear UX with evident function. Reduce clicks!"
+    ]
+  },
   "Connected": "-----------------------------------------------------------",
   "Connected.title": "CONNECTED STUDY",
   "Connected.text": "Following framework updates, news on security breaches and political decisions affecting the tech industry, articles on top design and UX trends; even pop culture, all affect how I think about my development process and code, and thus stay connected.",
@@ -218,20 +219,21 @@
     { "language": "Spanish", "level": "fluent, spoken + written" },
     { "language": "Catalan", "level": "basic, spoken + written" }
   ],
-  "Stack": "---------------------------------------------------------------",
-  "Stack.title": "MY STACK",
-  "Stack.list": [
-    "Linux Kubuntu",
-    "MacOS",
-    "VSCode",
-    "Node.js",
-    "Node SASS",
-    "Babel",
-    "MongoDB",
-    "Postman",
-    "ESLint",
-    "Prettier",
-    "ZSH shell"
-  ],
+  "STACK": {
+    "title": "MY STACK",
+    "list": [
+      "Linux Kubuntu",
+      "MacOS",
+      "VSCode",
+      "Node.js",
+      "Node SASS",
+      "Babel",
+      "MongoDB",
+      "Postman",
+      "ESLint",
+      "Prettier",
+      "ZSH shell"
+    ]
+  },
   "": "--------------------------------------------------------------------"
 }

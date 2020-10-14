@@ -11,7 +11,7 @@ import { routes, pageTitles } from '_config';
 // import Header from 'components/Header';
 // import Footer from 'components/Footer';
 import Sidebar from 'components/Sidebar';
-//import CV from 'containers/CV';
+import CV from 'containers/CV';
 import IntlTest from 'components/IntlTest';
 
 // STYLES
@@ -56,6 +56,7 @@ export default function App() {
         </Helmet>
         <Sidebar />
         <main>
+          <CV />
           {/*<IntlTest />*/}
           {/*
           <Switch>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import messages_en from '_config/locales/v2/en-US.json';
 import messages_es from '_config/locales/v2/es-ES.json';
 import { createIntl, createIntlCache } from 'react-intl';
+import { getCurrentLocale } from 'store';
 
 // NEW, but UNECESSARY with Node v13 ??
 // import '@formatjs/intl-displaynames/dist/locale-data/en';
@@ -14,8 +15,10 @@ import { createIntl, createIntlCache } from 'react-intl';
 // since it prevents memory leak
 const cache = createIntlCache();
 
-const getIntl = (localeCurrent) => {
-  // ============================================== //
+const getIntl = (locale) => {
+  // IF NO locale PARAM IS PASSED, GET FROM STATE - SAVES CODE IN COMPONENTS
+  const LOCALE = locale || getCurrentLocale().LOCALE;
+
   const messages = {
     'en': messages_en,
     'es': messages_es,
@@ -23,19 +26,17 @@ const getIntl = (localeCurrent) => {
 
   const intl = createIntl(
     {
-      locale: localeCurrent,
-      messages: { ...messages[localeCurrent] },
+      locale: LOCALE,
+      messages: { ...messages[LOCALE] },
     },
     cache,
   );
-
-  // ============================================== //
 
   return { intl, messages: intl.messages };
 };
 
 getIntl.propTypes = {
-  localeCurrent: PropTypes.string.isRequired,
+  LOCALE: PropTypes.string.isRequired,
 };
 
 export default getIntl;

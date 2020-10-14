@@ -1,7 +1,7 @@
 import { ENV } from 'utils/envUtils';
 const { HOST, PORT } = ENV;
 
-const appName = 'CRA Rewired Starter App';
+const appName = 'CV / Curriculum Vitae :: Justin Blair Rankin';
 export const pageTitles = {
   appName,
   pageTitleSuffix: ` - ${appName}`,

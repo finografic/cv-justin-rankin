@@ -78,7 +78,6 @@ function endProcess() {
 
   console.log(`Required version of node: `, node);
   console.log(`Required version of npm:  `, npm);
-  console.log(`\n`);
 
   const requiredNodeVersion = node.match(/([0-9.]+)/g)[0];
   await checkNodeVersion(requiredNodeVersion).catch((reason) => reportError(reason));

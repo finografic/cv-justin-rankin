@@ -19,6 +19,11 @@ export const StoreConsumer = StoreContext.Consumer;
 
 export const useStore = () => useContext(StoreContext);
 
+export const getCurrentLocale = () => {
+  const { state } = useStore();
+  return { LOCALE: state.locale };
+};
+
 // ============================================== //
 // ADDIOTIONS:
 

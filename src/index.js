@@ -11,8 +11,8 @@ import * as serviceWorker from 'serviceWorker';
 
 // ============================================== //
 
-// https://react.christmas/2019/7
 // STORE
+// https://react.christmas/2019/7
 import { StoreProvider } from 'store';
 import createStore from 'store/createStore';
 import initialState from 'store/store.schema';
@@ -38,7 +38,6 @@ const render = () => {
   );
 };
 
-console.clear();
 render();
 
 if (process.env.NODE_ENV === 'development' && module.hot) {

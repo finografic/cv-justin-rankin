@@ -9,13 +9,13 @@ import ButtonLocale from 'components/ButtonLocale';
 import CVHeader from './sections/CVHeader';
 // import Contact from './sections/Contact';
 import Profile from './sections/Profile';
-// import Education from './sections/Education';
+import Education from './sections/Education';
 // import Languages from './sections/Languages';
 // import Technologies from "./sections/Technologies";
 import Principles from './sections/Principles';
 // import WorkExperience from "./sections/WorkExperience";
 // import ExampleProjects from "./sections/ExampleProjects";
-// import Connected from "./sections/Connected";
+import Connected from './sections/Connected';
 import MyStack from './sections/MyStack';
 
 //----------------------------------------------------------------------------------//
@@ -67,9 +67,9 @@ export default function CV(props) {
                 <Profile />
                 <Principles className="hide-md-down" />
                 <MyStack className="hide-md-down" />
-                {/*
                 <Connected className="hide-md-down" />
                 <Education className="hide-md-down" />
+                {/*
                 <Languages className="hide-md-down" />
                 */}
               </Col>

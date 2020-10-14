@@ -80,23 +80,24 @@
       "Clear UX with evident function. Reduce clicks!"
     ]
   },
-  "Connected": "-----------------------------------------------------------",
-  "Connected.title": "CONNECTED STUDY",
-  "Connected.text": "Following framework updates, news on security breaches and political decisions affecting the tech industry, articles on top design and UX trends; even pop culture, all affect how I think about my development process and code, and thus stay connected.",
-  "Connected.resources": "Resources used to study + connect :",
-  "Connected.list": [
-    { "label": "Podcasts: ie. \"Syntax\" with Wes Bos" },
-    { "label": "github.com" },
-    { "label": "Medium" },
-    { "label": "alligator.io" },
-    { "label": "dev.to" },
-    { "label": "stackoverflow.com" },
-    { "label": "codesandbox.io" },
-    { "label": "caniuse.com" },
-    { "label": "csstricks.com" },
-    { "label": "webdesignerdepot.com" },
-    { "label": "awwwards.com" }
-  ],
+  "CONNECTED": {
+    "title": "CONNECTED STUDY",
+    "text": "Following framework updates, news on security breaches and political decisions affecting the tech industry, articles on top design and UX trends; even pop culture, all affect how I think about my development process and code, and thus stay connected.",
+    "resources": "Resources used to study + connect :",
+    "list": [
+      "Podcasts: ie. \"Syntax\" with Wes Bos",
+      "github.com",
+      "Medium",
+      "alligator.io",
+      "dev.to",
+      "stackoverflow.com",
+      "codesandbox.io",
+      "caniuse.com",
+      "csstricks.com",
+      "webdesignerdepot.com",
+      "awwwards.com"
+    ]
+  },
   "Experience": "-----------------------------------------------------------",
   "Experience.title": "WORK EXPERIENCE",
   "Experience.list": [
@@ -162,15 +163,16 @@
       "technologies": "PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps"
     }
   ],
-  "Education": "------------------------------------------------------------",
-  "Education.title": "UNIVERSITY EDUCATION",
-  "Education.university": {
-    "name": "Ontario College of Art and Design University (OCADU)",
-    "url": "https://www.ocadu.ca/"
+  "EDUCATION": {
+    "title": "UNIVERSITY EDUCATION",
+    "university": {
+      "name": "Ontario College of Art and Design University (OCADU)",
+      "url": "https://www.ocadu.ca/"
+    },
+    "diploma": "Design, Advertising Art Direction",
+    "location": "Toronto, Canada",
+    "text": "Multidisciplinary program based on core design principles, graphic design, multimedia, and communication in advertising. Focus on critical thinking, conceptual development and collaboration."
   },
-  "Education.diploma": "Design, Advertising Art Direction",
-  "Education.location": "Toronto, Canada",
-  "Education.text": "Multidisciplinary program based on core design principles, graphic design, multimedia, and communication in advertising. Focus on critical thinking, conceptual development and collaboration.",
   "Projects": "-------------------------------------------------------------",
   "Projects.title": "EXAMPLE PROJECTS",
   "Projects.list": [

@@ -11,6 +11,7 @@ import { routes, pageTitles } from '_config';
 // import Header from 'components/Header';
 // import Footer from 'components/Footer';
 import Sidebar from 'components/Sidebar';
+import IntlTest from 'components/IntlTest';
 
 // STYLES
 import { Global, jsx } from '@emotion/core';
@@ -22,21 +23,24 @@ import { cssGlobal } from 'styles/global';
 
 // LOCALES - INTL
 import { getCurrentLocale } from 'store';
-import { IntlProvider, addLocaleData } from 'react-intl';
+import { IntlProvider, RawIntlProvider } from 'react-intl';
 // import locale_en from 'react-intl/locale-data/en';
 // import locale_es from 'react-intl/locale-data/es';
-import messages_en from '_config/locales/en-US.json';
-import messages_es from '_config/locales/es-ES.json';
-const messages = {
-  'en': messages_en,
-  'es': messages_es,
-};
+// import messages_en from '_config/locales/en-US.json';
+// import messages_es from '_config/locales/es-ES.json';
+// const messages = {
+//   'en': messages_en,
+//   'es': messages_es,
+// };
+import getIntl from 'utils/getIntl';
 
 // ============================================== //
 
 export default function App() {
   const { state, dispatch } = useStore();
   const { LOCALE } = getCurrentLocale();
+  const { intl, messages } = getIntl(LOCALE);
+  console.log('TRANSLATIONS:', messages);
 
   // TRAILING SLASH OPTIONS:
   // 1. <Redirect from="/:url*(/+)" to={route.path.slice(0, -1)} />
@@ -45,7 +49,8 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <IntlProvider locale={LOCALE} messages={messages[state.locale]}>
+      {/*<IntlProvider locale={LOCALE} messages={messages[LOCALE]} textComponent={React.Fragment}>*/}
+      <RawIntlProvider value={intl}>
         <Helmet
           titleTemplate={`%s${pageTitles.appName}`}
           defaultTitle="CV: Justin Rankin"
@@ -58,6 +63,8 @@ export default function App() {
         </Helmet>
         <Sidebar />
         <main>
+          <IntlTest />
+          {/*
           <Switch>
             {' '}
             cvbnm,mnb+YT
@@ -72,9 +79,11 @@ export default function App() {
             ))}
             <Redirect from="/" to="/" />
           </Switch>
+          */}
         </main>
         <Global styles={cssGlobal} />
-      </IntlProvider>
+      </RawIntlProvider>
+      {/*</IntlProvider>*/}
     </React.Fragment>
   );
 }

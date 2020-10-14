@@ -1,6 +1,4 @@
 {
-  "app": "-------------------------------------------------------------",
-  "app.title": "CV / Curriculum Vitae :: Justin Blair Rankin",
   "words": "-------------------------------------------------------------",
   "words.Technologies": "Technologies",
   "Sidebar": "-----------------------------------------------------------",
@@ -42,19 +40,15 @@
       "url": "languages"
     }
   ],
-  "Contact": {
-    "title": "CONTACT",
-    "_end": "-----------------------------------------------"
-  },
-  "Profile": {
-    "title": "PROFILE",
-    "text": [
-      "Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.",
-      "Study, testing, and adoption of new technologies, coding best practices, and design trends, ensure projects are modern and future-proofed.",
-      "University education in design and communication, provide additional perspective to development, product structure, UX and design."
-    ],
-    "_end": "-----------------------------------------------"
-  },
+  "Contact": "-----------------------------------------------------------",
+  "Contact.title": "CONTACT",
+  "Profile": "-----------------------------------------------------------",
+  "Profile.title": "PROFILE",
+  "Profile.text": [
+    "Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.",
+    "Study, testing, and adoption of new technologies, coding best practices, and design trends, ensure projects are modern and future-proofed.",
+    "University education in design and communication, provide additional perspective to development, product structure, UX and design."
+  ],
   "Technologies": "---------------------------------------------------------",
   "Technologies.title": "TECHNOLOGIES",
   "Technologies.proficient": "Proficient",

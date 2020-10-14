@@ -21,6 +21,9 @@ const store = createStore({ /* reducer, */ initialState });
 
 // ============================================== //
 
+// NEEDED ??
+import { fullBrowserVersion } from 'react-device-detect';
+
 const MOUNT_NODE = document.getElementById('app');
 
 const render = () => {

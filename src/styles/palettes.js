@@ -1,4 +1,12 @@
 export const palettes = {
+  'cv': {
+    colors: [
+      '#363636', // dark grey
+      '#a8886a', // aqua
+      '#b7efcd', // light green pastel
+      '#ffbcbc', // rose
+    ],
+  },
   'standard': {
     url: 'https://colorhunt.co/palette/191620',
     colors: [

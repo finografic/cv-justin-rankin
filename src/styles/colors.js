@@ -3,7 +3,7 @@ import { lighten, darken, mix } from 'polished';
 import { palettes } from './palettes';
 
 export const getPalette = (name) => palettes[name].colors;
-export const base = getPalette('standard');
+export const base = getPalette('cv');
 
 export const baseColors = {
   // ADJUST

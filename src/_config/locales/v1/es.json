@@ -1,0 +1,254 @@
+{
+  "words": "-------------------------------------------------------------",
+  "words.Technologies": "Tecnologías",
+  "Sidebar": "-----------------------------------------------------------",
+  "Sidebar.nav.list": [
+    {
+      "label": "PERFIL",
+      "url": "profile"
+    },
+    {
+      "label": "TECNOLOGÍAS",
+      "url": "technologies"
+    },
+    {
+      "label": "PRINCIPIOS",
+      "url": "principles"
+    },
+    {
+      "label": "EXPERIENCIA LABORAL",
+      "url": "work-experience"
+    },
+    {
+      "label": "EDUCACIÓN UNIVERSITARIA",
+      "url": "education"
+    },
+    {
+      "label": "MI CONFIGURACIÓN",
+      "url": "my-stack"
+    },
+    {
+      "label": "EJEMPLOS DE PROYECTOS",
+      "url": "example-projects"
+    },
+    {
+      "label": "CONECTADO VÍA ESTUDIO",
+      "url": "connected-study"
+    },
+    {
+      "label": "IDIOMAS",
+      "url": "languages"
+    }
+  ],
+  "Contact": "-----------------------------------------------------------",
+  "Contact.title": "CONTACTO",
+  "Profile": "-----------------------------------------------------------",
+  "Profile.title": "PERFIL",
+  "Profile.text": [
+    "Más de 10 años de experiencia internacional en desarrollo frontend y back-end, centrado en sitios web mobile-first, dashboards y sistemas de administración CMS, servicios API RESTful, SaaS, SEO y diseño UX.",
+    "Siempre estudiando, probando y integrando nuevas tecnologías, codifique con mejores prácticas y las tendencias de diseño, para asegúrese que los proyectos sean modernos y estén preparados para futuro.",
+    "Educación universitaria en diseño y comunicación, ofrece una perspectiva adicional al desarrollo, estructura de producto, y la experiencia de usuario y el diseño."
+  ],
+  "Technologies": "---------------------------------------------------------",
+  "Technologies.title": "TECNOLOGÍAS",
+  "Technologies.proficient": "NIVEL AVANZADO",
+  "Technologies.proficient.list": [
+    "Node.js",
+    "React",
+    "Javascript: vanilla + ES6",
+    "PHP",
+    "MongoDB",
+    "MySQL",
+    "HTML5",
+    "CSS3 + SASS",
+    "CSS3 animations",
+    "RESTful services",
+    "SEO",
+    "Git",
+    "Linux Terminal"
+  ],
+  "Technologies.experienced": "NIVEL MEDIO",
+  "Technologies.experienced.list": [
+    "AngularJS v6",
+    "TypeScript",
+    "GraphQL",
+    "Ruby",
+    "Webpack",
+    "SysOps (Linux server)",
+    "AWS",
+    "Jenkins",
+    "Docker",
+    "i18n",
+    "OAuth",
+    "JWT",
+    "Google Analytics",
+    "Markdown"
+  ],
+  "Principles": "-----------------------------------------------------------",
+  "Principles.title": "PRINCIPIOS",
+  "Principles.list": [
+    "Estructura de equipo con framework SCRUM ágil",
+    "Suite Atlassian: JIRA, Confluence, Bitbucket",
+    "Buenas prácticas, convenciones de nomenclatura, linting",
+    "Variables, funciones y nombres de archivo simánticos",
+    "Incluir en el código: comentarios, anotaciones y TODOs",
+    "Código, módulos y componentes reutilizable",
+    "Projectos con potencia de aumetación a prueba de futuro",
+    "Estructuras de proyectos ordenadas y estandarizadas",
+    "UX limpio con función evidente y reducción de clics"
+  ],
+  "Connected": "-----------------------------------------------------------",
+  "Connected.title": "CONECTADO VÍA ESTUDIO",
+  "Connected.text": "Actualizaciones de frameworks, noticias sobre violaciones de seguridad y las decisiones políticas que afectan a la industria tecnológica, artículos sobre el diseño superior y las tendencias UX; incluso la cultura pop, todos afectan la forma de como pienso en mi proceso de desarrollo y código, y por lo tanto, me mantengo conectado al día.",
+  "Connected.resources": "Recursos para continuar ser conectado :",
+  "Connected.list": [
+    { "label": "Podcasts: ej. \"Syntax\" con Wes Bos" },
+    { "label": "github.com" },
+    { "label": "Medium" },
+    { "label": "alligator.io" },
+    { "label": "dev.to" },
+    { "label": "stackoverflow.com" },
+    { "label": "codesandbox.io" },
+    { "label": "caniuse.com" },
+    { "label": "csstricks.com" },
+    { "label": "webdesignerdepot.com" },
+    { "label": "awwwards.com" }
+  ],
+  "Experience": "-----------------------------------------------------------",
+  "Experience.title": "EXPERIENCIA LABORAL",
+  "Experience.list": [
+    {
+      "company": "PANGEALAND SL / exoticca.com",
+      "url": "https://exoticca.com",
+      "position": "Senior full-stack Developer",
+      "time": "2019 - 2018",
+      "location": "Barcelona, España",
+      "text": [
+        "Desarrollo back-end y mantenimiento del dashboard interno de la empresa utilizado por más de 50 empleados, en múltiples departamentos. Además de responder a las solicitudes de Jira, a menudo tomaba una iniciativa personal, identificando posibles mejoras y agregando nuevas funcionalidades.",
+        "Desarrollo de clientes front-end y servicios API, incluyendo un refactorización de proyectos grandes para preparar clientes y servidores poder agregar locales según la expansión del mercado global."
+      ],
+      "technologies": "Node.js, Javacript vanilla + ES6/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps."
+    },
+    {
+      "company": "DIGITAL DIMENSION ESPAÑA / ECONOCOM",
+      "url": "https://www.econocom.com/en",
+      "position": "Full-stack Developer / Diseñador UX + UI",
+      "time": "2016 - 2017",
+      "location": "Barcelona, España",
+      "text": [
+        "Desarrollo de aplicaciones para usuario y servidor de aplicaciones para usuario (que sirve a Francia y España), incluida la integración de múltiples servicios API, analizando las respuestas JSON para mostrar en React. Flujo de trabajo dentro del marco dinámico del equipo SCRUM.",
+        "Diseño, refactor y mejora de UX de la parte front-end del dashboard."
+      ],
+      "technologies": "Node.js, React, Javacript vanilla + ES6/Babel, Docker, RESTful API services, SASS."
+    },
+    {
+      "company": "70 MAIN STREET STUDIOS",
+      "url": "http://70mainstreet.com",
+      "position": "Front-end Developer / Diseñador UX + UI",
+      "time": "2015 - 2016",
+      "location": "Toronto, Canadá",
+      "text": [
+        "Desarrollo, diseño y UX de sitios web. Componentes codificados Angular para integración en productos existentes. Diseño, desarrollo y pruebas de newsletters e-mail.",
+        "Colaboración fluida en equipo a través de Slack, JIRA y GitLab.",
+        "Clientes internacionales: Scotiabank, TD Bank, Rogers, Nickelodeon."
+      ],
+      "technologies": "Node.js, Javascript vanilla + ES6/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins."
+    },
+    {
+      "company": "APPLE UK y ESPAÑA",
+      "url": "https://www.apple.com/es",
+      "position": "Full-stack developer, soporte técnico y ventas",
+      "time": "2010 - 2012",
+      "location": "Barcelona, España",
+      "text": [
+        "Promovido al equipo de IT, por mi iniciativa de codificar la nueva aplicación de seguimiento de llamadas, desde la posición inicial de soporte técnico y ventas.",
+        "La nueva aplicación inicialmente fue diseñada para uso personal, reemplazando la herramienta existente con una de diseño de UX superior, mejorando la velocidad del flujo de trabajo y proporcionando estadísticas adicionales sobre llamadas y pedidos. La gerencia decidió adoptar la aplicación para el uso de más de 300 empleados en el Black Friday (el mayor volumen del año).",
+        "Los gerentes del equipo ahora tenían acceso a datos y estadísticas importantes, que anteriormente no estaban disponibles."
+      ],
+      "technologies": "PHP, CSS3, Javacript vanilla + jQuery, MySQL"
+    },
+    {
+      "company": "METROPOLIS MEDIA GROUP SL",
+      "url": "http://metropolismedia.us",
+      "position": "Full-stack developer, diseñador, gerente de proyecto",
+      "time": "2003 - 2014",
+      "location": "Barcelona, España",
+      "text": [
+        "Contratista regular y confiable para diseño y desarrollo front-end y back-end, diseño UX y gestión de productos. Maquetación y diseño de una revista mensual de estilo de vida lujoso."
+      ],
+      "technologies": "PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps"
+    }
+  ],
+  "Education": "------------------------------------------------------------",
+  "Education.title": "EDUCACIÓN UNIVERSITARIA",
+  "Education.university": {
+    "name": "Ontario College of Art and Design University (OCADU)",
+    "url": "https://www.ocadu.ca/"
+  },
+  "Education.diploma": "Diseño, Dirección de Arte Publicitario.",
+  "Education.location": "Toronto, Canadá",
+  "Education.text": "Programa multidisciplinar basado en principios de diseño, diseño gráfico, multimedia, comunicación, publicidad. Centrarse en el pensamiento crítico, el desarrollo conceptual y la colaboración.",
+  "Projects": "-------------------------------------------------------------",
+  "Projects.title": "EJEMPLOS DE PROYECTOS",
+  "Projects.list": [
+    {
+      "name": "CV Personal",
+      "text": [
+        "curriculum vitae diseñado y desarrollado como aplicación de página singular en React. Optimizada para dispositivos móviles. Multi-locale (EN + ES), y posibilidad de descargar versión PDF en ambos idiomas."
+      ]
+    },
+    {
+      "name": "NodeJS + PM2 manager de crons",
+      "text": [
+        "programación de crons con horarios legibles por humanos, categorización opcional, y desplazamiento de tiempo por lotes. Registros y sugerencias para evitar trabajos simultáneos y reducir la carga de CPU del servidor."
+      ]
+    },
+    {
+      "name": "Call Tracker",
+      "text": [
+        "aplicación de intranet para call centers. Almacenamiento de datos de metadatos de llamadas, información del cliente, datos de ventas y estado de oportunidad, utilizados para el seguimiento de llamadas y pedidos. Informes de rendimiento - equipo e individuos. Estadísticas en directo para concursos de incentivos de ventas, etc."
+      ]
+    },
+    {
+      "name": "Plataforma CMS personalizada",
+      "text": [
+        "instalación y configuración ligera y fácil. Dispone al cliente una experiencia administrativa más personalizada y una alternativa simplificada en comparación con otras plataformas CMS."
+      ]
+    },
+    {
+      "name": "Social Feed Agregada",
+      "text": [
+        "para sitio portafolio, combinando publicaciones a través de varias cuentas de redes sociales a través de conexiones a los API asociados, creando un solo social feed unificado, con apariencia personalizada. Datos tirados en caché / base de datos para una carga rápida."
+      ]
+    },
+    {
+      "name": "Tienda online",
+      "text": [
+        "desarrollado y diseñado en la era pre-Shopify. Front-end: shopping cart, enviar a un amigo, pagar con PayPal. Back-end: através de un CMS personalizado (mencionado arriba) dispone de administrar las colecciones, descuentos de varios tipos."
+      ]
+    }
+  ],
+  "Languages": "------------------------------------------------------------",
+  "Languages.title": "IDIOMAS",
+  "Languages.list": [
+    { "language": "Inglés", "level": "lengua materna" },
+    { "language": "Castellano", "level": "fluido, hablado y escrito" },
+    { "language": "Català", "level": "bàsic, parlat i escrit" }
+  ],
+  "Stack": "---------------------------------------------------------------",
+  "Stack.title": "CONFIGURACIÓN PERSONAL",
+  "Stack.list": [
+    "Linux Kubuntu",
+    "MacOS",
+    "VSCode",
+    "Node.js",
+    "Node SASS",
+    "Babel",
+    "MongoDB",
+    "Postman",
+    "ESLint",
+    "Prettier",
+    "ZSH shell"
+  ],
+  "": "--------------------------------------------------------------------"
+}

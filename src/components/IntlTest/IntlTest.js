@@ -86,7 +86,7 @@ function IntlTest(props) {
         </FormattedMessage>
         */}
       <h2>
-        *<FormattedMessage id={messages.test2} />*
+        <FormattedMessage id={messages.app.title} />
       </h2>
 
       {/*<FormattedMessage id="Profile">{(profile) => <strong>{profile}</strong>}</FormattedMessage>*/}

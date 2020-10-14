@@ -11,6 +11,7 @@ import { routes, pageTitles } from '_config';
 // import Header from 'components/Header';
 // import Footer from 'components/Footer';
 import Sidebar from 'components/Sidebar';
+//import CV from 'containers/CV';
 import IntlTest from 'components/IntlTest';
 
 // STYLES
@@ -24,14 +25,6 @@ import { cssGlobal } from 'styles/global';
 // LOCALES - INTL
 import { getCurrentLocale } from 'store';
 import { IntlProvider, RawIntlProvider } from 'react-intl';
-// import locale_en from 'react-intl/locale-data/en';
-// import locale_es from 'react-intl/locale-data/es';
-// import messages_en from '_config/locales/en-US.json';
-// import messages_es from '_config/locales/es-ES.json';
-// const messages = {
-//   'en': messages_en,
-//   'es': messages_es,
-// };
 import getIntl from 'utils/getIntl';
 
 // ============================================== //
@@ -59,11 +52,11 @@ export default function App() {
           }}>
           <html lang={LOCALE} />
           <title>{pageTitles.appName} (DEFAULT)</title>
-          <meta name="description" content="CV / Curriculum Vitae :: Justin Blair Rankin" />
+          <meta name="description" content={messages.title} />
         </Helmet>
         <Sidebar />
         <main>
-          <IntlTest />
+          {/*<IntlTest />*/}
           {/*
           <Switch>
             {' '}

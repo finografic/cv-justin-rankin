@@ -1,8 +1,7 @@
 {
-  "test": "This is a test",
-  "test2": "This is a test2",
-  "app": "-------------------------------------------------------------",
-  "app.title": "CV / Curriculum Vitae :: Justin Blair Rankin",
+  "app": {
+    "title": "CV / Curriculum Vitae :: Justin Blair Rankin"
+  },
   "words": "-------------------------------------------------------------",
   "words.Technologies": "Technologies",
   "Sidebar": "-----------------------------------------------------------",

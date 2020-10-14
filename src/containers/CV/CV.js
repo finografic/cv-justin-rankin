@@ -7,11 +7,11 @@ import ButtonLocale from 'components/ButtonLocale';
 
 // SECTIONS
 import CVHeader from './sections/CVHeader';
-// import Contact from './sections/Contact';
+import Contact from './sections/Contact';
 import Profile from './sections/Profile';
 import Education from './sections/Education';
 import Languages from './sections/Languages';
-// import Technologies from "./sections/Technologies";
+import Technologies from './sections/Technologies';
 import Principles from './sections/Principles';
 import WorkExperience from './sections/WorkExperience';
 import ExampleProjects from './sections/ExampleProjects';
@@ -61,9 +61,7 @@ export default function CV(props) {
           <div className={state.localeTransition === true && 'locale-transition'}>
             <Row className={`padded-${isPadded}`}>
               <Col xs={12} sm={12} md={5} lg={4} xl={4} className="col">
-                {/*
                 <Contact />
-                */}
                 <Profile />
                 <Principles className="hide-md-down" />
                 <MyStack className="hide-md-down" />
@@ -72,9 +70,7 @@ export default function CV(props) {
                 <Languages className="hide-md-down" />
               </Col>
               <Col xs={12} sm={12} md={7} lg={8} xl={8} className="col">
-                {/*
                 <Technologies />
-                */}
                 <Principles className="hide-md-up" />
                 <WorkExperience />
                 <Education className="hide-md-up" />

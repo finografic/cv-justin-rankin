@@ -16,9 +16,8 @@
       "url": "technologies"
     }
   ],
-  "Contact": {
-    "title": "CONTACT",
-    "_end": "-----------------------------------------------"
+  "CONTACT": {
+    "title": "CONTACT"
   },
   "PROFILE": {
     "title": "PROFILE",
@@ -29,7 +28,7 @@
     ],
     "_end": "-----------------------------------------------"
   },
-  "Technologies": {
+  "TECHNOLOGIES": {
     "title": "TECHNOLOGIES",
     "proficient": {
       "title": "Proficient",
@@ -48,25 +47,27 @@
         "Git",
         "Linux Terminal"
       ]
+    },
+    "experienced": {
+      "title": "Experienced",
+      "list": [
+        "AngularJS v6",
+        "TypeScript",
+        "GraphQL",
+        "Ruby",
+        "Webpack",
+        "SysOps (Linux server)",
+        "AWS",
+        "Jenkins",
+        "Docker",
+        "i18n",
+        "OAuth",
+        "JWT",
+        "Google Analytics",
+        "Markdown"
+      ]
     }
   },
-  "Technologies.experienced": "Experienced",
-  "Technologies.experienced.list": [
-    "AngularJS v6",
-    "TypeScript",
-    "GraphQL",
-    "Ruby",
-    "Webpack",
-    "SysOps (Linux server)",
-    "AWS",
-    "Jenkins",
-    "Docker",
-    "i18n",
-    "OAuth",
-    "JWT",
-    "Google Analytics",
-    "Markdown"
-  ],
   "PRICIPLES": {
     "title": "PRINCIPLES",
     "list": [

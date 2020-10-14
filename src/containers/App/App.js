@@ -54,7 +54,7 @@ export default function App() {
           <title>{pageTitles.appName} (DEFAULT)</title>
           <meta name="description" content={messages.title} />
         </Helmet>
-        <Sidebar />
+        {/*<Sidebar />*/}
         <main>
           <CV />
           {/*<IntlTest />*/}

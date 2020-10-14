@@ -10,11 +10,11 @@ import CVHeader from './sections/CVHeader';
 // import Contact from './sections/Contact';
 import Profile from './sections/Profile';
 import Education from './sections/Education';
-// import Languages from './sections/Languages';
+import Languages from './sections/Languages';
 // import Technologies from "./sections/Technologies";
 import Principles from './sections/Principles';
-// import WorkExperience from "./sections/WorkExperience";
-// import ExampleProjects from "./sections/ExampleProjects";
+import WorkExperience from './sections/WorkExperience';
+import ExampleProjects from './sections/ExampleProjects';
 import Connected from './sections/Connected';
 import MyStack from './sections/MyStack';
 
@@ -69,13 +69,12 @@ export default function CV(props) {
                 <MyStack className="hide-md-down" />
                 <Connected className="hide-md-down" />
                 <Education className="hide-md-down" />
-                {/*
                 <Languages className="hide-md-down" />
-                */}
               </Col>
               <Col xs={12} sm={12} md={7} lg={8} xl={8} className="col">
                 {/*
                 <Technologies />
+                */}
                 <Principles className="hide-md-up" />
                 <WorkExperience />
                 <Education className="hide-md-up" />
@@ -83,7 +82,6 @@ export default function CV(props) {
                 <ExampleProjects />
                 <Connected className="hide-md-up" />
                 <Languages className="hide-md-up" />
-                */}
               </Col>
             </Row>
           </div>

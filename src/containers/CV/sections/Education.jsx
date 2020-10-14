@@ -4,10 +4,6 @@ import { FormattedMessage } from 'react-intl';
 import getIntl from 'utils/getIntl';
 import { GoLinkExternal } from "react-icons/go";
 
-// DEPRECATED: ALL @fortawesome/FontAwesome on npmjs.com EXPIRED !!
-// NEW: SVG VERSIONS (SVGs are still FontAwesome v5)
-// import { ReactComponent as IconExternalLinkAlt } from 'assets/icons/external-link-alt.svg';
-
 export default function Education (props) {
 
   const { messages: { EDUCATION } } = getIntl();
@@ -15,8 +11,7 @@ export default function Education (props) {
   return (
     <Element name="education">
       <section  {...props} className={`${props.className} section-education`}>
-
-      <h2><FormattedMessage id={EDUCATION.title} /></h2>
+        <h2><FormattedMessage id={EDUCATION.title} /></h2>
         <p>
           <strong>
             <a href={EDUCATION.university.url} target="_blank" rel="noopener noreferrer">

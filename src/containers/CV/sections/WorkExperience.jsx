@@ -1,44 +1,37 @@
 import React from 'react';
 import { Element} from 'react-scroll';
 import { FormattedMessage } from 'react-intl';
-
-// DEPRECATED: ALL @fortawesome/FontAwesome on npmjs.com EXPIRED !!
-// NEW: SVG VERSIONS (SVGs are still FontAwesome v5)
-import { ReactComponent as IconExternalLinkAlt } from 'assets/icons/external-link-alt.svg';
+import getIntl from 'utils/getIntl';
+import { GoLinkExternal } from "react-icons/go";
 
 export default function WorkExperience (props) {
+
+  const { messages: { EXPERIENCE, words } } = getIntl();
 
   return (
     <Element name="work-experience">
       <section  {...props} className={`${props.className} section-work-experience`}>
-        <h2><FormattedMessage id="Experience.title" /></h2>
-        <p>
-          <FormattedMessage id="Experience.list">
-            {(jobs)=>{
-              var output = [];
-              jobs.forEach((job, index) => {
-                output.push( <h3>
-                              <a href={job.url} target="_blank" rel="noopener noreferrer">
-                                {job.company}<IconExternalLinkAlt className="icon-www" />
-                              </a>
-                            </h3>);
-                output.push(<strong>{job.position}</strong>);
-                output.push(<br />);
-                output.push(<i>{job.time} / {job.location}</i>);
-                output.push(<br />);
-                job.text.forEach((p, index) => {
-                  // TEXT ARRAY -> PARAGRAPHS
-                  output.push(<div>{p}</div>);
-                });
-                output.push(<div style={{marginBottom:'15px'}}>
-                              <strong><FormattedMessage id="words.Technologies" />: </strong>
-                              {job.technologies}
-                            </div>);
-              });
-              return output;
-            }}
-          </FormattedMessage>
-        </p>
+      <h2><FormattedMessage id={EXPERIENCE.title} /></h2>
+        {  
+          EXPERIENCE.list.map((job, i) => {
+            return (
+              <p key={i}>
+                <h3>
+                  <a href={job.url} target="_blank" rel="noopener noreferrer">
+                    <FormattedMessage id={job.company} /><GoLinkExternal className="icon-www" /> 
+                  </a>
+                </h3>
+                <strong><FormattedMessage id={job.position} /></strong><br />
+                <i><FormattedMessage id={job.time} /> / <FormattedMessage id={job.location} /></i><br />
+                { job.text.map((paragraph, k) => <div key={k}><FormattedMessage id={job.text[k]} /></div>) }
+                <div style={{marginBottom:'15px'}}>
+                  <strong><FormattedMessage id={words['Technologies']} />: </strong>
+                  <FormattedMessage id={job.technologies} />
+                </div>
+              </p>
+            );
+          })
+        }
       </section>
     </Element>
   )

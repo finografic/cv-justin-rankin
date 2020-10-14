@@ -10,7 +10,7 @@ export default function Principles (props) {
   return (
     <Element name="principles">
       <section {...props} className={`${props.className} section-principles`}>
-      <h2><FormattedMessage id={PRICIPLES.title} /></h2>
+        <h2><FormattedMessage id={PRICIPLES.title} /></h2>
         <ul>
           { PRICIPLES.list.map((text, i) => <li key={i}><FormattedMessage id={PRICIPLES.list[i]} /></li>) }
         </ul>

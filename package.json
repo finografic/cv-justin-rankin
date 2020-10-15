@@ -129,6 +129,7 @@
     "lint-staged": "^10.2.13",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
+    "offline-plugin": "^5.0.7",
     "pre-commit": "^1.2.2",
     "prettier": "^2.1.1",
     "react-app-rewired": "^2.1.6",

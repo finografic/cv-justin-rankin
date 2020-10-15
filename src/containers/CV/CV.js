@@ -8,15 +8,15 @@ import ButtonLocale from 'components/ButtonLocale';
 // SECTIONS
 import CVHeader from './sections/CVHeader';
 import Contact from './sections/Contact';
-import Profile from './sections/Profile';
+import Profile from './sections/Profile'; // OK
 import Education from './sections/Education';
 import Languages from './sections/Languages';
 import Technologies from './sections/Technologies';
-import Principles from './sections/Principles';
+import Principles from './sections/Principles'; // OK
 import WorkExperience from './sections/WorkExperience';
 import ExampleProjects from './sections/ExampleProjects';
 import Connected from './sections/Connected';
-import MyStack from './sections/MyStack';
+import MyStack from './sections/MyStack'; // OK
 
 //----------------------------------------------------------------------------------//
 

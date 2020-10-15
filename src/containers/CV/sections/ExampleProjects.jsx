@@ -13,8 +13,8 @@ export default function ExampleProjects (props) {
         <h2><FormattedMessage id={PROJECTS.title} /></h2>
         { 
           PROJECTS.list.map((text, i) => 
-            <div key={i}>
-              <strong className="accent"><FormattedMessage id={PROJECTS.list[i].name} /></strong>
+            <p key={i}>
+              <strong className="accent"><FormattedMessage id={PROJECTS.list[i].label} /></strong>
               <span> - </span>
               { 
                 // PROJECTS.list[i].text.map((paragraph, k) => <p key={k}>{paragraph}</p>)
@@ -23,8 +23,8 @@ export default function ExampleProjects (props) {
                     || <div>{paragraph}</div>
                 }) 
               }
-              <span className="level"><FormattedMessage id={PROJECTS.list[i].text} /></span>
-            </div>
+              <span><FormattedMessage id={PROJECTS.list[i].text} /></span>
+            </p>
           ) 
         }
       </section>

@@ -1,4 +1,5 @@
-section{
+section {
+  padding: 0!important;
   i {color: $color-text-light;}
 }
 
@@ -56,7 +57,15 @@ section{
 }
 
 .section-my-stack {
-  & div {
+  ul {
+    // @media only screen and (max-width: $break-md) {
+      column-count: 2;
+    // }
+  }
+}
+
+.section-connected {
+  ul {
     // @media only screen and (max-width: $break-md) {
       column-count: 2;
     // }
@@ -149,5 +158,24 @@ section{
     span.level{
       left: 10em;
     }
+  }
+}
+
+// TODO: 1. FIX + CLEANUP + REMOVE IMPORTANTS
+// TODO: 2. REMOVE BOOTSTRAP
+// TODO: 3. PASS ALL CSS TO CSS-IN-JS WITH @emotion
+
+section{
+  h2 {
+    margin-top: 20px!important;
+  }
+  @media only screen and (min-width: $break-xs) {
+    h2 { margin-top: 15px; }
+  }
+  @media only screen and (min-width: $break-md) {
+    h2 { margin-top: 20px; }
+  }
+  @media only screen and (min-width: $break-lg) {
+    h2 { margin-top: 20px; }
   }
 }

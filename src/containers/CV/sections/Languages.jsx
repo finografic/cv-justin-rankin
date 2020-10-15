@@ -1,8 +1,10 @@
-import React from 'react';
+/** @jsx jsx */
 import { Element } from 'react-scroll';
 import { FormattedMessage } from 'react-intl';
 import { useStore, getCurrentLocale } from 'store';
 import getIntl from 'utils/getIntl';
+import { jsx } from '@emotion/core';
+import { styles } from './Principles.styles';
 
 export default function Languags (props) {
 
@@ -14,7 +16,7 @@ export default function Languags (props) {
     <Element name="languages">
       <section {...props} className={`${props.className} section-languages ${LOCALE}`} >
         <h2><FormattedMessage id={LANGUAGES.title} /></h2>
-        <ul>
+        <ul className="no-bullets">
           { 
             LANGUAGES.list.map((text, i) => 
               <li key={i}>

@@ -22,8 +22,8 @@
   "PROFILE": {
     "title": "PROFILE",
     "text": [
-      "Over 10 years of international experience in front-end and back-end development, focussing on mobile-first websites, dashboard and CMS back-office systems, RESTful API services, SaaS, SEO and UX design.",
-      "Study, testing, and adoption of new technologies, coding best practices, and design trends, ensure projects are modern and future-proofed.",
+      "Over 10 years of international experience in front-end and back-end development, focusing on mobile-first websites, dashboard and CMS systems, SaaS, RESTful API services, SEO and UX design.",
+      "Study, testing, and adoption of new technologies, coding best practices, and design trends ensure projects are modern, cross-platform, readable by other developers, and scalable.",
       "University education in design and communication, provide additional perspective to development, product structure, UX and design."
     ],
     "_end": "-----------------------------------------------"
@@ -71,32 +71,28 @@
   "PRICIPLES": {
     "title": "PRINCIPLES",
     "list": [
-      "SCRUM agile team framework",
-      "Atlassian suite: JIRA, Confluence, Bitbucket",
-      "Best practices, naming-conventions, linting",
-      "Symantic variable, function, and file names",
-      "Code comments, annotations and TODOs",
-      "Reusable code, modules, and components",
-      "Product future-proofing",
-      "Tidy, standardized, project structures",
-      "Clear UX with evident function. Reduce clicks!"
+      { "label": "Agile workflow:", "text": "scrum + sprint" },
+      { "label": "Clean + functional code:", "text": "linting, unit-testing" },
+      { "label": "Reusable code:", "text": "components, classes, functions" },
+      { "label": "Semantic naming:", "text": "variables, functions, files" },
+      { "label": "Future proofing:", "text": "smart code for project scalability" },
+      { "label": "Documentation:", "text": "annotations, TODOs, README.md" },
+      { "label": "Atlassian suite:", "text": "JIRA, Confluence, Bitbucket" },
+      { "label": "Optimised UX:", "text": " clear function, reduced number of clicks" }
     ]
   },
   "CONNECTED": {
-    "title": "CONNECTED STUDY",
-    "text": "Following framework updates, news on security breaches and political decisions affecting the tech industry, articles on top design and UX trends; even pop culture, all affect how I think about my development process and code, and thus stay connected.",
-    "resources": "Resources used to study + connect :",
+    "title": "STAYING CONNECTED",
+    "text": "Framework updates, news on security breaches and political decisions affecting the tech industry, articles on design and UX trends - all form my development process.",
+    "resources": "Resources used to study + stay connected:",
     "list": [
-      "Podcasts: ie. \"Syntax\" with Wes Bos",
+      "Podcasts",
       "github.com",
-      "Medium",
-      "alligator.io",
+      "alligatori.io",
       "dev.to",
-      "stackoverflow.com",
-      "codesandbox.io",
+      "Medium",
       "caniuse.com",
       "csstricks.com",
-      "webdesignerdepot.com",
       "awwwards.com"
     ]
   },
@@ -104,55 +100,64 @@
     "title": "WORK EXPERIENCE",
     "list": [
       {
-        "company": "PANGEALAND S.L. / exoticca.com",
-        "url": "https://www.exoticca.com",
-        "position": "Senior full-stack Developer",
-        "time": "2019 - 2018",
+        "company": "eDreams ODIGEO / edreams.com",
+        "url": "https://www.edreams.com",
+        "position": "Front-end Developer",
+        "time": "2019 - 2020",
         "location": "Barcelona, Spain",
         "text": [
-          "Back-end development and maintenance of company internal dashboard used by 50+ employees, across multiple departments. Apart from response to Jira requests, often took personal initiative, both identifying possible improvements, and adding new functionality.",
-          "Development of front-end client and APIs, including a big project refactor to prepare client and server for adding locales as per global market expansion."
+          "Front-end development for hotel + flight (packaged) booking of the eDreams website;  desktop and mobile versions. New feature development, integration, and planning (by our pod and product owner, and requests from other company pods). Refactoring, unit-testing, debugging, and code reviews - all realised within a compete continuous integration framework/workflow, using: Scrum, QA, sanity, Jira, Git, Jenkins CI, PR code-reviews."
         ],
-        "technologies": "Node.js, Javacript vanilla + ES6/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps."
+        "technologies": "Javacript vanilla + ES6, Docker, Node.js, RESTful API services, Java, Mocha, Gherkins/Cucumber, SASS, Java, JSP."
       },
       {
-        "company": "DIGITAL DIMENSION SPAIN / ECONOCOM",
+        "company": "Pangealand S.L. / exoticca.com",
+        "url": "https://www.exoticca.com",
+        "position": "Senior full-stack Developer",
+        "time": "2018 - 2019",
+        "location": "Barcelona, Spain",
+        "text": [
+          "Development and full refactor of front-end B2B client and corresponding APIs, giving the ability to add multiple locales for  global market expansion. Back-end development and maintenance of internal company dashboard used by 50+ employees, across multiple departments. New features and Improvements to data display, functionality, and UX."
+        ],
+        "technologies": "Javacript ES6, AngularJS, Node.js, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, SysOps."
+      },
+      {
+        "company": "Econocom Spain / Digital Dimension",
         "url": "https://www.econocom.com/en",
         "position": "Full-stack Developer / UX + UI Designer",
         "time": "2016 - 2017",
         "location": "Barcelona, Spain",
         "text": [
-          "Front-end and back-end development of SaaS application (serving France and Spain), including integration of multiple service APIs, parsing the JSON response data to display in React. Fluid workflow within dynamic SCRUM team framework.",
-          "Dashboard design, project refactor and UX improvement."
+          "Front-end and back-end development of SaaS application (serving France and Spain), to administer y follow order made by company clients. Data from multiple service APIs, parsed and displayed with Redux + React. Team workflow with agile scrum framework."
         ],
-        "technologies": "Node.js, React, Javacript vanilla + ES6/Babel, Docker, RESTful API services, SASS."
+        "technologies": "React, Javacript ES6, Node.js, Docker, RESTful API services, SASS."
       },
       {
-        "company": "70 MAIN STREET STUDIOS",
+        "company": "70 Main Street Studios",
         "url": "http://www.70mainstreet.com",
         "position": "Front-end Developer / UX + UI Designer",
         "time": "2015 - 2016",
         "location": "Toronto, Canada",
         "text": [
-          "Development, design, and UX of websites. Coded Angular components for integration into existing products.  Newsletter design, development, and testing.",
-          "Fluid team collaboration via Slack, JIRA, and GitLab.",
-          "International clients: Scotiabank, TD Bank, Rogers, Nickelodeon."
+          "Development, design, and UX of websites and web components for major international clients, including: Scotiabank, TD Bank, Rogers, Nickelodeon. Newsletter and marketing design, development, and testing.  Fluid team collaboration via Slack, JIRA, and GitLab."
         ],
-        "technologies": "Node.js, Javascript vanilla + ES6/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins."
+        "technologies": "Javascript ES6, jQuery, AngularJS, jQuery, Ruby, SASS, MySQL, Jenkins CI."
       },
+
       {
-        "company": "APPLE UK & SPAIN",
+        "company": "Apple UK & Spain",
         "url": "https://www.apple.com/uk",
         "position": "Full-stack developer, Tech Support + Sales",
         "time": "2010 - 2012",
         "location": "Barcelona, Spain",
         "text": [
           "Promoted to IT team, for my initiative to code new call-tracker app, from initial position of tech support and sales.",
-          "The new app was initially meant for personal use, replacing the existing tool that of one with superior UX design, improving workflow speed, and providing additional statistics on calls and orders.",
-          "Management decided to adopt the app for use by 300+ employees on Black Friday (highest volume of the year). Important data and statistics, previously unavailable, were now accessible to team managers."
+          "The app was initially code to aid personal workflow, replacing the existing tool to improve efficiency, and provide additional info.",
+          "Management decided to adopt the app for use by 300+ employees on Black Friday (highest volume of the year). Important data and statistics, previously unavailable, now available for team managers."
         ],
-        "technologies": "PHP, CSS3, Javacript vanilla + jQuery, MySQL"
+        "technologies": "PHP, Javacript (vanilla + jQuery), CSS MySQL"
       },
+
       {
         "company": "METROPOLIS MEDIA GROUP SL",
         "url": "http://metropolismedia.us",
@@ -162,7 +167,7 @@
         "text": [
           "Trusted regular contractor for front-end and back-end web development, UX design, and product management. Print and layout design of an upscale monthly lifestyle magazine."
         ],
-        "technologies": "PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps"
+        "technologies": "PHP, Javacript (vanilla + jQuery), SASS, MySQL, SysOps, WordPress."
       }
     ]
   },
@@ -180,40 +185,33 @@
     "title": "EXAMPLE PROJECTS",
     "list": [
       {
-        "name": "Personal CV",
-        "text": [
-          "curriculum vitae designed and developed as mobile-first single-page app in React.",
-          "Multi-locale (EN + ES) with option to download PDF version in either language."
-        ]
-      },
-      {
-        "name": "NodeJS + PM2 cron manager",
+        "label": "NodeJS + PM2 cron manager",
         "text": [
           "cron job admin with human-readable schedules, optional categorization and batch time-offset. Logs and suggestions to avoid simultaneous jobs and lower server CPU load."
         ]
       },
       {
-        "name": "Call Tracker",
+        "label": "Call Tracker",
         "text": [
-          "intranet application for call centres. Data storage of call metadata, customer info, sales data, and opportunity status, used for follow-up calls. Performance reports - team and individuals. Live stats for sales incentive contests etc."
+          "intranet application for call centres. Data storage of call metadata, customer info, sales data, and opportunity status. Performance reports - team and individuals. Live stats for sales incentive contests etc."
         ]
       },
       {
-        "name": "Custom CMS platform",
+        "label": "Custom CMS platform",
         "text": [
           "lightweight, effortless installation and configuration. Offering the client a more tailored administrative experience, and a streamlined alternative to other CMS platforms."
         ]
       },
       {
-        "name": "Aggregated Social Feed",
+        "label": "Online store",
         "text": [
-          "for portfolio site, combining posts from various social media accounts, parsing data from connected APIs, creating a single, unified feed, with custom look and feel. Data cached in database for fast loading."
+          "developed and designed pre Shopify etc era. Front-end: shopping cart, share with a friend, PayPal gateway. Back-end: customized CMS platform (mentioned above) provide the ability to administer and categorize items, and apply discounts."
         ]
       },
       {
-        "name": "Online store",
+        "label": "Personal CV",
         "text": [
-          "developed and designed without any framework, in an era before Shopify etc. Front-end: shopping cart, share with a friend, PayPal gateway. Back-end: customized CMS platform (mentioned above) provided the ability to administer item info categorize items into collections, and discount system."
+          "curriculum vitae designed and developed as mobile-first, single-page app in React.  Multi-locale (EN + ES) with option to download PDF version."
         ]
       }
     ]
@@ -228,19 +226,6 @@
   },
   "STACK": {
     "title": "MY STACK",
-    "list": [
-      "Linux Kubuntu",
-      "MacOS",
-      "VSCode",
-      "Node.js",
-      "Node SASS",
-      "Babel",
-      "MongoDB",
-      "Postman",
-      "ESLint",
-      "Prettier",
-      "ZSH shell"
-    ]
-  },
-  "": "--------------------------------------------------------------------"
+    "list": ["Linux Kubuntu", "ZSH shell", "Node.js", "VSCode", "ESLint", "lint-staged (git)", "Babel", "Postman"]
+  }
 }

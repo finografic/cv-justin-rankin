@@ -57,7 +57,8 @@ export const cssLayout = css`
   }
 
   section {
-    padding: ${layout.padding} calc(${layout.padding} * 1.5);
+    /* padding: ${layout.padding} calc(${layout.padding} * 1.5); */
+    padding: ${layout.padding} 0 !important;
   }
 
   article {

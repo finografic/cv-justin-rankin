@@ -8,6 +8,7 @@ import 'sanitize.css/reduce-motion.css';
 import { css } from '@emotion/core';
 import { colors } from './colors';
 import { layout, cssLayout } from './layout';
+import { cssCustom } from './custom';
 
 export const cssGlobal = css`
   ${cssLayout} /* layout imported in */
@@ -48,6 +49,8 @@ export const cssGlobal = css`
   fieldset {
     border: 0;
   }
+
+  ${cssCustom} /* custom styles and overrides imported in */
 
   /* NEW !! pointer-events */
   /* NO SAFARI SUPPORT ??? */

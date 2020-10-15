@@ -8,8 +8,9 @@ import { useStore } from 'store';
 import { routes, pageTitles } from '_config';
 
 // LAYOUT
+import Sidebar from 'components/Sidebar';
 import CV from 'containers/CV';
-// import IntlTest from 'components/IntlTest';
+import IntlTest from 'components/IntlTest';
 
 // STYLES
 import { Global, jsx } from '@emotion/core';
@@ -17,9 +18,11 @@ import { cssGlobal } from 'styles/global';
 
 // ============================================== //
 
+// INTL FROM v1.9.0 CV
+
 // LOCALES - INTL
 import { getCurrentLocale } from 'store';
-import { RawIntlProvider } from 'react-intl';
+import { IntlProvider, RawIntlProvider } from 'react-intl';
 import getIntl from 'utils/getIntl';
 
 // ============================================== //

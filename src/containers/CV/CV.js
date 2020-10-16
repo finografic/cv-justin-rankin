@@ -48,8 +48,7 @@ export default function CV(props) {
                           <CVHeader />
                         </Col>
                         <Col xs={12} sm={12} md={7} lg={8} xl={8} className="col">
-                          <ButtonLocale />
-                          {/* LATER USE */}
+                          {/*<ButtonLocale />*/}
                         </Col>
                       </Row>
                     </Col>

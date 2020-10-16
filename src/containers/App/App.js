@@ -9,15 +9,13 @@ import { routes, pageTitles } from '_config';
 
 // LAYOUT
 import CV from 'containers/CV';
-import IntlTest from 'components/IntlTest';
+import IntlTest from 'components/IntlTest'; // COMMENTING-OUT DISABLES CSS
 
 // STYLES
 import { Global, jsx } from '@emotion/core';
 import { cssGlobal } from 'styles/global';
 
 // ============================================== //
-
-// INTL FROM v1.9.0 CV
 
 // LOCALES - INTL
 import { getCurrentLocale } from 'store';
@@ -27,7 +25,7 @@ import getIntl from 'utils/getIntl';
 // ============================================== //
 
 export default function App() {
-  // const { state, dispatch } = useStore();
+  const { state, dispatch } = useStore();
   const { LOCALE } = getCurrentLocale();
   const { intl, messages } = getIntl(LOCALE);
   console.log('TRANSLATIONS:', messages);

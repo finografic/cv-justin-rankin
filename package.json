@@ -50,7 +50,7 @@
     "preinstall": "npm run checknodenpmversions",
     "prebuild": "npm run clean:build",
     "pretest": "npm run test:clean && npm run lint",
-    "predeploy": "rimraf ./build && npm run build && GENERATE_SOURCEMAP=false react-app-rewired build",
+    "predeploy": "rm -fr ./build && npm run build && GENERATE_SOURCEMAP=false react-app-rewired build",
     "···················": "··················································",
     "                   ": "                                                  "
   },

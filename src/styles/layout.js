@@ -35,8 +35,8 @@ export const cssLayout = css`
   #app {
     display: flex;
     min-height: 100%;
-    background: ${colors.greyXXLight};
-    /* background: ${colors.light.b};*/
+    /* background: ${colors.greyXXLight}; */
+    background: #ffffff;
   }
 
   main {
@@ -67,7 +67,7 @@ export const cssLayout = css`
 
   header,
   footer {
-    padding: ${layout.padding} calc(${layout.padding} * 1.5);
+    /* padding: ${layout.padding} calc(${layout.padding} * 1.5); */
     z-index: 0;
     div > div > div {
       display: flex;

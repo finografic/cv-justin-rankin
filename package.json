@@ -29,7 +29,6 @@
     "clean:all": "npm run test:clean && npm run clean:build",
     "·········· DEPLOY": "··················································",
     "deploy": "npm run build && NODE_DEBUG=gh-pages gh-pages --dist build",
-    "deploy:full": "npm run build && npm run deploy",
     "deploy:help": "gh-pages --help",
     "·········· LINTING": "··················································",
     "lint": "esw --color",

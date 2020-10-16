@@ -35,35 +35,38 @@
       "list": [
         "Node.js",
         "React",
-        "Javascript: vanilla + ES6",
-        "PHP",
+        "ES6",
+        "Javascript (vanilla)",
+        "Mocha",
         "MongoDB",
         "MySQL",
+        "RESTful services",
+        "SEO",
+        "Linux CLI",
+        "PHP",
         "HTML5",
         "CSS3 + SASS",
         "CSS3 animations",
-        "RESTful services",
-        "SEO",
-        "Git",
-        "Linux Terminal"
+        "Git"
       ]
     },
     "experienced": {
       "title": "Experienced",
       "list": [
-        "AngularJS v6",
+        "AngularJS",
         "TypeScript",
         "GraphQL",
-        "Ruby",
-        "Webpack",
-        "SysOps (Linux server)",
-        "AWS",
-        "Jenkins",
+
         "Docker",
-        "i18n",
+        "Webpack",
+        "SysOps (Linux)",
+        "AWS",
+        "Jenkins CI",
+        "Gherkins + Cucumber",
+        "Google Analytics",
         "OAuth",
         "JWT",
-        "Google Analytics",
+        "i18n",
         "Markdown"
       ]
     }

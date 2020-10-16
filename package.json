@@ -181,7 +181,8 @@
     "url": "https://github.com/finografic/cv-justin-rankin.git"
   },
   "proxy": "http://localhost:3000",
-  "homepage": "https://finografic.github.io/cv-justin-rankin",
+  "homepage": "https://finografic.github.io",
+  "homepage-BAK": "https://finografic.github.io/cv-justin-rankin",
   "keywords": [
     "CV",
     "curriculum vitae",

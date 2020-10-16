@@ -7,15 +7,15 @@ import ButtonLocale from 'components/ButtonLocale';
 
 // SECTIONS
 import CVHeader from './sections/CVHeader';
-import Contact from './sections/Contact';
+import Contact from './sections/Contact'; // OK
 import Profile from './sections/Profile'; // OK
-import Education from './sections/Education';
-import Languages from './sections/Languages';
-import Technologies from './sections/Technologies';
+import Education from './sections/Education'; // OK
+import Languages from './sections/Languages'; // OK
+import Technologies from './sections/Technologies'; // OK
 import Principles from './sections/Principles'; // OK
-import WorkExperience from './sections/WorkExperience';
-import ExampleProjects from './sections/ExampleProjects';
-import Connected from './sections/Connected';
+import WorkExperience from './sections/WorkExperience'; // OK
+import ExampleProjects from './sections/ExampleProjects'; // OK
+import Connected from './sections/Connected'; // OK
 import MyStack from './sections/MyStack'; // OK
 
 //----------------------------------------------------------------------------------//

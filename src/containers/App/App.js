@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { Suspense } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+// import { Switch, Route, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useStore } from 'store';
 
@@ -8,9 +8,6 @@ import { useStore } from 'store';
 import { routes, pageTitles } from '_config';
 
 // LAYOUT
-// import Header from 'components/Header';
-// import Footer from 'components/Footer';
-import Sidebar from 'components/Sidebar';
 import CV from 'containers/CV';
 import IntlTest from 'components/IntlTest';
 
@@ -24,13 +21,13 @@ import { cssGlobal } from 'styles/global';
 
 // LOCALES - INTL
 import { getCurrentLocale } from 'store';
-import { IntlProvider, RawIntlProvider } from 'react-intl';
+import { RawIntlProvider } from 'react-intl';
 import getIntl from 'utils/getIntl';
 
 // ============================================== //
 
 export default function App() {
-  const { state, dispatch } = useStore();
+  // const { state, dispatch } = useStore();
   const { LOCALE } = getCurrentLocale();
   const { intl, messages } = getIntl(LOCALE);
   console.log('TRANSLATIONS:', messages);
@@ -42,7 +39,6 @@ export default function App() {
 
   return (
     <React.Fragment>
-      {/*<IntlProvider locale={LOCALE} messages={messages[LOCALE]} textComponent={React.Fragment}>*/}
       <RawIntlProvider value={intl}>
         <Helmet
           titleTemplate={`%s${pageTitles.appName}`}
@@ -77,7 +73,6 @@ export default function App() {
         </main>
         <Global styles={cssGlobal} />
       </RawIntlProvider>
-      {/*</IntlProvider>*/}
     </React.Fragment>
   );
 }

@@ -9,7 +9,7 @@ import { routes, pageTitles } from '_config';
 
 // LAYOUT
 import CV from 'containers/CV';
-// import IntlTest from 'components/IntlTest';
+import IntlTest from 'components/IntlTest'; // COMMENTING-OUT DISABLES CSS
 
 // STYLES
 import { Global, jsx } from '@emotion/core';

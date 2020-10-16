@@ -7,11 +7,11 @@ import ButtonLocale from 'components/ButtonLocale';
 
 // SECTIONS
 import CVHeader from './sections/CVHeader';
-import Contact from './sections/Contact';
+import Contact from './sections/Contact'; // OK
 import Profile from './sections/Profile'; // OK
 import Education from './sections/Education'; // OK
 import Languages from './sections/Languages'; // OK
-import Technologies from './sections/Technologies';
+import Technologies from './sections/Technologies'; // OK
 import Principles from './sections/Principles'; // OK
 import WorkExperience from './sections/WorkExperience'; // OK
 import ExampleProjects from './sections/ExampleProjects'; // OK
@@ -49,7 +49,6 @@ export default function CV(props) {
                         </Col>
                         <Col xs={12} sm={12} md={7} lg={8} xl={8} className="col">
                           {/*<ButtonLocale />*/}
-                          {/* LATER USE */}
                         </Col>
                       </Row>
                     </Col>

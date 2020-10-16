@@ -5,7 +5,6 @@
   "words": {
     "Technologies": "Technologies"
   },
-  "Sidebar": "-----------------------------------------------------------",
   "Sidebar.nav.list": [
     {
       "label": "Profile",
@@ -25,8 +24,7 @@
       "Over 10 years of international experience in front-end and back-end development, focusing on mobile-first websites, dashboard and CMS systems, SaaS, RESTful API services, SEO and UX design.",
       "Study, testing, and adoption of new technologies, coding best practices, and design trends ensure projects are modern, cross-platform, readable by other developers, and scalable.",
       "University education in design and communication, provide additional perspective to development, product structure, UX and design."
-    ],
-    "_end": "-----------------------------------------------"
+    ]
   },
   "TECHNOLOGIES": {
     "title": "TECHNOLOGIES",

@@ -18,7 +18,7 @@ export default function Principles (props) {
           { 
             PRICIPLES.list.map((text, i) => 
               <li key={i}>
-                <strong><FormattedMessage id={PRICIPLES.list[i].label} /></strong>
+                <label><FormattedMessage id={PRICIPLES.list[i].label} /></label>
                 <span className="colon"> </span>
                 <FormattedMessage id={PRICIPLES.list[i].text} />
               </li>

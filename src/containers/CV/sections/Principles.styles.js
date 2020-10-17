@@ -10,9 +10,11 @@ export const styles = css`
       &:before {
         content: none !important;
       }
-      strong {
+      label {
+        font-weight: 700;
         color: ${colors.b};
         margin-right: 0.33em;
+        margin-bottom: 0; /* TEMP FIX/OVERRIDE */
       }
     }
   }

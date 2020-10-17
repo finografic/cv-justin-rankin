@@ -229,7 +229,7 @@
     ]
   },
   "STACK": {
-    "title": "CONFIG / STACK PERSONAL",
+    "title": "CONFIG + STACK PERSONAL",
     "list": ["Linux Kubuntu", "ZSH shell", "Node.js", "VSCode", "ESLint", "lint-staged (git)", "Babel", "Postman"]
   }
 }

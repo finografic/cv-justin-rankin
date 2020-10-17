@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { colors } from 'styles/colors';
 
 export const styles = css`
   ul {
@@ -7,7 +8,12 @@ export const styles = css`
     li {
       text-indent: 0;
       &:before {
-      content: none !important;
+        content: none !important;
+      }
+      strong {
+        color: ${colors.b};
+        margin-right: 0.33em;
+      }
     }
   }
 `;

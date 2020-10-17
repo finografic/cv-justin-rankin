@@ -2,6 +2,15 @@
 import { css } from '@emotion/core';
 
 export const cssCustom = css`
+  main {
+    p,
+    p span,
+    li,
+    li span,
+    .pill {
+      font-size: 14px;
+    }
+  }
   /*
    ul.no-bullets {
     list-style-position: outside;

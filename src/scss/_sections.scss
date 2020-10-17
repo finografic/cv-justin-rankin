@@ -4,7 +4,9 @@ section {
 }
 
 .section-contact{
-  ul { line-height: 2; }
+  ul { line-height: 2;
+    li{ font-size: 16px!important; }
+  }
   a{
     color: $color-accent!important;
     @media only screen and (min-width: $break-xs) {font-weight: 700;}
@@ -120,7 +122,7 @@ section {
   .icon-www{
     position: absolute;
     margin-left: 6px!important;
-    margin-top: 5px!important;
+    /*margin-top: 5px!important;*/
     * {color: $color-text-light!important;}
   }
 }

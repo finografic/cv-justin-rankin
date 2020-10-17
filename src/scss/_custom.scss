@@ -5,7 +5,6 @@
 
 /*********************************** // OVERRIDES & CORE // ***************************************/
 
-
 .app{
   background: #ffffff;
 }
@@ -236,7 +235,7 @@ ul.no-bullets{
     @media only screen and (min-width: $break-xs) {padding-left:15px;}
     @media only screen and (min-width: $break-sm+1) {padding-left:15px;}
     @media only screen and (min-width: $break-md) {padding-left:30px;}
-    @media only screen and (min-width: 900px) {padding-left:50px;}
+    @media only screen and (min-width: 900px) {padding-left:40px;}
     @media only screen and (min-width: $break-lg) {padding-left:50px;}
     @media only screen and (min-width: $break-xl) {padding-left:50px;}
   }
@@ -309,10 +308,11 @@ ul.no-bullets{
 .icon-www{
   display: inline-block;
   margin-left: 12px!important;
-  margin-top: 4px!important;
+  margin-top: 2px!important;
   margin-right: 12px;
   text-align: center;
-  font-size: 14px!important;
+  font-size: 16px!important;
+  vertical-align: middle !important;
   transition: opacity 250ms ease;
   opacity: 0.5;
   * { color: $color-text-xlight!important; }

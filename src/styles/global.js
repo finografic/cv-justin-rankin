@@ -17,7 +17,8 @@ export const cssGlobal = css`
     color: ${colors.a};
   }
   h2 {
-    color: ${colors.dark.b};
+    color: ${colors.b};
+    font-weight: 700;
   }
   h3 {
     color: ${colors.light.a};

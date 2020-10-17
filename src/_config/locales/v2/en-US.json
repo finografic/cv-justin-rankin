@@ -84,7 +84,7 @@
   "CONNECTED": {
     "title": "STAYING CONNECTED",
     "text": "Framework updates, news on security breaches and political decisions affecting the tech industry, articles on design and UX trends - all form my development process.",
-    "resources": "Resources used to study + stay connected:",
+    "listSubtitle": "Resources used to study + stay connected:",
     "list": [
       "Podcasts",
       "github.com",

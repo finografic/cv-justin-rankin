@@ -12,7 +12,7 @@ export default function StudySources (props) {
       <section {...props} className={`${props.className} section-connected`}>
         <h2><FormattedMessage id={CONNECTED.title} /></h2>
         <p><FormattedMessage id={CONNECTED.text} /></p>
-        <p><i><FormattedMessage id={CONNECTED.resources} /></i></p>
+        <p><i><FormattedMessage id={CONNECTED.listSubtitle} /></i></p>
         <ul>
           { CONNECTED.list.map((text, i) => <li key={i}><FormattedMessage id={CONNECTED.list[i]} /></li>) }
         </ul>

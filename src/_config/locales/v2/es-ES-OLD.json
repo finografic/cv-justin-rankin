@@ -58,7 +58,7 @@
   "Technologies.proficient.list": [
     "Node.js",
     "React",
-    "Javascript: vanilla + ES6",
+    "Javascript: ES6 + vanilla",
     "PHP",
     "MongoDB",
     "MySQL",
@@ -130,7 +130,7 @@
         "Desarrollo back-end y mantenimiento del dashboard interno de la empresa utilizado por más de 50 empleados, en múltiples departamentos. Además de responder a las solicitudes de Jira, a menudo tomaba una iniciativa personal, identificando posibles mejoras y agregando nuevas funcionalidades.",
         "Desarrollo de clientes front-end y servicios API, incluyendo un refactorización de proyectos grandes para preparar clientes y servidores poder agregar locales según la expansión del mercado global."
       ],
-      "technologies": "Node.js, Javacript vanilla + ES6/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps."
+      "technologies": "Node.js, Javascript ES6 + vanilla/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps."
     },
     {
       "company": "DIGITAL DIMENSION ESPAÑA / ECONOCOM",
@@ -142,7 +142,7 @@
         "Desarrollo de aplicaciones para usuario y servidor de aplicaciones para usuario (que sirve a Francia y España), incluida la integración de múltiples servicios API, analizando las respuestas JSON para mostrar en React. Flujo de trabajo dentro del marco dinámico del equipo SCRUM.",
         "Diseño, refactor y mejora de UX de la parte front-end del dashboard."
       ],
-      "technologies": "Node.js, React, Javacript vanilla + ES6/Babel, Docker, RESTful API services, SASS."
+      "technologies": "Node.js, React, Javascript ES6 + vanilla/Babel, Docker, RESTful API services, SASS."
     },
     {
       "company": "70 MAIN STREET STUDIOS",
@@ -155,7 +155,7 @@
         "Colaboración fluida en equipo a través de Slack, JIRA y GitLab.",
         "Clientes internacionales: Scotiabank, TD Bank, Rogers, Nickelodeon."
       ],
-      "technologies": "Node.js, Javascript vanilla + ES6/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins."
+      "technologies": "Node.js, Javascript ES6 + vanilla/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins."
     },
     {
       "company": "APPLE UK y ESPAÑA",
@@ -168,7 +168,7 @@
         "La nueva aplicación inicialmente fue diseñada para uso personal, reemplazando la herramienta existente con una de diseño de UX superior, mejorando la velocidad del flujo de trabajo y proporcionando estadísticas adicionales sobre llamadas y pedidos. La gerencia decidió adoptar la aplicación para el uso de más de 300 empleados en el Black Friday (el mayor volumen del año).",
         "Los gerentes del equipo ahora tenían acceso a datos y estadísticas importantes, que anteriormente no estaban disponibles."
       ],
-      "technologies": "PHP, CSS3, Javacript vanilla + jQuery, MySQL"
+      "technologies": "PHP, CSS3, Javascript vanilla + jQuery, MySQL"
     },
     {
       "company": "METROPOLIS MEDIA GROUP SL",
@@ -179,7 +179,7 @@
       "text": [
         "Contratista regular y confiable para diseño y desarrollo front-end y back-end, diseño UX y gestión de productos. Maquetación y diseño de una revista mensual de estilo de vida lujoso."
       ],
-      "technologies": "PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps"
+      "technologies": "PHP, WordPress, Javascript vanilla + jQuery, SASS, MySQL, SysOps"
     }
   ],
   "Education": "------------------------------------------------------------",

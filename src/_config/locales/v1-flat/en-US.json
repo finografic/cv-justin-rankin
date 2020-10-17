@@ -33,7 +33,7 @@
   "Technologies.proficient.list": [
     "Node.js",
     "React",
-    "Javascript: vanilla + ES6",
+    "Javascript: ES6 + vanilla",
     "PHP",
     "MongoDB",
     "MySQL",
@@ -105,7 +105,7 @@
         "Back-end development and maintenance of company internal dashboard used by 50+ employees, across multiple departments. Apart from response to Jira requests, often took personal initiative, both identifying possible improvements, and adding new functionality.",
         "Development of front-end client and APIs, including a big project refactor to prepare client and server for adding locales as per global market expansion."
       ],
-      "technologies": "Node.js, Javacript vanilla + ES6/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps."
+      "technologies": "Node.js, Javascript ES6 + vanilla/Babel, Angular, MongoDB, MySQL, RESTful API services, PHP, SASS, AWS, and server SysOps."
     },
     {
       "company": "DIGITAL DIMENSION SPAIN / ECONOCOM",
@@ -117,7 +117,7 @@
         "Front-end and back-end development of SaaS application (serving France and Spain), including integration of multiple service APIs, parsing the JSON response data to display in React. Fluid workflow within dynamic SCRUM team framework.",
         "Dashboard design, project refactor and UX improvement."
       ],
-      "technologies": "Node.js, React, Javacript vanilla + ES6/Babel, Docker, RESTful API services, SASS."
+      "technologies": "Node.js, React, Javascript ES6 + vanilla/Babel, Docker, RESTful API services, SASS."
     },
     {
       "company": "70 MAIN STREET STUDIOS",
@@ -130,7 +130,7 @@
         "Fluid team collaboration via Slack, JIRA, and GitLab.",
         "International clients: Scotiabank, TD Bank, Rogers, Nickelodeon."
       ],
-      "technologies": "Node.js, Javascript vanilla + ES6/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins."
+      "technologies": "Node.js, Javascript ES6 + vanilla/Babel + jQuery, Angular, Ruby, SASS, MySQL, Jenkins."
     },
     {
       "company": "APPLE UK & SPAIN",
@@ -143,7 +143,7 @@
         "The new app was initially meant for personal use, replacing the existing tool that of one with superior UX design, improving workflow speed, and providing additional statistics on calls and orders.",
         "Management decided to adopt the app for use by 300+ employees on Black Friday (highest volume of the year). Important data and statistics, previously unavailable, were now accessible to team managers."
       ],
-      "technologies": "PHP, CSS3, Javacript vanilla + jQuery, MySQL"
+      "technologies": "PHP, CSS3, Javascript vanilla + jQuery, MySQL"
     },
     {
       "company": "METROPOLIS MEDIA GROUP SL",
@@ -154,7 +154,7 @@
       "text": [
         "Trusted regular contractor for front-end and back-end web development, UX design, and product management. Print and layout design of an upscale monthly lifestyle magazine."
       ],
-      "technologies": "PHP, WordPress, Javacript vanilla + jQuery, SASS, MySQL, SysOps"
+      "technologies": "PHP, WordPress, Javascript vanilla + jQuery, SASS, MySQL, SysOps"
     }
   ],
   "Education": "------------------------------------------------------------",

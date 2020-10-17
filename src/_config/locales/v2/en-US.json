@@ -108,7 +108,7 @@
         "text": [
           "Front-end development for hotel + flight (packaged) booking of the eDreams website; desktop and mobile versions. New feature development, integration, and planning (by our pod and product owner, and requests from other company pods). Refactoring, unit-testing, debugging, and code reviews - all realised within a compete continuous integration framework/workflow, using: Scrum, QA, sanity, Jira, Git, Jenkins CI, PR code-reviews."
         ],
-        "technologies": "Javacript vanilla + ES6, Docker, Node.js, RESTful API services, Java, Mocha, Gherkins/Cucumber, SASS, Java, JSP."
+        "technologies": "Javascript ES6 + vanilla, Docker, Node.js, RESTful API services, Java, Mocha, Gherkins/Cucumber, SASS, Java, JSP."
       },
       {
         "company": "Pangealand S.L. / exoticca.com",
@@ -119,7 +119,7 @@
         "text": [
           "Development and full refactor of front-end B2B client and corresponding APIs, giving the ability to add multiple locales for  global market expansion. Back-end development and maintenance of internal company dashboard used by 50+ employees, across multiple departments. New features and Improvements to data display, functionality, and UX."
         ],
-        "technologies": "Javacript vanilla + ES6, AngularJS, Node.js, MongoDB, MySQL, RESTful API services, PHP, SASS/CSS, AWS, SysOps."
+        "technologies": "Javascript ES6 + vanilla, AngularJS, Node.js, MongoDB, MySQL, RESTful API services, PHP, SASS/CSS, AWS, SysOps."
       },
       {
         "company": "Econocom Spain / Digital Dimension",
@@ -130,7 +130,7 @@
         "text": [
           "Front-end and back-end development of SaaS application (serving France and Spain), to administer y follow order made by company clients. Data from multiple service APIs, parsed and displayed with Redux + React. Team workflow with agile scrum framework."
         ],
-        "technologies": "React, Javacript ES6, Node.js, Docker, RESTful API services, SASS."
+        "technologies": "React, Javascript ES6 + vanilla, Node.js, Docker, RESTful API services, SASS."
       },
       {
         "company": "70 Main Street Studios",
@@ -141,7 +141,7 @@
         "text": [
           "Development, design, and UX of websites and web components for major international clients, including: Scotiabank, TD Bank, Rogers, Nickelodeon. Newsletter and marketing design, development, and testing.  Fluid team collaboration via Slack, JIRA, and GitLab."
         ],
-        "technologies": "Javascript ES6, AngularJS, jQuery, Ruby, SASS/CSS, MySQL, Jenkins CI."
+        "technologies": "Javascript ES6 + vanilla, AngularJS, jQuery, Ruby, SASS/CSS, MySQL, Jenkins CI."
       },
 
       {
@@ -155,11 +155,11 @@
           "The app was initially code to aid personal workflow, replacing the existing tool to improve efficiency, and provide additional info.",
           "Management decided to adopt the app for use by 300+ employees on Black Friday (highest volume of the year). Important data and statistics, previously unavailable, now available for team managers."
         ],
-        "technologies": "Javacript (vanilla + jQuery), PHP, CSS, MySQL"
+        "technologies": "Javascript vanilla + jQuery, PHP, CSS, MySQL."
       },
 
       {
-        "company": "METROPOLIS MEDIA GROUP SL",
+        "company": "Metropolis Media Group SL",
         "url": "http://metropolismedia.us",
         "position": "Full-stack developer, Designer, Project Manager",
         "time": "2003 - 2014",
@@ -167,7 +167,7 @@
         "text": [
           "Trusted regular contractor for front-end and back-end web development, UX design, and product management. Print and layout design of an upscale monthly lifestyle magazine."
         ],
-        "technologies": "Javacript (vanilla + jQuery), PHP, SASS/CSS, MySQL, SysOps, WordPress."
+        "technologies": "Javascript vanilla + jQuery, PHP, SASS/CSS, MySQL, SysOps, WordPress."
       }
     ]
   },

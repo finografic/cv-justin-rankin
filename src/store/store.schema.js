@@ -1,6 +1,6 @@
 export default {
   time: new Date(),
-  locale: 'es',
+  locale: 'en',
   localeTransition: false,
   name: 'Justin',
   unreadCount: 1,

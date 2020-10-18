@@ -50,6 +50,7 @@ export default function Layout(props) {
                   <Suspense fallback={routeLoading(state)}>
                     <Router>
                       <CV path="/" />
+                      <CV path="cv-justin-rankin" />
                       {/*<Redirect from="/" to="/cv" />*/}
                     </Router>
                     {/*

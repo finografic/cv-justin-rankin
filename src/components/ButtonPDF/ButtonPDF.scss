@@ -1,0 +1,102 @@
+@import "../../scss/variables";
+
+
+.btn-download-pdf {
+  opacity: 1;
+  transition: all 500ms ease;
+  background: $color-success;
+  &:hover, &:active{ background: darken($color-success, 7%); }
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 1.85em;
+  height: 1.8em;
+  position: fixed;
+  overflow: visible;
+  z-index: 99;
+  box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.4);
+
+  @media only screen and (min-width: $break-xs) {
+    bottom: 18px; right: 18px;
+    transform: scale(0.9);
+  }
+  @media only screen and (min-width: $break-sm+1) {
+    bottom: 25px; right: 23px;
+    transform: scale(0.9);
+    background: $color-success;
+  }
+  @media only screen and (min-width: $break-md) {
+    bottom: 25px; right: 23px;
+    transform: scale(0.9);
+  }
+  @media only screen and (min-width: $break-md) {
+    bottom: 30px; right: 30px;
+    transform: scale(0.9);
+  }
+  @media only screen and (min-width: $break-lg) {
+    bottom: 30px; right: 30px;
+    transform: scale(0.9);
+  }
+
+  img{
+    width: 0.95em;
+    position: absolute;
+    margin-left: -0.033em;
+    margin-top: 0.08em;;
+  }
+
+  *{ color: #ffffff; }
+  .svg-inline--fa {
+    display: block;
+    /*
+    &:nth-of-type(1) {
+      font-size: 1em;
+      margin-top: -0.4em;
+      margin-left: 0.05em;
+    }
+    &:nth-of-type(2) {
+      font-size: 0.5em;
+      margin-top: 2px;
+    }
+    */
+    position: absolute;
+    font-size: 1.1em;
+    margin-top: -0.033em;
+    margin-left: 0.05em;
+  }
+
+  .fa-check{
+    margin-top: 0.04em;
+    margin-left: 0.02em;
+  }
+
+  .fa-check-circle{
+    margin-top: 0em;
+    margin-left: 0.033em;
+  }
+
+  /*
+  strong {
+    font-size: 0.4em;
+    margin-left: 0.15em;
+    bottom: 0.25em;
+    position: absolute;
+  }
+  */
+}
+
+// body.sidebar-open{
+//   .btn-download-pdf {
+//     opacity: 0;
+//   }
+// }
+
+
+.app.sidebar-true .btn-download-pdf {
+  opacity: 0;
+  button {cursor: default!important; }
+}

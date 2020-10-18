@@ -8,8 +8,8 @@ import { useStore } from 'store';
 import { routes, pageTitles } from '_config';
 
 // LAYOUT
-import Sidebar from 'components/Sidebar';
-import CV from 'containers/CV';
+// import Sidebar from 'components/Sidebar';
+import Layout from 'containers/Layout';
 import IntlTest from 'components/IntlTest'; // COMMENTING-OUT DISABLES CSS
 
 // STYLES
@@ -51,9 +51,7 @@ export default function App() {
           <title>{pageTitles.appName} (DEFAULT)</title>
           <meta name="description" content={messages.title} />
         </Helmet>
-        <main>
-          <CV />
-        </main>
+        <Layout />
         <Global styles={cssGlobal} />
       </RawIntlProvider>
     </React.Fragment>

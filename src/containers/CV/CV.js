@@ -1,6 +1,8 @@
 /**
  * NOTE: NEW! 'React' import no longer required for scope, if not directly used.
  * This is a new feature as of REACT ^16.14.0
+ *
+ * UPDATE; stopped working !!?? 'React' imported again, until fixed
  */
 import React, { useState } from 'react';
 import { useStore } from 'store';
@@ -10,7 +12,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ButtonLocale from 'components/ButtonLocale';
 
 // SECTIONS
-import { Header } from 'components/Header';
+import { Header } from 'components/HeaderSticky';
 import {
   Contact,
   Profile,
@@ -46,20 +48,7 @@ const CV = (props) => {
             {({ style, isSticky, distanceFromTop }) => (
               <div>
                 {handleSticky(isSticky)}
-                <div style={{ ...style, zIndex: 10 }}>
-                  <Row>
-                    <Col lg={12} className="col">
-                      <Row>
-                        <Col xs={12} sm={12} md={5} lg={4} xl={4} className="col" style={{ paddingRight: '0px' }}>
-                          <Header />
-                        </Col>
-                        <Col xs={12} sm={12} md={7} lg={8} xl={8} className="col">
-                          {/*<ButtonLocale />*/}
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                </div>
+                <Header style={style} />
               </div>
             )}
           </Sticky>

@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { useStore, getCurrentLocale } from 'store';
 import getIntl from 'utils/getIntl';
 import { jsx } from '@emotion/core';
-import { styles } from './Principles.styles';
+import { styles } from './Languages.css';
 
 export default function Languags (props) {
 

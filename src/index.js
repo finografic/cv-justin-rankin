@@ -5,7 +5,6 @@ import 'react-app-polyfill/stable'; // NECESSARY ??
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import * as serviceWorker from 'serviceWorker';
 
@@ -31,11 +30,9 @@ const render = () => {
   const App = require('./containers/App').default;
   ReactDOM.render(
     <StoreProvider store={store}>
-      <Router>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
-      </Router>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
     </StoreProvider>,
     MOUNT_NODE,
   );

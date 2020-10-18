@@ -44,7 +44,7 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: ['.'],
+        root: ['./src'],
         alias: {
           'scss': './src/scss',
           'assets': './src/assets',

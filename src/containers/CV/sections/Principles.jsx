@@ -4,7 +4,7 @@ import { Element } from 'react-scroll';
 import { FormattedMessage } from 'react-intl';
 import getIntl from 'utils/getIntl';
 import { jsx } from '@emotion/core';
-import { styles } from './Principles.styles';
+import { styles } from './Principles.css';
 
 export default function Principles (props) {
 

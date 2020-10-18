@@ -3,7 +3,7 @@ import { Element} from 'react-scroll';
 import { FormattedMessage } from 'react-intl';
 import getIntl from 'utils/getIntl';
 
-export default function Profile(props) {
+const Profile = (props) => {
 
   const { messages: { PROFILE } } = getIntl();
 
@@ -34,4 +34,7 @@ export default function Profile(props) {
       </section>
     </Element>
   )
-}
+};
+
+export default Profile;
+

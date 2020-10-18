@@ -2,7 +2,7 @@
  * NOTE: NEW! 'React' import no longer required for scope, if not directly used.
  * This is a new feature as of REACT ^16.14.0
  */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useStore } from 'store';
 import { Container } from 'react-bootstrap';
 import { Col, Row } from 'react-styled-flexboxgrid';
@@ -11,18 +11,16 @@ import ButtonLocale from 'components/ButtonLocale';
 
 // SECTIONS
 import { Header } from 'components/Header';
-import {
-  Contact,
-  Profile,
-  Education,
-  Languages,
-  Technologies,
-  Principles,
-  WorkExperience,
-  ExampleProjects,
-  Connected,
-  MyStack,
-} from './sections'; // OK
+import Contact from './sections/Contact'; // OK
+import Profile from './sections/Profile'; // OK
+import Education from './sections/Education'; // OK
+import Languages from './sections/Languages'; // OK
+import Technologies from './sections/Technologies'; // OK
+import Principles from './sections/Principles'; // OK
+import WorkExperience from './sections/WorkExperience'; // OK
+import ExampleProjects from './sections/ExampleProjects'; // OK
+import Connected from './sections/Connected'; // OK
+import MyStack from './sections/MyStack'; // OK
 
 //----------------------------------------------------------------------------------//
 

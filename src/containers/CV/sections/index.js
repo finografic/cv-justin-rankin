@@ -1,0 +1,10 @@
+export { default as Contact } from './Contact'; // OK
+export { default as Profile } from './Profile'; // OK
+export { default as Education } from './Education'; // OK
+export { default as Languages } from './Languages'; // OK
+export { default as Technologies } from './Technologies'; // OK
+export { default as Principles } from './Principles'; // OK
+export { default as WorkExperience } from './WorkExperience'; // OK
+export { default as ExampleProjects } from './ExampleProjects'; // OK
+export { default as Connected } from './Connected'; // OK
+export { default as MyStack } from './MyStack'; // OK

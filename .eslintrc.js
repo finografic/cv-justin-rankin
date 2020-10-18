@@ -83,5 +83,7 @@ module.exports = {
     // ...rules,
     ...require('./eslint-config-finografic').rules,
     'import/no-unresolved': 0,
+    'react/jsx-uses-react': 0, // NEW! jsx runtime transform included in REACT ^16.14.0
+    'react/react-in-jsx-scope': 0, // NEW! jsx runtime transform included in REACT ^16.14.0
   },
 };

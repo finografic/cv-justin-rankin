@@ -3,7 +3,7 @@ import { Element } from 'react-scroll';
 import { FormattedMessage } from 'react-intl';
 import getIntl from 'utils/getIntl';
 
-export default function StudySources (props) {
+const Connected = (props) => {
 
   const { messages: { CONNECTED } } = getIntl();
 
@@ -20,3 +20,5 @@ export default function StudySources (props) {
     </Element>
   )
 }
+
+export default Connected;

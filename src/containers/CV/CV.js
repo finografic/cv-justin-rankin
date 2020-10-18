@@ -6,7 +6,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ButtonLocale from 'components/ButtonLocale';
 
 // SECTIONS
-import CVHeader from './sections/CVHeader';
+import { Header } from '../../components/Header';
 import Contact from './sections/Contact'; // OK
 import Profile from './sections/Profile'; // OK
 import Education from './sections/Education'; // OK
@@ -45,7 +45,7 @@ export default function CV(props) {
                     <Col lg={12} className="col">
                       <Row>
                         <Col xs={12} sm={12} md={5} lg={4} xl={4} className="col" style={{ paddingRight: '0px' }}>
-                          <CVHeader />
+                          <Header />
                         </Col>
                         <Col xs={12} sm={12} md={7} lg={8} xl={8} className="col">
                           {/*<ButtonLocale />*/}

@@ -3,9 +3,9 @@ import React from "react";
 import photo from 'assets/img/justin.png';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import { jsx } from '@emotion/core';
-import { styles } from './CVHeader.styles';
+import { styles } from './Header.css';
 
-export default function CVHeader(props) {
+export const Header = (props) => {
 
   return (
     <header className="cv-header" css={styles}>
@@ -21,3 +21,5 @@ export default function CVHeader(props) {
     </header>
   )
 }
+
+// export default Header;

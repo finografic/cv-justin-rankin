@@ -40,7 +40,8 @@
     "lint:watch": "esw --watch --color",
     "lint:watch:fix": "esw --color --fix",
     "lint:staged": "lint-staged",
-    "prettify": "prettier --write .",
+    "prettify:test": "prettier --check  \"src/**/*.js\" \"src/**/*.jsx\"",
+    "prettify:write": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
     "·········· TESTING:": "··················································",
     "test": "react-app-rewired test — env=jsdom",
     "test:jest": "cross-env NODE_ENV=test jest --coverage",
@@ -53,15 +54,6 @@
     "predeploy": "rm -fr ./build && npm run build && GENERATE_SOURCEMAP=false react-app-rewired build",
     "···················": "··················································",
     "                   ": "                                                  "
-  },
-  "scripts-TEST": {
-    "lint:test": "prettier --check  \"src/**/*.js\" \"src/**/*.jsx\"",
-    "lint:write": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
-    "delete-maps": "yarn run delete-map-files && yarn run delete-references-to-map-files",
-    "delete-map-files": "find ./build -name '*.map' -delete",
-    "delete-references-to-map-files": "find ./build -regex '.*\\.\\(js\\|css\\)' -exec sed -i -E '\\/[\\*\\/]#\\ssourceMappingURL=main(\\.[0-9a-f]+)?\\.(css|js)\\.map(\\*\\/)?/g' {} +",
-    "build:finografic": "GENERATE_SOURCEMAP=false react-scripts build && node minify.js && rm finografic.com -fr && cp -r build finografic.com",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",

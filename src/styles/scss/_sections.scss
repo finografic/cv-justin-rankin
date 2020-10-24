@@ -1,6 +1,10 @@
 section {
   padding: 0!important;
   i {color: $color-text-light;}
+  h3, 
+  h3 a {
+    text-transform: none;
+  }
 }
 
 .section-contact{

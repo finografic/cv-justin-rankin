@@ -1,0 +1,250 @@
+@import "../../scss/variables";
+
+.nav-sidebar-wrap{
+  width: 66vw;
+  max-width: 300px;
+}
+
+.nav-sidebar {
+
+  background: #ffffff;
+  padding: 15px 15px 30px 15px;
+  transition: all 250ms ease 0s;
+
+  nav{ padding: 0 20px; }
+
+  h1.nav-title{
+    font-family: Raleway, sans-serif; ; // 100,200,300,400,500,600
+    font-weight: 700; // 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
+    font-size: 22px;
+    padding-top: 9px;
+    padding-bottom: unset;
+    margin-bottom: 0px;
+    &, &:hover, &:active {
+      color: darken($color-text-light,5%)!important;
+      outline: none!important;
+    }
+  }
+
+  h2.nav-title-sub{
+    font-family: Raleway, sans-serif; ; // 100,200,300,400,500,600
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding-top: 4px;
+    padding-bottom: 5px!important;
+    &, &:hover, &:active {
+      color: darken($color-text-light,5%)!important;
+      outline: none!important;
+      background-image: none;
+    }
+  }
+
+  .nav-link {
+    padding: 0.7rem 1rem;
+    padding: 12px 5px;
+    margin: 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600; // 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
+    font-size: 14px;
+    text-transform: uppercase;
+    color: darken($color-accent-light,5%)!important;
+    outline: none!important;
+    &:hover,
+    &:active,
+    &.active {
+      color: $color-text-light!important;
+      background: transparent;
+    }
+  }
+
+  .nav-link-contact{
+      padding: 0.4rem 1rem;
+      padding: 8px 5px;
+      margin: 0px 0px;
+      text-transform: lowercase!important;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600; // 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
+      font-size: 12px;
+      color: $color-accent!important;
+      outline: none!important;
+      &:hover,
+      &:active,
+      &.active {
+        color: $color-text-light!important;
+        outline: none!important;
+        background-image: none;
+      }
+  }
+
+  .nav-link-contact:nth-of-type(1){
+    padding-left: 3px!important;
+  }
+
+  .nav-link-contact:nth-of-type(3){
+    padding-bottom: 32px!important;
+    margin-bottom: 20px!important;
+    background-position: 0% 100%;
+    background-image: linear-gradient(to right, rgba($color-accent,0.33) 30%, transparent 0%);
+    background-size: 6px 2px;
+    background-repeat: repeat-x;
+  }
+
+  .icon-bullet{
+    margin-right: 8px!important;
+  }
+
+}
+
+// SMALL SCREENS (iPhone5 etc...)
+@media only screen and (max-height: 600px) and (max-width: 400px){
+  .nav-sidebar-wrap{
+    width: 85vw!important;
+    max-width: unset;
+  }
+  .nav-sidebar {
+    padding-left: 10px!important;
+    // padding-right: 20px;
+    h1.nav-title{ padding-bottom: 4px!important; padding-top: 10px!important; }
+    h2.nav-title-sub{ padding-top: 0px!important; opacity: 0.66;}
+    .nav-link{ padding: 7px 5px!important; }
+    .nav-link-contact{
+      padding: 5px 5px!important;
+      margin-left: -2px;
+    }
+    .nav-link-contact:nth-of-type(3){
+      padding-bottom: 28px!important;
+      margin-bottom: 20px!important;
+    }
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  @media only screen and (min-width: $break-xs) {top: 20px; right: 20px;}
+  @media only screen and (min-width: $break-sm+1) {top: 20px; right: 20px;}
+  @media only screen and (min-width: $break-md) {top: 2-px; right: 20px;}
+  top: 25px;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  z-index: 9999!important;
+  &,
+  & * {
+    color: $color-text-light;
+    outline: none!important;
+  }
+  opacity: 1;
+  transition: all 500ms ease!important; // NOT WORKING :(
+  &:hover,
+  &:active,
+  &:hover *,
+  &:active *{
+    color: $color-accent-dark!important;
+  }
+  // @media only screen and (min-width: $break-xs) {display: block;}
+  // @media only screen and (min-width: $break-sm) {display: block;}
+  // @media only screen and (min-width: $break-md) {display: none;}
+  // @media only screen and (min-width: $break-lg) {display: none;}
+  // @media only screen and (min-width: $break-xl) {display: none;}
+
+  @media only screen and (min-width: $break-xs) {right: 20px;}
+  @media only screen and (min-width: $break-sm) {right: 20px;}
+  @media only screen and (min-width: $break-md) {right:-25px;}
+  @media only screen and (min-width: $break-lg) {right:-25px;}
+  @media only screen and (min-width: $break-xl) {right:-25px;}
+
+}
+
+.app.sidebar-true .bm-burger-button {
+  opacity: 0;
+  // right: -25px;
+  button {cursor: default!important; }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: transparent!important; // FIX for preloading quirk
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  top: 25px!important;
+  right: 15px!important;
+  width: 24px!important;
+  height: 24px!important;
+  & * { color:lighten($color-text-light,15%)!important; }
+  &:hover *,
+  &:active * { color:$color-accent-light!important; }
+  &, & button{ outline: none!important; }
+}
+
+// .bm-cross {
+//   &, & * { color:lighten($color-text-light,20%)!important; }
+//   &:hover,
+//   &:active,
+//   &:hover *,
+//   &:active *{
+//     color:lighten($color-text-light,20%)!important;
+//   }
+// }
+
+/* Styling of overlay */
+.bm-overlay {
+  // background: rgba(255, 255, 255, 0.85)!important;
+  background: rgba($color-accent-dark, 0.66)!important;
+}
+
+// SMALL SCREENS (iPhone5 etc...)
+@media only screen and (max-height: 600px) and (max-width: $break-sm) {
+  .bm-burger-button{
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+  }
+  .bm-cross-button{
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// .bm-item {
+//   display: inline-block;
+//   text-decoration: none;
+//   margin-bottom: 10px;
+//   color: #d1d1d1;
+//   transition: color 0.2s;
+// }
+
+// .bm-item:hover {
+//   color: white;
+// }
+
+
+/* Color/shape of close button cross */
+// .bm-cross {
+//   background: #bdc3c7;
+// }
+
+/* General sidebar styles */
+// .bm-menu {
+//   background: #f3f3f3;
+//   padding: 2.5em 1.5em 0;
+//   font-size: 1.15em;
+// }
+
+/* Morph shape necessary with bubble or elastic */
+// .bm-morph-shape {
+//   fill: #373a47;
+// }
+
+/* Wrapper for item list */
+// .bm-item-list {
+//   color: #b8b7ad;
+// }
+

@@ -1,7 +1,6 @@
 module.exports = {
   // ================================================ //
   presets: [
-    //'react-app', // NEEDED ??
     [
       '@babel/preset-env',
       {
@@ -14,7 +13,6 @@ module.exports = {
           firefox: '60',
           chrome: '67',
           safari: '11.1',
-          // node: 10,
           node: 'current',
         },
       },
@@ -63,25 +61,12 @@ module.exports = {
       {
         idInterpolationPattern: '[sha512:contenthash:base64:6]',
         extractFromFormatMessageCall: true,
-        // messagesDir: './build/messages',
         extractSourceLocation: true,
         removeDefaultMessage: true,
         ast: true,
       },
     ],
-    // [
-    //   'babel-plugin-root-import',
-    //   {
-    //     'rootPathSuffix': './',
-    //     'rootPathPrefix': '~/',
-    //   },
-    // ],
     ['styled-components'],
-    // ['@babel/plugin-syntax-dynamic-import'],
-    // ['@babel/plugin-transform-arrow-functions'],
     ['@babel/plugin-proposal-class-properties', { 'loose': true }],
-    // ['@babel/plugin-proposal-decorators', { 'legacy': true }],
-    // ['@babel/plugin-proposal-export-default-from'],
-    // ['@babel/plugin-proposal-object-rest-spread'],
   ],
 };

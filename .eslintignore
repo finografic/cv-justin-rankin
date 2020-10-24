@@ -28,13 +28,4 @@ build/
 *-ORIG*
 *-BAK*
 *-bak*
-src/config/
 gist.cms.js
-App-GQL.js
-src/lib/fetch*
-App-GQL.js
-src/lib/state/*
-src/lib/intl/*
-Loading.js
-
-

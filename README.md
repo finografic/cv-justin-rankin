@@ -1,4 +1,4 @@
-# CV Justin Rankin <span style="color:#AAAAAA">(v1.9.0)</span>
+# CV Justin Rankin <span style="color:#AAAAAA">(v1.9.1)</span>
 
 ### Initialize, installing dependencies:
 

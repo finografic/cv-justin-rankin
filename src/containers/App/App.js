@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { useStore } from 'store';
 
 // CONFIG
-import { routes, pageTitles } from '_config';
+import { pageTitles } from '_config';
 
 // LAYOUT
 // import Sidebar from 'components/Sidebar';

@@ -1,12 +1,9 @@
-// import React, { Suspense } from 'react';
 import React from 'react';
-// import { Router, Redirect } from '@reach/router';
 import { Router } from '@reach/router';
 
 import { Col, Row, Container } from 'react-bootstrap';
 import { useStore } from 'store';
 
-// import { routes } from 'config/routes';
 // import { loading, routeLoading } from 'components/Loading';
 import { routeLoading } from 'components/Loading';
 
@@ -40,9 +37,9 @@ export default function Layout() {
     <div className={`app sidebar-${state.sidebar.isOpen}`}>
       <div className="app-body">
         {/*
-        <Suspense fallback={loading()}>
+        <React.Suspense fallback={loading()}>
           <SideBar />
-        </Suspense>
+        </React.Suspense>
         */}
         <main id="page-wrap">
           <RemoveScroll enabled={state.sidebar.isOpen} removeScrollBar={false}>
@@ -68,9 +65,9 @@ export default function Layout() {
         </main>
       </div>
       {/*
-      <Suspense fallback={loading(false)}>
+      <React.Suspense fallback={loading(false)}>
         <Footer />
-      </Suspense>
+      </React.Suspense>
       */}
     </div>
   );

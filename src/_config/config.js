@@ -12,4 +12,3 @@ export const company = {
   logoURL: 'http:/www.test.com/assets/img/logo.png',
 };
 
-export { routes } from './routes';

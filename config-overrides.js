@@ -1,6 +1,3 @@
-// REFERENCE:
-// https://github.com/arackaf/customize-cra/blob/HEAD/api.md#useeslintrcconfigfile
-
 const { override, useBabelRc, useEslintRc, overrideDevServer, watchAll } = require('customize-cra');
 const path = require('path');
 

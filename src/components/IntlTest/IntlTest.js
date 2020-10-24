@@ -1,6 +1,6 @@
 import React from 'react';
 import photo from 'assets/img/justin.png';
-import 'scss/style.scss';
+import 'styles/scss/style.scss';
 
 // NEW, but UNECESSARY with Node v13 ??
 // import '@formatjs/intl-displaynames/dist/locale-data/en';

@@ -44,7 +44,7 @@ module.exports = {
       {
         root: ['./src'],
         alias: {
-          'scss': './src/scss',
+          'scss': './src/styles/scss',
           'assets': './src/assets',
           '_config': './src/_config',
           'config': './src/config',

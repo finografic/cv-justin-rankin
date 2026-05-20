@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.tgz
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Agents
+.agents/
+!.agents/handoff.md
+.codex/
+.claude/
+!.claude/handoff.md
+!.claude/settings.json
+.worktrees/
+**/worktrees/
+
+# IDE
+**/.cursor/**
+!**/.cursor/.gitkeep
+!.cursor/rules/
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Docs
+docs/drafts/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# macOS
+**/.DS_Store
+**Thumbs.db
+Icon?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~

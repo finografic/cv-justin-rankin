@@ -1,40 +1,36 @@
 # @finografic/cv-justin-rankin
 
-> Personal CV — responsive web + print-optimized PDF, built with TypeScript, React, and Vite
+Personal CV for Justin Rankin, built as a responsive React + Vite site with print-optimized PDF output.
 
-## Installation
-
-```bash
-pnpm add @finografic/cv-justin-rankin
-```
-
-## Usage
-
-```typescript
-import {} from '@finografic/cv-justin-rankin';
-```
-
-## Development
+## Setup
 
 ```bash
-# Install dependencies (automatically sets up git hooks)
 pnpm install
-
-# Run in development mode
 pnpm dev
-
-# Build
-pnpm build
-
-# Run tests
-pnpm test:run
-
-# Lint
-pnpm lint
 ```
 
-**Note:** Git hooks are automatically configured on `pnpm install`. See [docs/DEVELOPER_WORKFLOW.md](./docs/DEVELOPER_WORKFLOW.md) for the complete workflow.
+GitHub Pages base path:
 
-## License
+- `/cv-justin-rankin`
+- [https://finografic.github.io/cv-justin-rankin](https://finografic.github.io/cv-justin-rankin)
 
-MIT © [Justin Rankin](https://finografic.github.io/cv-justin-rankin)
+## Content
+
+Edit:
+
+- [src/data/cv-content.ts](./src/data/cv-content.ts)
+
+## Deploy
+
+Push to `main`.
+Pages builds from:
+
+- [.github/workflows/deploy.yml](./.github/workflows/deploy.yml)
+
+## Validate
+
+```bash
+pnpm build
+pnpm lint
+pnpm typecheck
+```

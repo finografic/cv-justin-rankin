@@ -2,7 +2,7 @@
   "name": "@finografic/cv-justin-rankin",
   "type": "module",
   "version": "0.0.0",
-  "description": "Personal CV for Justin Rankin.  Responsive web + print-optimized PDF, built with TypeScript, React, and Vite",
+  "description": "Personal CV for Justin Rankin. Responsive web + print-optimized PDF, built with TypeScript, React, and Vite",
   "homepage": "https://github.com/finografic/cv-justin-rankin",
   "repository": {
     "type": "git",
@@ -23,26 +23,16 @@
   "keywords": [
     "finografic",
     "cv-justin-rankin",
-    "genx:type:library",
-    "library"
+    "cv",
+    "react",
+    "vite"
   ],
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
-  "module": "./dist/index.mjs",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
-  },
   "scripts": {
     "---------- DEV": "-------------------------------------------------------",
-    "dev": "tsdown --watch",
-    "link": "pnpm build && pnpm link --global",
-    "unlink": "pnpm unlink --global",
+    "dev": "vite",
     "·········· BUILD": "·····················································",
-    "build": "tsdown",
+    "build": "tsc --project tsconfig.json && vite build",
+    "preview": "vite preview",
     "·········· TESTING": "···················································",
     "test": "vitest",
     "test:run": "vitest run",
@@ -70,10 +60,14 @@
     "·········· UTILS": "·····················································",
     "tsc:debug": "tsc --pretty --project tsconfig.json",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "prepack": "pnpm build",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "@finografic/md-lint": "^0.9.6",
@@ -84,8 +78,8 @@
     "oxfmt": "^0.43.0",
     "oxlint": "^1.60.0",
     "oxlint-tsgolint": "^0.21.1",
-    "tsdown": "^0.20.3",
     "typescript": "^5.9.3",
+    "vite": "^7.1.10",
     "vitest": "^4.0.18"
   },
   "packageManager": "pnpm@10.33.0",
@@ -102,5 +96,8 @@
       "oxfmt --no-error-on-unmatched-pattern"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
 }

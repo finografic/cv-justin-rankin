@@ -53,8 +53,10 @@ export function CVSection({
   className,
   id,
 }: CVSectionProps): ReactNode {
+  const combinedClassName = className ? `cv-section ${className}` : 'cv-section';
+
   return (
-    <Section className={className} id={id} variant={variant}>
+    <Section className={combinedClassName} id={id} variant={variant}>
       <Heading>{title}</Heading>
       {children}
     </Section>

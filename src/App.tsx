@@ -194,16 +194,20 @@ export default function App(): ReactNode {
     <>
       <Global styles={appGlobalStyles} />
       <CVLayout>
-        <PageHeader>
+        <PageHeader className="cv-page-header">
           <CVHeader
             name="Justin Rankin"
             positioning={cvContent.positioning}
             strapline="Front-end architecture, TypeScript systems, and tooling-led engineering for products that need to scale cleanly."
           />
         </PageHeader>
-        <ContentGrid className="print-tight">
-          <Column as="aside">{sidebar}</Column>
-          <Column as="main">{main}</Column>
+        <ContentGrid className="cv-content-grid print-tight">
+          <Column as="aside" className="cv-column cv-column--sidebar">
+            {sidebar}
+          </Column>
+          <Column as="main" className="cv-column cv-column--main">
+            {main}
+          </Column>
         </ContentGrid>
       </CVLayout>
     </>

@@ -22,7 +22,7 @@ Edit:
 
 ## Deploy
 
-Push to `main`.
+Push to `master`.
 Pages builds from:
 
 - [.github/workflows/deploy.yml](./.github/workflows/deploy.yml)

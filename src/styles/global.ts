@@ -2,50 +2,78 @@ import { css } from '@emotion/react';
 
 import { theme } from './theme';
 
-export const globalStyles = css({
-  '@import':
-    'url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;700;800&family=Outfit:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap")',
-  ':root': {
-    color: theme.colors.text,
-    backgroundColor: theme.colors.background,
-    fontFamily: theme.fonts.body,
-    lineHeight: 1.5,
-    fontWeight: 400,
-    textRendering: 'optimizeLegibility',
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-  },
-  '*': {
-    boxSizing: 'border-box',
-  },
-  'html': {
-    minHeight: '100%',
-    backgroundColor: theme.colors.background,
-  },
-  'body': {
-    margin: 0,
-    minHeight: '100vh',
-    backgroundColor: theme.colors.background,
-  },
-  'a': {
-    color: theme.colors.accent,
-    textDecoration: 'none',
-  },
-  'a:hover': {
-    textDecoration: 'underline',
-    textUnderlineOffset: '0.2em',
-  },
-  'button': {
-    font: 'inherit',
-  },
-  'img, picture': {
-    display: 'block',
-    maxWidth: '100%',
-  },
-  '#root': {
-    minHeight: '100vh',
-  },
-  '::selection': {
-    backgroundColor: '#eadbce',
-  },
-});
+const base = import.meta.env.BASE_URL;
+
+export const globalStyles = css`
+  @font-face {
+    font-family: 'Geist';
+    src: url(${base}fonts/geist/Geist-Variable.woff2) format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url(${base}fonts/geist/Geist-Italic.woff2) format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  :root {
+    color: ${theme.colors.text};
+    background-color: ${theme.colors.background};
+    font-family: ${theme.fonts.body};
+    line-height: 1.5;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    min-height: 100%;
+    background-color: ${theme.colors.background};
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: ${theme.colors.background};
+  }
+
+  a {
+    color: ${theme.colors.accent};
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  button {
+    font: inherit;
+  }
+
+  img,
+  picture {
+    display: block;
+    max-width: 100%;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: ${theme.colors.tagBackground};
+  }
+`;

@@ -1,3 +1,5 @@
+import './styles/panda.css';
+import '@finografic/design-system/styles/reset.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 

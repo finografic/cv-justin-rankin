@@ -63,16 +63,17 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@finografic/md-lint": "^0.9.6",
+    "@finografic/oxc-config": "^2.0.0",
+    "@pandacss/dev": "^1.11.1",
+    "@types/node": "^24.0.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",
-    "@commitlint/cli": "^20.2.0",
-    "@commitlint/config-conventional": "^20.2.0",
-    "@finografic/md-lint": "^0.9.6",
-    "@finografic/oxc-config": "^2.0.0",
-    "@types/node": "^24.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "oxfmt": "^0.43.0",
@@ -97,6 +98,8 @@
     ]
   },
   "dependencies": {
+    "@finografic/design-system": "^1.14.1",
+    "geist": "^1.7.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   }

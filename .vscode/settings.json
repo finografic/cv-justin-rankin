@@ -8,10 +8,7 @@
     "source.organizeImports": "explicit"
   },
   "eslint.enable": false,
-  "eslint.validate": [
-    "javascript",
-    "typescript"
-  ],
+  "eslint.validate": ["javascript", "typescript"],
   "prettier.enable": false,
   "oxc.typeAware": true,
   "oxc.lint.run": "onSave",
@@ -70,7 +67,5 @@
       "style": "aligned"
     }
   },
-  "markdown.styles": [
-    "node_modules/@finografic/md-lint/styles/markdown-github-light.css"
-  ]
+  "markdown.styles": ["node_modules/@finografic/md-lint/styles/markdown-github-light.css"]
 }

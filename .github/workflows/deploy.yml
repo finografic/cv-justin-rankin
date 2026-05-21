@@ -31,6 +31,11 @@ jobs:
           cache: 'pnpm'
           node-version: 24
 
+      - name: Configure npm authentication
+        run: |
+          echo "@finografic:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 

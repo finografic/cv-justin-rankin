@@ -3,115 +3,134 @@
 ## Project
 
 `@finografic/cv-justin-rankin` — personal CV site for Justin Rankin.
-Phase: styling overhaul complete, deployed to GitHub Pages.
+Phase: styling + component architecture complete, deployed to GitHub Pages.
 
 ## Architecture
 
 Single-page React + Vite app with static typed content.
 
-- `src/data/cv-content.ts`
-  Source of truth for CV copy and structured entries.
-- `src/data/types.ts`
-  Type definitions for contact info, technologies, work history, projects, education, and languages.
-- `src/App.tsx`
-  Page composition and section ordering.
-- `src/components/*`
-  Presentational CV components styled with Emotion.
-- `src/styles/theme.ts`
-  Colour and typography tokens (OKLCH colours, Raleway + Geist font stacks).
-- `src/styles/global.ts`
-  Global Emotion styles — Geist `@font-face` declarations, font-rendering props.
-- `src/styles/panda.css`
-  CSS layer order declaration (`@layer reset, base, tokens, recipes, utilities`), processed by the Panda PostCSS plugin.
-- `src/styles/print.ts`
-  Print-specific layout and pagination tuning.
-- `panda.config.ts`
-  Panda CSS config wired to `@finografic/design-system` preset. Defines CV gold/copper primary colour in OKLCH via `createColorTokens`.
-- `postcss.config.cjs`
-  PostCSS config — loads `@pandacss/dev/postcss`.
-- `public/favicon/`
-  Favicon set (ico, png 16/32, apple-touch-icon, SVG) — sourced from v1.
-- `public/fonts/geist/`
-  Geist variable font woff2 files (normal + italic) served as static assets.
-- `vite.config.ts`
-  GitHub Pages base path: `/cv-justin-rankin`.
-- `.github/workflows/deploy.yml`
-  GitHub Pages build/deploy workflow — triggers on push to `master`.
-- `.github/workflows/ci.yml`
-  CI — lint, typecheck, format check on every push/PR.
+### CSS layer order (import sequence in `src/main.tsx`)
+
+```
+styles/styles.css         → @layer order declaration + DS reset (@layer reset)
+@styled-system/styles.css → Panda CSS: base + tokens + utilities (pre-generated)
+Emotion <Global>          → unlayered (highest priority): fonts, :root vars, app base styles
+```
+
+### Key source files
+
+- `src/data/cv-content.ts` — all CV copy and structured entries
+- `src/data/types.ts` — TypeScript types for all CV data shapes
+- `src/App.tsx` — page composition; uses `css` prop from `src/App.styles.ts`
+- `src/App.styles.ts` — layout and composition styles for App
+- `src/components/*.tsx` — plain HTML elements with `css` prop
+- `src/components/*.styles.ts` — colocated Emotion template-literal styles
+- `src/styles/theme.ts` — accent-dependent colours reference `var(--colors-primary*)`;
+  fixed values (background, muted, fonts) as OKLCH/string literals
+- `src/styles/global.styles.ts` — Emotion `<Global>`: `@font-face`, `--cv-*` vars,
+  `:root` base, `a`, `::selection`
+- `src/styles/print.styles.ts` — Emotion `<Global>`: print-specific layout rules
+- `src/styles/styles.css` — `@layer` order + `@import DS reset`
+- `panda.config.ts` — Panda preset + `createColorTokens({ primary: '...' })`;
+  single source of truth for the accent colour scale
+- `public/fonts/geist/` — Geist-Variable.woff2, Geist-Italic.woff2
+- `public/favicon/` — favicon.ico, favicon.svg, apple-touch-icon.png
+- `vite.config.ts` — base `/cv-justin-rankin/`, `jsxImportSource` for Emotion css prop
+- `tsconfig.json` — `jsxImportSource: @emotion/react` (required for `css` prop on HTML elements)
+- `.github/workflows/deploy.yml` — GitHub Pages deploy on push to `master`
+- `.github/workflows/ci.yml` — lint, typecheck, format check
 
 ## Stack
 
 - TypeScript (strict, ESM)
-- React 19
-- Vite
-- Emotion (CSS-in-JS for components)
-- `@finografic/design-system` + Panda CSS (token layer, CSS reset)
+- React 19 + Vite
+- Emotion (template-literal `css` prop on plain HTML — no `styled.*`)
+- `@finografic/design-system` + Panda CSS (token layer + CSS reset)
 - Raleway Variable (Google Fonts, headings)
-- Geist Variable (local woff2 from `geist` npm package, body)
-- pnpm
-- oxlint / oxfmt
-- GitHub Pages
+- Geist Variable (local woff2, body)
+- pnpm, oxlint/oxfmt, GitHub Pages
 
-## Schema / Types
+## Component styling pattern
 
-| Type              | Purpose                                       |
-| ----------------- | --------------------------------------------- |
-| `CVContent`       | Top-level typed content model for the full CV |
-| `ContactInfo`     | Contact + work rights metadata                |
-| `TechnologyGroup` | Grouped skills/technology chips               |
-| `WorkEntry`       | Individual work experience entries            |
-| `PhilosophyItem`  | Engineering philosophy bullets                |
-| `ProjectCategory` | Grouped project sections                      |
-| `Project`         | Individual technical project summary          |
-| `EducationEntry`  | Education card content                        |
-| `LanguageEntry`   | Language + proficiency                        |
+Every component follows the same pattern — no `styled.*` anywhere:
 
-## CLI Commands
+```tsx
+// ComponentName.tsx
+import { styles } from './ComponentName.styles';
+<h2 css={styles.heading}>{title}</h2>
+```
 
-| Command          | Purpose                       | Status |
-| ---------------- | ----------------------------- | ------ |
-| `pnpm dev`       | Run Vite dev server           | Ready  |
-| `pnpm build`     | Type-check + production build | Ready  |
-| `pnpm lint`      | Run oxlint                    | Ready  |
-| `pnpm typecheck` | Run TypeScript without emit   | Ready  |
-| `pnpm lint:md`   | Validate markdown docs        | Ready  |
+```ts
+// ComponentName.styles.ts
+import { css } from '@emotion/react';
+export const styles = {
+  heading: css`
+    color: var(--colors-primary);
+    font-family: var(--cv-font-heading);
+  `,
+};
+```
 
-## Design token setup
+CSS vars used in styles:
 
-The accent colour (`oklch(53% 0.085 53)` — gold/copper from v1) must be updated in **two places**:
+- `var(--colors-primary*)` — Panda-generated accent scale
+- `var(--cv-*)` — static CV values declared in `global.styles.ts` `:root`
+- Literal `768px` for media query breakpoints (CSS vars don't work in `@media`)
 
-1. `src/styles/theme.ts` — `colors.accent` (and related shades: `accentSoft`, `border`, `tagBackground`)
-2. `panda.config.ts` — `createColorTokens({ primary: '...' })`
+## Accent colour — single source of truth
 
-The DS CSS reset is imported in `src/main.tsx` before all other styles.
-Geist font paths use `import.meta.env.BASE_URL` so they resolve correctly under the `/cv-justin-rankin/` base in both dev and production.
+Change `primary` in `panda.config.ts` → regenerate with `pnpm panda:codegen` → all
+components update automatically via CSS vars. No changes needed in `theme.ts`.
+
+```ts
+// panda.config.ts
+colors: createColorTokens({
+  primary: 'oklch(62% 0.078 54)', // gold/copper
+  secondary: 'oklch(38% 0 0)',    // v1 grey (rgb 68 68 68)
+  ...
+}),
+```
+
+## CSS import architecture
+
+`src/styles/styles.css` mirrors `theme.css` from the touch-monorepo:
+
+```css
+@layer reset, base, tokens, recipes, utilities;
+@import '@finografic/design-system/styles/reset.css';
+```
+
+PostCSS is NOT used — tokens come from the pre-generated `styled-system/` folder.
+Run `pnpm panda:codegen` after changing `panda.config.ts`.
 
 ## Decisions
 
-1. Build the CV as a static React + Vite site rather than a package/library scaffold. (2026-05-20)
-2. Keep CV content compiled into typed TypeScript data rather than markdown/runtime loading. (2026-05-20)
-3. Use Emotion for styling and keep the page editorial rather than template-like. (2026-05-20)
-4. Deploy via GitHub Pages with Vite `base` set to `/cv-justin-rankin`. (2026-05-20)
-5. Keep print styling close to the live site: two-column, colored, A4-targeted. (2026-05-21)
-6. Add `@finografic/design-system` + Panda CSS for the token layer and CSS reset; keep Emotion for all component styling — no migration needed. (2026-05-22)
-7. Removed `release.yml` and `docs/process/` — this is a static site, not a published package. (2026-05-22)
+1. Build the CV as a static React + Vite site. (2026-05-20)
+2. Keep CV content compiled into typed TypeScript data. (2026-05-20)
+3. Emotion with template-literal `css` prop on plain HTML (no `styled.*`). (2026-05-22)
+4. Deploy via GitHub Pages, Vite `base: /cv-justin-rankin/`. (2026-05-20)
+5. Print styling close to screen: two-column, coloured, A4-targeted. (2026-05-21)
+6. `@finografic/design-system` + Panda CSS for token layer and CSS reset. (2026-05-22)
+7. `panda.config.ts` is the single source of truth for the accent colour scale. (2026-05-22)
+8. Removed PostCSS config — was double-generating Panda CSS (53 KB → 21 KB CSS). (2026-05-22)
+9. `jsxImportSource: @emotion/react` in both `vite.config.ts` and `tsconfig.json`. (2026-05-22)
 
 ## Open Questions
 
-1. Does Justin want a real headshot asset restored instead of the current `JR` monogram header mark?
-2. Are there further print-layout issues to resolve (blank pages, pagination)?
+1. Replace `justin.png` headshot with a newer photo.
+2. Generate `favicon.svg` (JR monogram or simple mark; add `<link rel="icon">` tag).
 
 ## Status
 
-Styling overhaul complete and deployed.
+Architecture and styling complete.
 
-- Design system integration, OKLCH tokens, Raleway + Geist fonts, and favicon all landed in `8c47a0d`.
-- README rewritten and release workflow removed in `486360b`.
-- `docs/process/` deleted in `8d222db`.
-- Build, lint, and typecheck all passing.
-- Site live at [finografic.github.io/cv-justin-rankin](https://finografic.github.io/cv-justin-rankin).
+- All components use plain HTML + Emotion `css` prop from `*.styles.ts` files
+- CSS vars are the single interface between Panda tokens and Emotion styles
+- CSS bundle: 21 KB (was 53 KB before PostCSS double-processing was fixed)
+- Build, lint, and typecheck all passing
+- Site live at [finografic.github.io/cv-justin-rankin](https://finografic.github.io/cv-justin-rankin)
 
 ## Next Likely Step
 
-Push to `master` to trigger the GitHub Pages deploy and verify the new fonts, gold colour, and favicon appear correctly on the live site.
+Push to `master` to deploy. Then replace `src/assets/justin.png` with a newer photo
+and update `CVHeader.tsx` `alt` text if needed.

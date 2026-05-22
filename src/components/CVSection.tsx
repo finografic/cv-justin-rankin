@@ -1,41 +1,6 @@
-import styled from '@emotion/styled';
 import type { ReactNode } from 'react';
 
-import { theme } from '../styles/theme';
-
-const sectionVariantStyles = {
-  compact: {
-    gap: '0.9rem',
-  },
-  default: {
-    gap: '1rem',
-  },
-  grid: {
-    gap: '1rem',
-  },
-} as const;
-
-const Section = styled.section<{
-  variant: keyof typeof sectionVariantStyles;
-}>(({ variant }) => ({
-  display: 'grid',
-  gap: sectionVariantStyles[variant].gap,
-}));
-
-const Heading = styled.h2({
-  'margin': 0,
-  'paddingBottom': '0.75rem',
-  'borderBottom': `1px dotted ${theme.colors.accentSoft}`,
-  'color': theme.colors.accent,
-  'fontFamily': theme.fonts.heading,
-  'fontSize': '1.15rem',
-  'fontWeight': 700,
-  'letterSpacing': '0.08em',
-  'textTransform': 'uppercase',
-  '@media print': {
-    borderBottomColor: theme.colors.accentSoft,
-  },
-});
+import { styles } from './CVSection.styles';
 
 interface CVSectionProps {
   title: string;
@@ -52,12 +17,14 @@ export function CVSection({
   className,
   id,
 }: CVSectionProps): ReactNode {
-  const combinedClassName = className ? `cv-section ${className}` : 'cv-section';
+  const sectionClass = ['cv-section', variant === 'compact' && 'compact', className]
+    .filter(Boolean)
+    .join(' ');
 
   return (
-    <Section className={combinedClassName} id={id} variant={variant}>
-      <Heading>{title}</Heading>
+    <section className={sectionClass} css={styles.section} id={id}>
+      <h2 css={styles.heading}>{title}</h2>
       {children}
-    </Section>
+    </section>
   );
 }

@@ -1,1 +1,5 @@
+/* CSS layer order — must be declared before any @layer content */
 @layer reset, base, tokens, recipes, utilities;
+
+/* Design system CSS reset — populates @layer reset */
+@import '@finografic/design-system/styles/reset.css';

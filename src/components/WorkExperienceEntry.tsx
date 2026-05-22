@@ -1,17 +1,8 @@
-import styled from '@emotion/styled';
 import type { WorkEntry } from '../data/types';
 import type { ReactNode } from 'react';
 
 import { CVSectionEntry } from './CVSectionEntry';
-
-const Copy = styled.div({
-  display: 'grid',
-  gap: '0.6rem',
-});
-
-const Paragraph = styled.p({
-  margin: 0,
-});
+import { styles } from './WorkExperienceEntry.styles';
 
 interface WorkExperienceEntryProps {
   entry: WorkEntry;
@@ -25,11 +16,11 @@ export function WorkExperienceEntry({ entry }: WorkExperienceEntryProps): ReactN
       subheading={entry.title}
       technologies={entry.technologies}
     >
-      <Copy>
+      <div css={styles.copy}>
         {entry.description.map((paragraph) => (
-          <Paragraph key={paragraph}>{paragraph}</Paragraph>
+          <p key={paragraph}>{paragraph}</p>
         ))}
-      </Copy>
+      </div>
     </CVSectionEntry>
   );
 }

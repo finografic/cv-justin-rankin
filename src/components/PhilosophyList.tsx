@@ -1,22 +1,7 @@
-import styled from '@emotion/styled';
 import type { PhilosophyItem } from '../data/types';
 import type { ReactNode } from 'react';
 
-const List = styled.ul({
-  display: 'grid',
-  gap: '0.85rem',
-  margin: 0,
-  paddingLeft: '1rem',
-});
-
-const Item = styled.li({
-  paddingLeft: '0.2rem',
-});
-
-const Strong = styled.strong({
-  display: 'inline-block',
-  marginRight: '0.3rem',
-});
+import { styles } from './PhilosophyList.styles';
 
 interface PhilosophyListProps {
   items: PhilosophyItem[];
@@ -24,13 +9,12 @@ interface PhilosophyListProps {
 
 export function PhilosophyList({ items }: PhilosophyListProps): ReactNode {
   return (
-    <List>
+    <ul css={styles.list}>
       {items.map((item) => (
-        <Item key={item.title}>
-          <Strong>{item.title}</Strong>
-          {item.description}
-        </Item>
+        <li css={styles.item} key={item.title}>
+          <strong>{item.title}</strong> {item.description}
+        </li>
       ))}
-    </List>
+    </ul>
   );
 }

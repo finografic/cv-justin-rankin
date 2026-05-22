@@ -3,6 +3,8 @@ export const theme = {
     // accent-dependent — driven by panda.config.ts `primary` token
     accent: 'var(--colors-primary)',
     accentSoft: 'var(--colors-primary-lighter)',
+    secondary: 'var(--colors-secondary)',
+    secondarySoft: 'var(--colors-secondary-lighter)',
     border: 'var(--colors-primary-xxlight)',
     tagBackground: 'var(--colors-primary-xxxlight)',
     // fixed — independent of accent

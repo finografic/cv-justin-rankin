@@ -1,10 +1,8 @@
 import { css } from '@emotion/react';
 
-import { theme } from './theme';
-
 const base = import.meta.env.BASE_URL;
 
-export const globalStyles = css`
+export const stylesGlobal = css`
   @font-face {
     font-family: 'Roboto';
     src: url(${base}fonts/roboto/Roboto-Regular.ttf) format('truetype');
@@ -46,9 +44,21 @@ export const globalStyles = css`
   }
 
   :root {
-    color: ${theme.colors.text};
-    background-color: ${theme.colors.background};
-    font-family: ${theme.fonts.body};
+    /* CV-specific values not covered by Panda tokens */
+    --cv-bg: oklch(99.4% 0.007 75);
+    --cv-surface: oklch(100% 0 0);
+    --cv-text: oklch(17% 0.005 264);
+    --cv-muted: oklch(45% 0.008 55);
+    --cv-font-heading: 'Raleway', sans-serif;
+    --cv-font-body: 'Roboto', 'Geist', sans-serif;
+    --cv-shadow: oklch(10% 0.006 50 / 0.08) 0 24px 64px;
+    --cv-radius-sm: 0.35rem;
+    --cv-radius-md: 0.75rem;
+    --cv-radius-lg: 1.25rem;
+
+    color: var(--cv-text);
+    background-color: var(--cv-bg);
+    font-family: var(--cv-font-body);
     line-height: 1.5;
     font-weight: 400;
     font-optical-sizing: auto;
@@ -64,13 +74,13 @@ export const globalStyles = css`
 
   html {
     min-height: 100%;
-    background-color: ${theme.colors.background};
+    background-color: var(--cv-bg);
   }
 
   body {
     margin: 0;
     min-height: 100vh;
-    background-color: ${theme.colors.background};
+    background-color: var(--cv-bg);
   }
 
   h1,
@@ -85,7 +95,7 @@ export const globalStyles = css`
   }
 
   a {
-    color: ${theme.colors.accent};
+    color: var(--colors-primary);
     text-decoration: none;
   }
 
@@ -109,6 +119,6 @@ export const globalStyles = css`
   }
 
   ::selection {
-    background-color: ${theme.colors.tagBackground};
+    background-color: var(--colors-primary-xxxlight);
   }
 `;

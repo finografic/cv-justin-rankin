@@ -125,7 +125,7 @@ export default function App(): ReactNode {
           {cvContent.education.map((entry) => (
             <EducationCard className="print-avoid-break" key={entry.institution}>
               <Institution>{entry.institution}</Institution>
-              <Degree>{entry.degree}</Degree>
+              <Degree className="cv-accent">{entry.degree}</Degree>
               <Meta>{entry.location}</Meta>
               <Copy>{entry.description}</Copy>
             </EducationCard>
@@ -160,7 +160,7 @@ export default function App(): ReactNode {
         <Stack>
           {cvContent.technicalProjects.map((category) => (
             <Category key={category.name}>
-              <CategoryHeading>{category.name}</CategoryHeading>
+              <CategoryHeading className="cv-accent">{category.name}</CategoryHeading>
               <Stack>
                 {category.projects.map((project) => (
                   <ProjectEntry key={project.name} project={project} />

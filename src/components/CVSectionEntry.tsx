@@ -16,16 +16,13 @@ const Heading = styled.h3({
 });
 
 const Subheading = styled.p({
-  'margin': 0,
-  'color': theme.colors.accent,
-  'fontFamily': theme.fonts.heading,
-  'fontWeight': 700,
-  'fontSize': '0.92rem',
-  'textTransform': 'uppercase',
-  'letterSpacing': '0.04em',
-  '@media print': {
-    color: '#000000',
-  },
+  margin: 0,
+  color: theme.colors.accent,
+  fontFamily: theme.fonts.heading,
+  fontWeight: 700,
+  fontSize: '0.92rem',
+  textTransform: 'uppercase',
+  letterSpacing: '0.04em',
 });
 
 const Meta = styled.p({
@@ -77,7 +74,7 @@ export function CVSectionEntry({
 }: CVSectionEntryProps): ReactNode {
   return (
     <Wrap className="print-avoid-break">
-      {subheading ? <Subheading>{subheading}</Subheading> : null}
+      {subheading ? <Subheading className="cv-accent">{subheading}</Subheading> : null}
       <Heading>{heading}</Heading>
       {meta ? <Meta>{meta}</Meta> : null}
       <div>{children}</div>

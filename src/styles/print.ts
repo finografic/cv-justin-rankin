@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { theme } from './theme';
+
 export const printStyles = css({
   '@page': {
     size: 'A4',
@@ -42,23 +44,26 @@ export const printStyles = css({
       marginBottom: '1.4rem !important',
     },
     '.cv-content-grid': {
-      display: 'flex !important',
+      display: 'grid !important',
+      gridTemplateColumns: '1fr 1fr !important',
       gap: '1rem !important',
       alignItems: 'start !important',
     },
     '.cv-column': {
       display: 'block !important',
+      minWidth: 0,
       alignContent: 'start !important',
     },
     '.cv-column--sidebar': {
-      flex: '0 0 34% !important',
-      maxWidth: '34% !important',
-      paddingRight: '0.35rem',
+      paddingRight: '0.5rem',
     },
     '.cv-column--main': {
-      flex: '1 1 auto !important',
-      maxWidth: '66% !important',
-      paddingLeft: '0.35rem',
+      paddingLeft: '0.5rem',
+    },
+    '.cv-accent, .cv-section h2': {
+      color: `${theme.colors.accent} !important`,
+      WebkitPrintColorAdjust: 'exact',
+      printColorAdjust: 'exact',
     },
     '.cv-section': {
       marginBottom: '1rem',

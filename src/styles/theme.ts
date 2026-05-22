@@ -12,9 +12,9 @@ export const theme = {
   },
   fonts: {
     heading: '"Raleway", sans-serif',
-    body: '"Geist", sans-serif',
+    body: '"Roboto", "Geist", sans-serif',
     altHeading: '"Raleway", sans-serif',
-    altBody: '"Geist", sans-serif',
+    altBody: '"Roboto", "Geist", sans-serif',
   },
   spacing: {
     'xs': '0.375rem',

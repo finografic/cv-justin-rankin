@@ -33,8 +33,7 @@ const Heading = styled.h2({
   'letterSpacing': '0.08em',
   'textTransform': 'uppercase',
   '@media print': {
-    color: '#000000',
-    borderBottomColor: '#999999',
+    borderBottomColor: theme.colors.accentSoft,
   },
 });
 

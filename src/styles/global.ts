@@ -6,6 +6,30 @@ const base = import.meta.env.BASE_URL;
 
 export const globalStyles = css`
   @font-face {
+    font-family: 'Roboto';
+    src: url(${base}fonts/roboto/Roboto-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url(${base}fonts/roboto/Roboto-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url(${base}fonts/roboto/Roboto-Italic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
     font-family: 'Geist';
     src: url(${base}fonts/geist/Geist-Variable.woff2) format('woff2');
     font-weight: 100 900;

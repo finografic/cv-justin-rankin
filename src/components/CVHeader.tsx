@@ -66,7 +66,7 @@ export function CVHeader({ name, positioning, strapline }: CVHeaderProps): React
       <Avatar aria-hidden="true">JR</Avatar>
       <div>
         <Name>{name}</Name>
-        <Positioning>{positioning}</Positioning>
+        <Positioning className="cv-accent">{positioning}</Positioning>
         <Strap>{strapline}</Strap>
       </div>
     </Wrap>

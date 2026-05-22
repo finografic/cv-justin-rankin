@@ -4,7 +4,7 @@
 
 - React 19 + TypeScript + Vite
 - Emotion CSS-in-JS with `@finografic/design-system` + Panda CSS token layer
-- OKLCH colour tokens, Raleway (headings), Geist (body)
+- OKLCH colour tokens, Raleway (headings), Roboto (body, local) with Geist fallback
 - Auto-deployed to GitHub Pages on push to `master`
 
 **Live:** [finografic.github.io/cv-justin-rankin](https://finografic.github.io/cv-justin-rankin)
@@ -49,9 +49,11 @@ colors: {
 },
 fonts: {
   heading: '"Raleway", sans-serif',
-  body:    '"Geist", sans-serif',
+  body:    '"Roboto", "Geist", sans-serif',
 },
 ```
+
+Body fonts are self-hosted under `public/fonts/`: Roboto Regular/Bold/Italic (standard width, not Condensed), with Geist as fallback.
 
 ### Panda CSS token layer (`panda.config.ts`)
 

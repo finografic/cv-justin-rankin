@@ -59,15 +59,26 @@
     "view:registry:github": "pnpm view @finografic/cv-justin-rankin --registry=https://npm.pkg.github.com",
     "·········· PACKAGES": "··················································",
     "update:deps:all": "pnpm update --latest",
+    "update:design-system": "pnpm update @finografic/design-system --latest",
+    "update:icons": "pnpm update @finografic/icons --latest",
+    "update:md-lint": "pnpm update @finografic/md-lint --latest",
     "update:oxc-config": "pnpm update @finografic/oxc-config --latest && pnpm update oxfmt --latest && pnpm update oxlint --latest",
     "·········· UTILS": "·····················································",
     "tsc:debug": "tsc --pretty --project tsconfig.json",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky && pnpm panda:codegen"
   },
+  "dependencies": {
+    "@finografic/design-system": "^1.15.1",
+    "@finografic/icons": "^1.15.0",
+    "geist": "^1.7.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
+    "@emotion/css": "^11.13.5",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@finografic/md-lint": "^0.9.6",
@@ -100,11 +111,5 @@
     "*.{json,jsonc,yml,yaml,toml}": [
       "oxfmt --no-error-on-unmatched-pattern"
     ]
-  },
-  "dependencies": {
-    "@finografic/design-system": "^1.14.1",
-    "geist": "^1.7.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
   }
 }

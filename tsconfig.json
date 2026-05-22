@@ -16,7 +16,16 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "data/*": ["./src/data/*"],
+      "styles/*": ["./src/styles/*"],
+      "@styled-system/*": ["./styled-system/*"],
+      "@styled-system/css": ["./styled-system/css"],
+      "@styled-system/jsx": ["./styled-system/jsx"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

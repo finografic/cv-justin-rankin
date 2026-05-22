@@ -6,6 +6,9 @@ dist/
 build/
 *.tgz
 
+# Panda CSS — generated at build time
+styled-system/
+
 # Environment files
 .env
 .env.local

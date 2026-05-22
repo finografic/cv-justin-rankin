@@ -85,8 +85,7 @@ The accent colour (`oklch(53% 0.085 53)` — gold/copper from v1) must be update
 2. `panda.config.ts` — `createColorTokens({ primary: '...' })`
 
 The DS CSS reset is imported in `src/main.tsx` before all other styles.
-Geist font paths use `import.meta.env.BASE_URL` so they resolve correctly under the
-`/cv-justin-rankin/` base in both dev and production.
+Geist font paths use `import.meta.env.BASE_URL` so they resolve correctly under the `/cv-justin-rankin/` base in both dev and production.
 
 ## Decisions
 
@@ -95,8 +94,7 @@ Geist font paths use `import.meta.env.BASE_URL` so they resolve correctly under 
 3. Use Emotion for styling and keep the page editorial rather than template-like. (2026-05-20)
 4. Deploy via GitHub Pages with Vite `base` set to `/cv-justin-rankin`. (2026-05-20)
 5. Keep print styling close to the live site: two-column, colored, A4-targeted. (2026-05-21)
-6. Add `@finografic/design-system` + Panda CSS for the token layer and CSS reset; keep Emotion for
-   all component styling — no migration needed. (2026-05-22)
+6. Add `@finografic/design-system` + Panda CSS for the token layer and CSS reset; keep Emotion for all component styling — no migration needed. (2026-05-22)
 7. Removed `release.yml` and `docs/process/` — this is a static site, not a published package. (2026-05-22)
 
 ## Open Questions
@@ -116,5 +114,4 @@ Styling overhaul complete and deployed.
 
 ## Next Likely Step
 
-Push to `master` to trigger the GitHub Pages deploy and verify the new fonts, gold colour, and
-favicon appear correctly on the live site.
+Push to `master` to trigger the GitHub Pages deploy and verify the new fonts, gold colour, and favicon appear correctly on the live site.

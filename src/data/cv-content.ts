@@ -325,12 +325,7 @@ export const cvContent: CVContent = {
       'Outside of work, Justin builds and maintains a personal TypeScript tooling ecosystem spanning shared linting and formatting configs, CLI tooling, project generation, codemods, dependency governance, and a design system built on PandaCSS and Ark UI.',
       'Preference for explicit architecture over implicit convention, strong typing, self-documenting code, and systems that stay readable and scalable by default.',
     ],
-    extended: [
-      'Software engineer focused on front-end architecture, TypeScript-first systems, and developer experience. Over fifteen years building for the web, from early full-stack freelance work through agency, startup, and large enterprise environments across Canada, Spain, and Australia.',
-      'Spent the last five years at Sage, working on enterprise SaaS products inside a large-scale micro-frontend architecture. Collaboration covered shared UI systems, reusable component libraries, internal platform improvements, and front-end modernization.',
-      'Actively building and maintaining an open-source TypeScript tooling ecosystem: shared linting and formatting configurations, CLI developer tools, project generators, codemod tooling, dependency governance, and a design system published via GitHub Packages.',
-      'Strong preference for explicit architecture over implicit convention, tight typing, self-documenting code, long-term maintainability, and modern systems that remain easy to understand at scale.',
-    ],
+    extended: [],
   },
   contact: {
     location: 'Brisbane, Australia',

@@ -32,16 +32,6 @@ const Paragraph = styled.p({
   fontSize: '1.02rem',
 });
 
-const TwoColList = styled.ul({
-  columns: 2,
-  columnGap: '1.5rem',
-  margin: 0,
-  paddingLeft: '1rem',
-  [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-    columns: 1,
-  },
-});
-
 const EducationCard = styled.article({
   display: 'grid',
   gap: '0.35rem',
@@ -179,13 +169,6 @@ export default function App(): ReactNode {
             </Category>
           ))}
         </Stack>
-      </CVSection>
-      <CVSection title="Profile Expansion" variant="compact">
-        <TwoColList>
-          {cvContent.profileSummary.extended.map((paragraph) => (
-            <li key={paragraph}>{paragraph}</li>
-          ))}
-        </TwoColList>
       </CVSection>
     </>
   );

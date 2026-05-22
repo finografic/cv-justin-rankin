@@ -73,6 +73,17 @@ export const globalStyles = css`
     background-color: ${theme.colors.background};
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header h1 + p {
+    letter-spacing: 0.05em !important;
+    user-select: none;
+  }
+
   a {
     color: ${theme.colors.accent};
     text-decoration: none;

@@ -334,8 +334,8 @@ export const cvContent: CVContent = {
     github: 'github.com/finografic',
     website: 'finografic.github.io/cv-justin-rankin',
     phone: '+61 available on request',
-    workRights: 'NZ citizen with full Australian work rights (Subclass 444)',
-    vevo: 'VEVO verification available on request',
+    workRightsNote:
+      'NZ citizen with full Australian work rights (Subclass 444). VEVO verification available on request.',
   },
   technologies,
   workExperience,

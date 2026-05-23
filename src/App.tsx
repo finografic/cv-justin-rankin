@@ -26,6 +26,9 @@ export default function App(): ReactNode {
   const sidebar = (
     <>
       <PrintButton />
+      <CVSection title="Contact" variant="compact">
+        <ContactInfo contact={cvContent.contact} />
+      </CVSection>
       <CVSection title="Profile">
         <div css={styles.paragraphList}>
           {cvContent.profileSummary.short.map((paragraph) => (
@@ -61,9 +64,6 @@ export default function App(): ReactNode {
             </li>
           ))}
         </ul>
-      </CVSection>
-      <CVSection title="Contact" variant="compact">
-        <ContactInfo contact={cvContent.contact} />
       </CVSection>
     </>
   );

@@ -123,6 +123,10 @@ export default defineConfig({
 
 If you fork this for your own CV, replace every occurrence of `cv-justin-rankin` with your own repo name.
 
+**Trailing slash:** Vite `base` must end with `/`. GitHub Pages redirects
+`…/cv-justin-rankin` → `…/cv-justin-rankin/` (301). Local dev and `pnpm preview` use the
+same redirect via `vite.config.ts`.
+
 ---
 
 ## ✅ Validate

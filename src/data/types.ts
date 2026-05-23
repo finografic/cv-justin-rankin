@@ -20,8 +20,7 @@ export interface ContactInfo {
   github: string;
   website: string;
   phone: string;
-  workRights: string;
-  vevo: string;
+  workRightsNote: string;
 }
 
 export interface TechnologyGroup {

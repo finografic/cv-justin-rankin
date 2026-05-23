@@ -68,15 +68,17 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 
 - Do not create git commits unless the user explicitly asks.
 - When changing typography, prepend new body fonts to the stack and keep existing fallbacks unless the user asks to remove a family entirely.
+- For `@finografic/design-system`, ship prebuilt `dist/` from CI in the npm tarball; do not commit `dist/` or use postinstall build scripts.
 
 ## Learned Workspace Facts
 
 - GitHub Pages deploys on push to `master` via `.github/workflows/deploy.yml`; `release.yml` (version tags) is for npm/GitHub Releases only, not the live CV site.
 - Production URL: `https://finografic.github.io/cv-justin-rankin/` — Vite `base` is `/cv-justin-rankin/`.
 - Body font stack: `"Roboto", "Geist", sans-serif` with Roboto self-hosted under `public/fonts/roboto/`; headings use Raleway from Google Fonts.
-- Panda CSS entry is `src/styles/theme.css` (PostCSS via `@pandacss/dev/postcss`); `styled-system/styles.css` is generated output — token edits in `panda.config.ts` apply through PostCSS, not by importing that file in `src/`.
-- `panda.config.ts` must include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`).
+- Panda CSS entry is `src/styles/theme.css` (PostCSS via `@pandacss/dev/postcss`); Vite runs PostCSS on imported CSS — token edits in `panda.config.ts` apply at build/dev time, not by importing `styled-system/styles.css` in app source (that file is Panda codegen output).
+- `panda.config.ts` must include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`); when `pnpm link` points at the DS monorepo, also include `./node_modules/@finografic/design-system/src/**/*.{ts,tsx}`.
 - `panda.config.ts` must set `jsxFramework: 'react'` so `styled-system/jsx` exists for `@finografic/design-system`.
 - Vite aliases for `assets`, `styles`, `@styled-system/css`, and `@styled-system/jsx` must mirror `tsconfig` paths — TypeScript paths alone do not resolve in Vite.
+- In dev, open `?ds-smoke=1` to show `DsSmokePanel` for `@finografic/design-system` component and recipe checks (dev-only, hidden from print).
 
 ---

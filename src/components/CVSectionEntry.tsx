@@ -7,16 +7,9 @@ interface CVSectionEntryProps {
   subheading?: string;
   meta?: string;
   children: ReactNode;
-  technologies?: string[];
 }
 
-export function CVSectionEntry({
-  heading,
-  subheading,
-  meta,
-  children,
-  technologies,
-}: CVSectionEntryProps): ReactNode {
+export function CVSectionEntry({ heading, subheading, meta, children }: CVSectionEntryProps): ReactNode {
   return (
     <article className="print-avoid-break" css={styles.wrap}>
       {subheading ? (
@@ -27,15 +20,6 @@ export function CVSectionEntry({
       <h3 css={styles.heading}>{heading}</h3>
       {meta ? <p css={styles.meta}>{meta}</p> : null}
       <div>{children}</div>
-      {technologies?.length ? (
-        <ul css={styles.techList}>
-          {technologies.map((technology) => (
-            <li css={styles.techItem} key={technology}>
-              {technology}
-            </li>
-          ))}
-        </ul>
-      ) : null}
     </article>
   );
 }

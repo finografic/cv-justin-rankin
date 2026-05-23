@@ -1,3 +1,10 @@
+export type WorkTechnologiesVariant = 'list' | 'pills';
+
+export interface WorkTechnologies {
+  items: string[];
+  variant?: WorkTechnologiesVariant;
+}
+
 export interface CVContent {
   positioning: string;
   profileSummary: {
@@ -34,8 +41,9 @@ export interface WorkEntry {
   title: string;
   period: string;
   location: string;
+  url?: string;
   description: string[];
-  technologies: string[];
+  technologies: WorkTechnologies;
 }
 
 export interface PhilosophyItem {

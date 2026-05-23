@@ -63,3 +63,20 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 - **Project state snapshot:** `.agents/handoff.md` (git-tracked) — maintenance rules are in that file.
 
 ---
+
+## Learned User Preferences
+
+- Do not create git commits unless the user explicitly asks.
+- When changing typography, prepend new body fonts to the stack and keep existing fallbacks unless the user asks to remove a family entirely.
+
+## Learned Workspace Facts
+
+- GitHub Pages deploys on push to `master` via `.github/workflows/deploy.yml`; `release.yml` (version tags) is for npm/GitHub Releases only, not the live CV site.
+- Production URL: `https://finografic.github.io/cv-justin-rankin/` — Vite `base` is `/cv-justin-rankin/`.
+- Body font stack: `"Roboto", "Geist", sans-serif` with Roboto self-hosted under `public/fonts/roboto/`; headings use Raleway from Google Fonts.
+- Panda CSS entry is `src/styles/theme.css` (PostCSS via `@pandacss/dev/postcss`); `styled-system/styles.css` is generated output — token edits in `panda.config.ts` apply through PostCSS, not by importing that file in `src/`.
+- `panda.config.ts` must include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`).
+- `panda.config.ts` must set `jsxFramework: 'react'` so `styled-system/jsx` exists for `@finografic/design-system`.
+- Vite aliases for `assets`, `styles`, `@styled-system/css`, and `@styled-system/jsx` must mirror `tsconfig` paths — TypeScript paths alone do not resolve in Vite.
+
+---

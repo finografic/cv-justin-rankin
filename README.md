@@ -18,6 +18,28 @@ pnpm install
 pnpm dev
 ```
 
+### Design system (`@finografic/design-system`)
+
+Panda must scan **compiled DS recipes** in `node_modules` (see `panda.config.ts`). The published
+package ships `dist/components/*.recipe.js`, not `src/components/`.
+
+```bash
+pnpm install
+pnpm panda:codegen   # after DS or token changes
+pnpm dev
+```
+
+**Registry vs link:** `dist/**/*.recipe.js` in `include` is required for GitHub Packages installs.
+The `src/**` line is optional and helps when you `pnpm link` the monorepo checkout.
+
+**Automated:** `pnpm test:ds` — package resolves and DS components render.
+
+**Visual:** `http://localhost:5173/cv-justin-rankin/?ds-smoke=1` — Button, Badge, Callout, Card
+(recipes). Hidden from print.
+
+**Vite:** `vite.config.ts` aliases `@styled-system/css` and `@styled-system/jsx` so imports inside
+DS `dist/` resolve to this app’s generated `styled-system/` (required for production build).
+
 ---
 
 ## ✏️ Updating content

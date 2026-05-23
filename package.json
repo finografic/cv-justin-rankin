@@ -39,6 +39,7 @@
     "·········· TESTING": "···················································",
     "test": "vitest",
     "test:run": "vitest run",
+    "test:ds": "vitest run src/dev/design-system.smoke.test.tsx",
     "test:coverage": "vitest run --coverage",
     "·········· LINTING": "···················································",
     "lint": "oxlint -c oxlint.config.ts",
@@ -69,8 +70,8 @@
     "prepare": "husky && pnpm panda:codegen"
   },
   "dependencies": {
-    "@finografic/design-system": "^1.15.1",
-    "@finografic/icons": "^1.15.0",
+    "@finografic/design-system": "^1.17.0",
+    "@finografic/icons": "^1.17.0",
     "geist": "^1.7.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
@@ -97,6 +98,10 @@
     "typescript": "^5.9.3",
     "vite": "^7.1.10",
     "vitest": "^4.0.18"
+  },
+  "LOCAL_DEP_EXAMPLE": {
+    "@finografic/design-system_REMOTE": "^1.17.0",
+    "@finografic/design-system_LOCAL": "link:/Users/justin/repos-finografic/@finografic-design-system/packages/design-system"
   },
   "packageManager": "pnpm@10.33.0",
   "lint-staged": {

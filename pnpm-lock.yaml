@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@finografic/design-system':
-        specifier: ^1.15.1
-        version: 1.15.1(@ark-ui/react@5.36.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-hook-form@7.71.1(react@19.2.6))(react@19.2.6)
+        specifier: ^1.17.0
+        version: 1.17.0(@ark-ui/react@5.36.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-hook-form@7.71.1(react@19.2.6))(react@19.2.6)
       '@finografic/icons':
-        specifier: ^1.15.0
-        version: 1.15.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.17.0
+        version: 1.17.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       geist:
         specifier: ^1.7.1
         version: 1.7.1(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))
@@ -654,8 +654,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@finografic/design-system@1.15.1':
-    resolution: {integrity: sha512-EtgQd2F1RZABhrRPsSNB729vPLehue5RdMoBYD+aXfSowp16XodG6xxljcIu/lwYlLn6AdNpty4e7pNkhc0jYQ==, tarball: https://npm.pkg.github.com/download/@finografic/design-system/1.15.1/ad033eddbef7a846869e510aa7c1099c502c4219}
+  '@finografic/design-system@1.17.0':
+    resolution: {integrity: sha512-zVtjKA0+AV0ksxdsPrNhmDlNHSZ4UgRN+DXnTlxpEs7bNjJYjiRMTuMFZpDj6LptcKWIkMsebbN02rdOPSAt7g==, tarball: https://npm.pkg.github.com/download/@finografic/design-system/1.17.0/5be2350222dfcb64d99d7a020f4a759e5aadff32}
     peerDependencies:
       '@ark-ui/react': ^5.36.1
       react: ^18.0.0 || ^19.0.0
@@ -665,15 +665,8 @@ packages:
       react-hook-form:
         optional: true
 
-  '@finografic/icons@1.15.0':
-    resolution: {integrity: sha512-vOCy88sjJlEQC2t2yQCrY5LgLXT9BTgp1Dnt21pod7bF+ZdOrYXs0bwurWt6lz3ycVf4vYKYs6IRxvWR07sqYw==, tarball: https://npm.pkg.github.com/download/@finografic/icons/1.15.0/5c5ccd4364277162d2c98740832d5fa00362851b}
-    hasBin: true
-    peerDependencies:
-      react: ^18.0.0 || ^19.0.0
-      react-dom: ^18.0.0 || ^19.0.0
-
-  '@finografic/icons@1.15.1':
-    resolution: {integrity: sha512-5+TMDHYU/bY8xJ79ksRHm8sVQ2lfCVlOwr4mi6aE99bp1aFRV/bIcBBqpAWT8l5X6/RU5tm9kJ/9eyx75M/zIQ==, tarball: https://npm.pkg.github.com/download/@finografic/icons/1.15.1/bc0adb7451f6fd5dc03b2dd8d68746ee779765ae}
+  '@finografic/icons@1.17.0':
+    resolution: {integrity: sha512-IzMeVFE7Rkr3wvWYHBl0OxO0ZrmwIKVtQuWDRbwY88c/vuEt4NERwd9AkkrBgFWkULUcWI7y/6hvEs4H88bHwA==, tarball: https://npm.pkg.github.com/download/@finografic/icons/1.17.0/1360e498143f6b3cf5637f53a06180bd9b67474d}
     hasBin: true
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
@@ -4168,10 +4161,10 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@finografic/design-system@1.15.1(@ark-ui/react@5.36.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-hook-form@7.71.1(react@19.2.6))(react@19.2.6)':
+  '@finografic/design-system@1.17.0(@ark-ui/react@5.36.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-hook-form@7.71.1(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@ark-ui/react': 5.36.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@finografic/icons': 1.15.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@finografic/icons': 1.17.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@tanstack/react-table': 8.21.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       match-sorter: 8.2.0
       react: 19.2.6
@@ -4179,13 +4172,7 @@ snapshots:
     optionalDependencies:
       react-hook-form: 7.71.1(react@19.2.6)
 
-  '@finografic/icons@1.15.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
-    dependencies:
-      lucide-react: 1.16.0(react@19.2.6)
-      react: 19.2.6
-      react-dom: 19.2.6(react@19.2.6)
-
-  '@finografic/icons@1.15.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@finografic/icons@1.17.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       lucide-react: 1.16.0(react@19.2.6)
       react: 19.2.6

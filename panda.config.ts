@@ -7,14 +7,20 @@ export default defineConfig({
   presets: ['@pandacss/dev/presets', designSystemPreset],
 
   /**
-   * Scan for Panda CSS usage (css(), Box, recipes, etc.)
+   * Panda scans these globs to decide which recipe CSS to emit into styled-system/.
    *
-   * Include design-system src so Panda extracts styles used in DS component
-   * files (components/, forms/, etc.). Without it, CSS for those components
-   * won't be generated. With pnpm workspaces, @finografic/design-system
-   * resolves to the installed package.
+   * - App source: ./src
+   * - DS (registry): dist `**` `*.recipe.js` — published package ships compiled recipes in dist/components/,
+   *   not src/components/
+   * - DS (pnpm link): optional src tree when the monorepo checkout is linked
+   *
+   * See finografic.pandaConsumerInclude in @finografic/design-system/package.json
    */
-  include: ['./src/**/*.{ts,tsx}', './node_modules/@finografic/design-system/src/**/*.{ts,tsx}'],
+  include: [
+    './src/**/*.{ts,tsx}',
+    './node_modules/@finografic/design-system/dist/**/*.recipe.js',
+    './node_modules/@finografic/design-system/src/**/*.{ts,tsx}',
+  ],
   exclude: [],
 
   /**

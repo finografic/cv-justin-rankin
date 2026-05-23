@@ -12,11 +12,15 @@ import { ProjectEntry } from './components/ProjectEntry';
 import { TechnologyGrid } from './components/TechnologyGrid';
 import { WorkExperienceEntry } from './components/WorkExperienceEntry';
 import { cvContent } from './data/cv-content';
+import { DsSmokePanel } from './dev/DsSmokePanel';
 
 import { stylesGlobal } from './styles/global.styles';
 import { stylesPrint } from './styles/print.styles';
 
 const globalStyles = [stylesGlobal, stylesPrint];
+
+const showDsSmokePanel =
+  import.meta.env.DEV && new URLSearchParams(globalThis.location.search).has('ds-smoke');
 
 export default function App(): ReactNode {
   const sidebar = (
@@ -96,6 +100,7 @@ export default function App(): ReactNode {
     <>
       <Global styles={globalStyles} />
       <CVLayout>
+        {showDsSmokePanel ? <DsSmokePanel /> : null}
         <header className="cv-page-header" css={styles.pageHeader}>
           <CVHeader
             name="JUSTIN RANKIN"

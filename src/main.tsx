@@ -1,9 +1,9 @@
-import './styles/styles.css'; // layer order + DS reset (@layer reset)
-import '@styled-system/styles.css'; // Panda CSS: base styles + tokens + utilities
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import App from './App';
+
+import './styles/theme.css'; // PostCSS entry: layer order + DS reset + Panda tokens
 
 const rootElement = document.querySelector('#root');
 

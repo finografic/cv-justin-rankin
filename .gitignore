@@ -57,8 +57,6 @@ coverage/
 # macOS
 **/.DS_Store
 **Thumbs.db
-# Custom folder icon file (name is literally "Icon" + carriage return). Do not use `Icon?` — it ignores *Icon.tsx components on Linux CI.
-Icon
 
 # Windows
 Thumbs.db

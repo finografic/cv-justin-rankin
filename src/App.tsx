@@ -103,13 +103,11 @@ export default function App(): ReactNode {
     <>
       <Global styles={globalStyles} />
       <CVLayout>
-        <header className="cv-page-header" css={styles.pageHeader}>
-          <CVHeader
-            name={CONTENT.headerContent.name}
-            positioning={CONTENT.headerContent.positioning}
-            strapline={CONTENT.headerContent.strapline}
-          />
-        </header>
+        <CVHeader
+          name={CONTENT.headerContent.name}
+          positioning={CONTENT.headerContent.positioning}
+          strapline={CONTENT.headerContent.strapline}
+        />
         <div className="cv-content-grid print-tight" css={styles.contentGrid}>
           <aside className="cv-column cv-column--sidebar" css={styles.column}>
             {sidebar}

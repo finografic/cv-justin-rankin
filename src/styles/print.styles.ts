@@ -10,7 +10,7 @@ export const stylesPrint = css`
     html {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
-      font-size: 90%;
+      font-size: 80%;
     }
 
     html,
@@ -39,6 +39,25 @@ export const stylesPrint = css`
       page-break-before: auto;
     }
 
+    /* Invisible rule — place inside one column via <PrintColumnBreak /> */
+    .print-column-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .print-column-break--after {
+      break-before: auto;
+      page-break-before: auto;
+      break-after: page;
+      page-break-after: always;
+    }
+
+    .cv-content-grid,
+    .cv-column {
+      break-inside: auto;
+      page-break-inside: auto;
+    }
+
     .print-avoid-break {
       break-inside: avoid;
       page-break-inside: avoid;
@@ -48,42 +67,44 @@ export const stylesPrint = css`
       gap: 1rem !important;
     }
 
-    .cv-page-header {
-      margin-bottom: 1.25rem !important;
-    }
-
-    /* Match screen proportions — sidebar ~38%, main ~62% (not 50/50) */
+    /* Print columns — equal split (screen keeps fixed sidebar + fluid main) */
     .cv-content-grid {
       display: grid !important;
-      grid-template-columns: minmax(15rem, 38%) minmax(0, 1fr) !important;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
       gap: 1.5rem !important;
       align-items: start !important;
     }
 
     /* Compact header — frees first-page space without changing screen layout */
-    .cv-header {
+    .cv-header,
+    .cv-page-header {
       gap: 0.65rem !important;
       grid-template-columns: 4.75rem minmax(0, 1fr) !important;
       align-items: center !important;
+      margin-bottom: 1.25rem !important;
     }
 
-    .cv-header [data-scope='avatar'] {
+    .cv-header [data-scope='avatar'],
+    .cv-page-header [data-scope='avatar'] {
       width: 4.75rem !important;
       height: 4.75rem !important;
     }
 
-    .cv-header h1 {
+    .cv-header h1,
+    .cv-page-header h1 {
       margin-top: 0 !important;
       font-size: 1.45rem !important;
       line-height: 1.15 !important;
     }
 
-    .cv-header .cv-accent {
+    .cv-header .cv-accent,
+    .cv-page-header .cv-accent {
       font-size: 1.05rem !important;
       line-height: 1.2 !important;
     }
 
-    .cv-header p:not(.cv-accent) {
+    .cv-header p:not(.cv-accent),
+    .cv-page-header p:not(.cv-accent) {
       margin-top: 0.2rem !important;
       font-size: 0.85rem !important;
       line-height: 1.4 !important;

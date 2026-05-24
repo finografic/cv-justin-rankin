@@ -8,7 +8,7 @@ import { styles } from './CVHeader.styles';
 
 export function CVHeader({ name, positioning, strapline }: CVHeaderProps): ReactNode {
   return (
-    <div className="cv-header" css={styles.wrap}>
+    <header className="cv-header cv-page-header" css={styles.wrap}>
       <AvatarDS alt={name} size="2xl" src={photo} variant="elevated" shape="rounded" />
       <div>
         <h1 css={styles.name}>{name}</h1>
@@ -17,6 +17,6 @@ export function CVHeader({ name, positioning, strapline }: CVHeaderProps): React
         </p>
         <p css={styles.strap}>{strapline}</p>
       </div>
-    </div>
+    </header>
   );
 }

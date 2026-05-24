@@ -43,7 +43,7 @@ export const employment: WorkEntry[] = [
       'Cross-team engineering workflows involving code reviews, QA processes, release pipelines, and front-end application architecture across an international product organization.',
     ],
     technologies: {
-      variant: 'list',
+      variant: 'pills',
       items: [
         'JavaScript',
         'Node.js',

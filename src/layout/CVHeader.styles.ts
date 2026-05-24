@@ -6,6 +6,7 @@ export const styles = {
     gap: 0.95rem;
     grid-template-columns: 6.25rem minmax(0, 1fr);
     align-items: center;
+    margin-bottom: 2.5rem;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;

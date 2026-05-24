@@ -1,31 +1,28 @@
 import { Global } from '@emotion/react';
+import { PrintButton } from 'components/print-button/PrintButton';
 import type { ReactNode } from 'react';
 
 import { styles } from './App.styles';
-import { ContactInfo } from './components/ContactInfo';
-import { CVHeader } from './components/CVHeader';
-import { CVLayout } from './components/CVLayout';
-import { CVSection } from './components/CVSection';
+import { ContactInfo } from './components/contact-info/ContactInfo';
 import { EducationEntry } from './components/EducationEntry';
-import { PhilosophyList } from './components/PhilosophyList';
+import { PhilosophyList } from './components/philosophy-list/PhilosophyList';
 import { ProjectEntry } from './components/ProjectEntry';
-import { TechnologyGrid } from './components/TechnologyGrid';
+import { TechnologyGrid } from './components/technology-grid/TechnologyGrid';
 import { WorkExperienceEntry } from './components/WorkExperienceEntry';
 import { CONTENT } from './data';
-import { DsSmokePanel } from './dev/DsSmokePanel';
+import { CVHeader } from './layout/CVHeader';
+import { CVLayout } from './layout/CVLayout';
+import { CVSection } from './layout/CVSection';
 
 import { stylesGlobal } from './styles/global.styles';
 import { stylesPrint } from './styles/print.styles';
 
 const globalStyles = [stylesGlobal, stylesPrint];
 
-const showDsSmokePanel =
-  import.meta.env.DEV && new URLSearchParams(globalThis.location.search).has('ds-smoke');
-
 export default function App(): ReactNode {
   const sidebar = (
     <>
-      {/* <PrintButton /> */}
+      <PrintButton />
       <CVSection sectionKey="contact" title="Contact" variant="compact">
         <ContactInfo contact={CONTENT.contact} />
       </CVSection>
@@ -99,7 +96,6 @@ export default function App(): ReactNode {
     <>
       <Global styles={globalStyles} />
       <CVLayout>
-        {showDsSmokePanel ? <DsSmokePanel /> : null}
         <header className="cv-page-header" css={styles.pageHeader}>
           <CVHeader
             name={CONTENT.headerContent.name}

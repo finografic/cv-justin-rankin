@@ -81,7 +81,6 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 - `panda.config.ts` must include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`); when `pnpm link` points at the DS monorepo, also include `./node_modules/@finografic/design-system/src/**/*.{ts,tsx}`.
 - `panda.config.ts` must set `jsxFramework: 'react'` so `styled-system/jsx` exists for `@finografic/design-system`.
 - Vite aliases for `assets`, `styles`, `types`, `@styled-system/css`, and `@styled-system/jsx` must mirror `tsconfig` paths — TypeScript paths alone do not resolve in Vite; CV data types live under `src/types/` (`types` path alias).
-- In dev, open `?ds-smoke=1` to show `DsSmokePanel` for `@finografic/design-system` component and recipe checks (dev-only, hidden from print); run `pnpm test:ds` for linked-package and render smoke checks in Node.
 - Print layout in `src/styles/print.ts` uses a 50/50 `.cv-content-grid`; keep gold/Raleway accents via `theme.colors.accent` and `.cv-accent` — avoid print CSS that forces accent text to black.
 - Site copy lives in `src/data/cv-content.ts`; when updating prose, sync from canonical markdown `CV_2026_CONTENT_FINAL_V2.md` in the sibling `__CV_2026__` content repo and diff before editing.
 

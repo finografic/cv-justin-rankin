@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Project } from 'types';
 
-import { CVEntry } from './CVEntry';
+import { CVEntry } from '../layout/CVEntry';
 
 const FINOGRAFIC_PACKAGE = /^@finografic\/(.+)$/;
 

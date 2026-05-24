@@ -24,5 +24,9 @@ export const styles = {
       color: var(--cv-surface);
       transform: translateY(-1px);
     }
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
   `,
 };

@@ -1,8 +1,7 @@
+import { ItemList } from 'components/items-list/ItemList';
+import { CVEntry } from 'layout/CVEntry';
 import type { ReactNode } from 'react';
 import type { WorkEntry } from 'types';
-
-import { CVEntry } from './CVEntry';
-import { ItemList } from './ItemList';
 
 interface WorkExperienceEntryProps {
   entry: WorkEntry;

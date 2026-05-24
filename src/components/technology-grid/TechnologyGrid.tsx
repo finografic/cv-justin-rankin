@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { TechnologyGroup } from 'types';
 
-import { ItemList } from './ItemList';
+import { ItemList } from '../items-list/ItemList';
 import { styles } from './TechnologyGrid.styles';
 
 interface TechnologyGridProps {

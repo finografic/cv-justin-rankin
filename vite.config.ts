@@ -44,9 +44,14 @@ export default defineConfig({
   resolve: {
     // Single React 19 instance across any linked packages
     dedupe: ['react', 'react-dom'],
+    // Mirror tsconfig paths — Vite does not read paths from tsconfig.json
     alias: {
       'assets': resolve('src/assets'),
+      'components': resolve('src/components'),
+      'data': resolve('src/data'),
+      'layout': resolve('src/layout'),
       'styles': resolve('src/styles'),
+      'types': resolve('src/types'),
       '@styled-system/styles.css': resolve('styled-system/styles.css'),
       '@styled-system/css': resolve('styled-system/css'),
       '@styled-system/jsx': resolve('styled-system/jsx'),

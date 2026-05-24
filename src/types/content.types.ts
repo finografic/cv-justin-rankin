@@ -9,6 +9,7 @@ export interface CVContent {
   employment: WorkEntry[];
   philosophy: PhilosophyItem[];
   projects: ProjectCategory[];
+  aiProjects: Project[];
   education: EducationEntry[];
   languages: LanguageEntry[];
 }

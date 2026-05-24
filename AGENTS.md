@@ -80,8 +80,9 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 - Panda CSS entry is `src/styles/theme.css` (PostCSS via `@pandacss/dev/postcss`); Vite runs PostCSS on imported CSS — token edits in `panda.config.ts` apply at build/dev time, not by importing `styled-system/styles.css` in app source (that file is Panda codegen output).
 - `panda.config.ts` must include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`); when `pnpm link` points at the DS monorepo, also include `./node_modules/@finografic/design-system/src/**/*.{ts,tsx}`.
 - `panda.config.ts` must set `jsxFramework: 'react'` so `styled-system/jsx` exists for `@finografic/design-system`.
-- Vite aliases for `assets`, `styles`, `types`, `@styled-system/css`, and `@styled-system/jsx` must mirror `tsconfig` paths — TypeScript paths alone do not resolve in Vite; CV data types live under `src/types/` (`types` path alias).
-- Print layout in `src/styles/print.ts` uses a 50/50 `.cv-content-grid`; keep gold/Raleway accents via `theme.colors.accent` and `.cv-accent` — avoid print CSS that forces accent text to black.
-- Site copy lives in `src/data/cv-content.ts`; when updating prose, sync from canonical markdown `CV_2026_CONTENT_FINAL_V2.md` in the sibling `__CV_2026__` content repo and diff before editing.
+- Vite aliases for `assets`, `styles`, `components`, `layout`, `data`, `types`, `@styled-system/css`, and `@styled-system/jsx` must mirror `tsconfig` paths — TypeScript paths alone do not resolve in Vite; CV data types live under `src/types/` (`types` path alias).
+- Print layout in `src/styles/print.styles.ts` matches screen proportions (~38% sidebar / ~62% main on `.cv-content-grid`, not 50/50); keep gold/Raleway accents via `theme.colors.accent` and `.cv-accent` — avoid print CSS that forces accent text to black.
+- CV copy is split across `src/data/*.data.ts` and aggregated as `CONTENT` in `src/data/index.ts`; when updating prose, sync from canonical markdown `CV_2026_CONTENT_FINAL_V2.md` in the sibling `__CV_2026__` content repo and diff before editing.
+- `CVSection` requires `sectionKey`; renders `cv-section cv-section-${sectionKey}` with `id` defaulting to `sectionKey` for section-specific styling in `App.styles.ts` or print CSS.
 
 ---

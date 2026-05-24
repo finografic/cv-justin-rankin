@@ -3,7 +3,6 @@ import type { TechnologyGroup } from 'types';
 export const technologies: TechnologyGroup[] = [
   {
     category: 'Core',
-    variant: 'bullets',
     items: ['TypeScript', 'JavaScript', 'React', 'Node.js'],
   },
   {

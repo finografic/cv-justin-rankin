@@ -88,11 +88,15 @@ export function ContactInfo({ contact }: { contact: ContactDetails }): ReactNode
           text={contact.website}
         />
       </ul>
-      {contact.workRightsNotes.map((note) => (
-        <p css={styles.note} key={note}>
-          {note}
+      {contact.workRightsNotes.length > 0 ? (
+        <p css={styles.note}>
+          {contact.workRightsNotes.map((note) => (
+            <span css={styles.noteLine} key={note}>
+              {note}
+            </span>
+          ))}
         </p>
-      ))}
+      ) : null}
     </>
   );
 }

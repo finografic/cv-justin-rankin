@@ -79,17 +79,15 @@ export const styles = {
   `,
 
   note: css`
-    margin: 0;
+    margin: 0.5rem 0 1rem;
     padding: 0 0.2rem;
     font-size: 0.9rem;
     font-weight: 400;
-    line-height: 0.66;
+    line-height: 1.5;
     text-transform: none;
-    &:first-of-type {
-      margin-top: 0.5rem;
-    }
-    &:last-of-type {
-      margin-bottom: 1rem;
-    }
+  `,
+
+  noteLine: css`
+    display: block;
   `,
 };

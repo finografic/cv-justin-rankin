@@ -43,6 +43,13 @@ export default function App(): ReactNode {
       >
         <PhilosophyList items={CONTENT.philosophy} />
       </CVSection>
+      <CVSection sectionKey="ai-experimentation" title="AI & Experimentation">
+        <div css={styles.stack}>
+          {CONTENT.aiProjects.map((project) => (
+            <ProjectEntry key={project.name} project={project} />
+          ))}
+        </div>
+      </CVSection>
       <CVSection sectionKey="education" title="Education" variant="compact">
         <div css={styles.stack}>
           {CONTENT.education.map((entry) => (

@@ -1,4 +1,4 @@
-import type { ContactInfo, EducationEntry, LanguageEntry, PhilosophyItem } from 'types';
+import type { ContactDetails, EducationEntry, LanguageEntry, PhilosophyItem } from 'types';
 
 import type { CVHeaderProps } from 'types/header.types';
 
@@ -9,15 +9,17 @@ export const headerContent: CVHeaderProps = {
     'Front-end architecture, TypeScript systems, and tooling-led engineering for products that need to scale cleanly.',
 };
 
-export const contact: ContactInfo = {
+export const contact: ContactDetails = {
   location: 'Brisbane, Australia',
   email: 'justin.blair.rankin@gmail.com',
   linkedin: 'linkedin.com/in/rankinjustin',
   github: 'github.com/finografic',
   website: 'finografic.github.io/cv-justin-rankin',
   phone: '+61 483 757 098',
-  workRightsNote:
-    'NZ citizen with full Australian work rights (Subclass 444). VEVO verification available on request.',
+  workRightsNotes: [
+    'NZ citizen with full Australian work rights (Subclass 444).',
+    'VEVO verification available on request.',
+  ],
 };
 
 export const philosophy: PhilosophyItem[] = [

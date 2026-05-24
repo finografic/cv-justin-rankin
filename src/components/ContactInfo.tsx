@@ -1,23 +1,27 @@
-import { ExternalLinkIcon, GlobeIcon, HomeIcon, LinkIcon, SmartphoneIcon } from '@finografic/icons';
+import type { IconProps } from '@finografic/icons';
+import { GlobeIcon, HomeIcon, MailIcon } from '@finografic/icons';
+import { GithubIcon } from 'assets/icons/GithubIcon';
+import { LinkedInIcon } from 'assets/icons/LinkedInIcon';
+import { MobileIcon } from 'assets/icons/MobileIcon';
 import type { Interpolation } from '@emotion/react';
-import type { ReactNode } from 'react';
-import type { ContactInfo as ContactInfoType } from 'types';
+import type { ComponentType, ReactNode } from 'react';
+import type { ContactDetails } from 'types';
 
-import { LinkedInInIcon } from '../assets/icons/LinkedInInIcon';
 import { styles } from './ContactInfo.styles';
 
-interface ContactInfoProps {
-  contact: ContactInfoType;
+interface ContactIconProps extends IconProps {
+  css?: Interpolation;
 }
 
 interface ContactRowProps {
   href?: string;
   iconCss?: Interpolation;
-  Icon: React.ComponentType<{ css?: Interpolation }>;
+  iconName: string;
+  Icon: ComponentType<ContactIconProps>;
   text: string;
 }
 
-function ContactRow({ href, iconCss, Icon, text }: ContactRowProps): ReactNode {
+function ContactRow({ href, iconCss, iconName, Icon, text }: ContactRowProps): ReactNode {
   const content = href ? (
     <a
       href={href}
@@ -33,38 +37,62 @@ function ContactRow({ href, iconCss, Icon, text }: ContactRowProps): ReactNode {
   return (
     <li css={styles.item}>
       <span css={styles.row}>
-        <Icon css={iconCss ?? styles.icon} />
+        <Icon className={`icon icon-${iconName}`} css={iconCss} />
         {content}
       </span>
     </li>
   );
 }
 
-export function ContactInfo({ contact }: ContactInfoProps): ReactNode {
+export function ContactInfo({ contact }: { contact: ContactDetails }): ReactNode {
   const phoneDigits = contact.phone.replace(/[^\d+]/g, '');
   const phoneHref = /^\+?\d{7,15}$/.test(phoneDigits) ? `tel:${phoneDigits}` : undefined;
 
   return (
     <>
       <ul css={styles.list}>
-        <ContactRow Icon={HomeIcon} text={contact.location} />
-        <ContactRow Icon={SmartphoneIcon} href={phoneHref} text={contact.phone} />
-        <ContactRow Icon={LinkIcon} href={`mailto:${contact.email}`} text={contact.email} />
+        <ContactRow Icon={HomeIcon} iconCss={styles.icon} iconName="home" text={contact.location} />
         <ContactRow
-          Icon={LinkedInInIcon}
+          Icon={MobileIcon}
+          href={phoneHref}
+          iconCss={styles.iconCustom}
+          iconName="phone"
+          text={contact.phone}
+        />
+        <ContactRow
+          Icon={MailIcon}
+          iconCss={styles.icon}
+          href={`mailto:${contact.email}`}
+          iconName="mail"
+          text={contact.email}
+        />
+        <ContactRow
+          Icon={LinkedInIcon}
           href={`https://${contact.linkedin}`}
-          iconCss={styles.iconLinkedIn}
+          iconCss={styles.iconCustom}
+          iconName="linkedin"
           text={contact.linkedin}
         />
-        <ContactRow Icon={ExternalLinkIcon} href={`https://${contact.github}`} text={contact.github} />
+        <ContactRow
+          Icon={GithubIcon}
+          href={`https://${contact.github}`}
+          iconCss={styles.iconCustom}
+          iconName="github"
+          text={contact.github}
+        />
         <ContactRow
           Icon={GlobeIcon}
           href={`https://${contact.website}`}
-          iconCss={styles.iconGlobe}
+          iconCss={styles.iconCustom}
+          iconName="website"
           text={contact.website}
         />
       </ul>
-      <p css={styles.note}>{contact.workRightsNote}</p>
+      {contact.workRightsNotes.map((note) => (
+        <p css={styles.note} key={note}>
+          {note}
+        </p>
+      ))}
     </>
   );
 }

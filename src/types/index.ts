@@ -1,5 +1,5 @@
 export type {
-  ContactInfo,
+  ContactDetails,
   CVContent,
   EducationEntry,
   LanguageEntry,

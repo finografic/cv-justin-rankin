@@ -37,39 +37,59 @@ export const styles = {
 
   icon: css`
     flex-shrink: 0;
-    width: 1.15rem;
-    height: 1.15rem;
-    color: var(--colors-primary);
-    /* margin-right: 2rem; */
-    opacity: 0.66;
-  `,
-
-  iconLinkedIn: css`
-    flex-shrink: 0;
-    width: 1rem;
-    height: 1rem;
+    width: 1.32rem;
+    height: 1.32rem;
     color: var(--colors-primary);
     opacity: 0.66;
   `,
 
-  iconGlobe: css`
+  /** Custom SVG marks (phone, linkedin, github) — ~15% larger than default contact icons. */
+  iconCustom: css`
     flex-shrink: 0;
-    width: 1rem;
-    height: 1.15rem;
-    color: var(--colors-primary);
-    opacity: 0.85;
-    transform: scale(1.15);
-    transform-origin: center;
+    width: 1.32rem;
+    height: 1.32rem;
     opacity: 0.66;
+
+    &.icon-phone {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: -0.2rem;
+      transform: translateX(-0.1rem);
+      opacity: 0.82;
+    }
+
+    &.icon-linkedin {
+      transform: translateY(-0.2rem);
+      opacity: 0.7;
+    }
+
+    &.icon-github {
+      transform: scale(1.1) translateX(0.05rem);
+      transform-origin: center;
+    }
+
+    &.icon-website {
+      width: 1rem;
+      height: 1.15rem;
+      margin-left: 0.2rem;
+      margin-right: 0.15rem;
+      transform: scale(1.3);
+      transform-origin: center;
+    }
   `,
 
   note: css`
-    margin: 0.4rem 0 1rem;
+    margin: 0;
     padding: 0 0.2rem;
-    color: var(--cv-text);
     font-size: 0.9rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 0.66;
     text-transform: none;
+    &:first-of-type {
+      margin-top: 0.5rem;
+    }
+    &:last-of-type {
+      margin-bottom: 1rem;
+    }
   `,
 };

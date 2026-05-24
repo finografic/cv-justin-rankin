@@ -4,7 +4,7 @@ import type { ItemListConfig } from 'types/items.types';
 export interface CVContent {
   headerContent: CVHeaderProps;
   profile: string[];
-  contact: ContactInfo;
+  contact: ContactDetails;
   technologies: TechnologyGroup[];
   employment: WorkEntry[];
   philosophy: PhilosophyItem[];
@@ -13,14 +13,14 @@ export interface CVContent {
   languages: LanguageEntry[];
 }
 
-export interface ContactInfo {
+export interface ContactDetails {
   location: string;
   email: string;
   linkedin: string;
   github: string;
   website: string;
   phone: string;
-  workRightsNote: string;
+  workRightsNotes: string[];
 }
 
 export type WorkTechnologies = ItemListConfig;

@@ -90,7 +90,7 @@ export const stylesGlobal = css`
   h5,
   h6,
   header h1 + p {
-    letter-spacing: 0.05em !important;
+    letter-spacing: 0.05rem;
     user-select: none;
   }
 

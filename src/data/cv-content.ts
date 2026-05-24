@@ -11,6 +11,7 @@ import type {
 const technologies: TechnologyGroup[] = [
   {
     category: 'Core',
+    variant: 'bullets',
     items: ['TypeScript', 'JavaScript', 'React', 'Node.js'],
   },
   {
@@ -100,7 +101,7 @@ const workExperience: WorkEntry[] = [
   {
     company: 'Sage',
     title: 'Software Engineer',
-    period: '2021 – 2026',
+    period: '2021 - 2026',
     location: 'Barcelona, Spain',
     url: 'https://www.sage.com',
     description: [
@@ -126,7 +127,7 @@ const workExperience: WorkEntry[] = [
   {
     company: 'eDreams ODIGEO / edreams.com',
     title: 'Front-end Developer',
-    period: '2019 – 2020',
+    period: '2019 - 2020',
     location: 'Barcelona, Spain',
     url: 'https://www.edreams.com',
     description: [
@@ -141,7 +142,7 @@ const workExperience: WorkEntry[] = [
   {
     company: 'Pangealand S.L. / exoticca.com',
     title: 'Senior Software Engineer',
-    period: '2018 – 2019',
+    period: '2018 - 2019',
     location: 'Barcelona, Spain',
     url: 'https://www.exoticca.com',
     description: [
@@ -156,7 +157,7 @@ const workExperience: WorkEntry[] = [
   {
     company: 'Econocom Spain / Digital Dimension',
     title: 'Full-stack Developer',
-    period: '2016 – 2017',
+    period: '2016 - 2017',
     location: 'Barcelona, Spain',
     url: 'https://www.econocom.com/en',
     description: [
@@ -171,7 +172,7 @@ const workExperience: WorkEntry[] = [
   {
     company: '70 Main Street Studios',
     title: 'Front-end Developer / UX Designer',
-    period: '2015 – 2016',
+    period: '2015 - 2016',
     location: 'Toronto, Canada',
     url: 'http://www.70mainstreet.com',
     description: [
@@ -186,7 +187,7 @@ const workExperience: WorkEntry[] = [
   {
     company: 'Apple UK & Spain',
     title: 'Software Developer / Technical Support',
-    period: '2010 – 2012',
+    period: '2010 - 2012',
     location: 'Barcelona, Spain',
     url: 'https://www.apple.com/uk',
     description: [
@@ -201,7 +202,7 @@ const workExperience: WorkEntry[] = [
   {
     company: 'Metropolis Media Group S.L.',
     title: 'Full-stack Developer, Designer, Product Manager',
-    period: '2003 – 2014',
+    period: '2003 - 2014',
     location: 'Barcelona, Spain',
     url: 'http://metropolismedia.us',
     description: [
@@ -361,7 +362,7 @@ export const cvContent: CVContent = {
     linkedin: 'linkedin.com/in/rankinjustin',
     github: 'github.com/finografic',
     website: 'finografic.github.io/cv-justin-rankin',
-    phone: '+61 available on request',
+    phone: '+61 483 757 098',
     workRightsNote:
       'NZ citizen with full Australian work rights (Subclass 444). VEVO verification available on request.',
   },

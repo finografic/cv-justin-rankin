@@ -1,9 +1,11 @@
-export type WorkTechnologiesVariant = 'list' | 'pills';
+export type ItemListVariant = 'list' | 'pills' | 'bullets';
 
-export interface WorkTechnologies {
+export interface ItemListConfig {
   items: string[];
-  variant?: WorkTechnologiesVariant;
+  variant?: ItemListVariant;
 }
+
+export type WorkTechnologies = ItemListConfig;
 
 export interface CVContent {
   positioning: string;
@@ -30,9 +32,8 @@ export interface ContactInfo {
   workRightsNote: string;
 }
 
-export interface TechnologyGroup {
+export interface TechnologyGroup extends ItemListConfig {
   category: string;
-  items: string[];
   note?: string;
 }
 

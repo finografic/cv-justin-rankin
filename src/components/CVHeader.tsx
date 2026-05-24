@@ -13,7 +13,7 @@ interface CVHeaderProps {
 export function CVHeader({ name, positioning, strapline }: CVHeaderProps): ReactNode {
   return (
     <div css={styles.wrap}>
-      <AvatarDS alt="Justin Rankin" size="lg" src={photo} variant="elevated" />
+      <AvatarDS alt="Justin Rankin" size="2xl" src={photo} variant="elevated" shape="rounded" />
       <div>
         <h1 css={styles.name}>{name}</h1>
         <p className="cv-accent" css={styles.positioning}>

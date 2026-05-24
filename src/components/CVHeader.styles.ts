@@ -11,15 +11,23 @@ export const styles = {
       grid-template-columns: 1fr;
       gap: 1rem;
     }
+
+    div[data-scope='avatar'] {
+      border: none;
+      margin-bottom: 0.25rem;
+    }
+
+    div:nth-of-type(2) {
+      margin-left: 0.66rem;
+    }
   `,
 
   name: css`
-    margin: 0;
+    margin: 0.25rem 0 0;
     font-family: var(--cv-font-heading);
     font-weight: 600;
-    font-size: clamp(1rem, 1.6vw, 1.625rem);
+    font-size: clamp(1.75rem, 1.6vw, 1.625rem);
     line-height: 1.2;
-    letter-spacing: 0;
     text-transform: uppercase;
     color: var(--colors-secondary-lighter);
   `,
@@ -28,18 +36,19 @@ export const styles = {
     margin: 0.125rem 0 0;
     color: var(--colors-primary);
     font-family: var(--cv-font-heading);
-    font-size: clamp(0.875rem, 1.4vw, 1.375rem);
+    font-size: clamp(1.4rem, 1.4vw, 1.375rem);
     font-weight: 600;
-    letter-spacing: 0;
     line-height: 1.25;
     text-transform: uppercase;
   `,
 
   strap: css`
-    margin: 0.45rem 0 0;
+    margin: 0.33rem 0 0;
     max-width: 52rem;
     color: var(--cv-muted);
+    color: var(--colors-secondary-light);
     font-size: 1rem;
+    font-weight: 500;
     line-height: 1.5;
   `,
 };

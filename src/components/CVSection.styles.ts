@@ -25,7 +25,6 @@ export const styles = {
     font-family: var(--cv-font-heading);
     font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
     text-transform: uppercase;
 
     @media print {

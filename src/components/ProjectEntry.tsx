@@ -1,3 +1,5 @@
+import { PrintColumnBreak } from 'components/print-column-break/PrintColumnBreak';
+import { Fragment } from 'react';
 import type { ReactNode } from 'react';
 import type { Project } from 'types';
 
@@ -33,12 +35,15 @@ interface ProjectEntryProps {
 
 export function ProjectEntry({ project }: ProjectEntryProps): ReactNode {
   return (
-    <CVEntry
-      meta={buildProjectMeta(project)}
-      title={project.name}
-      titleHref={resolveProjectTitleHref(project)}
-    >
-      <p>{project.description}</p>
-    </CVEntry>
+    <Fragment>
+      <CVEntry
+        meta={buildProjectMeta(project)}
+        title={project.name}
+        titleHref={resolveProjectTitleHref(project)}
+      >
+        <p>{project.description}</p>
+      </CVEntry>
+      {project.printBreakAfter ? <PrintColumnBreak when="after" /> : null}
+    </Fragment>
   );
 }

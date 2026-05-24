@@ -9,7 +9,7 @@ import { styles } from './CVHeader.styles';
 export function CVHeader({ name, positioning, strapline }: CVHeaderProps): ReactNode {
   return (
     <header className="cv-header cv-page-header" css={styles.wrap}>
-      <AvatarDS alt={name} size="2xl" src={photo} variant="elevated" shape="rounded" />
+      <AvatarDS alt={name} size="2xl" src={photo} variant="elevated" shape="circle" />
       <div>
         <h1 css={styles.name}>{name}</h1>
         <p className="cv-accent" css={styles.positioning}>

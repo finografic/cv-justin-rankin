@@ -1,5 +1,6 @@
 import type { CVHeaderProps } from 'types/header.types';
 import type { ItemListConfig } from 'types/items.types';
+import type { PrintBreakAfter } from 'types/print.types';
 
 export interface CVContent {
   headerContent: CVHeaderProps;
@@ -26,7 +27,7 @@ export interface ContactDetails {
 
 export type WorkTechnologies = ItemListConfig;
 
-export interface WorkEntry {
+export interface WorkEntry extends PrintBreakAfter {
   company: string;
   title: string;
   period: string;
@@ -36,12 +37,12 @@ export interface WorkEntry {
   technologies: WorkTechnologies;
 }
 
-export interface ProjectCategory {
+export interface ProjectCategory extends PrintBreakAfter {
   name: string;
   projects: Project[];
 }
 
-export interface Project {
+export interface Project extends PrintBreakAfter {
   name: string;
   version?: string;
   visibility?: 'public' | 'private';
@@ -51,7 +52,7 @@ export interface Project {
   titleHref?: string;
 }
 
-export interface TechnologyGroup extends ItemListConfig {
+export interface TechnologyGroup extends ItemListConfig, PrintBreakAfter {
   category: string;
   note?: string;
 }

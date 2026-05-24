@@ -31,6 +31,7 @@ export const employment: WorkEntry[] = [
         'Enterprise SaaS architecture',
       ],
     },
+    printBreakAfter: true,
   },
   {
     company: 'eDreams ODIGEO',

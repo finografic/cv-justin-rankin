@@ -4,6 +4,7 @@ export const technologies: TechnologyGroup[] = [
   {
     category: 'Core',
     items: ['TypeScript', 'JavaScript', 'React', 'Node.js'],
+    // printBreakAfter: true,
   },
   {
     category: 'Architecture & Patterns',
@@ -69,7 +70,7 @@ export const technologies: TechnologyGroup[] = [
   },
   {
     category: 'Testing',
-    items: ['Vitest', '@testing-library/react', 'Jest', 'Playwright (emerging)'],
+    items: ['Vitest', '@testing-library/react', 'Jest', 'Playwright'],
   },
   {
     category: 'Server & APIs',

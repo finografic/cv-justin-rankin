@@ -1,5 +1,6 @@
 import { Global } from '@emotion/react';
 import { PrintButton } from 'components/print-button/PrintButton';
+import { PrintColumnBreak } from 'components/print-column-break/PrintColumnBreak';
 import type { ReactNode } from 'react';
 
 import { styles } from './App.styles';
@@ -33,6 +34,7 @@ export default function App(): ReactNode {
           ))}
         </div>
       </CVSection>
+      <PrintColumnBreak />
       <CVSection sectionKey="technologies" title="Technologies" variant="grid">
         <TechnologyGrid groups={CONTENT.technologies} />
       </CVSection>

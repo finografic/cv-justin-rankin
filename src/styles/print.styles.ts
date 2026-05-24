@@ -40,12 +40,14 @@ export const stylesPrint = css`
     }
 
     /* Invisible rule — place inside one column via <PrintColumnBreak /> */
-    .print-column-break {
+    .print-column-break,
+    .print-break-before-page {
       break-before: page;
       page-break-before: always;
     }
 
-    .print-column-break--after {
+    .print-column-break--after,
+    .print-break-after-page {
       break-before: auto;
       page-break-before: auto;
       break-after: page;
@@ -81,7 +83,7 @@ export const stylesPrint = css`
       gap: 0.65rem !important;
       grid-template-columns: 4.75rem minmax(0, 1fr) !important;
       align-items: center !important;
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 3.25rem !important;
     }
 
     .cv-header [data-scope='avatar'],

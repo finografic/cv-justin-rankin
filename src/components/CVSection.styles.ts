@@ -10,6 +10,10 @@ export const styles = {
     &.compact {
       gap: 0.9rem;
     }
+
+    ul {
+      padding-left: 0;
+    }
   `,
 
   heading: css`

@@ -22,6 +22,7 @@
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
       "data/*": ["./src/data/*"],
+      "layout/*": ["./src/layout/*"],
       "styles/*": ["./src/styles/*"],
       "types": ["./src/types"],
       "types/*": ["./src/types/*"],

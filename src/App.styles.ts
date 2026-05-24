@@ -20,6 +20,27 @@ export const styles = {
   column: css`
     display: grid;
     gap: 1.5rem;
+
+    section.cv-section-education {
+      h3 {
+        letter-spacing: 0;
+      }
+    }
+
+    section.cv-section-languages {
+      strong,
+      span {
+        display: inline-block;
+      }
+      strong {
+        width: 3.5rem;
+      }
+      span.colon {
+        color: var(--colors-secondary-xlight);
+        font-weight: 700;
+        margin-right: 0.5rem;
+      }
+    }
   `,
 
   stack: css`
@@ -30,30 +51,6 @@ export const styles = {
   paragraphList: css`
     display: grid;
     gap: 0.9rem;
-  `,
-
-  educationCard: css`
-    display: grid;
-    gap: 0.35rem;
-  `,
-
-  institution: css`
-    margin: 0;
-    font-family: var(--cv-font-heading);
-    font-size: 1rem;
-  `,
-
-  degree: css`
-    margin: 0;
-    color: var(--colors-primary);
-    font-family: var(--cv-font-heading);
-    font-weight: 700;
-  `,
-
-  meta: css`
-    margin: 0;
-    color: var(--cv-muted);
-    font-style: italic;
   `,
 
   languageList: css`

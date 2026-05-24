@@ -1,12 +1,31 @@
 import type { ReactNode } from 'react';
 import type { Project } from 'types';
 
-import { CVSectionEntry } from './CVSectionEntry';
+import { CVEntry } from './CVEntry';
 
-const buildProjectMeta = (project: Project): string | undefined => {
+const FINOGRAFIC_PACKAGE = /^@finografic\/(.+)$/;
+
+function buildProjectMeta(project: Project): string | undefined {
   const parts = [project.version, project.visibility, project.status].filter(Boolean);
   return parts.length ? parts.join(' · ') : undefined;
-};
+}
+
+function resolveProjectTitleHref(project: Project): string | undefined {
+  if (project.titleHref) {
+    return project.titleHref;
+  }
+
+  if (project.visibility !== 'public') {
+    return undefined;
+  }
+
+  const match = FINOGRAFIC_PACKAGE.exec(project.name);
+  if (match) {
+    return `https://github.com/finografic/${match[1]}`;
+  }
+
+  return undefined;
+}
 
 interface ProjectEntryProps {
   project: Project;
@@ -14,8 +33,12 @@ interface ProjectEntryProps {
 
 export function ProjectEntry({ project }: ProjectEntryProps): ReactNode {
   return (
-    <CVSectionEntry heading={project.name} meta={buildProjectMeta(project)}>
+    <CVEntry
+      meta={buildProjectMeta(project)}
+      title={project.name}
+      titleHref={resolveProjectTitleHref(project)}
+    >
       <p>{project.description}</p>
-    </CVSectionEntry>
+    </CVEntry>
   );
 }

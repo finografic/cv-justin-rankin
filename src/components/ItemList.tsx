@@ -24,7 +24,7 @@ function ItemListLabel({
     return <strong css={styles.labelCategory}>{label}</strong>;
   }
 
-  return <strong css={styles.labelDefault}>{label}:</strong>;
+  return <strong>{label}:</strong>;
 }
 
 function ItemListItems({ items, variant }: { items: string[]; variant: ItemListVariant }): ReactNode {

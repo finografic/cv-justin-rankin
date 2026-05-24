@@ -114,6 +114,10 @@ export const stylesGlobal = css`
     max-width: 100%;
   }
 
+  section strong {
+    color: var(--colors-secondary);
+  }
+
   #root {
     min-height: 100vh;
   }

@@ -6,6 +6,7 @@ import { ContactInfo } from './components/ContactInfo';
 import { CVHeader } from './components/CVHeader';
 import { CVLayout } from './components/CVLayout';
 import { CVSection } from './components/CVSection';
+import { EducationEntry } from './components/EducationEntry';
 import { PhilosophyList } from './components/PhilosophyList';
 import { ProjectEntry } from './components/ProjectEntry';
 import { TechnologyGrid } from './components/TechnologyGrid';
@@ -25,41 +26,40 @@ export default function App(): ReactNode {
   const sidebar = (
     <>
       {/* <PrintButton /> */}
-      <CVSection title="Contact" variant="compact">
+      <CVSection sectionKey="contact" title="Contact" variant="compact">
         <ContactInfo contact={CONTENT.contact} />
       </CVSection>
-      <CVSection title="Profile">
+      <CVSection sectionKey="profile" title="Profile">
         <div css={styles.paragraphList}>
           {CONTENT.profile.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
       </CVSection>
-      <CVSection title="Technologies" variant="grid">
+      <CVSection sectionKey="technologies" title="Technologies" variant="grid">
         <TechnologyGrid groups={CONTENT.technologies} />
       </CVSection>
-      <CVSection className="print-break-before" title="Engineering Philosophy">
+      <CVSection
+        className="print-break-before"
+        sectionKey="engineering-philosophy"
+        title="Engineering Philosophy"
+      >
         <PhilosophyList items={CONTENT.philosophy} />
       </CVSection>
-      <CVSection title="Education" variant="compact">
+      <CVSection sectionKey="education" title="Education" variant="compact">
         <div css={styles.stack}>
           {CONTENT.education.map((entry) => (
-            <article className="print-avoid-break" css={styles.educationCard} key={entry.institution}>
-              <h3 css={styles.institution}>{entry.institution}</h3>
-              <p className="cv-accent" css={styles.degree}>
-                {entry.degree}
-              </p>
-              <p css={styles.meta}>{entry.location}</p>
-              <p>{entry.description}</p>
-            </article>
+            <EducationEntry entry={entry} key={entry.institution} />
           ))}
         </div>
       </CVSection>
-      <CVSection title="Languages" variant="compact">
+      <CVSection sectionKey="languages" title="Languages" variant="compact">
         <ul css={styles.languageList}>
           {CONTENT.languages.map((entry) => (
             <li key={entry.language}>
-              <strong>{entry.language}</strong> — {entry.level}
+              <strong>{entry.language}</strong>
+              <span className="colon">:</span>
+              <span className="level">{entry.level}</span>
             </li>
           ))}
         </ul>
@@ -69,14 +69,14 @@ export default function App(): ReactNode {
 
   const main = (
     <>
-      <CVSection title="Work Experience">
+      <CVSection sectionKey="work-experience" title="Work Experience">
         <div css={styles.stack}>
           {CONTENT.employment.map((entry) => (
             <WorkExperienceEntry entry={entry} key={`${entry.company}-${entry.period}`} />
           ))}
         </div>
       </CVSection>
-      <CVSection className="print-break-before" title="Technical Projects">
+      <CVSection className="print-break-before" sectionKey="technical-projects" title="Technical Projects">
         <div css={styles.stack}>
           {CONTENT.projects.map((category) => (
             <div css={styles.category} key={category.name}>

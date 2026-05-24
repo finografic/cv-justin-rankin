@@ -46,6 +46,8 @@ export interface Project {
   visibility?: 'public' | 'private';
   status?: string;
   description: string;
+  /** Override GitHub or external link on the title; public @finografic/* names auto-link when omitted. */
+  titleHref?: string;
 }
 
 export interface TechnologyGroup extends ItemListConfig {

@@ -6,16 +6,17 @@ export const styles = {
     gap: 0.15rem;
   `,
 
-  companyHeading: css`
+  entryTitle: css`
     margin: 0.5rem 0 0;
     padding: 0;
     font-family: var(--cv-font-body);
     font-size: 1.1rem;
     font-weight: 700;
+    color: var(--colors-primary);
     letter-spacing: 0.01em;
   `,
 
-  companyLink: css`
+  titleLink: css`
     display: inline;
     color: var(--colors-primary);
     text-decoration: none;
@@ -40,9 +41,9 @@ export const styles = {
     color: color-mix(in oklch, var(--cv-muted) 70%, var(--cv-text));
   `,
 
-  title: css`
+  subtitle: css`
     margin: 0;
-    color: var(--colors-secondary-light);
+    color: var(--colors-secondary);
     font-family: var(--cv-font-body);
     font-weight: 700;
   `,
@@ -56,7 +57,7 @@ export const styles = {
     color: var(--colors-secondary-lighter);
   `,
 
-  copy: css`
+  body: css`
     display: grid;
     gap: 0.6rem;
     font-family: var(--cv-font-body);

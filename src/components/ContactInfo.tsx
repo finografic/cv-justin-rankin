@@ -31,7 +31,7 @@ function ContactRow({ href, iconCss, iconName, Icon, text }: ContactRowProps): R
       {text}
     </a>
   ) : (
-    text
+    <>{text}</>
   );
 
   return (

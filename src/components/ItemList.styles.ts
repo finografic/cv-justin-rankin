@@ -17,20 +17,14 @@ export const styles = {
     gap: 0.45rem;
   `,
 
-  labelDefault: css`
-    font-weight: 700;
-    color: var(--cv-text);
-  `,
-
   labelCategory: css`
     display: block;
     margin: 0;
     font-family: var(--cv-font-heading);
     font-size: 0.9rem;
-    font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--cv-text);
+    color: var(--colors-secondary);
   `,
 
   listText: css`

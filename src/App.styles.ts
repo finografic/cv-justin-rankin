@@ -8,7 +8,7 @@ export const styles = {
   contentGrid: css`
     display: grid;
     gap: 2.25rem;
-    grid-template-columns: minmax(18rem, 25rem) minmax(0, 1fr);
+    grid-template-columns: minmax(18rem, 27rem) minmax(0, 1fr);
     align-items: start;
 
     @media (max-width: 768px) {

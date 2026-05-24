@@ -40,7 +40,8 @@ export const styles = {
   pills: css`
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem 0.5rem;
+    row-gap: 0.4rem;
+    column-gap: 0.4rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -48,13 +49,14 @@ export const styles = {
   `,
 
   pill: css`
-    padding: 0.33rem 0.66rem;
+    padding: 0.4rem 0.66rem;
     border: 1px solid var(--colors-primary-light);
     border-radius: 6px;
     background: transparent;
     color: var(--colors-primary);
     font-family: var(--cv-font-body);
-    font-size: 0.875rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.015em;
     font-weight: 600;
     line-height: 1.2;
 

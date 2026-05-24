@@ -5,7 +5,6 @@ export const styles = {
     display: grid;
     gap: 0.85rem;
     margin: 0;
-    padding-left: 1rem;
   `,
 
   item: css`

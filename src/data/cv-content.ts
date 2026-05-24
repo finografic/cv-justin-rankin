@@ -165,7 +165,7 @@ const workExperience: WorkEntry[] = [
       'Built early large-scale React and Redux experience inside an agile Scrum environment, contributing to responsive interfaces, UX improvements, and modernization work.',
     ],
     technologies: {
-      variant: 'list',
+      variant: 'pills',
       items: ['React', 'Redux', 'Node.js', 'JavaScript', 'Docker', 'RESTful APIs', 'SASS / CSS'],
     },
   },
@@ -180,7 +180,7 @@ const workExperience: WorkEntry[] = [
       'Worked inside a multidisciplinary agency environment spanning design, development, UX, marketing platforms, and project delivery.',
     ],
     technologies: {
-      variant: 'list',
+      variant: 'pills',
       items: ['JavaScript', 'Angular', 'Ruby', 'MySQL', 'SASS / CSS', 'Jenkins CI'],
     },
   },
@@ -195,8 +195,8 @@ const workExperience: WorkEntry[] = [
       'The platform improved workflow efficiency, operational visibility, and reporting, and was later adopted by 300+ employees for high-volume Black Friday operations.',
     ],
     technologies: {
-      variant: 'list',
-      items: ['JavaScript', 'PHP', 'MySQL', 'CSS'],
+      variant: 'pills',
+      items: ['JavaScript', 'PHP', 'MySQL', 'SASS / CSS'],
     },
   },
   {
@@ -210,8 +210,8 @@ const workExperience: WorkEntry[] = [
       'Built websites, custom CMS platforms, operational business tools, publishing systems, and online business platforms alongside branding and layout design work.',
     ],
     technologies: {
-      variant: 'list',
-      items: ['JavaScript', 'PHP', 'WordPress', 'MySQL', 'SASS / CSS', 'Linux administration'],
+      variant: 'pills',
+      items: ['JavaScript', 'PHP', 'MySQL', 'SASS / CSS', 'Linux administration'],
     },
   },
 ];
@@ -349,10 +349,10 @@ export const cvContent: CVContent = {
   positioning: 'Software Engineer · TypeScript · React · Node.js',
   profileSummary: {
     short: [
-      'Software engineer focused on front-end architecture, TypeScript-first systems, and developer experience. Over fifteen years building for the web across freelance, agency, startup, enterprise, and product environments in Canada, Spain, and Australia.',
-      'The last five years were spent at Sage, contributing to enterprise SaaS products inside a large-scale micro-frontend architecture, shared UI systems, reusable component libraries, platform improvements, and front-end modernization.',
-      'Outside of work, Justin builds and maintains a personal TypeScript tooling ecosystem spanning shared linting and formatting configs, CLI tooling, project generation, codemods, dependency governance, and a design system built on PandaCSS and Ark UI.',
-      'Preference for explicit architecture over implicit convention, strong typing, self-documenting code, and systems that stay readable and scalable by default.',
+      'Software engineer focused on front-end architecture, TypeScript-first systems, and developer experience. Over fifteen years building for the web, from early full-stack freelance work through agency, startup, and large enterprise environments across Canada, Spain, and Australia.',
+      'Spent the last five years at Sage, working on enterprise SaaS products within a large-scale micro-frontend architecture. Collaborated across international teams on shared UI systems, reusable component libraries, internal platform improvements, and front-end modernization. Increasing focus on maintainability, DX tooling, and integrating AI-assisted development workflows into modern TypeScript engineering.',
+      'Outside of work, actively building and maintaining a personal open-source TypeScript tooling ecosystem: shared linting and formatting configurations, CLI developer tools, a project generator and codemod toolkit, dependency governance, and a design system built on PandaCSS and Ark UI. All published via GitHub Packages.',
+      'Preference for explicit architecture over implicit convention, strong typing, self-documenting code, long-term maintainability, and systems that are readable and scalable by default.',
     ],
     extended: [],
   },

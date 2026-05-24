@@ -3,16 +3,16 @@ import { css } from '@emotion/react';
 export const styles = {
   wrap: css`
     display: grid;
-    gap: 0.55rem;
+    gap: 0.15rem;
   `,
 
   companyHeading: css`
     margin: 0.5rem 0 0;
     padding: 0;
     font-family: var(--cv-font-body);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    line-height: 1.66;
+    letter-spacing: 0.01em;
   `,
 
   companyLink: css`
@@ -31,40 +31,36 @@ export const styles = {
 
   externalIcon: css`
     display: inline-block;
-    width: 0.7em;
-    height: 0.7em;
-    margin-left: 0.35em;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
     vertical-align: baseline;
     transform: translateY(0.12em);
-    opacity: 0.55;
+    opacity: 0.45;
     color: color-mix(in oklch, var(--cv-muted) 70%, var(--cv-text));
   `,
 
   title: css`
     margin: 0;
-    color: color-mix(in oklch, var(--cv-text) 92%, white);
+    color: var(--colors-secondary-light);
     font-family: var(--cv-font-body);
-    font-size: 0.875rem;
     font-weight: 700;
-    line-height: 1.64;
   `,
 
   meta: css`
-    margin: 0;
-    color: color-mix(in oklch, var(--cv-muted) 85%, black);
+    margin: 0.25rem 0 0.33rem;
     font-family: var(--cv-font-body);
-    font-size: 0.875rem;
     font-style: italic;
-    font-weight: 500;
-    line-height: 1.64;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--colors-secondary-lighter);
   `,
 
   copy: css`
     display: grid;
     gap: 0.6rem;
     font-family: var(--cv-font-body);
-    font-size: 0.875rem;
-    line-height: 1.64;
+    font-size: 0.9rem;
 
     p {
       margin: 0;

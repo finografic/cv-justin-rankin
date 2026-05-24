@@ -7,7 +7,6 @@ import { CVHeader } from './components/CVHeader';
 import { CVLayout } from './components/CVLayout';
 import { CVSection } from './components/CVSection';
 import { PhilosophyList } from './components/PhilosophyList';
-import { PrintButton } from './components/PrintButton';
 import { ProjectEntry } from './components/ProjectEntry';
 import { TechnologyGrid } from './components/TechnologyGrid';
 import { WorkExperienceEntry } from './components/WorkExperienceEntry';
@@ -25,7 +24,7 @@ const showDsSmokePanel =
 export default function App(): ReactNode {
   const sidebar = (
     <>
-      <PrintButton />
+      {/* <PrintButton /> */}
       <CVSection title="Contact" variant="compact">
         <ContactInfo contact={cvContent.contact} />
       </CVSection>

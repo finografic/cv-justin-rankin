@@ -2,13 +2,13 @@ import { css } from '@emotion/react';
 
 export const styles = {
   pageHeader: css`
-    margin-bottom: 2.25rem;
+    margin-bottom: 2.5rem;
   `,
 
   contentGrid: css`
     display: grid;
     gap: 2.25rem;
-    grid-template-columns: minmax(18rem, 23rem) minmax(0, 1fr);
+    grid-template-columns: minmax(18rem, 25rem) minmax(0, 1fr);
     align-items: start;
 
     @media (max-width: 768px) {

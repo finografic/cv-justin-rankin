@@ -44,18 +44,19 @@ export const styles = {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding: 0.4rem 0 0.5rem;
   `,
 
   pill: css`
-    padding: 0.35rem 0.625rem;
-    border: 1px solid var(--colors-primary);
-    border-radius: 4px;
+    padding: 0.33rem 0.66rem;
+    border: 1px solid var(--colors-primary-light);
+    border-radius: 6px;
     background: transparent;
     color: var(--colors-primary);
     font-family: var(--cv-font-body);
     font-size: 0.875rem;
-    font-weight: 500;
-    line-height: 1.4;
+    font-weight: 600;
+    line-height: 1.2;
 
     @media print {
       print-color-adjust: exact;

@@ -23,6 +23,8 @@
       "components/*": ["./src/components/*"],
       "data/*": ["./src/data/*"],
       "styles/*": ["./src/styles/*"],
+      "types": ["./src/types"],
+      "types/*": ["./src/types/*"],
       "@styled-system/*": ["./styled-system/*"],
       "@styled-system/css": ["./styled-system/css"],
       "@styled-system/jsx": ["./styled-system/jsx"]

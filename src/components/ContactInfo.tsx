@@ -1,7 +1,7 @@
 import { ExternalLinkIcon, GlobeIcon, HomeIcon, LinkIcon, SmartphoneIcon } from '@finografic/icons';
-import type { ContactInfo as ContactInfoType } from '../data/types';
 import type { Interpolation } from '@emotion/react';
 import type { ReactNode } from 'react';
+import type { ContactInfo as ContactInfoType } from 'types';
 
 import { LinkedInInIcon } from '../assets/icons/LinkedInInIcon';
 import { styles } from './ContactInfo.styles';

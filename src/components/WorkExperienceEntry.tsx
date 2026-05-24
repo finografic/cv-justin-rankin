@@ -1,6 +1,6 @@
 import { ExternalLinkIcon } from '@finografic/icons';
-import type { WorkEntry } from '../data/types';
 import type { ReactNode } from 'react';
+import type { WorkEntry } from 'types';
 
 import { ItemList } from './ItemList';
 import { styles } from './WorkExperienceEntry.styles';

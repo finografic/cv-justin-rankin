@@ -50,7 +50,7 @@ All CV data lives in one file:
 src/data/cv-content.ts
 ```
 
-Edit the exported `cvContent` object — work experience, projects, technologies, profile text, contact
+Edit the exported `CONTENT` object — work experience, projects, technologies, profile text, contact
 details. TypeScript types are in `src/data/types.ts`.
 
 ---

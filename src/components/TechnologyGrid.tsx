@@ -1,5 +1,5 @@
-import type { TechnologyGroup } from '../data/types';
 import type { ReactNode } from 'react';
+import type { TechnologyGroup } from 'types';
 
 import { ItemList } from './ItemList';
 import { styles } from './TechnologyGrid.styles';

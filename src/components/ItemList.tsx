@@ -1,5 +1,5 @@
-import type { ItemListVariant } from '../data/types';
 import type { ReactNode } from 'react';
+import type { ItemListVariant } from 'types';
 
 import { styles } from './ItemList.styles';
 

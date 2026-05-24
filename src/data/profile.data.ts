@@ -1,0 +1,6 @@
+export const profile: string[] = [
+  'Software engineer focused on front-end architecture, TypeScript-first systems, and developer experience. Over fifteen years building for the web, from early full-stack freelance work through agency, startup, and large enterprise environments across Canada, Spain, and Australia.',
+  'Spent the last five years at Sage, working on enterprise SaaS products within a large-scale micro-frontend architecture. Collaborated across international teams on shared UI systems, reusable component libraries, internal platform improvements, and front-end modernization. Increasing focus on maintainability, DX tooling, and integrating AI-assisted development workflows into modern TypeScript engineering.',
+  'Outside of work, actively building and maintaining a personal open-source TypeScript tooling ecosystem: shared linting and formatting configurations, CLI developer tools, a project generator and codemod toolkit, dependency governance, and a design system built on PandaCSS and Ark UI. All published via GitHub Packages.',
+  'Preference for explicit architecture over implicit convention, strong typing, self-documenting code, long-term maintainability, and systems that are readable and scalable by default.',
+];

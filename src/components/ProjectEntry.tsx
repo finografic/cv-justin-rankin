@@ -1,5 +1,5 @@
-import type { Project } from '../data/types';
 import type { ReactNode } from 'react';
+import type { Project } from 'types';
 
 import { CVSectionEntry } from './CVSectionEntry';
 

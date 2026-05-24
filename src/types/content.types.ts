@@ -1,23 +1,14 @@
-export type ItemListVariant = 'list' | 'pills' | 'bullets';
-
-export interface ItemListConfig {
-  items: string[];
-  variant?: ItemListVariant;
-}
-
-export type WorkTechnologies = ItemListConfig;
+import type { CVHeaderProps } from 'types/header.types';
+import type { ItemListConfig } from 'types/items.types';
 
 export interface CVContent {
-  positioning: string;
-  profileSummary: {
-    short: string[];
-    extended: string[];
-  };
+  headerContent: CVHeaderProps;
+  profile: string[];
   contact: ContactInfo;
   technologies: TechnologyGroup[];
-  workExperience: WorkEntry[];
+  employment: WorkEntry[];
   philosophy: PhilosophyItem[];
-  technicalProjects: ProjectCategory[];
+  projects: ProjectCategory[];
   education: EducationEntry[];
   languages: LanguageEntry[];
 }
@@ -32,10 +23,7 @@ export interface ContactInfo {
   workRightsNote: string;
 }
 
-export interface TechnologyGroup extends ItemListConfig {
-  category: string;
-  note?: string;
-}
+export type WorkTechnologies = ItemListConfig;
 
 export interface WorkEntry {
   company: string;
@@ -45,11 +33,6 @@ export interface WorkEntry {
   url?: string;
   description: string[];
   technologies: WorkTechnologies;
-}
-
-export interface PhilosophyItem {
-  title: string;
-  description: string;
 }
 
 export interface ProjectCategory {
@@ -62,6 +45,16 @@ export interface Project {
   version?: string;
   visibility?: 'public' | 'private';
   status?: string;
+  description: string;
+}
+
+export interface TechnologyGroup extends ItemListConfig {
+  category: string;
+  note?: string;
+}
+
+export interface PhilosophyItem {
+  title: string;
   description: string;
 }
 

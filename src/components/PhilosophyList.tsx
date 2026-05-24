@@ -1,5 +1,5 @@
-import type { PhilosophyItem } from '../data/types';
 import type { ReactNode } from 'react';
+import type { PhilosophyItem } from 'types';
 
 import { styles } from './PhilosophyList.styles';
 

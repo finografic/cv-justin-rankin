@@ -16,7 +16,13 @@ export function TechnologyGrid({ groups }: TechnologyGridProps): ReactNode {
       {groups.map((group) => (
         <Fragment key={group.category}>
           <article css={styles.group}>
-            <ItemList items={group.items} label={group.category} variant={group.variant ?? 'pills'} />
+            <ItemList
+              items={group.items}
+              label={group.category}
+              labelStyle="category"
+              variant={group.variant ?? 'pills'}
+              wrap={group.wrap}
+            />
             {group.note ? <p css={styles.note}>{group.note}</p> : null}
           </article>
           {group.printBreakAfter ? <PrintColumnBreak when="after" /> : null}

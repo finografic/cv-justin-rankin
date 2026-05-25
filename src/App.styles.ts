@@ -41,6 +41,22 @@ export const styles = {
         margin-right: 0.5rem;
       }
     }
+
+    section.cv-section-technical-projects {
+      & > div {
+        gap: 0;
+      }
+      h3:not(:first-of-type) {
+        margin-top: 2rem;
+      }
+      article h3 {
+        margin-top: 0.5rem;
+      }
+    }
+
+    section.cv-section-languages {
+      margin-top: 0.5rem;
+    }
   `,
 
   stack: css`
@@ -66,12 +82,17 @@ export const styles = {
   `,
 
   categoryHeading: css`
-    margin: 0;
-    font-family: var(--cv-font-heading);
-    color: var(--colors-primary);
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    display: block;
+    margin: 0.15rem 0 0;
+    padding: 0;
+    font-family: var(--cv-font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--colors-secondary-light);
+    letter-spacing: 0.01em;
+    & + ul {
+      padding: 0 0 0.25rem;
+    }
   `,
 
   twoColList: css`

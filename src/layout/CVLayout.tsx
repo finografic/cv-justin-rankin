@@ -4,7 +4,7 @@ import { styles } from './CVLayout.styles';
 
 export function CVLayout({ children }: PropsWithChildren): ReactNode {
   return (
-    <div css={styles.shell}>
+    <div className="cv-layout-shell" css={styles.shell}>
       <div className="print-stack" css={styles.paper}>
         {children}
       </div>

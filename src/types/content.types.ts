@@ -11,6 +11,8 @@ export interface CVContent {
   philosophy: PhilosophyItem[];
   projects: ProjectCategory[];
   aiProjects: Project[];
+  cliProjects: Project[];
+  fullstackProjects: Project[];
   education: EducationEntry[];
   languages: LanguageEntry[];
 }

@@ -52,6 +52,7 @@ export default defineConfig({
       'layout': resolve('src/layout'),
       'styles': resolve('src/styles'),
       'types': resolve('src/types'),
+      'utils': resolve('src/utils'),
       '@styled-system/styles.css': resolve('styled-system/styles.css'),
       '@styled-system/css': resolve('styled-system/css'),
       '@styled-system/jsx': resolve('styled-system/jsx'),

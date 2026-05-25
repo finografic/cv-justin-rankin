@@ -71,6 +71,7 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 - For `@finografic/design-system`, ship prebuilt `dist/` from CI in the npm tarball; do not commit `dist/` or use postinstall build scripts.
 - In this workspace, do not remove unused imports on save (`source.organizeImports: never`); sort only via `source.sortImports: explicit`. Keep `source.fixAll.oxc: explicit` for oxlint fixes without organize-imports cleanup.
 - Prefer adding missing imports on save (`source.addMissingImports: explicit`) and TypeScript auto-import suggestions while typing.
+- Prefer print-only typography and layout tweaks in `src/styles/print.styles.ts` rather than changing screen component styles.
 
 ## Learned Workspace Facts
 
@@ -81,7 +82,9 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 - `panda.config.ts` must include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`); when `pnpm link` points at the DS monorepo, also include `./node_modules/@finografic/design-system/src/**/*.{ts,tsx}`.
 - `panda.config.ts` must set `jsxFramework: 'react'` so `styled-system/jsx` exists for `@finografic/design-system`.
 - Vite aliases for `assets`, `styles`, `components`, `layout`, `data`, `types`, `@styled-system/css`, and `@styled-system/jsx` must mirror `tsconfig` paths — TypeScript paths alone do not resolve in Vite; CV data types live under `src/types/` (`types` path alias).
-- Print layout in `src/styles/print.styles.ts` matches screen proportions (~38% sidebar / ~62% main on `.cv-content-grid`, not 50/50); keep gold/Raleway accents via `theme.colors.accent` and `.cv-accent` — avoid print CSS that forces accent text to black.
+- Screen `.cv-content-grid` in `App.styles.ts` is asymmetric (`minmax(18rem, 27rem)` sidebar / `1fr` main). Print and `?print=1` preview share `printLayoutRules()` in `src/styles/print.styles.ts` — 50/50 grid, `html` `font-size: 75%`, `cv-print-preview` via `src/utils/print-preview.utils.ts` and `applyPrintPreviewMode()` in `main.tsx`; keep gold/Raleway via `.cv-accent` / `var(--colors-primary)` with `print-color-adjust: exact`, not forced black.
+- `PrintColumnBreak` and optional `printBreakAfter` on employment, project, and technology data; `ItemList` supports `wrap: false` on pill rows when full labels must stay on one line (`ItemListConfig` / `technologies.data.ts`).
+- Sidebar `AI & Experimentation` (`sectionKey` `ai-experimentation`) uses `src/data/ai-projects.data.ts` as `CONTENT.aiProjects`; `CVHeader` renders `<header className="cv-header cv-page-header">`.
 - CV copy is split across `src/data/*.data.ts` and aggregated as `CONTENT` in `src/data/index.ts`; when updating prose, sync from canonical markdown `CV_2026_CONTENT_FINAL_V2.md` in the sibling `__CV_2026__` content repo and diff before editing.
 - `CVSection` requires `sectionKey`; renders `cv-section cv-section-${sectionKey}` with `id` defaulting to `sectionKey` for section-specific styling in `App.styles.ts` or print CSS.
 

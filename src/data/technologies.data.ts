@@ -4,13 +4,12 @@ export const technologies: TechnologyGroup[] = [
   {
     category: 'Core',
     items: ['TypeScript', 'JavaScript', 'React', 'Node.js'],
-    // printBreakAfter: true,
   },
   {
     category: 'Architecture & Patterns',
     items: [
       'Micro-frontends',
-      'Monorepo (pnpm workspaces, Turborepo)',
+      'Monorepo (pnpm, Turborepo)',
       'Shared component systems',
       'Design systems',
       'ESM-first modules',
@@ -21,13 +20,12 @@ export const technologies: TechnologyGroup[] = [
     category: 'Front-end & UI',
     items: [
       'Accessibility (WCAG, ARIA)',
-      'Headless UI primitives (Ark UI, Radix UI)',
+      'Headless UI (Ark UI, Radix UI)',
       'React Hook Form',
-      'Schema validation (Zod, StandardSchema)',
+      'Schema validation (Zod)',
       'CSS-in-JS (PandaCSS, Emotion)',
       'SASS/CSS',
-      'Responsive design',
-      'Mobile-first development',
+      'Responsive & mobile-first',
       'i18n / Localization',
     ],
   },
@@ -40,7 +38,7 @@ export const technologies: TechnologyGroup[] = [
       'tsdown',
       'Vitest',
       '@testing-library',
-      'CI/CD pipelines (TeamCity, GitHub Actions)',
+      'CI/CD (TeamCity, GitHub Actions)',
       'Git workflows',
       'Docker',
       'GitHub Packages',
@@ -51,10 +49,10 @@ export const technologies: TechnologyGroup[] = [
   {
     category: 'CLI & Developer Tools',
     items: [
-      'Custom CLI development (Commander, @clack/prompts)',
+      'Custom CLI (Commander, @clack/prompts)',
       'TUI rendering',
-      'Code generation and codemod tooling',
-      'Dependency governance automation',
+      'Codemod tooling',
+      'Dependency governance',
     ],
   },
   {
@@ -65,7 +63,7 @@ export const technologies: TechnologyGroup[] = [
       'LLM integration (Anthropic, Ollama)',
       'MCP server development',
       'Structured knowledge pipelines',
-      'Prompt engineering and system instruction design',
+      'Prompt & system instruction design',
     ],
   },
   {
@@ -79,5 +77,6 @@ export const technologies: TechnologyGroup[] = [
   {
     category: 'Platforms & Infrastructure',
     items: ['Linux', 'macOS', 'AWS', 'GitHub Actions', 'TeamCity CI/CD'],
+    wrap: false,
   },
 ];

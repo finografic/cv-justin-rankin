@@ -9,22 +9,29 @@ export const styles = {
   `,
 
   wrapBlock: css`
-    margin: 0.35rem 0 0;
+    margin: 0.1rem 0 0;
     font-family: var(--cv-font-body);
     font-size: 0.875rem;
     line-height: 1.64;
     display: grid;
     gap: 0.45rem;
+    & + p {
+      margin-top: 0.25rem;
+    }
   `,
 
   labelCategory: css`
     display: block;
-    margin: 0;
-    font-family: var(--cv-font-heading);
-    font-size: 0.9rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--colors-secondary);
+    margin: 0.15rem 0 0;
+    padding: 0;
+    font-family: var(--cv-font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--colors-secondary-light);
+    letter-spacing: 0.01em;
+    & + ul {
+      padding: 0 0 0.25rem;
+    }
   `,
 
   listText: css`
@@ -40,6 +47,15 @@ export const styles = {
     margin: 0;
     padding: 0;
     padding: 0.4rem 0 0.5rem;
+  `,
+
+  pillsNoWrap: css`
+    flex-wrap: nowrap;
+
+    li {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
   `,
 
   pill: css`

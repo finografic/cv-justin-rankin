@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import type { ReactNode } from 'react';
 import type { ItemListVariant } from 'types';
 
@@ -10,6 +11,8 @@ export interface ItemListProps {
   label?: string;
   /** `category` — section subheading style; `default` — inline bold label with colon. */
   labelStyle?: 'default' | 'category';
+  /** When `false`, pill rows stay on one line. Defaults to wrapping. */
+  wrap?: boolean;
   className?: string;
 }
 
@@ -27,10 +30,18 @@ function ItemListLabel({
   return <strong>{label}:</strong>;
 }
 
-function ItemListItems({ items, variant }: { items: string[]; variant: ItemListVariant }): ReactNode {
+function ItemListItems({
+  items,
+  variant,
+  wrap = true,
+}: {
+  items: string[];
+  variant: ItemListVariant;
+  wrap?: boolean;
+}): ReactNode {
   if (variant === 'pills') {
     return (
-      <ul css={styles.pills}>
+      <ul css={css(styles.pills, wrap === false && styles.pillsNoWrap)}>
         {items.map((item) => (
           <li css={styles.pill} key={item}>
             {item}
@@ -61,6 +72,7 @@ export function ItemList({
   variant = 'list',
   label,
   labelStyle = 'default',
+  wrap = true,
   className,
 }: ItemListProps): ReactNode {
   if (items.length === 0) {
@@ -72,7 +84,8 @@ export function ItemList({
   if (isInlineList) {
     return (
       <p className={className} css={styles.wrapInline}>
-        <ItemListLabel label={label} labelStyle={labelStyle} /> <ItemListItems items={items} variant="list" />
+        <ItemListLabel label={label} labelStyle={labelStyle} />{' '}
+        <ItemListItems items={items} variant="list" wrap={wrap} />
       </p>
     );
   }
@@ -80,7 +93,7 @@ export function ItemList({
   return (
     <div className={className} css={styles.wrapBlock}>
       {label ? <ItemListLabel label={label} labelStyle={labelStyle} /> : null}
-      <ItemListItems items={items} variant={variant} />
+      <ItemListItems items={items} variant={variant} wrap={wrap} />
     </div>
   );
 }

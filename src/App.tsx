@@ -45,17 +45,68 @@ export default function App(): ReactNode {
       >
         <PhilosophyList items={CONTENT.philosophy} />
       </CVSection>
-      <CVSection sectionKey="ai-experimentation" title="AI & Experimentation">
+      <CVSection sectionKey="sidebar-projects" title="Technical Projects">
         <div css={styles.stack}>
-          {CONTENT.aiProjects.map((project) => (
-            <ProjectEntry key={project.name} project={project} />
-          ))}
+          <div>
+            <h3 css={styles.categoryHeading}>AI & Experimentation</h3>
+            <div css={styles.stack}>
+              {CONTENT.aiProjects.map((project) => (
+                <ProjectEntry key={project.name} project={project} />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 css={styles.categoryHeading}>Full-stack Application</h3>
+            <div css={styles.stack}>
+              {CONTENT.fullstackProjects.map((project) => (
+                <ProjectEntry key={project.name} project={project} />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 css={styles.categoryHeading}>CLI & Developer Tools</h3>
+            <div css={styles.stack}>
+              {CONTENT.cliProjects.map((project) => (
+                <ProjectEntry key={project.name} project={project} />
+              ))}
+            </div>
+          </div>
         </div>
       </CVSection>
       <CVSection sectionKey="education" title="Education" variant="compact">
         <div css={styles.stack}>
           {CONTENT.education.map((entry) => (
             <EducationEntry entry={entry} key={entry.institution} />
+          ))}
+        </div>
+      </CVSection>
+    </>
+  );
+
+  const main = (
+    <>
+      <CVSection sectionKey="work-experience" title="Work Experience">
+        <div css={styles.stack}>
+          {CONTENT.employment.map((entry) => (
+            <WorkExperienceEntry entry={entry} key={`${entry.company}-${entry.period}`} />
+          ))}
+        </div>
+      </CVSection>
+      <CVSection className="print-break-before" sectionKey="technical-projects" title="Technical Projects">
+        <div css={styles.stack}>
+          {CONTENT.projects.map((category) => (
+            <>
+              <h3 className="cv-accent heading-category" css={styles.categoryHeading}>
+                {category.name}
+              </h3>
+              <div css={styles.category} key={category.name}>
+                <div css={styles.stack}>
+                  {category.projects.map((project) => (
+                    <ProjectEntry key={project.name} project={project} />
+                  ))}
+                </div>
+              </div>
+            </>
           ))}
         </div>
       </CVSection>
@@ -73,37 +124,10 @@ export default function App(): ReactNode {
     </>
   );
 
-  const main = (
-    <>
-      <CVSection sectionKey="work-experience" title="Work Experience">
-        <div css={styles.stack}>
-          {CONTENT.employment.map((entry) => (
-            <WorkExperienceEntry entry={entry} key={`${entry.company}-${entry.period}`} />
-          ))}
-        </div>
-      </CVSection>
-      <CVSection className="print-break-before" sectionKey="technical-projects" title="Technical Projects">
-        <div css={styles.stack}>
-          {CONTENT.projects.map((category) => (
-            <div css={styles.category} key={category.name}>
-              <h3 className="cv-accent" css={styles.categoryHeading}>
-                {category.name}
-              </h3>
-              <div css={styles.stack}>
-                {category.projects.map((project) => (
-                  <ProjectEntry key={project.name} project={project} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </CVSection>
-    </>
-  );
-
   return (
     <>
       <Global styles={globalStyles} />
+      <p className="print-preview-only">Print preview · remove ?print=1 for screen layout</p>
       <CVLayout>
         <CVHeader
           name={CONTENT.headerContent.name}

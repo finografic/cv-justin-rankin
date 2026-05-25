@@ -1,8 +1,10 @@
 import type { CVContent } from 'types';
 
 import { aiProjects } from './ai-projects.data';
+import { cliProjects } from './cli-projects.data';
 import { contact, education, headerContent, languages, philosophy } from './content.data';
 import { employment } from './employment.data';
+import { fullstackProjects } from './fullstack-projects.data';
 import { profile } from './profile.data';
 import { projects } from './projects.data';
 import { technologies } from './technologies.data';
@@ -16,6 +18,8 @@ export const CONTENT: CVContent = {
   employment,
   projects,
   aiProjects,
+  cliProjects,
+  fullstackProjects,
   education,
   languages,
 };

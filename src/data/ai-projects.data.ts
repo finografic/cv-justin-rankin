@@ -9,7 +9,7 @@ export const aiProjects: Project[] = [
       'Learning Loop & Agent Architecture Base. A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.',
   },
   {
-    name: '@finografic/harness',
+    name: '@finografic/ai-harness',
     version: 'v0.0',
     visibility: 'public',
     status: 'early stage',

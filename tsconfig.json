@@ -26,6 +26,7 @@
       "styles/*": ["./src/styles/*"],
       "types": ["./src/types"],
       "types/*": ["./src/types/*"],
+      "utils/*": ["./src/utils/*"],
       "@styled-system/*": ["./styled-system/*"],
       "@styled-system/css": ["./styled-system/css"],
       "@styled-system/jsx": ["./styled-system/jsx"]

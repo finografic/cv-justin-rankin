@@ -15,6 +15,7 @@ export const technologies: TechnologyGroup[] = [
       'ESM-first modules',
       '@tanstack/query',
     ],
+    printBreakAfter: true,
   },
   {
     category: 'Front-end & UI',

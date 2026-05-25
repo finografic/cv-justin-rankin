@@ -31,7 +31,7 @@ export const employment: WorkEntry[] = [
         'Enterprise SaaS architecture',
       ],
     },
-    printBreakAfter: true,
+    // printBreakAfter: true,
   },
   {
     company: 'eDreams ODIGEO',
@@ -111,6 +111,7 @@ export const employment: WorkEntry[] = [
       variant: 'pills',
       items: ['JavaScript', 'Angular', 'Ruby', 'MySQL', 'SASS/CSS', 'Jenkins CI'],
     },
+    // printBreakAfter: true,
   },
   {
     company: 'Apple UK & Spain',

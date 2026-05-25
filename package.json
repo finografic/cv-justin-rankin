@@ -1,7 +1,7 @@
 {
   "name": "@finografic/cv-justin-rankin",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Personal CV for Justin Rankin. Responsive web + print-optimized PDF, built with TypeScript, React, and Vite",
   "homepage": "https://github.com/finografic/cv-justin-rankin",
   "repository": {

@@ -1,13 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { applyPrintPreviewMode } from './utils/print-preview.utils';
-
 import App from './App';
 
 import './styles/theme.css'; // PostCSS entry: layer order + DS reset + Panda tokens
-
-applyPrintPreviewMode();
 
 const rootElement = document.querySelector('#root');
 

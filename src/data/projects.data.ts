@@ -27,6 +27,7 @@ export const projects: ProjectCategory[] = [
         status: 'active',
         description:
           'Central dependency version policy consumed by genx and other tooling. Includes its own CLI for auditing, updating, and snapshotting dependency state across the ecosystem.',
+        // printBreakAfter: true,
       },
       {
         name: '@finografic/core',

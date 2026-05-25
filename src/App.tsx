@@ -34,7 +34,7 @@ export default function App(): ReactNode {
           ))}
         </div>
       </CVSection>
-      <PrintColumnBreak />
+      {/* <PrintColumnBreak /> */}
       <CVSection sectionKey="technologies" title="Technologies" variant="grid">
         <TechnologyGrid groups={CONTENT.technologies} />
       </CVSection>
@@ -73,12 +73,24 @@ export default function App(): ReactNode {
           </div>
         </div>
       </CVSection>
+      <PrintColumnBreak />
       <CVSection sectionKey="education" title="Education" variant="compact">
         <div css={styles.stack}>
           {CONTENT.education.map((entry) => (
             <EducationEntry entry={entry} key={entry.institution} />
           ))}
         </div>
+      </CVSection>
+      <CVSection className="print-only-section" sectionKey="languages" title="Languages" variant="compact">
+        <ul css={styles.languageList}>
+          {CONTENT.languages.map((entry) => (
+            <li key={entry.language}>
+              <strong>{entry.language}</strong>
+              <span className="colon">:</span>
+              <span className="level">{entry.level}</span>
+            </li>
+          ))}
+        </ul>
       </CVSection>
     </>
   );
@@ -96,7 +108,7 @@ export default function App(): ReactNode {
         <div css={styles.stack}>
           {CONTENT.projects.map((category) => (
             <>
-              <h3 className="cv-accent heading-category" css={styles.categoryHeading}>
+              <h3 className="heading-category" css={styles.categoryHeading}>
                 {category.name}
               </h3>
               <div css={styles.category} key={category.name}>
@@ -110,7 +122,7 @@ export default function App(): ReactNode {
           ))}
         </div>
       </CVSection>
-      <CVSection sectionKey="languages" title="Languages" variant="compact">
+      <CVSection className="screen-only-section" sectionKey="languages" title="Languages" variant="compact">
         <ul css={styles.languageList}>
           {CONTENT.languages.map((entry) => (
             <li key={entry.language}>
@@ -127,7 +139,6 @@ export default function App(): ReactNode {
   return (
     <>
       <Global styles={globalStyles} />
-      <p className="print-preview-only">Print preview · remove ?print=1 for screen layout</p>
       <CVLayout>
         <CVHeader
           name={CONTENT.headerContent.name}

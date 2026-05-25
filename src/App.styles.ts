@@ -14,12 +14,52 @@ export const styles = {
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+
+      > button,
+      > hr {
+        order: 0;
+      }
+      .cv-section-contact {
+        order: 1;
+      }
+      .cv-section-profile {
+        order: 2;
+      }
+      .cv-section-work-experience {
+        order: 3;
+      }
+      .cv-section-technologies {
+        order: 4;
+      }
+      .cv-section-engineering-philosophy {
+        order: 5;
+      }
+      .cv-section-sidebar-projects {
+        order: 6;
+      }
+      .cv-section-technical-projects {
+        order: 7;
+      }
+      .cv-section-education {
+        order: 8;
+      }
+      .cv-section-languages {
+        order: 9;
+      }
+
+      .cv-section-technical-projects > h2 {
+        display: none;
+      }
     }
   `,
 
   column: css`
     display: grid;
     gap: 1.5rem;
+
+    @media (max-width: 768px) {
+      display: contents;
+    }
 
     section.cv-section-education {
       h3 {

@@ -44,14 +44,27 @@ DS `dist/` resolve to this app’s generated `styled-system/` (required for prod
 
 ## ✏️ Updating content
 
-All CV data lives in one file:
+CV data is split across typed data files in `src/data/` and aggregated as `CONTENT` in `src/data/index.ts`:
 
-```
-src/data/cv-content.ts
+| File                         | Content                                    |
+| ---------------------------- | ------------------------------------------ |
+| `projects.data.ts`           | Architecture & Configuration, Front-end DS |
+| `ai-projects.data.ts`        | AI & Experimentation                       |
+| `cli-projects.data.ts`       | CLI & Developer Tools                      |
+| `fullstack-projects.data.ts` | Full-stack Application                     |
+| `technologies.data.ts`       | Technology groups and pills                |
+| `employment.data.ts`         | Work experience entries                    |
+| `education.data.ts`          | Education entries                          |
+
+TypeScript types are in `src/types/content.types.ts`.
+
+### Syncing project versions from GitHub
+
+```bash
+pnpm sync-versions
 ```
 
-Edit the exported `CONTENT` object — work experience, projects, technologies, profile text, contact
-details. TypeScript types are in `src/data/types.ts`.
+Fetches the latest release tag for every `@finografic/*` package from the public GitHub API and updates `version` fields in the data files. Private repos (`touch-monorepo`, `LLAAB`) are skipped.
 
 ---
 

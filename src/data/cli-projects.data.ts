@@ -3,7 +3,7 @@ import type { Project } from 'types';
 export const cliProjects: Project[] = [
   {
     name: '@finografic/gli',
-    version: 'v1.23',
+    version: 'v1.23.0',
     visibility: 'public',
     status: 'active',
     description:
@@ -11,7 +11,7 @@ export const cliProjects: Project[] = [
   },
   {
     name: '@finografic/cli-kit',
-    version: 'v1.4',
+    version: 'v1.4.0',
     visibility: 'public',
     status: 'active',
     description:
@@ -19,7 +19,7 @@ export const cliProjects: Project[] = [
   },
   {
     name: '@finografic/macos-layouts',
-    version: 'v0.17',
+    version: 'v0.17.2',
     visibility: 'public',
     status: 'active',
     description:

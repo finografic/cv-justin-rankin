@@ -6,7 +6,7 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/genx',
-        version: 'v5.24',
+        version: 'v5.25.1',
         visibility: 'public',
         status: 'active',
         description:
@@ -14,7 +14,7 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/oxc-config',
-        version: 'v2.5',
+        version: 'v2.5.1',
         visibility: 'public',
         status: 'active',
         description:
@@ -22,7 +22,7 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/deps-policy',
-        version: 'v0.20',
+        version: 'v0.20.0',
         visibility: 'public',
         status: 'active',
         description:
@@ -31,7 +31,7 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/core',
-        version: 'v0.15',
+        version: 'v0.15.0',
         visibility: 'public',
         status: 'active',
         description:
@@ -39,7 +39,7 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/md-lint',
-        version: 'v0.9',
+        version: 'v0.9.7',
         visibility: 'public',
         status: 'active',
         description:
@@ -47,7 +47,7 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/project-scripts',
-        version: 'v1.3',
+        version: 'v1.3.3',
         visibility: 'public',
         status: 'active',
         description:
@@ -60,6 +60,7 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/design-system',
+        version: 'v1.18.2',
         visibility: 'public',
         status: 'active',
         description:
@@ -67,7 +68,7 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/lucide-manager',
-        version: 'v0.7',
+        version: 'v0.7.0',
         visibility: 'public',
         status: 'active',
         description:
@@ -75,7 +76,7 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/zustand-context-creator',
-        version: 'v1.2',
+        version: 'v1.2.0',
         visibility: 'public',
         status: 'active',
         description:

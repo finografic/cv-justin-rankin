@@ -32,6 +32,6 @@
       "@styled-system/jsx": ["./styled-system/jsx"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "scripts/**/*"],
   "exclude": ["node_modules", "dist"]
 }

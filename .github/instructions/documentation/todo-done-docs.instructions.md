@@ -5,7 +5,7 @@ Rules for planning docs, working docs, and completion records.
 ## Locations
 
 - `docs/todo/` holds task-level planning docs and completion records
-- `docs/ROADMAP.md` holds the repo or package roadmap
+- `docs/todo/ROADMAP.md` holds the repo or package roadmap
 - `docs/todo/NEXT_STEPS.md` is optional for medium to large, actively evolving projects
 - `docs/investigation/` is optional for deeper debugging, audits, and research
 - `docs/taxonomy/` is optional for larger systems that need structure, domain models, or content maps
@@ -56,11 +56,10 @@ When work is complete:
 2. Update the title from `# TODO` to `# DONE`
 3. Replace the status line with a completion line
 4. Update any links pointing to the old filename
-5. If the work appears in `docs/ROADMAP.md` or `docs/todo/NEXT_STEPS.md`, update those references too
+5. If the work appears in `docs/todo/ROADMAP.md` or `docs/todo/NEXT_STEPS.md`, update those references too
 
 ## ROADMAP.md
 
-- Use `docs/ROADMAP.md`, not `docs/todo/ROADMAP.md`
 - ROADMAP is for larger initiatives, themes, and sequencing
 - Keep it concise and structured
 - Include a `## Done` section at the end for completed roadmap items
@@ -72,5 +71,5 @@ When work is complete:
 - `docs/todo/NEXT_STEPS.md` is optional
 - Use it for medium to large projects that are active and growing
 - Keep it near-term and action-oriented
-- It can reference roadmap items, but should not replace `docs/ROADMAP.md`
+- It can reference roadmap items, but should not replace `docs/todo/ROADMAP.md`
 - Good uses: follow-ups, manual testing, cleanup, short-horizon implementation tasks

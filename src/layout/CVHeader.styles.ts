@@ -16,6 +16,10 @@ export const styles = {
     div[data-scope='avatar'] {
       border: none;
       margin-bottom: 0.25rem;
+
+      @media screen {
+        background-color: #fff;
+      }
     }
 
     div:nth-of-type(2) {

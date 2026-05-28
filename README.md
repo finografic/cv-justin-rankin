@@ -1,4 +1,4 @@
-# @finografic/cv-justin-rankin
+# 🦋 @finografic/cv-justin-rankin
 
 > Personal CV for Justin Rankin — responsive web + print-optimised PDF.
 

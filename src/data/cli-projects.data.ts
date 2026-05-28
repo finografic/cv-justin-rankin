@@ -17,6 +17,10 @@ export const cliProjects: Project[] = [
     description:
       'Composable CLI primitives shared across all @finografic CLI tools. Flag parsing, interactive prompts, TUI table rendering, file diff display, XDG config paths. The single hard dependency for every CLI in the ecosystem.',
   },
+];
+
+// Parked for potential future reshuffles.
+export const _archivedCliProjects: Project[] = [
   {
     name: '@finografic/macos-layouts',
     version: 'v0.17.2',

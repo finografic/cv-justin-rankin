@@ -186,9 +186,12 @@ export const stylesPrint = css`
       page-break-inside: auto !important;
     }
 
-    /* Use block flow for work entries — CSS grid miscalculates item Y after break-inside:avoid
-       pushes children across page boundaries, causing Apple/Metropolis overlap */
-    .cv-section-work-experience > div {
+    /* Use block flow for work/project entries — CSS grid miscalculates item Y after
+       break-after:page on a descendant, causing content overlap on the next page */
+    .cv-section-work-experience > div,
+    .cv-section-technical-projects > div,
+    .cv-section-technical-projects > div > div,
+    .cv-section-technical-projects > div > div > div {
       display: block !important;
     }
 

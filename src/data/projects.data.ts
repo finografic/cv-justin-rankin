@@ -44,6 +44,7 @@ export const projects: ProjectCategory[] = [
         status: 'active',
         description:
           'Structural markdown linter with two scoped rule sets: strict rules for human-facing docs, relaxed rules for AI agent instruction files (CLAUDE.md, AGENTS.md). Auto-classifies files by path.',
+        printBreakAfter: true,
       },
       {
         name: '@finografic/project-scripts',

@@ -47,10 +47,12 @@ export interface ProjectCategory extends PrintBreakAfter {
 export interface Project extends PrintBreakAfter {
   name: string;
   version?: string;
+  /** Total commits on the default branch — synced from GitHub via `pnpm sync-versions`. */
+  commits?: number;
   visibility?: 'public' | 'private';
   status?: string;
   description: string;
-  /** Override GitHub or external link on the title; public @finografic/* names auto-link when omitted. */
+  /** Override GitHub or external link on the title; @finografic/* names auto-link when omitted. */
   titleHref?: string;
 }
 

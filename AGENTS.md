@@ -75,12 +75,10 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 
 ## Learned Workspace Facts
 
-- GitHub Pages deploys on push to `master` via `.github/workflows/deploy.yml`; `release.yml` (version tags) is for npm/GitHub Releases only, not the live CV site.
-- Production URL: `https://finografic.github.io/cv-justin-rankin/` — Vite `base` is `/cv-justin-rankin/` (trailing slash required for assets); dev/preview `vite.config.ts` middleware 301-redirects `/cv-justin-rankin` to the slash URL (GitHub Pages does the same in production).
+- GitHub Pages deploys on push to `master` via `.github/workflows/deploy.yml`; `release.yml` (version tags) is for npm/GitHub Releases only, not the live CV site. Production URL: `https://finografic.github.io/cv-justin-rankin/` — Vite `base` is `/cv-justin-rankin/` (trailing slash required for assets); dev/preview `vite.config.ts` middleware 301-redirects `/cv-justin-rankin` to the slash URL (GitHub Pages does the same in production).
 - Body font stack: `"Roboto", "Geist", sans-serif` with Roboto self-hosted under `public/fonts/roboto/`; headings use Raleway from Google Fonts.
 - Panda CSS entry is `src/styles/theme.css` (PostCSS via `@pandacss/dev/postcss`); Vite runs PostCSS on imported CSS — token edits in `panda.config.ts` apply at build/dev time, not by importing `styled-system/styles.css` in app source (that file is Panda codegen output).
-- `panda.config.ts` must include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`); when `pnpm link` points at the DS monorepo, also include `./node_modules/@finografic/design-system/src/**/*.{ts,tsx}`.
-- `panda.config.ts` must set `jsxFramework: 'react'` so `styled-system/jsx` exists for `@finografic/design-system`.
+- `panda.config.ts` must set `jsxFramework: 'react'` and include `./node_modules/@finografic/design-system/dist/**/*.recipe.js` for registry installs (published package has `dist/components/*.recipe.js`, not `src/components/`); when `pnpm link` points at the DS monorepo, also include `./node_modules/@finografic/design-system/src/**/*.{ts,tsx}`.
 - Vite aliases for `assets`, `styles`, `components`, `layout`, `data`, `types`, `@styled-system/css`, and `@styled-system/jsx` must mirror `tsconfig` paths — TypeScript paths alone do not resolve in Vite; CV data types live under `src/types/` (`types` path alias).
 - Screen `.cv-content-grid` in `App.styles.ts` is asymmetric (`minmax(18rem, 27rem)` sidebar / `1fr` main). Print uses `printLayoutRules()` in `src/styles/print.styles.ts` — 50/50 grid, `html` `font-size: 75%`; keep gold/Raleway via `.cv-accent` / `var(--colors-primary)` with `print-color-adjust: exact`, not forced black. The `?print=1` browser preview mode was removed (`print-preview.utils.ts` deleted).
 - `PrintColumnBreak` and optional `printBreakAfter` on employment, project, and technology data; `ItemList` supports `wrap: false` on pill rows when full labels must stay on one line (`ItemListConfig` / `technologies.data.ts`).
@@ -88,5 +86,6 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 - Languages section appears twice: `print-only-section` in sidebar (left column) and `screen-only-section` in main (right column) — print places it on the left for column balance.
 - CV copy is split across `src/data/*.data.ts` and aggregated as `CONTENT` in `src/data/index.ts`; when updating prose, sync from canonical markdown `CV_2026_CONTENT_FINAL_V2.md` in the sibling `__CV_2026__` content repo and diff before editing.
 - `CVSection` requires `sectionKey`; renders `cv-section cv-section-${sectionKey}` with `id` defaulting to `sectionKey` for section-specific styling in `App.styles.ts` or print CSS.
+- `pnpm sync-versions` (`scripts/sync-versions.ts`) fetches latest release tags and total commit counts from the GitHub API for `@finografic/*` packages and GitHub repos `LLAAB`, `touch-monorepo`, and `monorepo-starter`, writing `version` and `commits` into project data files; version sync is skipped for those three repos without releases but commit counts still update; `ProjectEntry` displays metadata as `vX.X.X · N commits`.
 
 ---

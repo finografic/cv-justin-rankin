@@ -64,7 +64,7 @@ TypeScript types are in `src/types/content.types.ts`.
 pnpm sync-versions
 ```
 
-Fetches the latest release tag for every `@finografic/*` package from the public GitHub API and updates `version` fields in the data files. Private repos (`touch-monorepo`, `LLAAB`) are skipped.
+Fetches the latest release tag and total commit count for every GitHub-hosted project from the public GitHub API, then updates `version` and `commits` fields in the data files. Metadata renders as `vX.X.X · N commits`. Repos without releases (`touch-monorepo`, `LLAAB`, `monorepo-starter`) skip version sync but still get commit counts.
 
 ---
 

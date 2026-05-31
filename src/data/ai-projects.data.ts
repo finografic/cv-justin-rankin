@@ -3,6 +3,7 @@ import type { Project } from 'types';
 export const aiProjects: Project[] = [
   {
     name: 'LLAAB',
+    commits: 138,
     visibility: 'public',
     status: 'active development',
     titleHref: 'https://github.com/finografic/llaab',
@@ -11,7 +12,8 @@ export const aiProjects: Project[] = [
   },
   {
     name: '@finografic/ai-harness',
-    version: 'v0.0.1',
+    version: 'v0.1.0',
+    commits: 13,
     visibility: 'public',
     status: 'early stage',
     description:

@@ -6,18 +6,21 @@ import type { Project } from 'types';
 
 const FINOGRAFIC_PACKAGE = /^@finografic\/(.+)$/;
 
+function formatCommitCount(commits: number): string {
+  return `${commits.toLocaleString('en-US')} commits`;
+}
+
 function buildProjectMeta(project: Project): string | undefined {
-  const parts = [project.version, project.visibility, project.status].filter(Boolean);
+  const parts = [
+    project.version,
+    project.commits != null ? formatCommitCount(project.commits) : undefined,
+  ].filter(Boolean);
   return parts.length ? parts.join(' · ') : undefined;
 }
 
 function resolveProjectTitleHref(project: Project): string | undefined {
   if (project.titleHref) {
     return project.titleHref;
-  }
-
-  if (project.visibility !== 'public') {
-    return undefined;
   }
 
   const match = FINOGRAFIC_PACKAGE.exec(project.name);

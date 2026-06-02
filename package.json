@@ -78,34 +78,34 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.2.0",
-    "@commitlint/config-conventional": "^20.2.0",
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
     "@emotion/css": "^11.13.5",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@finografic/md-lint": "^0.9.6",
-    "@finografic/oxc-config": "^2.0.0",
+    "@finografic/md-lint": "^0.16.4",
+    "@finografic/oxc-config": "^2.6.6",
     "@pandacss/dev": "^1.11.1",
-    "@types/node": "^24.0.0",
+    "@types/node": "24.12.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",
     "concurrently": "^9.2.1",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
-    "oxfmt": "^0.43.0",
-    "oxlint": "^1.60.0",
-    "oxlint-tsgolint": "^0.21.1",
+    "lint-staged": "^17.0.7",
+    "oxfmt": "^0.53.0",
+    "oxlint": "^1.68.0",
+    "oxlint-tsgolint": "^0.23.0",
     "tsx": "^4.22.3",
     "typescript": "^5.9.3",
     "vite": "^7.1.10",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.8"
   },
   "LOCAL_DEP_EXAMPLE": {
     "@finografic/design-system_REMOTE": "^1.17.0",
     "@finografic/design-system_LOCAL": "link:/Users/justin/repos-finografic/@finografic-design-system/packages/design-system"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.32.1",
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs}": [
       "oxfmt --no-error-on-unmatched-pattern",
@@ -118,5 +118,8 @@
     "*.{json,jsonc,yml,yaml,toml}": [
       "oxfmt --no-error-on-unmatched-pattern"
     ]
+  },
+  "engines": {
+    "node": ">=24.3.0"
   }
 }

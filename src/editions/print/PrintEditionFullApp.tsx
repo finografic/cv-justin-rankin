@@ -198,35 +198,35 @@ const PROJECTS = [
   {
     name: 'LLAAB',
     href: 'https://github.com/finografic/llaab',
-    meta: 'active',
+    meta: '138 commits · active',
     description:
       'Local-first AI agent architecture base. Structured knowledge vault with typed markdown nodes, LLM router (Anthropic + Ollama), agent orchestration, and MCP server. Built to formalise AI-assisted workflows in TypeScript engineering.',
   },
   {
     name: '@finografic/design-system',
     href: 'https://github.com/finografic/design-system',
-    meta: 'v1.18',
+    meta: 'v1.18.2 · 421 commits',
     description:
       'Token-driven React design system on PandaCSS and Ark UI. 20+ components, OKLCH colour palette, semantic tokens, responsive viewport system, and icon management tooling.',
   },
   {
     name: '@finografic/genx',
     href: 'https://github.com/finografic/genx',
-    meta: 'v5.33',
+    meta: 'v5.33.0 · 675 commits',
     description:
       'Project generator and codemod toolkit. Scaffolds packages, migrates conventions (OXC, AI configs, Vitest), audits repos for drift. The central tool tying the ecosystem together.',
   },
   {
     name: 'touch-monorepo',
     href: 'https://github.com/finografic/touch-monorepo',
-    meta: 'production',
+    meta: '2,931 commits · production',
     description:
       'Full-stack IoT product management system. React + Hono + Drizzle ORM + SQLite, hardware relay via USB HID, role-based auth, real-time session management, multi-locale (EN/ES/CA). Raspberry Pi deployment.',
   },
   {
     name: '@finografic/gli',
     href: 'https://github.com/finografic/gli',
-    meta: 'v1.25',
+    meta: 'v1.25.4 · 212 commits',
     description:
       'Git CLI with live-updating terminal PR dashboard. Interactive rebase, branch selection, multi-repo config, clickable PR links.',
   },
@@ -353,24 +353,22 @@ export default function PrintEditionFullApp(): ReactNode {
                 </ul>
               </section>
 
-              {/* Education */}
-              <section className="pe-section pe-section-education">
-                <h2 className="pe-section-heading">Education</h2>
-                <p className="pe-edu-institution">{EDUCATION.institution}</p>
-                <p className="pe-edu-degree">{EDUCATION.degree}</p>
-                <p className="pe-edu-location">{EDUCATION.location}</p>
-              </section>
-
-              {/* Languages */}
-              <section className="pe-section pe-section-languages">
-                <h2 className="pe-section-heading">Languages</h2>
-                <ul className="pe-lang-list">
-                  {LANGUAGES.map((lang) => (
-                    <li key={lang.language}>
-                      <strong>{lang.language}</strong>: {lang.level}
-                    </li>
+              {/* Technical Projects */}
+              <section className="pe-section pe-section-projects">
+                <h2 className="pe-section-heading">Technical Projects</h2>
+                <div className="pe-project-list">
+                  {PROJECTS.map((proj) => (
+                    <div className="pe-project" key={proj.name}>
+                      <p className="pe-project-title">
+                        <a href={proj.href} rel="noopener noreferrer" target="_blank">
+                          {proj.name}
+                        </a>
+                        <span className="pe-project-meta">{proj.meta}</span>
+                      </p>
+                      <p className="pe-project-desc">{proj.description}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </section>
             </div>
 
@@ -402,22 +400,24 @@ export default function PrintEditionFullApp(): ReactNode {
                 </div>
               </section>
 
-              {/* Technical Projects */}
-              <section className="pe-section pe-section-projects">
-                <h2 className="pe-section-heading">Technical Projects</h2>
-                <div className="pe-project-list">
-                  {PROJECTS.map((proj) => (
-                    <div className="pe-project" key={proj.name}>
-                      <p className="pe-project-title">
-                        <a href={proj.href} rel="noopener noreferrer" target="_blank">
-                          {proj.name}
-                        </a>
-                        <span className="pe-project-meta">{proj.meta}</span>
-                      </p>
-                      <p className="pe-project-desc">{proj.description}</p>
-                    </div>
+              {/* Education */}
+              <section className="pe-section pe-section-education">
+                <h2 className="pe-section-heading">Education</h2>
+                <p className="pe-edu-institution">{EDUCATION.institution}</p>
+                <p className="pe-edu-degree">{EDUCATION.degree}</p>
+                <p className="pe-edu-location">{EDUCATION.location}</p>
+              </section>
+
+              {/* Languages */}
+              <section className="pe-section pe-section-languages">
+                <h2 className="pe-section-heading">Languages</h2>
+                <ul className="pe-lang-list">
+                  {LANGUAGES.map((lang) => (
+                    <li key={lang.language}>
+                      <strong>{lang.language}</strong>: {lang.level}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </section>
             </div>
           </div>

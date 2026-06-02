@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 
 const PRIMARY = 'var(--colors-primary)';
 const FONT_BODY = '"Roboto", "Geist", sans-serif';
-const FONT_HEAD = '"Raleway Variable", "Raleway", sans-serif';
 
 // ─── Page margins — adjust these to taste ───────────────────────────────────
 const PAGE_MARGIN_TOP = '14mm';
@@ -200,8 +199,15 @@ export const printEditionStyles = css`
     justify-content: space-between;
     gap: 1.2rem;
     margin-bottom: 1.4rem;
-    padding-bottom: 0.9rem;
-    border-bottom: 1.5px solid #e4e4e4;
+    padding-bottom: 0;
+  }
+
+  /* Remove avatar ring/shadow from DS elevated variant */
+  .pe-header [data-scope='avatar'] {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    ring: none !important;
   }
 
   .pe-header-content {
@@ -218,19 +224,24 @@ export const printEditionStyles = css`
   }
 
   .pe-name {
-    font-family: ${FONT_HEAD};
+    font-family: var(--cv-font-heading);
     font-size: 2.1rem;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    color: #1a1a1a;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--colors-secondary-lighter);
     margin: 0 0 0.15rem;
     line-height: 1.1;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .pe-positioning {
-    font-family: ${FONT_HEAD};
+    font-family: var(--cv-font-heading);
     font-size: 1.05rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     color: ${PRIMARY};
     margin: 0 0 0.18rem;
     line-height: 1.2;
@@ -239,10 +250,13 @@ export const printEditionStyles = css`
   }
 
   .pe-strapline {
+    font-family: var(--cv-font-body);
     font-size: 0.85rem;
-    color: #666;
+    color: var(--cv-muted);
     margin: 0;
     line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .pe-header-qr {
@@ -286,15 +300,22 @@ export const printEditionStyles = css`
   }
 
   .pe-section-heading {
-    font-family: ${FONT_HEAD};
+    font-family: var(--cv-font-heading);
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: ${PRIMARY};
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 0.22rem;
+    padding-bottom: 0.32rem;
     margin: 0 0 0.5rem;
+    background-image: linear-gradient(
+      90deg,
+      color-mix(in oklch, var(--colors-primary) 50%, transparent) 30%,
+      transparent 0
+    );
+    background-size: 6px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -318,7 +339,11 @@ export const printEditionStyles = css`
     display: flex;
     align-items: center;
     gap: 0.45rem;
-    color: #333;
+    font-family: var(--cv-font-body);
+    font-weight: 600;
+    color: ${PRIMARY};
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .pe-contact-icon {
@@ -326,6 +351,7 @@ export const printEditionStyles = css`
     height: 0.95rem;
     flex-shrink: 0;
     color: ${PRIMARY};
+    opacity: 0.7;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -360,13 +386,19 @@ export const printEditionStyles = css`
   }
 
   .pe-tech-category {
+    font-family: var(--cv-font-body);
     font-weight: 700;
     color: #555;
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: block;
-    margin-bottom: 0.06rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.12rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   /* ── Default: inline comma-separated ── */
@@ -470,12 +502,14 @@ export const printEditionStyles = css`
   }
 
   .pe-work-company {
-    font-family: ${FONT_HEAD};
+    font-family: var(--cv-font-heading);
     font-size: 1rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--colors-secondary-lighter);
     margin: 0 0 0.1rem;
     line-height: 1.2;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 
     & a {
       color: inherit;
@@ -484,6 +518,7 @@ export const printEditionStyles = css`
   }
 
   .pe-work-role {
+    font-family: var(--cv-font-body);
     font-size: 0.86rem;
     font-weight: 600;
     color: ${PRIMARY};
@@ -493,9 +528,13 @@ export const printEditionStyles = css`
   }
 
   .pe-work-meta {
+    font-family: var(--cv-font-body);
     font-size: 0.76rem;
-    color: #999;
+    font-style: italic;
+    color: var(--cv-muted);
     margin: 0 0 0.38rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .pe-work-desc {
@@ -534,10 +573,12 @@ export const printEditionStyles = css`
   }
 
   .pe-project-title {
-    font-family: ${FONT_HEAD};
+    font-family: var(--cv-font-heading);
     font-size: 0.88rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--colors-secondary-lighter);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
     margin: 0 0 0.1rem;
     line-height: 1.3;
     display: flex;

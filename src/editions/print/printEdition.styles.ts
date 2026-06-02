@@ -6,7 +6,7 @@ const FONT_BODY = '"Roboto", "Geist", sans-serif';
 // ─── Page margins — adjust these to taste ───────────────────────────────────
 const PAGE_MARGIN_TOP = '14mm';
 const PAGE_MARGIN_SIDES = '12mm';
-const PAGE_MARGIN_BOTTOM = '16mm'; // extra bottom space for footer
+const PAGE_MARGIN_BOTTOM = '14mm';
 
 export const printEditionStyles = css`
   /* ─── html scale for screen preview ─── */
@@ -15,41 +15,11 @@ export const printEditionStyles = css`
     font-size: 65%;
   }
 
-  /* ─── @page: A4 + custom footer ─── */
+  /* ─── @page: A4 margins only ─── */
 
   @page {
     size: A4;
     margin: ${PAGE_MARGIN_TOP} ${PAGE_MARGIN_SIDES} ${PAGE_MARGIN_BOTTOM};
-
-    @top-left {
-      content: none;
-    }
-
-    @top-center {
-      content: none;
-    }
-
-    @top-right {
-      content: none;
-    }
-
-    @bottom-left {
-      content: 'Justin Rankin  ·  Software Engineer  ·  Brisbane, Australia';
-      font-family: 'Roboto', sans-serif;
-      font-size: 6.5pt;
-      color: #999;
-      border-top: 0.5pt dashed #ccc;
-      padding-top: 4pt;
-    }
-
-    @bottom-right {
-      content: counter(page);
-      font-family: 'Roboto', sans-serif;
-      font-size: 6.5pt;
-      color: #999;
-      border-top: 0.5pt dashed #ccc;
-      padding-top: 4pt;
-    }
   }
 
   /* ─── Print rules ─── */

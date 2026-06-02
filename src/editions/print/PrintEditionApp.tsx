@@ -4,7 +4,7 @@ import { Global } from '@emotion/react';
 import { GithubIcon } from 'assets/icons/GithubIcon';
 import { LinkedInIcon } from 'assets/icons/LinkedInIcon';
 import { MobileIcon } from 'assets/icons/MobileIcon';
-import photo from 'assets/justin.png';
+import photo from 'assets/justin-original.png';
 import { QRCodeSVG } from 'qrcode.react';
 import { useEffect } from 'react';
 import type { ComponentType, ReactNode } from 'react';

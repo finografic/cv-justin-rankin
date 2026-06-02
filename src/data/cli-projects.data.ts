@@ -22,7 +22,7 @@ export const cliProjects: Project[] = [
 ];
 
 // Parked for potential future reshuffles.
-export const _archivedCliProjects: Project[] = [
+export const archivedCliProjects: Project[] = [
   {
     name: '@finografic/macos-layouts',
     version: 'v0.19.3',

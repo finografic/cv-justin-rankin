@@ -13,6 +13,8 @@ import { printEditionStyles } from './printEdition.styles';
 
 import { stylesGlobal } from 'styles/global.styles';
 
+const printEditionGlobalStyles = [stylesGlobal, printEditionStyles];
+
 const QR_URL = 'https://finografic.github.io/cv-justin-rankin';
 
 interface ContactRowProps {
@@ -253,7 +255,7 @@ export default function PrintEditionFullApp(): ReactNode {
 
   return (
     <>
-      <Global styles={[stylesGlobal, printEditionStyles]} />
+      <Global styles={printEditionGlobalStyles} />
 
       <div className="pe-shell">
         <div className="pe-paper">

@@ -41,7 +41,7 @@ function ItemListItems({
 }): ReactNode {
   if (variant === 'pills') {
     return (
-      <ul css={css(styles.pills, wrap === false && styles.pillsNoWrap)}>
+      <ul css={css(styles.pills, !wrap && styles.pillsNoWrap)}>
         {items.map((item) => (
           <li css={styles.pill} key={item}>
             {item}

@@ -270,14 +270,9 @@ export const printEditionStyles = css`
   }
 
   .pe-section-heading {
-    font-family: var(--cv-font-heading);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: ${PRIMARY};
-    padding-bottom: 0.32rem;
     margin: 0 0 0.5rem;
+    padding-bottom: 0.25rem;
+    background-position: 0 100%;
     background-image: linear-gradient(
       90deg,
       color-mix(in oklch, var(--colors-primary) 50%, transparent) 30%,
@@ -285,7 +280,12 @@ export const printEditionStyles = css`
     );
     background-size: 6px 2px;
     background-repeat: repeat-x;
-    background-position: 0 100%;
+    color: var(--colors-primary);
+    font-family: var(--cv-font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }

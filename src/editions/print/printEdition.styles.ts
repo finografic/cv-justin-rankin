@@ -564,4 +564,54 @@ export const printEditionStyles = css`
     color: #444;
     margin: 0;
   }
+
+  /* ─── Engineering Philosophy ─── */
+
+  .pe-philosophy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .pe-philosophy-title {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
+  .pe-philosophy-desc {
+    color: #666;
+  }
+
+  /* ─── Multi-paragraph work description ─── */
+
+  .pe-work-desc-multi p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 0 0.28rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media print {
+    .pe-work-desc-multi p {
+      font-size: 0.78rem !important;
+      margin-bottom: 0.18rem !important;
+    }
+  }
+
+  /* ─── Full edition: slightly larger print font (2 pages, more room) ─── */
+
+  @media print {
+    html.pe-full {
+      font-size: 62% !important;
+    }
+  }
 `;

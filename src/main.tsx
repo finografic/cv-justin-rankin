@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import App from './App';
 import PrintEditionApp from './editions/print/PrintEditionApp';
+import PrintEditionFullApp from './editions/print/PrintEditionFullApp';
 
 import './styles/theme.css'; // PostCSS entry: layer order + DS reset + Panda tokens
 
@@ -13,7 +14,8 @@ if (!rootElement) {
 }
 
 const edition = new URLSearchParams(window.location.search).get('edition');
-const AppComponent = edition === 'print-compact' ? PrintEditionApp : App;
+const AppComponent =
+  edition === 'print-compact' ? PrintEditionApp : edition === 'print' ? PrintEditionFullApp : App;
 
 createRoot(rootElement).render(
   <StrictMode>

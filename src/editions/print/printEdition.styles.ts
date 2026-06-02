@@ -448,8 +448,31 @@ export const printEditionStyles = css`
     font-size: 0.83rem;
     line-height: 1.7;
 
+    & li {
+      margin: 0;
+    }
+
+    & strong,
+    & .pe-lang-colon,
+    & .pe-lang-level {
+      display: inline-block;
+    }
+
     & strong {
+      width: 3.5rem;
       color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    & .pe-lang-colon {
+      color: #b8b0a8;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    & .pe-lang-level {
+      color: #1a1a1a;
+      font-weight: 400;
     }
   }
 

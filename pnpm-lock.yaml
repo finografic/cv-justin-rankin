@@ -46,8 +46,8 @@ importers:
         specifier: ^0.16.4
         version: 0.16.4
       '@finografic/oxc-config':
-        specifier: ^2.6.6
-        version: 2.6.6(oxfmt@0.53.0)(oxlint@1.68.0(oxlint-tsgolint@0.23.0))
+        specifier: ^2.6.7
+        version: 2.6.7(oxfmt@0.53.0)(oxlint@1.68.0(oxlint-tsgolint@0.23.0))
       '@pandacss/dev':
         specifier: ^1.11.1
         version: 1.11.1(typescript@5.9.3)
@@ -838,8 +838,8 @@ packages:
     resolution: {integrity: sha512-yg1rw/4lHEHoVGQcGzXVlS4sLVgdR6PynbhEXJV/LVeO/2uJoMyxYn/QuRCCGNujS20ifc+lta70wPAqqTdx0g==, tarball: https://npm.pkg.github.com/download/@finografic/md-lint/0.16.4/18f7eaccd0a8bf5e22162f7b8d5e1b4fb0d821e9}
     hasBin: true
 
-  '@finografic/oxc-config@2.6.6':
-    resolution: {integrity: sha512-9ii5dT//hFV5B/1TrYjvLpbf3QHezsLLUyBV5BoMIJA9DtJ5GiEFpS69BBdEGlLzulF3vGTGopPiksvzu+gWzQ==, tarball: https://npm.pkg.github.com/download/@finografic/oxc-config/2.6.6/8661a4b2c64116fcb5b5f7cfedd0394ab64cedb5}
+  '@finografic/oxc-config@2.6.7':
+    resolution: {integrity: sha512-Xgjp98RhlyhiG/xmFe+EEK9ifmt34svcTIZMdXMQCyibfDfY/wG3AlOnYqsttK3VfQaYSKQUqiGnIdgQ0KM1nQ==, tarball: https://npm.pkg.github.com/download/@finografic/oxc-config/2.6.7/24d72a7a598ed842361f4b3aa8e531421866bf01}
     engines: {node: '>=24.3.0'}
     peerDependencies:
       oxfmt: '>=0.41.0'
@@ -1609,8 +1609,8 @@ packages:
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
-  '@swc/helpers@0.5.21':
-    resolution: {integrity: sha512-jI/VAmtdjB/RnI8GTnokyX7Ug8c+g+ffD6QRLa6XQewtnGyukKkKSk3wLTM3b5cjt1jNh9x0jfVlagdN2gDKQg==}
+  '@swc/helpers@0.5.23':
+    resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
 
   '@tanstack/react-table@8.21.3':
     resolution: {integrity: sha512-5nNMTSETP4ykGegmVkhjcS8tTLW6Vl4axfEGQN3v0zdHYbK4UfoqfPChclTrJ4EoK9QynqAu9oUf8VEmrpZ5Ww==}
@@ -2029,8 +2029,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  baseline-browser-mapping@2.10.32:
-    resolution: {integrity: sha512-wbPvpyjJPC0zdfdKXxqEL3Ea+bOMD/87X4lftiJkkaBiuG6ALQy1SLmEd7BSmVCuwCQsBrCamgBoLyfFDD1EPg==}
+  baseline-browser-mapping@2.10.33:
+    resolution: {integrity: sha512-bA6+tcSLpz2tIEdDXZPpPTIuxBcC4+w6SieaYyfigIa4h8GlFxbA17v22Vx3JUtuZQj9SgOsnbK+aTBzyDyEuw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -3560,8 +3560,8 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  type-fest@5.6.0:
-    resolution: {integrity: sha512-8ZiHFm91orbSAe2PSAiSVBVko18pbhbiB3U9GglSzF/zCGkR+rxpHx6sEMCUm4kxY4LjDIUGgCfUMtwfZfjfUA==}
+  type-fest@5.7.0:
+    resolution: {integrity: sha512-1URUxUqfHFM1c+zfSPsa3gnkO7Aq21qyH75SIduNYz4SzY964rn1X2vCMQaHSHhktiw+0kPa2iyb6PUpXqB6Vg==}
     engines: {node: '>=20'}
 
   type-is@2.1.0:
@@ -4457,13 +4457,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@finografic/oxc-config@2.6.6(oxfmt@0.53.0)(oxlint@1.68.0(oxlint-tsgolint@0.23.0))':
+  '@finografic/oxc-config@2.6.7(oxfmt@0.53.0)(oxlint@1.68.0(oxlint-tsgolint@0.23.0))':
     dependencies:
       execa: 9.6.1
       oxfmt: 0.53.0
       oxlint: 1.68.0(oxlint-tsgolint@0.23.0)
       picocolors: 1.1.1
-      type-fest: 5.6.0
+      type-fest: 5.7.0
 
   '@floating-ui/core@1.7.5':
     dependencies:
@@ -4579,11 +4579,11 @@ snapshots:
 
   '@internationalized/date@3.12.0':
     dependencies:
-      '@swc/helpers': 0.5.21
+      '@swc/helpers': 0.5.23
 
   '@internationalized/number@3.6.5':
     dependencies:
-      '@swc/helpers': 0.5.21
+      '@swc/helpers': 0.5.23
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -5094,7 +5094,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@swc/helpers@0.5.21':
+  '@swc/helpers@0.5.23':
     dependencies:
       tslib: 2.8.1
 
@@ -5872,7 +5872,7 @@ snapshots:
 
   baseline-browser-mapping@2.10.31: {}
 
-  baseline-browser-mapping@2.10.32: {}
+  baseline-browser-mapping@2.10.33: {}
 
   body-parser@2.2.2:
     dependencies:
@@ -6923,7 +6923,7 @@ snapshots:
     dependencies:
       '@next/env': 16.2.6
       '@swc/helpers': 0.5.15
-      baseline-browser-mapping: 2.10.32
+      baseline-browser-mapping: 2.10.33
       caniuse-lite: 1.0.30001793
       postcss: 8.4.31
       react: 19.2.6
@@ -7524,7 +7524,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  type-fest@5.6.0:
+  type-fest@5.7.0:
     dependencies:
       tagged-tag: 1.0.0
 

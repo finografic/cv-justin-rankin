@@ -85,7 +85,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@finografic/md-lint": "^0.16.4",
-    "@finografic/oxc-config": "^2.6.6",
+    "@finografic/oxc-config": "^2.6.7",
     "@pandacss/dev": "^1.11.1",
     "@types/node": "24.12.0",
     "@types/react": "^19.2.2",

@@ -38,9 +38,9 @@ function ContactRow({ Icon, text, href }: ContactRowProps): ReactNode {
 }
 
 const PROFILE = [
-  'Software engineer focused on front-end architecture, TypeScript-first systems, and developer experience. Over fifteen years building for the web, from freelance and agency work through startup and large enterprise environments across Canada, Spain, and Australia.',
-  'Spent the last five years at Sage delivering enterprise SaaS within a large-scale micro-frontend architecture across international squads. Increasing focus on maintainability, DX tooling, and integrating AI-assisted development workflows into modern TypeScript engineering.',
-  'Actively building a personal open-source TypeScript tooling ecosystem: shared linting and formatting configs, CLI tools, a project generator and codemod toolkit, dependency governance, and a design system. Published via GitHub Packages.',
+  'Software engineer focused on front-end architecture, TypeScript-first systems, and developer experience. Over fifteen years building for the web, from freelance and agency work through startup and enterprise environments across Canada, Spain, and Australia.',
+  'Spent the last five years at Sage delivering enterprise SaaS within a large-scale micro-frontend architecture across international squads. Increasing focus on maintainability, DX tooling, and AI-assisted development workflows.',
+  'Actively building a personal open-source TypeScript tooling ecosystem: linting and formatting configs, CLI tools, a project generator and codemod toolkit, dependency governance, and a design system. Published via GitHub Packages.',
 ];
 
 const TECHNOLOGIES = [
@@ -105,20 +105,20 @@ const TECHNOLOGIES = [
 const PHILOSOPHY = [
   {
     title: 'Explicit architecture, self-documenting code',
-    desc: '— clear naming, visible structure, readable intent',
+    desc: ' - clear naming, visible structure, readable intent',
   },
-  { title: 'Strong typing', desc: '— TypeScript for safety, documentation, and DX in one' },
+  { title: 'Strong typing', desc: ' - TypeScript for safety, documentation, and DX in one' },
   {
     title: 'Maintainability',
-    desc: '— limited, purposeful abstraction. Easy to read, navigate, and change next year',
+    desc: ' - limited, purposeful abstraction. Easy to read, navigate, and change next year',
   },
   {
     title: 'Developer experience',
-    desc: '— tooling, linting, CI, and onboarding friction directly affect what ships',
+    desc: ' - tooling, linting, CI, and onboarding friction directly affect what ships',
   },
   {
     title: 'ESM-first, monorepo-native',
-    desc: '— modern module resolution and workspace architecture as defaults',
+    desc: ' - modern module resolution and workspace architecture as defaults',
   },
 ];
 
@@ -130,10 +130,10 @@ const EMPLOYMENT = [
     period: '2021 – 2026',
     location: 'Barcelona, Spain',
     description: [
-      "Front-end and full-stack development for enterprise SaaS products within Sage's Small Business Segment (SBS), focused on accounting, finance, invoicing, and administrative platforms across a large-scale micro-frontend ecosystem.",
-      'Collaborated across international squads (Europe, South Africa, Canada, US) spanning front-end, back-end, architecture, UX, product, and shared platform teams. Built reusable front-end systems, shared UI functionality, and scalable component patterns using TypeScript, React, Node.js, Sage Design System tooling, and the Carbon component ecosystem.',
-      'Contributed to modernization initiatives including dependency migration, front-end form architecture, Node.js upgrades, security patching, and accessibility improvements. Unit, e2e, and integration testing with strict code coverage requirements. Daily pull-request reviews, refactoring initiatives, and front-end standards discussions across squads.',
-      'Explored and integrated AI-assisted and agentic development workflows into TypeScript engineering processes.',
+      "Full-stack development for enterprise SaaS products within Sage's Small Business Segment (SBS), focused on accounting, finance, invoicing, and administrative platforms across a large-scale micro-frontend ecosystem.",
+      'Collaborated across international squads (Europe, South Africa, Canada, US) spanning front-end, back-end, architecture, UX, product, and shared platform teams. Built reusable front-end systems, shared UI functionality, and scalable component patterns using Sage Design System tooling and the Carbon component ecosystem.',
+      'Contributed to modernization initiatives including dependency migration, front-end form architecture, security patching, and accessibility improvements. Unit, e2e, and integration testing with strict code coverage requirements. Daily pull-request reviews, refactoring initiatives, and front-end standards discussions across squads.',
+      'Explored and integrated AI-assisted and agentic development workflows into engineering processes.',
     ],
     tech: 'TypeScript, React, Node.js, Micro-frontends, Design systems, RESTful APIs, CI/CD, GitHub workflows, Accessibility',
   },
@@ -198,35 +198,35 @@ const PROJECTS = [
   {
     name: 'LLAAB',
     href: 'https://github.com/finografic/llaab',
-    meta: '138 commits · active',
+    meta: 'active',
     description:
       'Local-first AI agent architecture base. Structured knowledge vault with typed markdown nodes, LLM router (Anthropic + Ollama), agent orchestration, and MCP server. Built to formalise AI-assisted workflows in TypeScript engineering.',
   },
   {
     name: '@finografic/design-system',
     href: 'https://github.com/finografic/design-system',
-    meta: 'v1.18.2 · 421 commits',
+    meta: 'v1.18',
     description:
       'Token-driven React design system on PandaCSS and Ark UI. 20+ components, OKLCH colour palette, semantic tokens, responsive viewport system, and icon management tooling.',
   },
   {
     name: '@finografic/genx',
     href: 'https://github.com/finografic/genx',
-    meta: 'v5.33.0 · 675 commits',
+    meta: 'v5.33',
     description:
       'Project generator and codemod toolkit. Scaffolds packages, migrates conventions (OXC, AI configs, Vitest), audits repos for drift. The central tool tying the ecosystem together.',
   },
   {
     name: 'touch-monorepo',
     href: 'https://github.com/finografic/touch-monorepo',
-    meta: '2,931 commits · production',
+    meta: 'production',
     description:
       'Full-stack IoT product management system. React + Hono + Drizzle ORM + SQLite, hardware relay via USB HID, role-based auth, real-time session management, multi-locale (EN/ES/CA). Raspberry Pi deployment.',
   },
   {
     name: '@finografic/gli',
     href: 'https://github.com/finografic/gli',
-    meta: 'v1.25.4 · 212 commits',
+    meta: 'v1.25',
     description:
       'Git CLI with live-updating terminal PR dashboard. Interactive rebase, branch selection, multi-repo config, clickable PR links.',
   },
@@ -234,8 +234,7 @@ const PROJECTS = [
 
 const EDUCATION = {
   institution: 'Ontario College of Art and Design University (OCAD U)',
-  degree: 'Design, Advertising Art Direction',
-  location: 'Toronto, Canada',
+  detail: 'Design, Advertising Art Direction · Toronto, Canada',
 };
 
 const LANGUAGES = [
@@ -404,8 +403,7 @@ export default function PrintEditionFullApp(): ReactNode {
               <section className="pe-section pe-section-education">
                 <h2 className="pe-section-heading">Education</h2>
                 <p className="pe-edu-institution">{EDUCATION.institution}</p>
-                <p className="pe-edu-degree">{EDUCATION.degree}</p>
-                <p className="pe-edu-location">{EDUCATION.location}</p>
+                <p className="pe-edu-degree">{EDUCATION.detail}</p>
               </section>
 
               {/* Languages */}
@@ -414,7 +412,9 @@ export default function PrintEditionFullApp(): ReactNode {
                 <ul className="pe-lang-list">
                   {LANGUAGES.map((lang) => (
                     <li key={lang.language}>
-                      <strong>{lang.language}</strong>: {lang.level}
+                      <strong>{lang.language}</strong>
+                      <span className="pe-lang-colon">:</span>
+                      <span className="pe-lang-level">{lang.level}</span>
                     </li>
                   ))}
                 </ul>

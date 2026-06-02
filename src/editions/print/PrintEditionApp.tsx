@@ -41,21 +41,24 @@ const PROFILE =
   'Front-end architect and TypeScript engineer with 15+ years building for the web — from agency and startup through to enterprise SaaS. Last five years at Sage delivering micro-frontend platforms and shared front-end infrastructure across international squads. Preference for explicit architecture, strong typing, and systems that stay readable as they scale.';
 
 const TECHNOLOGIES = [
-  { category: 'Core', items: 'TypeScript, JavaScript, React, Node.js' },
-  { category: 'Architecture', items: 'Micro-frontends, Monorepo (pnpm/Turborepo), Design systems, ESM' },
+  { category: 'Core', items: ['TypeScript', 'JavaScript', 'React', 'Node.js'] },
+  {
+    category: 'Architecture',
+    items: ['Micro-frontends', 'Monorepo (pnpm/Turborepo)', 'Design systems', 'ESM'],
+  },
   {
     category: 'Front-end',
-    items: 'PandaCSS, Emotion, Ark UI, React Hook Form, Zod, WCAG/ARIA, i18n, SASS',
+    items: ['PandaCSS', 'Emotion', 'Ark UI', 'React Hook Form', 'Zod', 'WCAG/ARIA', 'i18n', 'SASS'],
   },
   {
     category: 'Tooling',
-    items: 'Vite, Vitest, OXC (oxlint/oxfmt), CI/CD (GitHub Actions, TeamCity), Docker',
+    items: ['Vite', 'Vitest', 'OXC (oxlint/oxfmt)', 'CI/CD (GitHub Actions, TeamCity)', 'Docker'],
   },
   {
     category: 'AI & Agentic',
-    items: 'Claude Code, LLM integration (Anthropic, Ollama), MCP server development',
+    items: ['Claude Code', 'LLM integration (Anthropic, Ollama)', 'MCP server development'],
   },
-  { category: 'Server', items: 'Hono, REST APIs, Drizzle ORM, SQLite, MySQL' },
+  { category: 'Server', items: ['Hono', 'REST APIs', 'Drizzle ORM', 'SQLite', 'MySQL'] },
 ];
 
 const EMPLOYMENT = [
@@ -231,7 +234,13 @@ export default function PrintEditionApp(): ReactNode {
                   {TECHNOLOGIES.map((group) => (
                     <div className="pe-tech-group" key={group.category}>
                       <span className="pe-tech-category">{group.category}</span>
-                      <span className="pe-tech-items">{group.items}</span>
+                      <div className="pe-tech-items-list">
+                        {group.items.map((item) => (
+                          <span className="pe-tech-item" key={item}>
+                            {item}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>

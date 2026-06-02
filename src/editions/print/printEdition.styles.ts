@@ -364,12 +364,51 @@ export const printEditionStyles = css`
     margin-bottom: 0.06rem;
   }
 
-  .pe-tech-items {
+  /* ── Default: inline comma-separated ── */
+
+  .pe-tech-items-list {
+    display: inline;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .pe-tech-item {
     color: ${PRIMARY};
     font-weight: 600;
-    font-size: 0.82rem;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+
+    &:not(:last-child)::after {
+      content: ', ';
+      color: ${PRIMARY};
+      font-weight: 600;
+    }
+  }
+
+  /* ── Pill variant: add .pill to .pe-tech-items-list ── */
+
+  .pe-tech-items-list.pill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.22rem;
+    margin-top: 0.15rem;
+  }
+
+  .pe-tech-items-list.pill .pe-tech-item {
+    background: color-mix(in srgb, var(--colors-primary) 10%, transparent);
+    border: 0.5px solid color-mix(in srgb, var(--colors-primary) 30%, transparent);
+    color: ${PRIMARY};
+    padding: 0.1rem 0.42rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+    &::after {
+      content: none !important;
+    }
   }
 
   /* ─── Education ─── */

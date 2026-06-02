@@ -198,6 +198,56 @@ function updateCommits(
   return { content, action: 'unchanged' };
 }
 
+function formatVersionCell(r: SyncResult): string {
+  if (r.oldVersion && r.newVersion && r.oldVersion !== r.newVersion) {
+    return `${r.oldVersion} → ${r.newVersion}`;
+  }
+  return r.newVersion ?? r.oldVersion ?? '-';
+}
+
+function formatCommitsCell(r: SyncResult): string {
+  if (r.oldCommits != null && r.newCommits != null && r.oldCommits !== r.newCommits) {
+    return `${r.oldCommits.toLocaleString('en-US')} → ${r.newCommits.toLocaleString('en-US')}`;
+  }
+  if (r.newCommits != null) return r.newCommits.toLocaleString('en-US');
+  if (r.oldCommits != null) return r.oldCommits.toLocaleString('en-US');
+  return '-';
+}
+
+function printSyncTable(results: SyncResult[]): void {
+  const rows = results.map((r) => ({
+    package: r.pkg,
+    version: formatVersionCell(r),
+    commits: formatCommitsCell(r),
+    versionSync: r.versionStatus,
+    commitsSync: r.commitsStatus,
+    note: r.error ?? '',
+  }));
+
+  const columns: Array<{ header: string; min: number; value: (row: (typeof rows)[0]) => string }> = [
+    { header: 'Package', min: 36, value: (row) => row.package },
+    { header: 'Version', min: 18, value: (row) => row.version },
+    { header: 'Commits', min: 10, value: (row) => row.commits },
+    { header: 'Version sync', min: 10, value: (row) => row.versionSync },
+    { header: 'Commits sync', min: 10, value: (row) => row.commitsSync },
+    { header: 'Note', min: 0, value: (row) => row.note },
+  ];
+
+  const widths = columns.map((col) =>
+    Math.max(col.min, col.header.length, ...rows.map((row) => col.value(row).length)),
+  );
+
+  const pad = (text: string, width: number): string => text.padEnd(width);
+
+  const formatRow = (cells: string[]): string => cells.map((cell, i) => pad(cell, widths[i])).join('  ');
+
+  console.log(formatRow(columns.map((col) => col.header)));
+  console.log(formatRow(widths.map((w) => '-'.repeat(w))));
+  for (const row of rows) {
+    console.log(formatRow(columns.map((col) => col.value(row))));
+  }
+}
+
 async function main(): Promise<void> {
   const root = resolve(import.meta.dirname, '..');
   const results: SyncResult[] = [];
@@ -331,44 +381,7 @@ async function main(): Promise<void> {
     }
   }
 
-  const col1 = 32;
-  const col2 = 12;
-  const col3 = 12;
-  const col4 = 10;
-  const col5 = 10;
-
-  console.log(
-    'Package'.padEnd(col1),
-    'Version'.padEnd(col2),
-    'Commits'.padEnd(col3),
-    'Ver'.padEnd(col4),
-    'Commits'.padEnd(col5),
-  );
-  console.log('-'.repeat(col1 + col2 + col3 + col4 + col5 + 4));
-
-  for (const r of results) {
-    const versionCol =
-      r.oldVersion && r.newVersion && r.oldVersion !== r.newVersion
-        ? `${r.oldVersion} → ${r.newVersion}`
-        : (r.newVersion ?? r.oldVersion ?? '-');
-    const commitsCol =
-      r.oldCommits != null && r.newCommits != null && r.oldCommits !== r.newCommits
-        ? `${r.oldCommits.toLocaleString('en-US')} → ${r.newCommits.toLocaleString('en-US')}`
-        : r.newCommits != null
-          ? r.newCommits.toLocaleString('en-US')
-          : r.oldCommits != null
-            ? r.oldCommits.toLocaleString('en-US')
-            : '-';
-
-    console.log(
-      r.pkg.padEnd(col1),
-      versionCol.padEnd(col2),
-      commitsCol.padEnd(col3),
-      r.versionStatus.padEnd(col4),
-      r.commitsStatus.padEnd(col5),
-      r.error ? `(${r.error})` : '',
-    );
-  }
+  printSyncTable(results);
 
   const versionChanged = results.filter((r) => r.versionStatus === 'updated' || r.versionStatus === 'added');
   const commitsChanged = results.filter((r) => r.commitsStatus === 'updated' || r.commitsStatus === 'added');

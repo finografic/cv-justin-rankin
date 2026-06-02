@@ -5,15 +5,54 @@ const FONT_BODY = '"Roboto", "Geist", sans-serif';
 const FONT_HEAD = '"Raleway Variable", "Raleway", sans-serif';
 
 export const printEditionStyles = css`
-  /* ─── html scale — makes rem consistent for screen preview and print ─── */
+  /* ─── html scale for screen preview ─── */
 
   .pe-edition {
     font-size: 65%;
   }
 
+  /* ─── @page: A4 + custom footer ─── */
+
+  @page {
+    size: A4;
+    margin: 8mm 7mm 14mm;
+
+    @top-left {
+      content: none;
+    }
+
+    @top-center {
+      content: none;
+    }
+
+    @top-right {
+      content: none;
+    }
+
+    @bottom-left {
+      content: 'Justin Rankin  ·  Software Engineer  ·  Brisbane, Australia';
+      font-family: 'Roboto', sans-serif;
+      font-size: 6.5pt;
+      color: #999;
+      border-top: 0.5pt dashed #ccc;
+      padding-top: 4pt;
+    }
+
+    @bottom-right {
+      content: counter(page);
+      font-family: 'Roboto', sans-serif;
+      font-size: 6.5pt;
+      color: #999;
+      border-top: 0.5pt dashed #ccc;
+      padding-top: 4pt;
+    }
+  }
+
+  /* ─── Print rules ─── */
+
   @media print {
     html {
-      font-size: 67%;
+      font-size: 60%;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -24,31 +63,104 @@ export const printEditionStyles = css`
       color: inherit;
       margin: 0;
     }
-  }
 
-  /* ─── @page: A4 + footer in print margin boxes ─── */
-
-  @page {
-    size: A4;
-    margin: 10mm 8mm 16mm;
-
-    @bottom-left {
-      content: 'Justin Rankin  ·  Software Engineer  ·  Brisbane, Australia';
-      font-family: 'Roboto', sans-serif;
-      font-size: 6.5pt;
-      color: #999;
-      border-top: 0.5pt dashed #ccc;
-      padding-top: 4pt;
-      width: 100%;
+    .pe-shell {
+      background: none !important;
+      padding: 0 !important;
+      display: block;
     }
 
-    @bottom-right {
-      content: counter(page) ' / 2';
-      font-family: 'Roboto', sans-serif;
-      font-size: 6.5pt;
-      color: #999;
-      border-top: 0.5pt dashed #ccc;
-      padding-top: 4pt;
+    .pe-paper {
+      width: 100% !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Header — tighter in print */
+    .pe-header {
+      margin-bottom: 0.9rem !important;
+      padding-bottom: 0.6rem !important;
+    }
+
+    .pe-name {
+      font-size: 1.85rem !important;
+    }
+
+    .pe-positioning {
+      font-size: 0.95rem !important;
+    }
+
+    .pe-strapline {
+      font-size: 0.78rem !important;
+    }
+
+    /* Grid */
+    .pe-content-grid {
+      gap: 1.1rem !important;
+    }
+
+    .pe-col {
+      display: block;
+      overflow: visible;
+    }
+
+    /* Sections */
+    .pe-section {
+      margin-bottom: 0.7rem !important;
+    }
+
+    .pe-section-heading {
+      margin-bottom: 0.32rem !important;
+      padding-bottom: 0.14rem !important;
+    }
+
+    /* Contact */
+    .pe-contact-list {
+      line-height: 1.55 !important;
+    }
+
+    /* Tech */
+    .pe-tech-list {
+      gap: 0.2rem !important;
+    }
+
+    .pe-tech-group {
+      gap: 0.02rem !important;
+    }
+
+    /* Work */
+    .pe-work-list {
+      gap: 0.52rem !important;
+    }
+
+    .pe-work-entry {
+      padding-bottom: 0.52rem !important;
+    }
+
+    .pe-work-meta {
+      margin-bottom: 0.22rem !important;
+    }
+
+    .pe-work-desc {
+      font-size: 0.78rem !important;
+      margin-bottom: 0.14rem !important;
+    }
+
+    .pe-work-tech {
+      font-size: 0.72rem !important;
+    }
+
+    /* Projects */
+    .pe-project-list {
+      gap: 0.42rem !important;
+    }
+
+    .pe-project {
+      padding-bottom: 0.38rem !important;
+    }
+
+    .pe-project-desc {
+      font-size: 0.76rem !important;
     }
   }
 
@@ -56,7 +168,7 @@ export const printEditionStyles = css`
 
   .pe-shell {
     min-height: 100vh;
-    background: #d8d8d8;
+    background: #d4d4d4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,21 +185,6 @@ export const printEditionStyles = css`
     color: #1a1a1a;
     font-size: 1rem;
     line-height: 1.5;
-  }
-
-  @media print {
-    .pe-shell {
-      background: none !important;
-      padding: 0 !important;
-      display: block;
-      gap: 0;
-    }
-
-    .pe-paper {
-      width: 100% !important;
-      padding: 0 !important;
-      box-shadow: none !important;
-    }
   }
 
   /* ─── Header ─── */
@@ -173,26 +270,10 @@ export const printEditionStyles = css`
     min-width: 0;
   }
 
-  .pe-col--left {
-    padding-right: 0.8rem;
-    border-right: 1px solid #ebebeb;
-  }
-
-  @media print {
-    .pe-content-grid {
-      gap: 1.2rem !important;
-    }
-
-    .pe-col {
-      display: block;
-      overflow: visible;
-    }
-  }
-
   /* ─── Section ─── */
 
   .pe-section {
-    margin-bottom: 1.15rem;
+    margin-bottom: 1.1rem;
   }
 
   .pe-section:last-child {
@@ -208,7 +289,7 @@ export const printEditionStyles = css`
     color: ${PRIMARY};
     border-bottom: 1px solid #ebebeb;
     padding-bottom: 0.22rem;
-    margin: 0 0 0.55rem;
+    margin: 0 0 0.5rem;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -219,17 +300,29 @@ export const printEditionStyles = css`
     list-style: none;
     margin: 0 0 0.35rem;
     padding: 0;
-    font-size: 0.84rem;
-    line-height: 1.75;
-
-    & li {
-      color: #333;
-    }
+    font-size: 0.9rem;
+    line-height: 1.8;
 
     & a {
       color: inherit;
       text-decoration: none;
     }
+  }
+
+  .pe-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #333;
+  }
+
+  .pe-contact-icon {
+    width: 0.95rem;
+    height: 0.95rem;
+    flex-shrink: 0;
+    color: ${PRIMARY};
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .pe-work-rights {
@@ -253,7 +346,7 @@ export const printEditionStyles = css`
   .pe-tech-list {
     display: flex;
     flex-direction: column;
-    gap: 0.38rem;
+    gap: 0.35rem;
   }
 
   .pe-tech-group {
@@ -383,11 +476,11 @@ export const printEditionStyles = css`
   .pe-project-list {
     display: flex;
     flex-direction: column;
-    gap: 0.72rem;
+    gap: 0.7rem;
   }
 
   .pe-project {
-    padding-bottom: 0.68rem;
+    padding-bottom: 0.65rem;
     border-bottom: 1px solid #f0f0f0;
 
     &:last-child {
@@ -401,8 +494,12 @@ export const printEditionStyles = css`
     font-size: 0.88rem;
     font-weight: 700;
     color: #1a1a1a;
-    margin: 0 0 0.18rem;
+    margin: 0 0 0.1rem;
     line-height: 1.3;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 
     & a {
       color: inherit;
@@ -413,7 +510,8 @@ export const printEditionStyles = css`
   .pe-project-meta {
     font-size: 0.72rem;
     color: #999;
-    margin: 0 0 0.15rem;
+    font-weight: 400;
+    font-family: ${FONT_BODY};
   }
 
   .pe-project-desc {
@@ -421,49 +519,5 @@ export const printEditionStyles = css`
     line-height: 1.45;
     color: #444;
     margin: 0;
-  }
-
-  /* ─── Page break ─── */
-
-  .pe-page-break {
-    display: none;
-  }
-
-  @media print {
-    .pe-page-break {
-      display: block;
-      break-after: page;
-      page-break-after: always;
-    }
-
-    .pe-work-entry,
-    .pe-project {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-
-    .pe-section-heading {
-      break-after: avoid;
-      page-break-after: avoid;
-    }
-  }
-
-  /* ─── Screen-only footer preview ─── */
-
-  .pe-footer-preview {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2.5rem;
-    padding-top: 0.6rem;
-    border-top: 1px dashed #ccc;
-    font-size: 0.72rem;
-    color: #999;
-  }
-
-  @media print {
-    .pe-footer-preview {
-      display: none;
-    }
   }
 `;

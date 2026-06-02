@@ -1,9 +1,13 @@
 import { AvatarDS } from '@finografic/design-system';
+import { GlobeIcon, HomeIcon, MailIcon } from '@finografic/icons';
 import { Global } from '@emotion/react';
+import { GithubIcon } from 'assets/icons/GithubIcon';
+import { LinkedInIcon } from 'assets/icons/LinkedInIcon';
+import { MobileIcon } from 'assets/icons/MobileIcon';
 import photo from 'assets/justin.png';
 import { QRCodeSVG } from 'qrcode.react';
 import { useEffect } from 'react';
-import type { ReactNode } from 'react';
+import type { ComponentType, ReactNode } from 'react';
 
 import { printEditionStyles } from './printEdition.styles';
 
@@ -11,13 +15,27 @@ import { stylesGlobal } from 'styles/global.styles';
 
 const QR_URL = 'https://finografic.github.io/cv-justin-rankin';
 
-const CONTACT = {
-  location: 'Brisbane, Australia',
-  phone: '+61 483 757 098',
-  email: 'justin.blair.rankin@gmail.com',
-  linkedin: 'linkedin.com/in/rankinjustin',
-  github: 'github.com/finografic',
-};
+interface ContactRowProps {
+  Icon: ComponentType<any>;
+  text: string;
+  href?: string;
+}
+
+function ContactRow({ Icon, text, href }: ContactRowProps): ReactNode {
+  const content = href ? (
+    <a href={href} rel="noopener noreferrer" target="_blank">
+      {text}
+    </a>
+  ) : (
+    text
+  );
+  return (
+    <li className="pe-contact-row">
+      <Icon className="pe-contact-icon" />
+      {content}
+    </li>
+  );
+}
 
 const PROFILE =
   'Front-end architect and TypeScript engineer with 15+ years building for the web — from agency and startup through to enterprise SaaS. Last five years at Sage delivering micro-frontend platforms and shared front-end infrastructure across international squads. Preference for explicit architecture, strong typing, and systems that stay readable as they scale.';
@@ -48,8 +66,8 @@ const EMPLOYMENT = [
     period: '2021 – 2026',
     location: 'Barcelona, Spain',
     description:
-      'Full-stack development for enterprise SaaS (accounting, finance, invoicing) within a large-scale micro-frontend ecosystem across international squads. Shared component systems, front-end infrastructure modernisation, accessibility standards, comprehensive testing, and integration of AI-assisted engineering workflows.',
-    tech: 'TypeScript, React, Node.js, Micro-frontends, Design systems, RESTful APIs, CI/CD, GitHub Actions',
+      'Full-stack development for enterprise SaaS (accounting, finance, invoicing) within a large-scale micro-frontend ecosystem across international squads. Shared component systems, front-end infrastructure modernisation, accessibility standards, and integration of AI-assisted engineering workflows.',
+    tech: 'TypeScript, React, Node.js, Micro-frontends, Design systems, RESTful APIs, CI/CD',
   },
   {
     company: 'eDreams ODIGEO',
@@ -110,14 +128,14 @@ const PROJECTS = [
     href: 'https://github.com/finografic/touch-monorepo',
     meta: '2,931 commits · production',
     description:
-      'Full-stack IoT product management system. React + Hono + Drizzle ORM + SQLite, hardware relay via USB HID, role-based auth, real-time session management, and multi-locale support (EN/ES/CA). Uses pnpm workspaces and Turborepo.',
+      'Full-stack IoT product management system. React + Hono + Drizzle ORM + SQLite, hardware relay via USB HID, role-based auth, real-time session management, multi-locale (EN/ES/CA).',
   },
   {
     name: '@finografic/gli',
     href: 'https://github.com/finografic/gli',
     meta: 'v1.25.4 · 212 commits',
     description:
-      'Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, and clickable PR links. Built on the GitHub CLI.',
+      'Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, and clickable PR links.',
   },
 ];
 
@@ -161,7 +179,7 @@ export default function PrintEditionApp(): ReactNode {
               </div>
             </div>
             <div className="pe-header-qr">
-              <QRCodeSVG level="M" size={72} value={QR_URL} />
+              <QRCodeSVG level="M" size={68} value={QR_URL} />
               <p className="pe-qr-label">Full CV & portfolio</p>
             </div>
           </header>
@@ -174,19 +192,28 @@ export default function PrintEditionApp(): ReactNode {
               <section className="pe-section pe-section-contact">
                 <h2 className="pe-section-heading">Contact</h2>
                 <ul className="pe-contact-list">
-                  <li>{CONTACT.location}</li>
-                  <li>
-                    <a href={`tel:${CONTACT.phone}`}>{CONTACT.phone}</a>
-                  </li>
-                  <li>
-                    <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-                  </li>
-                  <li>
-                    <a href={`https://${CONTACT.linkedin}`}>{CONTACT.linkedin}</a>
-                  </li>
-                  <li>
-                    <a href={`https://${CONTACT.github}`}>{CONTACT.github}</a>
-                  </li>
+                  <ContactRow Icon={HomeIcon} text="Brisbane, Australia" />
+                  <ContactRow Icon={MobileIcon} href="tel:+61483757098" text="+61 483 757 098" />
+                  <ContactRow
+                    Icon={MailIcon}
+                    href="mailto:justin.blair.rankin@gmail.com"
+                    text="justin.blair.rankin@gmail.com"
+                  />
+                  <ContactRow
+                    Icon={LinkedInIcon}
+                    href="https://linkedin.com/in/rankinjustin"
+                    text="linkedin.com/in/rankinjustin"
+                  />
+                  <ContactRow
+                    Icon={GithubIcon}
+                    href="https://github.com/finografic"
+                    text="github.com/finografic"
+                  />
+                  <ContactRow
+                    Icon={GlobeIcon}
+                    href="https://finografic.github.io/cv-justin-rankin"
+                    text="finografic.github.io/cv-justin-rankin"
+                  />
                 </ul>
                 <p className="pe-work-rights">NZ citizen · Full Australian work rights (Subclass 444)</p>
               </section>
@@ -209,9 +236,6 @@ export default function PrintEditionApp(): ReactNode {
                   ))}
                 </div>
               </section>
-
-              {/* Page break — left column continues on page 2 */}
-              <div className="pe-page-break" />
 
               {/* Education */}
               <section className="pe-section pe-section-education">
@@ -258,9 +282,6 @@ export default function PrintEditionApp(): ReactNode {
                 </div>
               </section>
 
-              {/* Page break — right column continues on page 2 */}
-              <div className="pe-page-break" />
-
               {/* Technical Projects */}
               <section className="pe-section pe-section-projects">
                 <h2 className="pe-section-heading">Technical Projects</h2>
@@ -271,20 +292,14 @@ export default function PrintEditionApp(): ReactNode {
                         <a href={proj.href} rel="noopener noreferrer" target="_blank">
                           {proj.name}
                         </a>
+                        <span className="pe-project-meta">{proj.meta}</span>
                       </p>
-                      <p className="pe-project-meta">{proj.meta}</p>
                       <p className="pe-project-desc">{proj.description}</p>
                     </div>
                   ))}
                 </div>
               </section>
             </div>
-          </div>
-
-          {/* ── Screen-only footer preview ── */}
-          <div className="pe-footer-preview">
-            <span>Justin Rankin · Software Engineer · Brisbane, Australia</span>
-            <span>1 / 2</span>
           </div>
         </div>
       </div>

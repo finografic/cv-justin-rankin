@@ -4,6 +4,11 @@ const PRIMARY = 'var(--colors-primary)';
 const FONT_BODY = '"Roboto", "Geist", sans-serif';
 const FONT_HEAD = '"Raleway Variable", "Raleway", sans-serif';
 
+// ─── Page margins — adjust these to taste ───────────────────────────────────
+const PAGE_MARGIN_TOP = '14mm';
+const PAGE_MARGIN_SIDES = '12mm';
+const PAGE_MARGIN_BOTTOM = '16mm'; // extra bottom space for footer
+
 export const printEditionStyles = css`
   /* ─── html scale for screen preview ─── */
 
@@ -15,7 +20,7 @@ export const printEditionStyles = css`
 
   @page {
     size: A4;
-    margin: 8mm 7mm 14mm;
+    margin: ${PAGE_MARGIN_TOP} ${PAGE_MARGIN_SIDES} ${PAGE_MARGIN_BOTTOM};
 
     @top-left {
       content: none;
@@ -179,7 +184,7 @@ export const printEditionStyles = css`
   .pe-paper {
     background: #fff;
     width: 210mm;
-    padding: 10mm 8mm;
+    padding: ${PAGE_MARGIN_TOP} ${PAGE_MARGIN_SIDES};
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
     font-family: ${FONT_BODY};
     color: #1a1a1a;

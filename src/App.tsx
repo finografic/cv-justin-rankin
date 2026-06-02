@@ -10,7 +10,7 @@ import { PhilosophyList } from './components/philosophy-list/PhilosophyList';
 import { ProjectEntry } from './components/ProjectEntry';
 import { TechnologyGrid } from './components/technology-grid/TechnologyGrid';
 import { WorkExperienceEntry } from './components/WorkExperienceEntry';
-import { CONTENT } from './data';
+import { CONTENT } from './data/web';
 import { CVHeader } from './layout/CVHeader';
 import { CVLayout } from './layout/CVLayout';
 import { CVSection } from './layout/CVSection';

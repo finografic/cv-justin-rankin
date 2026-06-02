@@ -9,7 +9,7 @@ import { QRCodeSVG } from 'qrcode.react';
 import { useEffect } from 'react';
 import type { ComponentType, ReactNode } from 'react';
 
-import { printEditionStyles } from './printEdition.styles';
+import { printEditionStyles } from './AppPrint.styles';
 
 import { stylesGlobal } from 'styles/global.styles';
 

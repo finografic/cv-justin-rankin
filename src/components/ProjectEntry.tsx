@@ -1,5 +1,5 @@
 import { PrintColumnBreak } from 'components/print-column-break/PrintColumnBreak';
-import { CVEntry } from 'layout/CVEntry';
+import { CVEntry } from 'layout/web/CVEntry';
 import { Fragment } from 'react';
 import type { ReactNode } from 'react';
 import type { Project } from 'types';

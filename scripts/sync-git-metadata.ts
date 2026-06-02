@@ -9,16 +9,11 @@ const VERSION_BLOCKLIST = new Set(['touch-monorepo', 'LLAAB', 'monorepo-starter'
 
 const GITHUB_PROJECT_NAMES = new Set(['touch-monorepo', 'monorepo-starter', 'LLAAB']);
 
-const DATA_FILES = [
-  'src/data/projects.data.ts',
-  'src/data/ai-projects.data.ts',
-  'src/data/cli-projects.data.ts',
-  'src/data/fullstack-projects.data.ts',
-];
+const DATA_FILES = ['src/data/web/projects.data.ts', 'src/data/print/projects.data.ts'];
 
 const HEADERS: Record<string, string> = {
   'Accept': 'application/vnd.github+json',
-  'User-Agent': 'cv-justin-rankin-version-sync',
+  'User-Agent': 'cv-justin-rankin-git-metadata-sync',
 };
 
 interface SyncResult {
@@ -254,7 +249,7 @@ async function main(): Promise<void> {
 
   const allProjects = new Map<
     string,
-    { file: string; oldVersion: string | null; oldCommits: number | null }
+    { oldVersion: string | null; oldCommits: number | null; files: Set<string> }
   >();
 
   for (const relPath of DATA_FILES) {
@@ -263,11 +258,14 @@ async function main(): Promise<void> {
     const names = extractProjectNames(content);
 
     for (const name of names) {
-      allProjects.set(name, {
-        file: relPath,
+      const existing = allProjects.get(name);
+      const entry = {
         oldVersion: readProjectField(content, name, 'version') as string | null,
         oldCommits: readProjectField(content, name, 'commits') as number | null,
-      });
+        files: existing?.files ?? new Set<string>(),
+      };
+      entry.files.add(relPath);
+      allProjects.set(name, entry);
     }
   }
 
@@ -344,7 +342,7 @@ async function main(): Promise<void> {
 
     for (const [pkg, version] of versionMap) {
       const projectInfo = allProjects.get(pkg);
-      if (projectInfo?.file !== relPath) continue;
+      if (!projectInfo?.files.has(relPath)) continue;
 
       const { content: updatedContent, action } = updateVersion(content, pkg, version);
       if (action !== 'unchanged') {
@@ -361,7 +359,7 @@ async function main(): Promise<void> {
 
     for (const [pkg, commits] of commitsMap) {
       const projectInfo = allProjects.get(pkg);
-      if (projectInfo?.file !== relPath) continue;
+      if (!projectInfo?.files.has(relPath)) continue;
 
       const { content: updatedContent, action } = updateCommits(content, pkg, commits);
       if (action !== 'unchanged') {

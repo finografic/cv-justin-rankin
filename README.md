@@ -44,27 +44,27 @@ DS `dist/` resolve to this app’s generated `styled-system/` (required for prod
 
 ## ✏️ Updating content
 
-CV data is split across typed data files in `src/data/` and aggregated as `CONTENT` in `src/data/index.ts`:
+CV data is split across typed data files under `src/data/web/` and aggregated as `CONTENT` in `src/data/web/index.ts`:
 
-| File                         | Content                                    |
-| ---------------------------- | ------------------------------------------ |
-| `projects.data.ts`           | Architecture & Configuration, Front-end DS |
-| `ai-projects.data.ts`        | AI & Experimentation                       |
-| `cli-projects.data.ts`       | CLI & Developer Tools                      |
-| `fullstack-projects.data.ts` | Full-stack Application                     |
-| `technologies.data.ts`       | Technology groups and pills                |
-| `employment.data.ts`         | Work experience entries                    |
-| `education.data.ts`          | Education entries                          |
+| File                   | Content                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------- |
+| `projects.data.ts`     | Main column categories, sidebar AI / full-stack / CLI lists, and archived CLI (if retained) |
+| `technologies.data.ts` | Technology groups and pills                                                                 |
+| `employment.data.ts`   | Work experience entries                                                                     |
+| `content.data.ts`      | Header, contact, philosophy, education, languages                                           |
+| `profile.data.ts`      | Profile paragraphs                                                                          |
+
+Print edition copy lives under `src/data/print/` (`PRINT_CONTENT` in `src/data/print/index.ts`) with the same file names as web (`content`, `profile`, `employment`, `technologies`, `projects`).
 
 TypeScript types are in `src/types/content.types.ts`.
 
 ### Syncing project versions from GitHub
 
 ```bash
-pnpm sync-versions
+pnpm sync-git-metadata
 ```
 
-Fetches the latest release tag and total commit count for every GitHub-hosted project from the public GitHub API, then updates `version` and `commits` fields in the data files. Metadata renders as `vX.X.X · N commits`. Repos without releases (`touch-monorepo`, `LLAAB`, `monorepo-starter`) skip version sync but still get commit counts.
+Fetches the latest release tag and total commit count for every GitHub-hosted project from the public GitHub API, then updates `version` and `commits` in `src/data/web/projects.data.ts` and `src/data/print/projects.data.ts`. Web metadata renders as `vX.X.X · N commits`; print shows `version` or `status` only. Repos without releases (`touch-monorepo`, `LLAAB`, `monorepo-starter`) skip version sync but still get commit counts.
 
 ---
 

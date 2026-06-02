@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 export const styles = {
-  wrap: css`
+  header: css`
     display: grid;
     gap: 0.95rem;
     grid-template-columns: 6.25rem minmax(0, 1fr);

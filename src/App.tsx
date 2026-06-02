@@ -3,7 +3,6 @@ import { PrintButton } from 'components/print-button/PrintButton';
 import { PrintColumnBreak } from 'components/print-column-break/PrintColumnBreak';
 import type { ReactNode } from 'react';
 
-import { styles } from './App.styles';
 import { ContactInfo } from './components/contact-info/ContactInfo';
 import { EducationEntry } from './components/EducationEntry';
 import { PhilosophyList } from './components/philosophy-list/PhilosophyList';
@@ -11,12 +10,13 @@ import { ProjectEntry } from './components/ProjectEntry';
 import { TechnologyGrid } from './components/technology-grid/TechnologyGrid';
 import { WorkExperienceEntry } from './components/WorkExperienceEntry';
 import { CONTENT } from './data/web';
-import { CVHeader } from './layout/CVHeader';
-import { CVLayout } from './layout/CVLayout';
-import { CVSection } from './layout/CVSection';
+import { CVHeader } from './layout/web/CVHeader';
+import { CVLayout } from './layout/web/CVLayout';
+import { CVSection } from './layout/web/CVSection';
 
+import { styles } from './styles/app.styles';
 import { stylesGlobal } from './styles/global.styles';
-import { stylesPrint } from './styles/print.styles';
+import { stylesPrint } from './styles/print.orig.styles';
 
 const globalStyles = [stylesGlobal, stylesPrint];
 

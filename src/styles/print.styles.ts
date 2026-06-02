@@ -1,242 +1,548 @@
 import { css } from '@emotion/react';
 
-export const stylesPrint = css`
-  @page {
-    size: A4;
-    margin: 8mm;
+const PRIMARY = 'var(--colors-primary)';
+const FONT_BODY = '"Roboto", "Geist", sans-serif';
+
+// ─── Page margins — adjust these to taste ───────────────────────────────────
+const PAGE_MARGIN_TOP = '14mm';
+const PAGE_MARGIN_SIDES = '12mm';
+const PAGE_MARGIN_BOTTOM = '14mm';
+
+export const printEditionStyles = css`
+  /* ─── html scale for screen preview ─── */
+
+  .pe-edition {
+    font-size: 65%;
   }
 
-  .print-only-section {
-    display: none !important;
+  /* ─── @page: A4 margins only ─── */
+
+  @page {
+    size: A4;
+    margin: ${PAGE_MARGIN_TOP} ${PAGE_MARGIN_SIDES} ${PAGE_MARGIN_BOTTOM};
   }
+
+  /* ─── Print rules ─── */
 
   @media print {
     html {
+      font-size: 60%;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
-      font-size: 75%;
     }
 
     html,
     html body {
-      background-color: #ffffff;
+      background: #fff !important;
       color: inherit;
-    }
-
-    html body {
       margin: 0;
     }
 
-    .screen-only,
-    .screen-only-section {
-      display: none !important;
+    .pe-shell {
+      background: none !important;
+      padding: 0 !important;
+      display: block;
     }
 
-    .print-only-section {
-      display: block !important;
-    }
-
-    .print-stack {
+    .pe-paper {
       width: 100% !important;
-      max-width: none !important;
       padding: 0 !important;
-      margin: 0 !important;
       box-shadow: none !important;
-      border-radius: 0 !important;
-      background-color: #ffffff !important;
     }
 
-    .cv-layout-shell {
-      padding: 0 !important;
-      background-color: #ffffff !important;
-      min-height: 0 !important;
+    /* Grid */
+    .pe-content-grid {
+      gap: 1.1rem !important;
     }
 
-    .print-break-before {
-      break-before: auto;
-      page-break-before: auto;
+    .pe-col {
+      display: block;
+      overflow: visible;
     }
 
-    .print-column-break,
-    .print-break-before-page {
-      break-before: page;
-      page-break-before: always;
+    /* Sections */
+    .pe-section {
+      margin-bottom: 0.7rem !important;
     }
 
-    .print-column-break--after,
-    .print-break-after-page {
-      break-before: auto;
-      page-break-before: auto;
-      break-after: page;
-      page-break-after: always;
+    .pe-section-heading {
+      margin-bottom: 0.32rem !important;
+      padding-bottom: 0.14rem !important;
     }
 
-    .cv-content-grid,
-    .cv-column {
-      break-inside: auto;
-      page-break-inside: auto;
+    /* Contact */
+    .pe-contact-list {
+      line-height: 1.55 !important;
     }
 
-    .print-avoid-break {
-      break-inside: avoid;
-      page-break-inside: avoid;
+    /* Tech */
+    .pe-tech-list {
+      gap: 0.2rem !important;
     }
 
-    .print-tight {
-      gap: 1rem !important;
+    .pe-tech-group {
+      gap: 0.02rem !important;
     }
 
-    .cv-content-grid {
-      display: grid !important;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-      gap: 1.5rem !important;
-      align-items: start !important;
+    /* Work */
+    .pe-work-list {
+      gap: 0.52rem !important;
     }
 
-    .cv-header,
-    .cv-page-header {
-      gap: 0.65rem !important;
-      grid-template-columns: 4.75rem minmax(0, 1fr) !important;
-      align-items: center !important;
-      margin-bottom: 2.25rem !important;
+    .pe-work-entry {
+      padding-bottom: 0.52rem !important;
     }
 
-    .cv-header [data-scope='avatar'],
-    .cv-page-header [data-scope='avatar'] {
-      width: 4.75rem !important;
-      height: 4.75rem !important;
+    .pe-work-meta {
+      margin-bottom: 0.22rem !important;
     }
 
-    .cv-header h1,
-    .cv-page-header h1 {
-      margin-top: 0 !important;
-      font-size: 1.45rem !important;
-      line-height: 1.15 !important;
+    .pe-work-desc {
+      font-size: 0.78rem !important;
+      margin-bottom: 0.14rem !important;
     }
 
-    .cv-header .cv-accent,
-    .cv-page-header .cv-accent {
-      font-size: 1.05rem !important;
-      line-height: 1.2 !important;
+    .pe-work-tech {
+      font-size: 0.72rem !important;
     }
 
-    .cv-header p:not(.cv-accent),
-    .cv-page-header p:not(.cv-accent) {
-      margin-top: 0.2rem !important;
-      font-size: 0.85rem !important;
-      line-height: 1.4 !important;
+    /* Projects */
+    .pe-project-list {
+      gap: 0.42rem !important;
     }
 
-    .cv-column {
-      display: block !important;
-      min-width: 0;
-      align-content: start !important;
-      overflow: visible !important;
-      position: relative !important;
+    .pe-project {
+      padding-bottom: 0.38rem !important;
     }
 
-    .cv-column--sidebar {
-      padding-right: 0.5rem;
+    .pe-project-desc {
+      font-size: 0.76rem !important;
     }
+  }
 
-    .cv-column--main {
-      padding-left: 0.5rem;
-    }
+  /* ─── Shell: paper preview on screen ─── */
 
-    .cv-accent,
-    .cv-section h2 {
-      color: var(--colors-primary) !important;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
+  .pe-shell {
+    min-height: 100vh;
+    background: #d4d4d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 4rem;
+    gap: 2rem;
+  }
 
-    .cv-section {
-      margin-bottom: 1rem;
-      break-inside: auto;
-      page-break-inside: auto;
-    }
+  .pe-paper {
+    background: #fff;
+    width: 210mm;
+    padding: ${PAGE_MARGIN_TOP} ${PAGE_MARGIN_SIDES};
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    font-family: ${FONT_BODY};
+    color: #1a1a1a;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 
-    .cv-section h2 {
-      margin-bottom: 0.2rem;
-    }
+  /* ─── Two-column content grid ─── */
 
-    .cv-section-languages h2 {
-      margin-bottom: 1.5rem;
-    }
+  .pe-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    align-items: start;
+  }
 
-    .cv-section article + article {
-      margin-top: 0.45rem;
-    }
+  .pe-col {
+    min-width: 0;
+  }
 
-    .cv-section-technical-projects article + article,
-    .cv-section-sidebar-projects article + article {
-      margin-top: 0.75rem;
-    }
+  /* ─── Section ─── */
 
-    .cv-section-technical-projects div + .heading-category {
-      break-before: auto;
-      padding-top: 0.25rem;
-    }
+  .pe-section {
+    margin-bottom: 1.1rem;
+  }
 
-    /* Long entries (work, projects) flow across pages — no giant gaps */
-    .cv-section-work-experience article.print-avoid-break,
-    .cv-section-technical-projects article.print-avoid-break,
-    .cv-section-sidebar-projects article.print-avoid-break {
-      break-inside: auto !important;
-      page-break-inside: auto !important;
-    }
+  .pe-section:last-child {
+    margin-bottom: 0;
+  }
 
-    /* Use block flow for work/project entries — CSS grid miscalculates item Y after
-       break-after:page on a descendant, causing content overlap on the next page */
-    .cv-section-work-experience > div,
-    .cv-section-technical-projects > div,
-    .cv-section-technical-projects > div > div,
-    .cv-section-technical-projects > div > div > div {
-      display: block !important;
-    }
+  .pe-section-heading {
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.25rem;
+    background-position: 0 100%;
+    background-image: linear-gradient(
+      90deg,
+      color-mix(in oklch, var(--colors-primary) 50%, transparent) 30%,
+      transparent 0
+    );
+    background-size: 6px 2px;
+    background-repeat: repeat-x;
+    color: var(--colors-primary);
+    font-family: var(--cv-font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
-    .cv-section-work-experience article + article {
-      margin-top: 1rem;
-    }
+  /* ─── Contact ─── */
 
-    /* Individual elements stay intact — no mid-paragraph splits */
-    .cv-section-work-experience article h3,
-    .cv-section-work-experience article p,
-    .cv-section-work-experience article ul,
-    .cv-section-technical-projects article h3,
-    .cv-section-technical-projects article p,
-    .cv-section-sidebar-projects article h3,
-    .cv-section-sidebar-projects article p {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
+  .pe-contact-list {
+    list-style: none;
+    margin: 0 0 0.35rem;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.8;
 
-    .cv-section-contact > ul {
-      font-size: 0.9rem !important;
-      line-height: 1.5 !important;
-      & + p {
-        margin-top: 0 !important;
-      }
-    }
-
-    .cv-section-contact > ul > li {
-      padding: 0.12rem 0.2rem !important;
-    }
-
-    .cv-section-contact > ul > li > span {
-      font-weight: 500 !important;
-    }
-
-    .cv-section-technologies ul li,
-    .work-entry-technologies ul li {
-      font-size: 0.738rem !important;
-      font-weight: 550 !important;
-      padding: 0.36rem 0.59rem !important;
-    }
-
-    a {
+    & a {
       color: inherit;
       text-decoration: none;
+    }
+  }
+
+  .pe-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--cv-font-body);
+    font-weight: 600;
+    color: ${PRIMARY};
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pe-contact-icon {
+    width: 0.95rem;
+    height: 0.95rem;
+    flex-shrink: 0;
+    color: ${PRIMARY};
+    opacity: 0.7;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pe-work-rights {
+    font-size: 0.75rem;
+    color: #999;
+    margin: 0.15rem 0 0;
+    line-height: 1.4;
+  }
+
+  /* ─── Profile ─── */
+
+  .pe-section-profile p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #333;
+    margin: 0;
+  }
+
+  /* ─── Technologies ─── */
+
+  .pe-tech-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .pe-tech-group {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .pe-tech-category {
+    font-family: var(--cv-font-body);
+    font-weight: 700;
+    color: #555;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-top: 0.35rem;
+    margin-bottom: 0.12rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  /* ── Default: inline comma-separated ── */
+
+  .pe-tech-items-list {
+    display: inline;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .pe-tech-item {
+    color: ${PRIMARY};
+    font-weight: 600;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+    &:not(:last-child)::after {
+      content: ', ';
+      color: ${PRIMARY};
+      font-weight: 600;
+    }
+  }
+
+  /* ── Pill variant: add .pill to .pe-tech-items-list ── */
+
+  .pe-tech-items-list.pill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.22rem;
+    margin-top: 0.15rem;
+  }
+
+  .pe-tech-items-list.pill .pe-tech-item {
+    background: color-mix(in srgb, var(--colors-primary) 10%, transparent);
+    border: 0.5px solid color-mix(in srgb, var(--colors-primary) 30%, transparent);
+    color: ${PRIMARY};
+    padding: 0.1rem 0.42rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+    &::after {
+      content: none !important;
+    }
+  }
+
+  /* ─── Education ─── */
+
+  .pe-edu-institution {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #1a1a1a;
+    margin: 0 0 0.1rem;
+  }
+
+  .pe-edu-degree {
+    font-size: 0.8rem;
+    color: #555;
+    margin: 0 0 0.1rem;
+  }
+
+  .pe-edu-location {
+    font-size: 0.76rem;
+    color: #999;
+    margin: 0;
+  }
+
+  /* ─── Languages ─── */
+
+  .pe-lang-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.83rem;
+    line-height: 1.7;
+
+    & li {
+      margin: 0;
+    }
+
+    & strong,
+    & .pe-lang-colon,
+    & .pe-lang-level {
+      display: inline-block;
+    }
+
+    & strong {
+      width: 3.5rem;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    & .pe-lang-colon {
+      color: #b8b0a8;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    & .pe-lang-level {
+      color: #1a1a1a;
+      font-weight: 400;
+    }
+  }
+
+  /* ─── Work Experience ─── */
+
+  .pe-work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .pe-work-entry {
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid #f0f0f0;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .pe-work-company {
+    font-family: var(--cv-font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--colors-secondary-lighter);
+    margin: 0 0 0.1rem;
+    line-height: 1.2;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .pe-work-role {
+    font-family: var(--cv-font-body);
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: ${PRIMARY};
+    margin: 0 0 0.08rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pe-work-meta {
+    font-family: var(--cv-font-body);
+    font-size: 0.76rem;
+    font-style: italic;
+    color: var(--cv-muted);
+    margin: 0 0 0.38rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pe-work-desc {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 0 0.28rem;
+  }
+
+  .pe-work-tech {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: ${PRIMARY};
+    margin: 0;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ─── Projects ─── */
+
+  .pe-project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .pe-project {
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid #f0f0f0;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .pe-project-title {
+    font-family: var(--cv-font-heading);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--colors-secondary-lighter);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0 0 0.1rem;
+    line-height: 1.3;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .pe-project-meta {
+    font-size: 0.72rem;
+    color: #999;
+    font-weight: 400;
+    font-family: ${FONT_BODY};
+  }
+
+  .pe-project-desc {
+    font-size: 0.79rem;
+    line-height: 1.45;
+    color: #444;
+    margin: 0;
+  }
+
+  /* ─── Engineering Philosophy ─── */
+
+  .pe-philosophy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .pe-philosophy-title {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
+  .pe-philosophy-desc {
+    color: #666;
+  }
+
+  /* ─── Multi-paragraph work description ─── */
+
+  .pe-work-desc-multi p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 0 0.28rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media print {
+    .pe-work-desc-multi p {
+      font-size: 0.78rem !important;
+      margin-bottom: 0.18rem !important;
+    }
+  }
+
+  /* ─── Full edition: slightly larger print font (2 pages, more room) ─── */
+
+  @media print {
+    html.pe-full {
+      font-size: 62% !important;
     }
   }
 `;

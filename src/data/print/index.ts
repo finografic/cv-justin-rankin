@@ -1,12 +1,12 @@
-import type { CVContent } from 'types';
+import type { PrintCVContent } from 'types/print-content.types';
 
 import { contact, education, headerContent, languages, philosophy } from './content.data';
 import { employment } from './employment.data';
 import { profile } from './profile.data';
-import { aiProjects, cliProjects, fullstackProjects, projects } from './projects.data';
+import { projects } from './projects.data';
 import { technologies } from './technologies.data';
 
-export const CONTENT: CVContent = {
+export const PRINT_CONTENT: PrintCVContent = {
   headerContent,
   profile,
   contact,
@@ -14,9 +14,6 @@ export const CONTENT: CVContent = {
   technologies,
   employment,
   projects,
-  aiProjects,
-  cliProjects,
-  fullstackProjects,
   education,
   languages,
 };

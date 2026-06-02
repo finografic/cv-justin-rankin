@@ -1,4 +1,4 @@
-import type { ProjectCategory } from 'types';
+import type { Project, ProjectCategory } from 'types';
 
 export const projects: ProjectCategory[] = [
   {
@@ -6,8 +6,8 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/genx',
-        version: 'v5.33.0',
-        commits: 675,
+        version: 'v5.36.1',
+        commits: 710,
         visibility: 'public',
         status: 'active',
         description:
@@ -15,8 +15,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/oxc-config',
-        version: 'v2.6.6',
-        commits: 177,
+        version: 'v2.6.7',
+        commits: 179,
         visibility: 'public',
         status: 'active',
         description:
@@ -24,8 +24,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/deps-policy',
-        version: 'v0.26.7',
-        commits: 163,
+        version: 'v0.26.8',
+        commits: 165,
         visibility: 'public',
         status: 'active',
         description:
@@ -43,8 +43,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/md-lint',
-        version: 'v0.16.1',
-        commits: 84,
+        version: 'v0.16.4',
+        commits: 90,
         visibility: 'public',
         status: 'active',
         description:
@@ -67,8 +67,8 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/design-system',
-        version: 'v1.18.2',
-        commits: 421,
+        version: 'v1.18.3',
+        commits: 425,
         visibility: 'public',
         status: 'active',
         description:
@@ -76,8 +76,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/lucide-manager',
-        version: 'v0.7.0',
-        commits: 44,
+        version: 'v0.9.0',
+        commits: 62,
         visibility: 'public',
         status: 'active',
         description:
@@ -93,5 +93,76 @@ export const projects: ProjectCategory[] = [
           'Lightweight utility for creating type-safe Zustand stores with React Context integration. Auto-generated setters, persistence, DevTools support. Inspired by patterns from Matt Pocock’s TypeScript work.',
       },
     ],
+  },
+];
+
+export const cliProjects: Project[] = [
+  {
+    name: '@finografic/gli',
+    version: 'v1.25.4',
+    commits: 212,
+    visibility: 'public',
+    status: 'active',
+    description:
+      'Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, clickable PR links. Built on the GitHub CLI.',
+  },
+  {
+    name: '@finografic/cli-kit',
+    version: 'v1.4.0',
+    commits: 48,
+    visibility: 'public',
+    status: 'active',
+    description:
+      'Composable CLI primitives shared across all @finografic CLI tools. Flag parsing, interactive prompts, TUI table rendering, file diff display, XDG config paths. The single hard dependency for every CLI in the ecosystem.',
+  },
+];
+
+export const aiProjects: Project[] = [
+  {
+    name: 'LLAAB',
+    commits: 150,
+    visibility: 'public',
+    status: 'active development',
+    titleHref: 'https://github.com/finografic/llaab',
+    description:
+      'Learning Loop & Agent Architecture Base. A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.',
+  },
+  {
+    name: '@finografic/ai-harness',
+    version: 'v0.1.0',
+    commits: 13,
+    visibility: 'public',
+    status: 'early stage',
+    description:
+      'Deterministic, composable pipeline for preprocessing inputs before LLM usage. Extract, reduce, structure, then optionally pass to an LLM. Designed to maximize the value of each token by doing as much work as possible before the model sees the input.',
+  },
+];
+
+export const fullstackProjects: Project[] = [
+  {
+    name: 'touch-monorepo',
+    commits: 2931,
+    titleHref: 'https://github.com/finografic/touch-monorepo',
+    description:
+      'Full-stack TypeScript monorepo for an IoT-connected product management and operational control system. React + React Router client with PandaCSS, Hono API server with Drizzle ORM + SQLite, hardware relay integration via USB HID, i18n with dynamic language support (EN/ES/CA), role-based auth, real-time timer and session management, and deployment tooling for Raspberry Pi. Uses pnpm workspaces, Turborepo, and consumes multiple @finografic packages in production.',
+  },
+  {
+    name: 'monorepo-starter',
+    commits: 14,
+    titleHref: 'https://github.com/finografic/monorepo-starter',
+    description:
+      'Full-stack pnpm monorepo starter with auth, routing, i18n, database, design tokens, OpenAPI docs, and structured logging pre-wired. Vite 7 + React 19 client, Hono API server, Drizzle ORM + SQLite, Auth.js, Panda CSS, and @finografic/design-system. Built as a reference implementation and portfolio demo.',
+  },
+];
+
+export const archivedCliProjects: Project[] = [
+  {
+    name: '@finografic/macos-layouts',
+    version: 'v0.20.0',
+    commits: 130,
+    visibility: 'public',
+    status: 'active',
+    description:
+      'macOS window layout manager. Save, list, and apply window arrangements via Hammerspoon IPC. TypeScript CLI generating Lua for window positioning, with display-aware resolution matching.',
   },
 ];

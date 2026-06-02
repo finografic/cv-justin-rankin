@@ -47,7 +47,7 @@ export interface ProjectCategory extends PrintBreakAfter {
 export interface Project extends PrintBreakAfter {
   name: string;
   version?: string;
-  /** Total commits on the default branch — synced from GitHub via `pnpm sync-versions`. */
+  /** Total commits on the default branch — synced from GitHub via `pnpm sync-git-metadata`. */
   commits?: number;
   visibility?: 'public' | 'private';
   status?: string;

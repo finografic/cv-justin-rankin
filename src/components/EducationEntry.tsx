@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { EducationEntry as EducationEntryData } from 'types';
 
-import { CVEntry } from '../layout/CVEntry';
+import { CVEntry } from '../layout/web/CVEntry';
 
 interface EducationEntryProps {
   entry: EducationEntryData;

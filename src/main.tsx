@@ -13,7 +13,7 @@ if (!rootElement) {
 }
 
 const edition = new URLSearchParams(window.location.search).get('edition');
-const AppComponent = edition === 'print' ? PrintEditionApp : App;
+const AppComponent = edition === 'print-compact' ? PrintEditionApp : App;
 
 createRoot(rootElement).render(
   <StrictMode>

@@ -234,7 +234,7 @@ export default function PrintEditionApp(): ReactNode {
                   {TECHNOLOGIES.map((group) => (
                     <div className="pe-tech-group" key={group.category}>
                       <span className="pe-tech-category">{group.category}</span>
-                      <div className="pe-tech-items-list">
+                      <div className="pe-tech-items-list pill">
                         {group.items.map((item) => (
                           <span className="pe-tech-item" key={item}>
                             {item}

@@ -10,7 +10,8 @@ interface WorkExperienceEntryProps {
 }
 
 export function WorkExperienceEntry({ entry }: WorkExperienceEntryProps): ReactNode {
-  const technologiesVariant = entry.technologies.variant ?? 'list';
+  const { technologies, tech } = entry;
+  const technologiesVariant = technologies?.variant ?? 'list';
 
   return (
     <Fragment>
@@ -23,12 +24,16 @@ export function WorkExperienceEntry({ entry }: WorkExperienceEntryProps): ReactN
         {entry.description.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
-        <ItemList
-          className="work-entry-technologies"
-          items={entry.technologies.items}
-          label={technologiesVariant === 'list' ? 'Technologies' : undefined}
-          variant={technologiesVariant}
-        />
+        {technologies ? (
+          <ItemList
+            className="work-entry-technologies"
+            items={technologies.items}
+            label={technologiesVariant === 'list' ? 'Technologies' : undefined}
+            variant={technologiesVariant}
+          />
+        ) : tech ? (
+          <p>{tech}</p>
+        ) : null}
       </CVEntry>
       {entry.printBreakAfter ? <PrintColumnBreak when="after" /> : null}
     </Fragment>

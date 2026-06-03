@@ -1,6 +1,6 @@
-import type { PrintTechnologyGroup } from 'types/print-content.types';
+import type { TechnologyGroup } from 'types';
 
-export const technologies: PrintTechnologyGroup[] = [
+export const technologies: TechnologyGroup[] = [
   { category: 'Core', items: ['TypeScript', 'JavaScript', 'React', 'Node.js'] },
   {
     category: 'Architecture',

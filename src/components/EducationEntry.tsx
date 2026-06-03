@@ -9,8 +9,8 @@ interface EducationEntryProps {
 
 export function EducationEntry({ entry }: EducationEntryProps): ReactNode {
   return (
-    <CVEntry meta={entry.location} subtitle={entry.degree} title={entry.institution}>
-      <p>{entry.description}</p>
+    <CVEntry meta={entry.location ?? entry.detail} subtitle={entry.degree} title={entry.institution}>
+      {entry.description ? <p>{entry.description}</p> : null}
     </CVEntry>
   );
 }

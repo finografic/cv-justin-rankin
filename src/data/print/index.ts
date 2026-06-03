@@ -1,4 +1,4 @@
-import type { PrintCVContent } from 'types/print-content.types';
+import type { PrintCVContent } from 'types';
 
 import { contact, education, headerContent, languages, philosophy } from './content.data';
 import { employment } from './employment.data';

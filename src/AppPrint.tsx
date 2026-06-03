@@ -165,7 +165,7 @@ export default function AppPrint(): ReactNode {
                     <li key={item.title}>
                       <span className="pe-philosophy-title">{item.title}</span>
                       <span className="pe-philosophy-colon">:</span>
-                      <span className="pe-philosophy-desc">{item.desc}</span>
+                      <span className="pe-philosophy-desc">{item.description}</span>
                     </li>
                   ))}
                 </ul>

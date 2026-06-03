@@ -24,7 +24,16 @@ export interface ContactDetails {
   github: string;
   website: string;
   phone: string;
-  workRightsNotes: string[];
+  /** Web screen edition — one or more lines under contact links. */
+  workRightsNotes?: string[];
+  /** Print handout — single condensed work-rights line. */
+  workRights?: string;
+  /** Optional precomputed hrefs (print data); web edition builds these in `ContactInfo`. */
+  phoneHref?: string;
+  emailHref?: string;
+  linkedinHref?: string;
+  githubHref?: string;
+  websiteHref?: string;
 }
 
 export type WorkTechnologies = ItemListConfig;
@@ -36,7 +45,10 @@ export interface WorkEntry extends PrintBreakAfter {
   location: string;
   url?: string;
   description: string[];
-  technologies: WorkTechnologies;
+  /** Web screen edition — pill or list of technologies. */
+  technologies?: WorkTechnologies;
+  /** Print handout — comma-separated technology line. */
+  tech?: string;
 }
 
 export interface ProjectCategory extends PrintBreakAfter {
@@ -68,12 +80,27 @@ export interface PhilosophyItem {
 
 export interface EducationEntry {
   institution: string;
-  degree: string;
-  location: string;
-  description: string;
+  degree?: string;
+  location?: string;
+  description?: string;
+  /** Print handout — combined degree · location when fields are folded into one line. */
+  detail?: string;
 }
 
 export interface LanguageEntry {
   language: string;
   level: string;
+}
+
+/** Condensed print handout (`?edition=print` / `PRINT_CONTENT`). */
+export interface PrintCVContent {
+  headerContent: CVHeaderProps;
+  profile: string[];
+  contact: ContactDetails;
+  technologies: TechnologyGroup[];
+  philosophy: PhilosophyItem[];
+  employment: WorkEntry[];
+  projects: Project[];
+  education: EducationEntry;
+  languages: LanguageEntry[];
 }

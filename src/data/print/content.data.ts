@@ -1,11 +1,6 @@
-import type { LanguageEntry } from 'types';
+import type { ContactDetails, EducationEntry, LanguageEntry, PhilosophyItem } from 'types';
 
 import type { CVHeaderProps } from 'types/header.types';
-import type {
-  PrintContactDetails,
-  PrintEducationEntry,
-  PrintPhilosophyItem,
-} from 'types/print-content.types';
 
 export const headerContent: CVHeaderProps = {
   name: 'Justin Rankin',
@@ -18,7 +13,7 @@ export const headerContent: CVHeaderProps = {
   },
 };
 
-export const contact: PrintContactDetails = {
+export const contact: ContactDetails = {
   location: 'Brisbane, Australia',
   phone: '+61 483 757 098',
   phoneHref: 'tel:+61483757098',
@@ -33,27 +28,27 @@ export const contact: PrintContactDetails = {
   workRights: 'NZ citizen · Full Australian work rights (Subclass 444)',
 };
 
-export const philosophy: PrintPhilosophyItem[] = [
+export const philosophy: PhilosophyItem[] = [
   {
     title: 'Explicit architecture, self-documenting code',
-    desc: 'clear naming, visible structure, readable intent.',
+    description: 'clear naming, visible structure, readable intent.',
   },
-  { title: 'Strong typing', desc: 'TypeScript for safety, documentation, and DX.' },
+  { title: 'Strong typing', description: 'TypeScript for safety, documentation, and DX.' },
   {
     title: 'Maintainability',
-    desc: 'limited, purposeful abstraction. Easy to read, navigate, and change next year.',
+    description: 'limited, purposeful abstraction. Easy to read, navigate, and change next year.',
   },
   {
     title: 'Developer experience',
-    desc: 'tooling, linting, CI, and onboarding friction directly affect what ships.',
+    description: 'tooling, linting, CI, and onboarding friction directly affect what ships.',
   },
   {
     title: 'ESM-first, monorepos',
-    desc: 'modern module resolution and workspace architecture by default.',
+    description: 'modern module resolution and workspace architecture by default.',
   },
 ];
 
-export const education: PrintEducationEntry = {
+export const education: EducationEntry = {
   institution: 'Ontario College of Art and Design University (OCAD U)',
   detail: 'Design, Advertising Art Direction · Toronto, Canada',
 };

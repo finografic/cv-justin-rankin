@@ -1,6 +1,6 @@
-import type { PrintEmploymentEntry } from 'types/print-content.types';
+import type { WorkEntry } from 'types';
 
-export const employment: PrintEmploymentEntry[] = [
+export const employment: WorkEntry[] = [
   {
     company: 'Sage',
     url: 'https://www.sage.com',

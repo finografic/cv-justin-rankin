@@ -88,7 +88,7 @@ export function ContactInfo({ contact }: { contact: ContactDetails }): ReactNode
           text={contact.website}
         />
       </ul>
-      {contact.workRightsNotes.length > 0 ? (
+      {contact.workRightsNotes && contact.workRightsNotes.length > 0 ? (
         <p css={styles.note}>
           {contact.workRightsNotes.map((note) => (
             <span css={styles.noteLine} key={note}>

@@ -54,7 +54,9 @@ CV data is split across typed data files under `src/data/web/` and aggregated as
 | `content.data.ts`      | Header, contact, philosophy, education, languages                                           |
 | `profile.data.ts`      | Profile paragraphs                                                                          |
 
-Print edition copy lives under `src/data/print/` (`PRINT_CONTENT` in `src/data/print/index.ts`) with the same file names as web (`content`, `profile`, `employment`, `technologies`, `projects`).
+Condensed handout copy lives under `src/data/print/` (`PRINT_CONTENT` in `src/data/print/index.ts`) with the same file names as web (`content`, `profile`, `employment`, `technologies`, `projects`).
+
+**Views:** `?view=full` (default) or `?view=condensed` — top nav also offers **PDF** (prints the current view). Legacy `?edition=print` redirects to condensed.
 
 TypeScript types are in `src/types/content.types.ts`.
 

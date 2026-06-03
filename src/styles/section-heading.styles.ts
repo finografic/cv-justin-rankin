@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 /** Web `CVSection` h2 — see `layout/web/CVSection.styles.ts`. */
 export const WEB_SECTION_HEADING_FONT_SIZE = '1.15rem';
 
-/** Print edition: ~15% above legacy 0.78rem, below web. */
+/** Condensed view: ~15% above legacy 0.78rem, below full. */
 export const PRINT_SECTION_HEADING_FONT_SIZE = '0.9rem';
 
 const sectionHeadingUnderline = css`

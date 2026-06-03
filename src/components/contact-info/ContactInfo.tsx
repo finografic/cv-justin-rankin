@@ -4,9 +4,10 @@ import { GithubIcon } from 'assets/icons/GithubIcon';
 import { LinkedInIcon } from 'assets/icons/LinkedInIcon';
 import { MobileIcon } from 'assets/icons/MobileIcon';
 import type { Interpolation } from '@emotion/react';
-import type { CvEdition } from 'layout/web/CVEntry';
 import type { ComponentType, ReactNode } from 'react';
 import type { ContactDetails } from 'types';
+
+import type { CvView } from 'types/cv-view.types';
 
 import { styles } from './ContactInfo.styles';
 
@@ -15,7 +16,7 @@ interface ContactIconProps extends IconProps {
 }
 
 interface ContactRowProps {
-  edition: CvEdition;
+  view: CvView;
   href?: string;
   iconClassName?: string;
   iconCss?: Interpolation;
@@ -25,7 +26,7 @@ interface ContactRowProps {
 }
 
 function ContactRow({
-  edition,
+  view,
   href,
   iconClassName,
   iconCss,
@@ -45,7 +46,7 @@ function ContactRow({
     <>{text}</>
   );
 
-  if (edition === 'print') {
+  if (view === 'condensed') {
     return (
       <li className="pe-contact-row">
         <Icon className={['pe-contact-icon', iconClassName].filter(Boolean).join(' ')} />
@@ -66,10 +67,10 @@ function ContactRow({
 
 interface ContactInfoProps {
   contact: ContactDetails;
-  edition?: CvEdition;
+  view?: CvView;
 }
 
-export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): ReactNode {
+export function ContactInfo({ contact, view = 'full' }: ContactInfoProps): ReactNode {
   const phoneDigits = contact.phone.replace(/[^\d+]/g, '');
   const computedPhoneHref = /^\+?\d{7,15}$/.test(phoneDigits) ? `tel:${phoneDigits}` : undefined;
   const phoneHref = contact.phoneHref ?? computedPhoneHref;
@@ -78,36 +79,42 @@ export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): 
   const githubHref = contact.githubHref ?? `https://${contact.github}`;
   const websiteHref = contact.websiteHref ?? `https://${contact.website}`;
 
-  if (edition === 'print') {
+  if (view === 'condensed') {
     return (
       <>
         <ul className="pe-contact-list">
-          <ContactRow edition="print" Icon={HomeIcon} iconName="home" text={contact.location} />
+          <ContactRow view="condensed" Icon={HomeIcon} iconName="home" text={contact.location} />
           <ContactRow
-            edition="print"
+            view="condensed"
             Icon={MobileIcon}
             href={phoneHref}
             iconClassName="pe-contact-icon--mobile"
             iconName="phone"
             text={contact.phone}
           />
-          <ContactRow edition="print" Icon={MailIcon} href={emailHref} iconName="mail" text={contact.email} />
           <ContactRow
-            edition="print"
+            view="condensed"
+            Icon={MailIcon}
+            href={emailHref}
+            iconName="mail"
+            text={contact.email}
+          />
+          <ContactRow
+            view="condensed"
             Icon={LinkedInIcon}
             href={linkedinHref}
             iconName="linkedin"
             text={contact.linkedin}
           />
           <ContactRow
-            edition="print"
+            view="condensed"
             Icon={GithubIcon}
             href={githubHref}
             iconName="github"
             text={contact.github}
           />
           <ContactRow
-            edition="print"
+            view="condensed"
             Icon={GlobeIcon}
             href={websiteHref}
             iconName="website"
@@ -123,14 +130,14 @@ export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): 
     <>
       <ul css={styles.list}>
         <ContactRow
-          edition="screen"
+          view="full"
           Icon={HomeIcon}
           iconCss={styles.icon}
           iconName="home"
           text={contact.location}
         />
         <ContactRow
-          edition="screen"
+          view="full"
           Icon={MobileIcon}
           href={phoneHref}
           iconCss={styles.iconCustom}
@@ -138,7 +145,7 @@ export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): 
           text={contact.phone}
         />
         <ContactRow
-          edition="screen"
+          view="full"
           Icon={MailIcon}
           iconCss={styles.icon}
           href={emailHref}
@@ -146,7 +153,7 @@ export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): 
           text={contact.email}
         />
         <ContactRow
-          edition="screen"
+          view="full"
           Icon={LinkedInIcon}
           href={linkedinHref}
           iconCss={styles.iconCustom}
@@ -154,7 +161,7 @@ export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): 
           text={contact.linkedin}
         />
         <ContactRow
-          edition="screen"
+          view="full"
           Icon={GithubIcon}
           href={githubHref}
           iconCss={styles.iconCustom}
@@ -162,7 +169,7 @@ export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): 
           text={contact.github}
         />
         <ContactRow
-          edition="screen"
+          view="full"
           Icon={GlobeIcon}
           href={websiteHref}
           iconCss={styles.iconCustom}

@@ -1,19 +1,20 @@
 import { Fragment } from 'react';
-import type { CvEdition } from 'layout/web/CVEntry';
 import type { ReactNode } from 'react';
 import type { TechnologyGroup } from 'types';
+
+import type { CvView } from 'types/cv-view.types';
 
 import { ItemList } from '../items-list/ItemList';
 import { PrintColumnBreak } from '../print-column-break/PrintColumnBreak';
 import { styles } from './TechnologyGrid.styles';
 
 interface TechnologyGridProps {
-  edition?: CvEdition;
+  view?: CvView;
   groups: TechnologyGroup[];
 }
 
-export function TechnologyGrid({ edition = 'screen', groups }: TechnologyGridProps): ReactNode {
-  if (edition === 'print') {
+export function TechnologyGrid({ view = 'full', groups }: TechnologyGridProps): ReactNode {
+  if (view === 'condensed') {
     return (
       <div className="pe-tech-list">
         {groups.map((group) => (

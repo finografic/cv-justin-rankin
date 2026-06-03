@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
-import type { CvEdition } from 'layout/web/CVEntry';
 import type { ReactNode } from 'react';
+
+import type { CvView } from 'types/cv-view.types';
 
 const screenStyles = {
   list: css`
@@ -10,12 +11,12 @@ const screenStyles = {
 };
 
 interface ProfileParagraphsProps {
-  edition?: CvEdition;
+  view?: CvView;
   paragraphs: string[];
 }
 
-export function ProfileParagraphs({ edition = 'screen', paragraphs }: ProfileParagraphsProps): ReactNode {
-  if (edition === 'print') {
+export function ProfileParagraphs({ view = 'full', paragraphs }: ProfileParagraphsProps): ReactNode {
+  if (view === 'condensed') {
     return (
       <div className="cv-entry__body pe-work-desc-multi">
         {paragraphs.map((para) => (

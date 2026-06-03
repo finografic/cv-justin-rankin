@@ -1,9 +1,11 @@
 import { ExternalLinkIcon } from '@finografic/icons';
 import type { ReactNode } from 'react';
 
+import type { CvView } from 'types/cv-view.types';
+
 import { styles } from './CVEntry.styles';
 
-export type CvEdition = 'screen' | 'print';
+export type { CvView };
 
 export interface CVEntryProps {
   /** Primary heading — company, institution, project name, etc. */
@@ -14,11 +16,11 @@ export interface CVEntryProps {
   subtitle?: string;
   /** Third line — dates, location, version · visibility · status, … */
   meta?: string;
-  /** Print projects: meta beside the title on one line. */
+  /** Condensed view projects: meta beside the title on one line. */
   metaInline?: boolean;
   children?: ReactNode;
   className?: string;
-  edition?: CvEdition;
+  view?: CvView;
 }
 
 export function CVEntry({
@@ -29,15 +31,15 @@ export function CVEntry({
   metaInline = false,
   children,
   className = 'print-avoid-break',
-  edition = 'screen',
+  view = 'full',
 }: CVEntryProps): ReactNode {
-  const isPrint = edition === 'print';
-  const showTitleLinkIcon = !isPrint && Boolean(titleHref);
+  const isCondensed = view === 'condensed';
+  const showTitleLinkIcon = !isCondensed && Boolean(titleHref);
 
   const titleContent = titleHref ? (
     <a
-      className={isPrint ? 'cv-entry__title-link' : undefined}
-      css={isPrint ? undefined : styles.titleLink}
+      className={isCondensed ? 'cv-entry__title-link' : undefined}
+      css={isCondensed ? undefined : styles.titleLink}
       href={titleHref}
       rel="noopener noreferrer"
       target="_blank"
@@ -53,31 +55,31 @@ export function CVEntry({
     meta && metaInline ? (
       <span className="cv-entry__meta cv-entry__meta--inline">{meta}</span>
     ) : meta ? (
-      <p className="cv-entry__meta" css={isPrint ? undefined : styles.meta}>
+      <p className="cv-entry__meta" css={isCondensed ? undefined : styles.meta}>
         {meta}
       </p>
     ) : null;
 
   return (
     <article
-      className={['cv-entry', isPrint ? 'cv-entry--print' : '', className].filter(Boolean).join(' ')}
-      css={isPrint ? undefined : styles.wrap}
-      data-cv-edition={edition}
+      className={['cv-entry', isCondensed ? 'cv-entry--condensed' : '', className].filter(Boolean).join(' ')}
+      css={isCondensed ? undefined : styles.wrap}
+      data-cv-view={view}
     >
       <div className={metaInline ? 'cv-entry__title-row' : undefined}>
-        <h3 className="cv-entry__title" css={isPrint ? undefined : styles.entryTitle}>
+        <h3 className="cv-entry__title" css={isCondensed ? undefined : styles.entryTitle}>
           {titleContent}
         </h3>
         {metaInline ? metaNode : null}
       </div>
       {subtitle ? (
-        <p className="cv-entry__subtitle" css={isPrint ? undefined : styles.subtitle}>
+        <p className="cv-entry__subtitle" css={isCondensed ? undefined : styles.subtitle}>
           {subtitle}
         </p>
       ) : null}
       {!metaInline ? metaNode : null}
       {children ? (
-        <div className="cv-entry__body" css={isPrint ? undefined : styles.body}>
+        <div className="cv-entry__body" css={isCondensed ? undefined : styles.body}>
           {children}
         </div>
       ) : null}

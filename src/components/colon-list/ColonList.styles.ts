@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-/** Shared colon-separated list (philosophy, languages). Print density in `print.styles.ts`. */
+/** Shared colon-separated list (philosophy, languages). Condensed density in `condensed.styles.ts`. */
 export const styles = {
   list: css`
     list-style: none;

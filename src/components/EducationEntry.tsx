@@ -1,15 +1,16 @@
 import { CVEntry } from 'layout/web/CVEntry';
-import type { CvEdition } from 'layout/web/CVEntry';
 import type { ReactNode } from 'react';
 import type { EducationEntry as EducationEntryData } from 'types';
 
+import type { CvView } from 'types/cv-view.types';
+
 interface EducationEntryProps {
-  edition?: CvEdition;
+  view?: CvView;
   entry: EducationEntryData;
 }
 
-export function EducationEntry({ edition = 'screen', entry }: EducationEntryProps): ReactNode {
-  if (edition === 'print' && entry.detail) {
+export function EducationEntry({ view = 'full', entry }: EducationEntryProps): ReactNode {
+  if (view === 'condensed' && entry.detail) {
     return (
       <>
         <p className="pe-edu-institution">{entry.institution}</p>
@@ -20,7 +21,7 @@ export function EducationEntry({ edition = 'screen', entry }: EducationEntryProp
 
   return (
     <CVEntry
-      edition={edition}
+      view={view}
       meta={entry.location ?? entry.detail}
       subtitle={entry.degree}
       title={entry.institution}

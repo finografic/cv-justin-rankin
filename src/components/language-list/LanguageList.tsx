@@ -1,22 +1,23 @@
-import type { CvEdition } from 'layout/web/CVEntry';
 import type { ReactNode } from 'react';
 import type { LanguageEntry } from 'types';
+
+import type { CvView } from 'types/cv-view.types';
 
 import { ColonList } from '../colon-list/ColonList';
 import { styles as colonStyles } from '../colon-list/ColonList.styles';
 
 interface LanguageListProps {
-  edition?: CvEdition;
+  view?: CvView;
   items: LanguageEntry[];
 }
 
-export function LanguageList({ edition = 'screen', items }: LanguageListProps): ReactNode {
+export function LanguageList({ view = 'full', items }: LanguageListProps): ReactNode {
   const colonItems = items.map((entry) => ({
     label: entry.language,
     value: entry.level,
   }));
 
-  if (edition === 'print') {
+  if (view === 'condensed') {
     return <ColonList items={colonItems} listClassName="cv-colon-list pe-lang-list" />;
   }
 

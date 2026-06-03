@@ -1,21 +1,22 @@
 import { ColonList } from 'components/colon-list/ColonList';
 import { styles as colonStyles } from 'components/colon-list/ColonList.styles';
-import type { CvEdition } from 'layout/web/CVEntry';
 import type { ReactNode } from 'react';
 import type { PhilosophyItem } from 'types';
 
+import type { CvView } from 'types/cv-view.types';
+
 interface PhilosophyListProps {
-  edition?: CvEdition;
+  view?: CvView;
   items: PhilosophyItem[];
 }
 
-export function PhilosophyList({ edition = 'screen', items }: PhilosophyListProps): ReactNode {
+export function PhilosophyList({ view = 'full', items }: PhilosophyListProps): ReactNode {
   const colonItems = items.map((item) => ({
     label: item.title,
     value: item.description,
   }));
 
-  if (edition === 'print') {
+  if (view === 'condensed') {
     return (
       <ColonList
         items={colonItems}

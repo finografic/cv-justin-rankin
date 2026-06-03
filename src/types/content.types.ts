@@ -24,11 +24,11 @@ export interface ContactDetails {
   github: string;
   website: string;
   phone: string;
-  /** Web screen edition — one or more lines under contact links. */
+  /** Full view — one or more lines under contact links. */
   workRightsNotes?: string[];
   /** Print handout — single condensed work-rights line. */
   workRights?: string;
-  /** Optional precomputed hrefs (print data); web edition builds these in `ContactInfo`. */
+  /** Optional precomputed hrefs (condensed data); full view builds these in `ContactInfo`. */
   phoneHref?: string;
   emailHref?: string;
   linkedinHref?: string;
@@ -45,7 +45,7 @@ export interface WorkEntry extends PrintBreakAfter {
   location: string;
   url?: string;
   description: string[];
-  /** Web screen edition — pill or list of technologies. */
+  /** Full view — pill or list of technologies. */
   technologies?: WorkTechnologies;
   /** Print handout — comma-separated technology line. */
   tech?: string;
@@ -92,7 +92,7 @@ export interface LanguageEntry {
   level: string;
 }
 
-/** Condensed print handout (`?edition=print` / `PRINT_CONTENT`). */
+/** Condensed handout (`?view=condensed` / `PRINT_CONTENT`). */
 export interface PrintCVContent {
   headerContent: CVHeaderProps;
   profile: string[];

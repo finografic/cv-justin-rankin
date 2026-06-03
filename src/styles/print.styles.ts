@@ -165,20 +165,20 @@ export const printEditionStyles = css`
       gap: 0.52rem !important;
     }
 
-    .pe-work-entry {
+    .pe-work-list .cv-entry--print {
       padding-bottom: 0.52rem !important;
     }
 
-    .pe-work-meta {
+    .pe-work-list .cv-entry--print .cv-entry__meta {
       margin-bottom: 0.22rem !important;
     }
 
-    .pe-work-desc {
+    .pe-work-list .cv-entry--print .cv-entry__body p {
       font-size: 0.78em !important;
       margin-bottom: 0.14rem !important;
     }
 
-    .pe-work-tech {
+    .pe-work-list .cv-entry--print .cv-entry__tech {
       font-size: 0.72em !important;
     }
 
@@ -187,11 +187,11 @@ export const printEditionStyles = css`
       gap: 0.42rem !important;
     }
 
-    .pe-project {
+    .pe-project-list .cv-entry--print {
       padding-bottom: 0.15rem !important;
     }
 
-    .pe-project-desc {
+    .pe-project-list .cv-entry--print .cv-entry__body p {
       font-size: 0.76em !important;
     }
   }
@@ -456,7 +456,7 @@ export const printEditionStyles = css`
     gap: 0.85rem;
   }
 
-  .pe-work-entry {
+  .pe-work-list .cv-entry--print {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #f0f0f0;
 
@@ -466,7 +466,7 @@ export const printEditionStyles = css`
     }
   }
 
-  .pe-work-company {
+  .pe-work-list .cv-entry--print .cv-entry__title {
     margin: 0 0 0.22rem;
     padding: 0;
     font-family: var(--cv-font-body);
@@ -484,7 +484,7 @@ export const printEditionStyles = css`
     }
   }
 
-  .pe-work-role {
+  .pe-work-list .cv-entry--print .cv-entry__subtitle {
     margin: 0 0 0.18rem;
     font-family: var(--cv-font-body);
     font-size: 0.86em;
@@ -495,7 +495,7 @@ export const printEditionStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-work-meta {
+  .pe-work-list .cv-entry--print .cv-entry__meta {
     margin: 0 0 0.42rem;
     font-family: var(--cv-font-body);
     font-size: 0.76em;
@@ -507,14 +507,14 @@ export const printEditionStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-work-desc {
+  .pe-work-list .cv-entry--print .cv-entry__body p {
     font-size: 0.82em;
     line-height: 1.5;
     color: #333;
     margin: 0 0 0.28rem;
   }
 
-  .pe-work-tech {
+  .pe-work-list .cv-entry--print .cv-entry__tech {
     font-size: 0.76em;
     font-weight: 600;
     color: ${PRIMARY};
@@ -532,7 +532,7 @@ export const printEditionStyles = css`
     gap: 0.7rem;
   }
 
-  .pe-project {
+  .pe-project-list .cv-entry--print {
     padding-bottom: 0.65rem;
     border-bottom: 1px solid #f0f0f0;
 
@@ -542,7 +542,7 @@ export const printEditionStyles = css`
     }
   }
 
-  .pe-project-title {
+  .pe-project-list .cv-entry--print .cv-entry__title-row {
     font-family: var(--cv-font-body);
     font-size: 0.88em;
     font-weight: 700;
@@ -556,6 +556,14 @@ export const printEditionStyles = css`
     align-items: baseline;
     gap: 0.5rem;
     flex-wrap: wrap;
+  }
+
+  .pe-project-list .cv-entry--print .cv-entry__title {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
 
     & a {
       color: ${PRIMARY};
@@ -563,7 +571,7 @@ export const printEditionStyles = css`
     }
   }
 
-  .pe-project-meta {
+  .pe-project-list .cv-entry--print .cv-entry__meta--inline {
     font-size: 0.76em;
     line-height: 1.2;
     color: var(--colors-secondary-lighter);
@@ -574,7 +582,7 @@ export const printEditionStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-project-desc {
+  .pe-project-list .cv-entry--print .cv-entry__body p {
     font-size: 0.79em;
     line-height: 1.45;
     color: #444;
@@ -617,7 +625,8 @@ export const printEditionStyles = css`
 
   /* ─── Multi-paragraph work description ─── */
 
-  .pe-work-desc-multi p {
+  .pe-work-desc-multi p,
+  .cv-entry__body p {
     font-size: 0.82em;
     line-height: 1.5;
     color: #333;
@@ -629,7 +638,8 @@ export const printEditionStyles = css`
   }
 
   @media print {
-    .pe-work-desc-multi p {
+    .pe-work-desc-multi p,
+    .pe-work-list .cv-entry--print .cv-entry__body p {
       font-size: 0.78em !important;
       margin-bottom: 0.18rem !important;
     }

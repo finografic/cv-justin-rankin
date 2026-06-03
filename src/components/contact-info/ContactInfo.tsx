@@ -4,6 +4,7 @@ import { GithubIcon } from 'assets/icons/GithubIcon';
 import { LinkedInIcon } from 'assets/icons/LinkedInIcon';
 import { MobileIcon } from 'assets/icons/MobileIcon';
 import type { Interpolation } from '@emotion/react';
+import type { CvEdition } from 'layout/web/CVEntry';
 import type { ComponentType, ReactNode } from 'react';
 import type { ContactDetails } from 'types';
 
@@ -14,14 +15,24 @@ interface ContactIconProps extends IconProps {
 }
 
 interface ContactRowProps {
+  edition: CvEdition;
   href?: string;
+  iconClassName?: string;
   iconCss?: Interpolation;
   iconName: string;
   Icon: ComponentType<ContactIconProps>;
   text: string;
 }
 
-function ContactRow({ href, iconCss, iconName, Icon, text }: ContactRowProps): ReactNode {
+function ContactRow({
+  edition,
+  href,
+  iconClassName,
+  iconCss,
+  iconName,
+  Icon,
+  text,
+}: ContactRowProps): ReactNode {
   const content = href ? (
     <a
       href={href}
@@ -34,6 +45,15 @@ function ContactRow({ href, iconCss, iconName, Icon, text }: ContactRowProps): R
     <>{text}</>
   );
 
+  if (edition === 'print') {
+    return (
+      <li className="pe-contact-row">
+        <Icon className={['pe-contact-icon', iconClassName].filter(Boolean).join(' ')} />
+        {content}
+      </li>
+    );
+  }
+
   return (
     <li css={styles.item}>
       <span css={styles.row}>
@@ -44,15 +64,73 @@ function ContactRow({ href, iconCss, iconName, Icon, text }: ContactRowProps): R
   );
 }
 
-export function ContactInfo({ contact }: { contact: ContactDetails }): ReactNode {
+interface ContactInfoProps {
+  contact: ContactDetails;
+  edition?: CvEdition;
+}
+
+export function ContactInfo({ contact, edition = 'screen' }: ContactInfoProps): ReactNode {
   const phoneDigits = contact.phone.replace(/[^\d+]/g, '');
-  const phoneHref = /^\+?\d{7,15}$/.test(phoneDigits) ? `tel:${phoneDigits}` : undefined;
+  const computedPhoneHref = /^\+?\d{7,15}$/.test(phoneDigits) ? `tel:${phoneDigits}` : undefined;
+  const phoneHref = contact.phoneHref ?? computedPhoneHref;
+  const emailHref = contact.emailHref ?? `mailto:${contact.email}`;
+  const linkedinHref = contact.linkedinHref ?? `https://${contact.linkedin}`;
+  const githubHref = contact.githubHref ?? `https://${contact.github}`;
+  const websiteHref = contact.websiteHref ?? `https://${contact.website}`;
+
+  if (edition === 'print') {
+    return (
+      <>
+        <ul className="pe-contact-list">
+          <ContactRow edition="print" Icon={HomeIcon} iconName="home" text={contact.location} />
+          <ContactRow
+            edition="print"
+            Icon={MobileIcon}
+            href={phoneHref}
+            iconClassName="pe-contact-icon--mobile"
+            iconName="phone"
+            text={contact.phone}
+          />
+          <ContactRow edition="print" Icon={MailIcon} href={emailHref} iconName="mail" text={contact.email} />
+          <ContactRow
+            edition="print"
+            Icon={LinkedInIcon}
+            href={linkedinHref}
+            iconName="linkedin"
+            text={contact.linkedin}
+          />
+          <ContactRow
+            edition="print"
+            Icon={GithubIcon}
+            href={githubHref}
+            iconName="github"
+            text={contact.github}
+          />
+          <ContactRow
+            edition="print"
+            Icon={GlobeIcon}
+            href={websiteHref}
+            iconName="website"
+            text={contact.website}
+          />
+        </ul>
+        {contact.workRights ? <p className="pe-work-rights">{contact.workRights}</p> : null}
+      </>
+    );
+  }
 
   return (
     <>
       <ul css={styles.list}>
-        <ContactRow Icon={HomeIcon} iconCss={styles.icon} iconName="home" text={contact.location} />
         <ContactRow
+          edition="screen"
+          Icon={HomeIcon}
+          iconCss={styles.icon}
+          iconName="home"
+          text={contact.location}
+        />
+        <ContactRow
+          edition="screen"
           Icon={MobileIcon}
           href={phoneHref}
           iconCss={styles.iconCustom}
@@ -60,29 +138,33 @@ export function ContactInfo({ contact }: { contact: ContactDetails }): ReactNode
           text={contact.phone}
         />
         <ContactRow
+          edition="screen"
           Icon={MailIcon}
           iconCss={styles.icon}
-          href={`mailto:${contact.email}`}
+          href={emailHref}
           iconName="mail"
           text={contact.email}
         />
         <ContactRow
+          edition="screen"
           Icon={LinkedInIcon}
-          href={`https://${contact.linkedin}`}
+          href={linkedinHref}
           iconCss={styles.iconCustom}
           iconName="linkedin"
           text={contact.linkedin}
         />
         <ContactRow
+          edition="screen"
           Icon={GithubIcon}
-          href={`https://${contact.github}`}
+          href={githubHref}
           iconCss={styles.iconCustom}
           iconName="github"
           text={contact.github}
         />
         <ContactRow
+          edition="screen"
           Icon={GlobeIcon}
-          href={`https://${contact.website}`}
+          href={websiteHref}
           iconCss={styles.iconCustom}
           iconName="website"
           text={contact.website}

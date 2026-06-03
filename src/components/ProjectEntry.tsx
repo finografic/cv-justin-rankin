@@ -1,45 +1,26 @@
 import { PrintColumnBreak } from 'components/print-column-break/PrintColumnBreak';
 import { CVEntry } from 'layout/web/CVEntry';
 import { Fragment } from 'react';
+import type { CvEdition } from 'layout/web/CVEntry';
 import type { ReactNode } from 'react';
 import type { Project } from 'types';
 
-const FINOGRAFIC_PACKAGE = /^@finografic\/(.+)$/;
-
-function formatCommitCount(commits: number): string {
-  return `${commits.toLocaleString('en-US')} commits`;
-}
-
-function buildProjectMeta(project: Project): string | undefined {
-  const parts = [
-    project.version,
-    project.commits != null ? formatCommitCount(project.commits) : undefined,
-  ].filter(Boolean);
-  return parts.length ? parts.join(' · ') : undefined;
-}
-
-function resolveProjectTitleHref(project: Project): string | undefined {
-  if (project.titleHref) {
-    return project.titleHref;
-  }
-
-  const match = FINOGRAFIC_PACKAGE.exec(project.name);
-  if (match) {
-    return `https://github.com/finografic/${match[1]}`;
-  }
-
-  return undefined;
-}
+import { formatProjectMeta, resolveProjectTitleHref } from 'utils/project-meta.utils';
 
 interface ProjectEntryProps {
+  edition?: CvEdition;
   project: Project;
 }
 
-export function ProjectEntry({ project }: ProjectEntryProps): ReactNode {
+export function ProjectEntry({ edition = 'screen', project }: ProjectEntryProps): ReactNode {
+  const meta = formatProjectMeta(project);
+
   return (
     <Fragment>
       <CVEntry
-        meta={buildProjectMeta(project)}
+        edition={edition}
+        meta={meta}
+        metaInline={edition === 'print'}
         title={project.name}
         titleHref={resolveProjectTitleHref(project)}
       >

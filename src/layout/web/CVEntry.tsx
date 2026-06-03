@@ -3,6 +3,8 @@ import type { ReactNode } from 'react';
 
 import { styles } from './CVEntry.styles';
 
+export type CvEdition = 'screen' | 'print';
+
 export interface CVEntryProps {
   /** Primary heading — company, institution, project name, etc. */
   title: string;
@@ -12,8 +14,11 @@ export interface CVEntryProps {
   subtitle?: string;
   /** Third line — dates, location, version · visibility · status, … */
   meta?: string;
+  /** Print projects: meta beside the title on one line. */
+  metaInline?: boolean;
   children?: ReactNode;
   className?: string;
+  edition?: CvEdition;
 }
 
 export function CVEntry({
@@ -21,24 +26,61 @@ export function CVEntry({
   titleHref,
   subtitle,
   meta,
+  metaInline = false,
   children,
   className = 'print-avoid-break',
+  edition = 'screen',
 }: CVEntryProps): ReactNode {
+  const isPrint = edition === 'print';
+  const showTitleLinkIcon = !isPrint && Boolean(titleHref);
+
   const titleContent = titleHref ? (
-    <a css={styles.titleLink} href={titleHref} rel="noopener noreferrer" target="_blank">
+    <a
+      className={isPrint ? 'cv-entry__title-link' : undefined}
+      css={isPrint ? undefined : styles.titleLink}
+      href={titleHref}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       {title}
-      <ExternalLinkIcon aria-hidden css={styles.externalIcon} />
+      {showTitleLinkIcon ? <ExternalLinkIcon aria-hidden css={styles.externalIcon} /> : null}
     </a>
   ) : (
     title
   );
 
+  const metaNode =
+    meta && metaInline ? (
+      <span className="cv-entry__meta cv-entry__meta--inline">{meta}</span>
+    ) : meta ? (
+      <p className="cv-entry__meta" css={isPrint ? undefined : styles.meta}>
+        {meta}
+      </p>
+    ) : null;
+
   return (
-    <article className={className} css={styles.wrap}>
-      <h3 css={styles.entryTitle}>{titleContent}</h3>
-      {subtitle ? <p css={styles.subtitle}>{subtitle}</p> : null}
-      {meta ? <p css={styles.meta}>{meta}</p> : null}
-      {children ? <div css={styles.body}>{children}</div> : null}
+    <article
+      className={['cv-entry', isPrint ? 'cv-entry--print' : '', className].filter(Boolean).join(' ')}
+      css={isPrint ? undefined : styles.wrap}
+      data-cv-edition={edition}
+    >
+      <div className={metaInline ? 'cv-entry__title-row' : undefined}>
+        <h3 className="cv-entry__title" css={isPrint ? undefined : styles.entryTitle}>
+          {titleContent}
+        </h3>
+        {metaInline ? metaNode : null}
+      </div>
+      {subtitle ? (
+        <p className="cv-entry__subtitle" css={isPrint ? undefined : styles.subtitle}>
+          {subtitle}
+        </p>
+      ) : null}
+      {!metaInline ? metaNode : null}
+      {children ? (
+        <div className="cv-entry__body" css={isPrint ? undefined : styles.body}>
+          {children}
+        </div>
+      ) : null}
     </article>
   );
 }

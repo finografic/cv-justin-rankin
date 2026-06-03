@@ -1,104 +1,118 @@
 import { css } from '@emotion/react';
 
-const PRIMARY = 'var(--colors-primary)';
+import { styles as webStyles } from '../web/CVHeader.styles';
+
+/** Masks faint grey ring on print photo / DS avatar border (zero-blur white halo). */
+const avatarEdgeMask = css`
+  border: none !important;
+  outline: 3px solid #fff !important;
+  outline-offset: 0;
+  box-shadow: 0 0 0 4px #fff !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+`;
 
 export const styles = {
   header: css`
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1.2rem;
+    ${webStyles.header}
+    /* Size first column to avatar; text and QR follow in flow */
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 1.4rem;
+    row-gap: 0.95rem;
     margin-bottom: 1.4rem;
-    padding-bottom: 0;
+
+    & > [data-scope='avatar'] {
+      ${avatarEdgeMask}
+      justify-self: start;
+      background-color: #fff;
+    }
+
+    /* Web header adds margin on col 2 — grid gap handles spacing here */
+    div:nth-of-type(2) {
+      margin-left: 0;
+    }
 
     @media print {
-      margin-bottom: 0.9rem !important;
-      padding-bottom: 0.6rem !important;
-    }
+      column-gap: 1.35rem;
+      row-gap: 1rem;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.6rem;
 
-    [data-scope='avatar'] {
-      border: none !important;
-      box-shadow: none !important;
-      outline: none !important;
-      ring: none !important;
+      div:nth-of-type(2) {
+        margin-left: 0;
+        min-width: 0;
+      }
     }
   `,
 
-  headerContent: css`
-    display: flex;
-    align-items: center;
-    gap: 1.1rem;
-    flex: 1;
-    min-width: 0;
-  `,
-
-  headerText: css`
-    flex: 1;
+  text: css`
     min-width: 0;
   `,
 
   name: css`
-    font-family: var(--cv-font-heading);
-    font-size: 2.1rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--colors-secondary-lighter);
-    margin: 0 0 0.15rem;
-    line-height: 1.1;
+    ${webStyles.name}
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 
     @media print {
-      font-size: 1.85rem !important;
+      margin-top: 0 !important;
+      font-size: 1.66rem !important;
+      line-height: 1.15 !important;
     }
   `,
 
   positioning: css`
-    font-family: var(--cv-font-heading);
-    font-size: 1.05rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: ${PRIMARY};
-    margin: 0 0 0.18rem;
-    line-height: 1.2;
+    ${webStyles.positioning}
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 
     @media print {
-      font-size: 0.95rem !important;
+      font-size: 1.1rem !important;
+      line-height: 1.2 !important;
     }
   `,
 
-  strapline: css`
-    font-family: var(--cv-font-body);
-    font-size: 0.85rem;
-    color: var(--cv-muted);
-    margin: 0;
-    line-height: 1.4;
+  strap: css`
+    ${webStyles.strap}
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 
     @media print {
-      font-size: 0.78rem !important;
+      margin-top: 0.2rem !important;
+      font-size: 0.9rem !important;
+      line-height: 1.4 !important;
     }
   `,
 
-  headerQr: css`
+  qr: css`
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
     flex-shrink: 0;
+    align-self: center;
+    padding-top: 0.25rem;
+
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
   `,
 
   qrLabel: css`
-    font-size: 0.66rem;
-    color: #999;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--colors-primary);
     text-align: center;
-    margin: 0;
+    margin-top: 0.15rem;
     line-height: 1.2;
     white-space: nowrap;
+
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
   `,
 };

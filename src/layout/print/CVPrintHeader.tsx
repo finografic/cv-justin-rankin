@@ -9,25 +9,21 @@ import { styles } from './CVPrintHeader.styles';
 
 export function CVPrintHeader({ name, positioning, strapline, qrCode }: CVHeaderProps): ReactNode {
   return (
-    <header css={styles.header}>
-      <div className="pe-header-content" css={styles.headerContent}>
-        <AvatarDS alt={name} shape="circle" size="2xl" src={photo} variant="elevated" />
-        <div className="pe-header-text" css={styles.headerText}>
-          <h1 css={styles.name}>{name}</h1>
-          <p className="pe-positioning" css={styles.positioning}>
-            {positioning}
-          </p>
-          <p css={styles.strapline}>{strapline}</p>
-        </div>
+    <header className="cv-header" css={styles.header}>
+      <AvatarDS alt={name} shape="circle" size="2xl" src={photo} variant="outlined" />
+      <div css={styles.text}>
+        <h1 css={styles.name}>{name}</h1>
+        <p className="cv-accent" css={styles.positioning}>
+          {positioning}
+        </p>
+        <p css={styles.strap}>{strapline}</p>
       </div>
-      {qrCode && (
-        <div className="pe-header-qr" css={styles.headerQr}>
+      {qrCode ? (
+        <div css={styles.qr}>
           <QRCodeSVG level="M" size={68} value={qrCode.url} />
-          <p className="pe-qr-label" css={styles.qrLabel}>
-            {qrCode.label}
-          </p>
+          <p css={styles.qrLabel}>{qrCode.label}</p>
         </div>
-      )}
+      ) : null}
     </header>
   );
 }

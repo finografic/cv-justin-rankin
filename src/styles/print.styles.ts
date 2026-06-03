@@ -50,6 +50,41 @@ export const printEditionStyles = css`
       box-shadow: none !important;
     }
 
+    /* Print header — first column tracks avatar width; text column fills remainder */
+    .cv-header {
+      column-gap: 1.35rem !important;
+      row-gap: 1rem !important;
+      grid-template-columns: auto minmax(0, 1fr) auto !important;
+      align-items: center !important;
+      margin-bottom: 0.9rem !important;
+      padding-bottom: 0.6rem !important;
+    }
+
+    .cv-header > [data-scope='avatar'] {
+      border: none !important;
+      outline: 3px solid #fff !important;
+      outline-offset: 0;
+      box-shadow: 0 0 0 4px #fff !important;
+      background-color: #fff !important;
+      justify-self: start !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cv-header > [data-scope='avatar'] img {
+      border: none !important;
+      outline: 2px solid #fff !important;
+      outline-offset: 0;
+      box-shadow: 0 0 0 3px #fff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cv-header > div:nth-of-type(2) {
+      margin-left: 0 !important;
+      min-width: 0;
+    }
+
     /* Grid */
     .pe-content-grid {
       gap: 1.1rem !important;

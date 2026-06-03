@@ -15,17 +15,7 @@ export const technologies: PrintTechnologyGroup[] = [
   },
   {
     category: 'Front-end',
-    items: [
-      'Accessibility (WCAG/ARIA)',
-      'Ark UI',
-      'Radix UI',
-      'React Hook Form',
-      'Zod',
-      'PandaCSS',
-      'Emotion',
-      'SASS/CSS',
-      'i18n',
-    ],
+    items: ['Accessibility (WCAG/ARIA)', 'Radix UI', 'React Hook Form', 'Zod', 'Emotion', 'SASS/CSS', 'i18n'],
   },
   {
     category: 'Tooling',
@@ -50,9 +40,8 @@ export const technologies: PrintTechnologyGroup[] = [
     items: [
       'Claude Code',
       'Cursor',
-      'Copilot',
       'LLM integration (Anthropic, Ollama)',
-      'MCP server development',
+      'MCP servers',
       'prompt engineering',
     ],
   },

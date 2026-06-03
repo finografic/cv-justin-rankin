@@ -36,20 +36,20 @@ export const contact: PrintContactDetails = {
 export const philosophy: PrintPhilosophyItem[] = [
   {
     title: 'Explicit architecture, self-documenting code',
-    desc: ' - clear naming, visible structure, readable intent',
+    desc: 'clear naming, visible structure, readable intent.',
   },
-  { title: 'Strong typing', desc: ' - TypeScript for safety, documentation, and DX in one' },
+  { title: 'Strong typing', desc: 'TypeScript for safety, documentation, and DX.' },
   {
     title: 'Maintainability',
-    desc: ' - limited, purposeful abstraction. Easy to read, navigate, and change next year',
+    desc: 'limited, purposeful abstraction. Easy to read, navigate, and change next year.',
   },
   {
     title: 'Developer experience',
-    desc: ' - tooling, linting, CI, and onboarding friction directly affect what ships',
+    desc: 'tooling, linting, CI, and onboarding friction directly affect what ships.',
   },
   {
-    title: 'ESM-first, monorepo-native',
-    desc: ' - modern module resolution and workspace architecture as defaults',
+    title: 'ESM-first, monorepos',
+    desc: 'modern module resolution and workspace architecture by default.',
   },
 ];
 

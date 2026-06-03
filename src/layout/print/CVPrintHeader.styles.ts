@@ -19,7 +19,8 @@ export const styles = {
     grid-template-columns: auto minmax(0, 1fr) auto;
     column-gap: 1.4rem;
     row-gap: 0.95rem;
-    margin-bottom: 1.4rem;
+    /* Override web CVHeader margin-bottom: 2.5rem */
+    margin-bottom: 0;
 
     & > [data-scope='avatar'] {
       ${avatarEdgeMask}
@@ -37,8 +38,8 @@ export const styles = {
       row-gap: 1rem;
       grid-template-columns: auto minmax(0, 1fr) auto;
       align-items: center;
-      margin-bottom: 0.9rem;
-      padding-bottom: 0.6rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
 
       div:nth-of-type(2) {
         margin-left: 0;
@@ -102,7 +103,7 @@ export const styles = {
   `,
 
   qrLabel: css`
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: var(--colors-primary);
     text-align: center;

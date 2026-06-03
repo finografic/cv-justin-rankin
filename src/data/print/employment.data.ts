@@ -11,7 +11,7 @@ export const employment: PrintEmploymentEntry[] = [
       "Full-stack development for enterprise SaaS products within Sage's Small Business Segment (SBS), focused on accounting, finance, invoicing, and administrative platforms across a large-scale micro-frontend ecosystem.",
       'Collaborated across international squads (Europe, South Africa, Canada, US) spanning front-end, back-end, architecture, UX, product, and shared platform teams. Built reusable front-end systems, shared UI functionality, and scalable component patterns using Sage Design System tooling and the Carbon component ecosystem.',
       'Contributed to modernization initiatives including dependency migration, front-end form architecture, security patching, and accessibility improvements. Unit, e2e, and integration testing with strict code coverage requirements. Daily pull-request reviews, refactoring initiatives, and front-end standards discussions across squads.',
-      'Explored and integrated AI-assisted and agentic development workflows into engineering processes.',
+      'Explored and integrated AI-assisted and agentic development workflows into engineering processes. Independent research into modern AI tooling applied selectively within professional engineering context.',
     ],
     tech: 'TypeScript, React, Node.js, Micro-frontends, Design systems, RESTful APIs, CI/CD, GitHub workflows, Accessibility',
   },
@@ -44,7 +44,7 @@ export const employment: PrintEmploymentEntry[] = [
     period: '2016 – 2017',
     location: 'Barcelona, Spain',
     description: [
-      'Full-stack SaaS serving France and Spain. API integrations, structured data dashboards, and front-end architecture. Early large-scale React and Redux experience within an agile engineering team.',
+      'Full-stack SaaS serving France and Spain. Integration of multiple external APIs and transformation of structured data for dashboard presentation and operational workflows. Early large-scale React and Redux experience within an agile engineering team.',
     ],
     tech: 'React, Redux, Node.js, JavaScript, Docker, SASS/CSS',
   },
@@ -55,7 +55,7 @@ export const employment: PrintEmploymentEntry[] = [
     period: '2015 – 2016',
     location: 'Toronto, Canada',
     description: [
-      'Front-end development and UX for international clients including Scotiabank, TD Bank, Rogers, and Nickelodeon. Responsive web experiences within a multidisciplinary agency environment.',
+      'Front-end development and UX for international clients including Scotiabank, TD Bank, Rogers, and Nickelodeon. Reusable front-end components, marketing platforms, and responsive web experiences within a multidisciplinary agency environment.',
     ],
     tech: 'JavaScript, Angular, Ruby, MySQL, SASS/CSS',
   },
@@ -66,7 +66,7 @@ export const employment: PrintEmploymentEntry[] = [
     period: '2010 – 2012',
     location: 'Barcelona, Spain',
     description: [
-      'Promoted from technical support after independently building an internal call-tracking application. Adopted by management for 300+ employees during Black Friday operations.',
+      'Promoted from technical support after independently building an internal call-tracking and operational reporting application. The platform improved workflow efficiency, operational visibility, and reporting for management and support teams. Adopted by management for 300+ employees during Black Friday operations.',
     ],
     tech: 'JavaScript, PHP, MySQL, CSS',
   },

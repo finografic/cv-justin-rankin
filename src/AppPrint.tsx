@@ -17,8 +17,16 @@ const printEditionGlobalStyles = [stylesGlobal, printEditionStyles];
 
 const FINOGRAFIC_PACKAGE = /^@finografic\/(.+)$/;
 
+function formatCommitCount(commits: number): string {
+  return `${commits.toLocaleString('en-US')} commits`;
+}
+
 function formatPrintProjectMeta(project: Project): string {
-  if (project.version) return project.version;
+  const parts = [
+    project.version,
+    project.commits != null ? formatCommitCount(project.commits) : undefined,
+  ].filter(Boolean);
+  if (parts.length) return parts.join(' · ');
   if (project.status) return project.status;
   return '';
 }
@@ -32,11 +40,12 @@ function resolveProjectHref(project: Project): string | undefined {
 
 interface ContactRowProps {
   Icon: ComponentType<any>;
+  iconClassName?: string;
   text: string;
   href?: string;
 }
 
-function ContactRow({ Icon, text, href }: ContactRowProps): ReactNode {
+function ContactRow({ Icon, iconClassName, text, href }: ContactRowProps): ReactNode {
   const content = href ? (
     <a href={href} rel="noopener noreferrer" target="_blank">
       {text}
@@ -46,7 +55,7 @@ function ContactRow({ Icon, text, href }: ContactRowProps): ReactNode {
   );
   return (
     <li className="pe-contact-row">
-      <Icon className="pe-contact-icon" />
+      <Icon className={['pe-contact-icon', iconClassName].filter(Boolean).join(' ')} />
       {content}
     </li>
   );
@@ -92,6 +101,7 @@ export default function AppPrint(): ReactNode {
                   <ContactRow
                     Icon={MobileIcon}
                     href={PRINT_CONTENT.contact.phoneHref}
+                    iconClassName="pe-contact-icon--mobile"
                     text={PRINT_CONTENT.contact.phone}
                   />
                   <ContactRow
@@ -154,7 +164,8 @@ export default function AppPrint(): ReactNode {
                   {PRINT_CONTENT.philosophy.map((item) => (
                     <li key={item.title}>
                       <span className="pe-philosophy-title">{item.title}</span>
-                      <span className="pe-philosophy-desc"> {item.desc}</span>
+                      <span className="pe-philosophy-colon">:</span>
+                      <span className="pe-philosophy-desc">{item.desc}</span>
                     </li>
                   ))}
                 </ul>

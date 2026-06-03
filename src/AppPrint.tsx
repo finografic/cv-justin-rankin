@@ -1,7 +1,12 @@
 import { Global } from '@emotion/react';
 import { ContactInfo } from 'components/contact-info/ContactInfo';
+import { EducationEntry } from 'components/EducationEntry';
+import { LanguageList } from 'components/language-list/LanguageList';
+import { PhilosophyList } from 'components/philosophy-list/PhilosophyList';
 import { PrintSection } from 'components/print-section/PrintSection';
+import { ProfileParagraphs } from 'components/profile-paragraphs/ProfileParagraphs';
 import { ProjectEntry } from 'components/ProjectEntry';
+import { TechnologyGrid } from 'components/technology-grid/TechnologyGrid';
 import { WorkExperienceEntry } from 'components/WorkExperienceEntry';
 import { CVPrintHeader } from 'layout/print/CVPrintHeader';
 import { useEffect } from 'react';
@@ -49,40 +54,15 @@ export default function AppPrint(): ReactNode {
               </PrintSection>
 
               <PrintSection sectionKey="profile" title="Profile">
-                <div className="cv-entry__body pe-work-desc-multi">
-                  {PRINT_CONTENT.profile.map((para) => (
-                    <p key={para}>{para}</p>
-                  ))}
-                </div>
+                <ProfileParagraphs edition="print" paragraphs={PRINT_CONTENT.profile} />
               </PrintSection>
 
               <PrintSection sectionKey="technologies" title="Technologies">
-                <div className="pe-tech-list">
-                  {PRINT_CONTENT.technologies.map((group) => (
-                    <div className="pe-tech-group" key={group.category}>
-                      <span className="pe-tech-category">{group.category}</span>
-                      <div className="pe-tech-items-list pill">
-                        {group.items.map((item) => (
-                          <span className="pe-tech-item" key={item}>
-                            {item}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <TechnologyGrid edition="print" groups={PRINT_CONTENT.technologies} />
               </PrintSection>
 
               <PrintSection sectionKey="philosophy" title="Engineering Philosophy">
-                <ul className="pe-philosophy-list">
-                  {PRINT_CONTENT.philosophy.map((item) => (
-                    <li key={item.title}>
-                      <span className="pe-philosophy-title">{item.title}</span>
-                      <span className="pe-philosophy-colon">:</span>
-                      <span className="pe-philosophy-desc">{item.description}</span>
-                    </li>
-                  ))}
-                </ul>
+                <PhilosophyList edition="print" items={PRINT_CONTENT.philosophy} />
               </PrintSection>
 
               <PrintSection sectionKey="projects" title="Technical Projects">
@@ -104,20 +84,11 @@ export default function AppPrint(): ReactNode {
               </PrintSection>
 
               <PrintSection sectionKey="education" title="Education">
-                <p className="pe-edu-institution">{PRINT_CONTENT.education.institution}</p>
-                <p className="pe-edu-degree">{PRINT_CONTENT.education.detail}</p>
+                <EducationEntry edition="print" entry={PRINT_CONTENT.education} />
               </PrintSection>
 
               <PrintSection sectionKey="languages" title="Languages">
-                <ul className="pe-lang-list">
-                  {PRINT_CONTENT.languages.map((lang) => (
-                    <li key={lang.language}>
-                      <strong>{lang.language}</strong>
-                      <span className="pe-lang-colon">:</span>
-                      <span className="pe-lang-level">{lang.level}</span>
-                    </li>
-                  ))}
-                </ul>
+                <LanguageList edition="print" items={PRINT_CONTENT.languages} />
               </PrintSection>
             </div>
           </div>

@@ -67,19 +67,14 @@ export const styles = {
       }
     }
 
-    section.cv-section-languages {
-      strong,
-      span {
-        display: inline-block;
-      }
-      strong {
-        width: 3.5rem;
-      }
-      span.colon {
-        color: var(--colors-secondary-xlight);
-        font-weight: 700;
-        margin-right: 0.5rem;
-      }
+    section.cv-section-languages .cv-colon-list__label,
+    section.cv-section-languages .cv-colon-list__colon,
+    section.cv-section-languages .cv-colon-list__value {
+      display: inline-block;
+    }
+
+    section.cv-section-languages .cv-colon-list__label {
+      width: 3.5rem;
     }
 
     section.cv-section-technical-projects {
@@ -102,18 +97,6 @@ export const styles = {
   stack: css`
     display: grid;
     gap: 1rem;
-  `,
-
-  paragraphList: css`
-    display: grid;
-    gap: 0.9rem;
-  `,
-
-  languageList: css`
-    display: grid;
-    gap: 0.5rem;
-    margin: 0;
-    padding-left: 1rem;
   `,
 
   category: css`

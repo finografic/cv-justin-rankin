@@ -424,25 +424,25 @@ export const printEditionStyles = css`
       margin: 0;
     }
 
-    & strong,
-    & .pe-lang-colon,
-    & .pe-lang-level {
+    & .cv-colon-list__label,
+    & .cv-colon-list__colon,
+    & .cv-colon-list__value {
       display: inline-block;
     }
 
-    & strong {
+    & .cv-colon-list__label {
       width: 3.5rem;
       color: #1a1a1a;
       font-weight: 700;
     }
 
-    & .pe-lang-colon {
+    & .cv-colon-list__colon {
       color: #b8b0a8;
       font-weight: 700;
       margin-right: 0.5rem;
     }
 
-    & .pe-lang-level {
+    & .cv-colon-list__value {
       color: #1a1a1a;
       font-weight: 400;
     }
@@ -602,24 +602,24 @@ export const printEditionStyles = css`
     line-height: 1.45;
   }
 
-  .pe-philosophy-title,
-  .pe-philosophy-colon,
-  .pe-philosophy-desc {
+  .pe-philosophy-list .cv-colon-list__label,
+  .pe-philosophy-list .cv-colon-list__colon,
+  .pe-philosophy-list .cv-colon-list__value {
     display: inline;
   }
 
-  .pe-philosophy-title {
+  .pe-philosophy-list .cv-colon-list__label {
     color: #1a1a1a;
     font-weight: 700;
   }
 
-  .pe-philosophy-colon {
+  .pe-philosophy-list .cv-colon-list__colon {
     color: #b8b0a8;
     font-weight: 700;
     margin: 0 0.35rem 0 0;
   }
 
-  .pe-philosophy-desc {
+  .pe-philosophy-list .cv-colon-list__value {
     color: #666;
   }
 

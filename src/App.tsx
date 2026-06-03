@@ -5,7 +5,9 @@ import type { ReactNode } from 'react';
 
 import { ContactInfo } from './components/contact-info/ContactInfo';
 import { EducationEntry } from './components/EducationEntry';
+import { LanguageList } from './components/language-list/LanguageList';
 import { PhilosophyList } from './components/philosophy-list/PhilosophyList';
+import { ProfileParagraphs } from './components/profile-paragraphs/ProfileParagraphs';
 import { ProjectEntry } from './components/ProjectEntry';
 import { TechnologyGrid } from './components/technology-grid/TechnologyGrid';
 import { WorkExperienceEntry } from './components/WorkExperienceEntry';
@@ -28,11 +30,7 @@ export default function App(): ReactNode {
         <ContactInfo contact={CONTENT.contact} />
       </CVSection>
       <CVSection sectionKey="profile" title="Profile">
-        <div css={styles.paragraphList}>
-          {CONTENT.profile.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+        <ProfileParagraphs paragraphs={CONTENT.profile} />
       </CVSection>
       {/* <PrintColumnBreak /> */}
       <CVSection sectionKey="technologies" title="Technologies" variant="grid">
@@ -82,15 +80,7 @@ export default function App(): ReactNode {
         </div>
       </CVSection>
       <CVSection className="print-only-section" sectionKey="languages" title="Languages" variant="compact">
-        <ul css={styles.languageList}>
-          {CONTENT.languages.map((entry) => (
-            <li key={entry.language}>
-              <strong>{entry.language}</strong>
-              <span className="colon">:</span>
-              <span className="level">{entry.level}</span>
-            </li>
-          ))}
-        </ul>
+        <LanguageList items={CONTENT.languages} />
       </CVSection>
     </>
   );
@@ -123,15 +113,7 @@ export default function App(): ReactNode {
         </div>
       </CVSection>
       <CVSection className="screen-only-section" sectionKey="languages" title="Languages" variant="compact">
-        <ul css={styles.languageList}>
-          {CONTENT.languages.map((entry) => (
-            <li key={entry.language}>
-              <strong>{entry.language}</strong>
-              <span className="colon">:</span>
-              <span className="level">{entry.level}</span>
-            </li>
-          ))}
-        </ul>
+        <LanguageList items={CONTENT.languages} />
       </CVSection>
     </>
   );

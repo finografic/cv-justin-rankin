@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { SwitchDS } from '@finografic/design-system/forms';
 import type { ReactNode } from 'react';
 
 import type { CvView } from 'types/cv-view.types';
@@ -21,26 +21,19 @@ interface ViewNavProps {
 }
 
 export function ViewNav({ view }: ViewNavProps): ReactNode {
+  const isCondensed = view === 'condensed';
+
   return (
     <nav aria-label="CV view" className="cv-view-nav" css={styles.bar}>
-      <div css={styles.group}>
-        <a
-          aria-current={view === 'full' ? 'page' : undefined}
-          css={css(styles.link, view === 'full' && styles.linkActive)}
-          href={buildViewHref('full')}
-        >
-          Full
-        </a>
-        <span css={styles.separator}>|</span>
-        <a
-          aria-current={view === 'condensed' ? 'page' : undefined}
-          css={css(styles.link, view === 'condensed' && styles.linkActive)}
-          href={buildViewHref('condensed')}
-        >
-          Condensed
-        </a>
-      </div>
-      <span css={styles.separator}>|</span>
+      <SwitchDS
+        checked={isCondensed}
+        label="Condensed"
+        onChange={(checked) => {
+          globalThis.location.assign(buildViewHref(checked ? 'condensed' : 'full'));
+        }}
+        palette="primary"
+        size="sm"
+      />
       <button
         className="cv-view-nav__pdf"
         css={styles.pdfButton}

@@ -3,3 +3,4 @@
 
 /* Design system CSS reset — populates @layer reset */
 @import "@finografic/design-system/styles/reset.css";
+@import "@finografic/design-system/forms/forms.css";

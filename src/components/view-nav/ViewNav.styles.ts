@@ -2,14 +2,19 @@ import { css } from '@emotion/react';
 
 export const styles = {
   bar: css`
-    display: flex;
+    position: fixed;
+    top: 0.75rem;
+    right: 1rem;
+    z-index: 100;
+    display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-    background: color-mix(in srgb, var(--colors-primary) 6%, #fff);
-    border-bottom: 1px solid color-mix(in srgb, var(--colors-primary) 18%, transparent);
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    background: color-mix(in srgb, #fff 92%, var(--colors-primary));
+    border: 1px solid color-mix(in srgb, var(--colors-primary) 22%, transparent);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     font-family: var(--cv-font-body);
     font-size: 0.82rem;
     -webkit-print-color-adjust: exact;
@@ -18,36 +23,6 @@ export const styles = {
     @media print {
       display: none !important;
     }
-  `,
-
-  group: css`
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  `,
-
-  link: css`
-    padding: 0.35rem 0.75rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--colors-primary);
-    border: 1px solid transparent;
-
-    &:hover {
-      background: color-mix(in srgb, var(--colors-primary) 8%, transparent);
-    }
-  `,
-
-  linkActive: css`
-    background: color-mix(in srgb, var(--colors-primary) 12%, transparent);
-    border-color: color-mix(in srgb, var(--colors-primary) 35%, transparent);
-    color: var(--colors-primary);
-  `,
-
-  separator: css`
-    color: #bbb;
-    user-select: none;
   `,
 
   pdfButton: css`

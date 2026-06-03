@@ -18,7 +18,7 @@ interface ProfileParagraphsProps {
 export function ProfileParagraphs({ view = 'full', paragraphs }: ProfileParagraphsProps): ReactNode {
   if (view === 'condensed') {
     return (
-      <div className="cv-entry__body pe-work-desc-multi">
+      <div className="cv-entry__body cv-condensed-work-desc-multi">
         {paragraphs.map((para) => (
           <p key={para}>{para}</p>
         ))}

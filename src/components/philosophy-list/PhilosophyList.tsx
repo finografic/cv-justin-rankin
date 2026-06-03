@@ -20,7 +20,7 @@ export function PhilosophyList({ view = 'full', items }: PhilosophyListProps): R
     return (
       <ColonList
         items={colonItems}
-        listClassName="cv-colon-list pe-philosophy-list"
+        listClassName="cv-colon-list cv-condensed-philosophy-list"
         valueCss={colonStyles.philosophyValue}
       />
     );

@@ -18,7 +18,7 @@ export function LanguageList({ view = 'full', items }: LanguageListProps): React
   }));
 
   if (view === 'condensed') {
-    return <ColonList items={colonItems} listClassName="cv-colon-list pe-lang-list" />;
+    return <ColonList items={colonItems} listClassName="cv-colon-list cv-condensed-lang-list" />;
   }
 
   return <ColonList items={colonItems} listClassName="cv-colon-list" listCss={colonStyles.languageList} />;

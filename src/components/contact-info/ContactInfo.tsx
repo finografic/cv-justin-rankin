@@ -48,8 +48,8 @@ function ContactRow({
 
   if (view === 'condensed') {
     return (
-      <li className="pe-contact-row">
-        <Icon className={['pe-contact-icon', iconClassName].filter(Boolean).join(' ')} />
+      <li className="cv-condensed-contact-row">
+        <Icon className={['cv-condensed-contact-icon', iconClassName].filter(Boolean).join(' ')} />
         {content}
       </li>
     );
@@ -82,13 +82,13 @@ export function ContactInfo({ contact, view = 'full' }: ContactInfoProps): React
   if (view === 'condensed') {
     return (
       <>
-        <ul className="pe-contact-list">
+        <ul className="cv-condensed-contact-list">
           <ContactRow view="condensed" Icon={HomeIcon} iconName="home" text={contact.location} />
           <ContactRow
             view="condensed"
             Icon={MobileIcon}
             href={phoneHref}
-            iconClassName="pe-contact-icon--mobile"
+            iconClassName="cv-condensed-contact-icon--mobile"
             iconName="phone"
             text={contact.phone}
           />
@@ -121,7 +121,7 @@ export function ContactInfo({ contact, view = 'full' }: ContactInfoProps): React
             text={contact.website}
           />
         </ul>
-        {contact.workRights ? <p className="pe-work-rights">{contact.workRights}</p> : null}
+        {contact.workRights ? <p className="cv-condensed-work-rights">{contact.workRights}</p> : null}
       </>
     );
   }

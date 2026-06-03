@@ -11,23 +11,16 @@ const PAGE_MARGIN_SIDES = '12mm';
 const PAGE_MARGIN_BOTTOM = '14mm';
 
 /**
- * Horizontal space between the two print content columns (paper preview).
+ * Horizontal space between the two condensed content columns (screen and print).
  * Left column width stays fixed; increasing this only narrows the right column.
  */
 export const PRINT_CONTENT_COL_GAP = '2.25rem';
 
-/**
- * Same gutter inside `@media print` (browser print / PDF).
- * Tune separately from preview — print layout often needs a smaller value.
- */
-export const PRINT_CONTENT_COL_GAP_PRINT = '1.5rem';
-
 /** Reference gutter for left-column width (original 50/50 split). Usually leave unchanged. */
 const PRINT_CONTENT_COL_GAP_REF = '1.6rem';
-const PRINT_CONTENT_COL_GAP_REF_PRINT = '1.1rem';
 
 /**
- * Base body text size on `.pe-paper` (paper preview). Section prose uses `em` from this;
+ * Base body text size on `.cv-condensed-paper` (paper preview). Section prose uses `em` from this;
  * tech pills use {@link PRINT_TECH_PILL_FONT_SIZE} instead (not scaled with body).
  */
 export const PRINT_BODY_FONT_SIZE = '1rem';
@@ -38,7 +31,7 @@ export const PRINT_BODY_FONT_SIZE = '1rem';
 export const PRINT_BODY_FONT_SIZE_PRINT = '1rem';
 
 /**
- * Technology pill label size only (`.pe-tech-items-list.pill .pe-tech-item`).
+ * Technology pill label size only (`.cv-condensed-tech-items-list.pill .cv-condensed-tech-item`).
  * Absolute `rem` on the root — changing {@link PRINT_BODY_FONT_SIZE} does not affect pills.
  */
 export const PRINT_TECH_PILL_FONT_SIZE = '0.7rem';
@@ -71,13 +64,13 @@ export const condensedViewStyles = css`
       margin: 0;
     }
 
-    .pe-shell {
+    .cv-condensed-shell {
       background: none !important;
       padding: 0 !important;
       display: block;
     }
 
-    .pe-paper {
+    .cv-condensed-paper {
       width: 100% !important;
       padding: 0 !important;
       box-shadow: none !important;
@@ -121,82 +114,85 @@ export const condensedViewStyles = css`
       min-width: 0;
     }
 
-    /* Grid — gap from PRINT_CONTENT_COL_GAP_PRINT; right column absorbs extra vs ref */
-    .pe-content-grid {
-      --pe-col-gap: ${PRINT_CONTENT_COL_GAP_PRINT};
-      --pe-col-gap-ref: ${PRINT_CONTENT_COL_GAP_REF_PRINT};
-      gap: var(--pe-col-gap) !important;
+    /* Grid — same gutter as screen so PDF matches browser layout */
+    .cv-condensed-content-grid {
+      --cv-condensed-col-gap: ${PRINT_CONTENT_COL_GAP};
+      --cv-condensed-col-gap-ref: ${PRINT_CONTENT_COL_GAP_REF};
+      gap: var(--cv-condensed-col-gap) !important;
       grid-template-columns:
-        calc((100% - var(--pe-col-gap-ref)) / 2)
+        calc((100% - var(--cv-condensed-col-gap-ref)) / 2)
         minmax(
           0,
-          calc((100% - var(--pe-col-gap-ref)) / 2 - (var(--pe-col-gap) - var(--pe-col-gap-ref)))
+          calc(
+            (100% - var(--cv-condensed-col-gap-ref)) / 2 -
+              (var(--cv-condensed-col-gap) - var(--cv-condensed-col-gap-ref))
+          )
         ) !important;
     }
 
-    .pe-col {
+    .cv-condensed-col {
       display: block;
       overflow: visible;
     }
 
     /* Sections */
-    .pe-section {
+    .cv-condensed-section {
       margin-bottom: 0.7rem !important;
     }
 
     /* Contact */
-    .pe-contact-list {
+    .cv-condensed-contact-list {
       line-height: 1.66 !important;
     }
 
     /* Tech */
-    .pe-tech-list {
+    .cv-condensed-tech-list {
       gap: 0.2rem !important;
     }
 
-    .pe-tech-group {
+    .cv-condensed-tech-group {
       gap: 0.02rem !important;
     }
 
     /* Work */
-    .pe-work-list {
+    .cv-condensed-work-list {
       gap: 0.52rem !important;
     }
 
-    .pe-work-list .cv-entry--condensed {
+    .cv-condensed-work-list .cv-entry--condensed {
       padding-bottom: 0.52rem !important;
     }
 
-    .pe-work-list .cv-entry--condensed .cv-entry__meta {
+    .cv-condensed-work-list .cv-entry--condensed .cv-entry__meta {
       margin-bottom: 0.22rem !important;
     }
 
-    .pe-work-list .cv-entry--condensed .cv-entry__body p {
+    .cv-condensed-work-list .cv-entry--condensed .cv-entry__body p {
       font-size: 0.78em !important;
       margin-bottom: 0.14rem !important;
     }
 
-    .pe-work-list .cv-entry--condensed .cv-entry__tech {
+    .cv-condensed-work-list .cv-entry--condensed .cv-entry__tech {
       font-size: 0.72em !important;
     }
 
     /* Projects */
-    .pe-project-list {
+    .cv-condensed-project-list {
       gap: 0.42rem !important;
     }
 
-    .pe-project-list .cv-entry--condensed {
+    .cv-condensed-project-list .cv-entry--condensed {
       padding-bottom: 0.15rem !important;
     }
 
-    .pe-project-list .cv-entry--condensed .cv-entry__body p {
+    .cv-condensed-project-list .cv-entry--condensed .cv-entry__body p {
       font-size: 0.76em !important;
     }
   }
 
   /* ─── Shell: centred A4 sheet (same layout as print; no separate preview scale) ─── */
 
-  .pe-shell {
+  .cv-condensed-shell {
     min-height: 100vh;
     background: #e8e8e8;
     display: flex;
@@ -205,9 +201,8 @@ export const condensedViewStyles = css`
     padding: 1.5rem 1rem 2rem;
   }
 
-  .pe-paper {
+  .cv-condensed-paper {
     background: #fff;
-    width: 210mm;
     padding: ${PAGE_MARGIN_TOP} ${PAGE_MARGIN_SIDES};
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
     font-family: ${FONT_BODY};
@@ -216,30 +211,42 @@ export const condensedViewStyles = css`
     line-height: 1.5;
   }
 
+  @media not print {
+    .cv-condensed-paper {
+      width: 320mm;
+    }
+  }
+
   /* ─── Two-column content grid ─── */
 
-  .pe-content-grid {
-    --pe-col-gap: ${PRINT_CONTENT_COL_GAP};
-    --pe-col-gap-ref: ${PRINT_CONTENT_COL_GAP_REF};
+  .cv-condensed-content-grid {
+    --cv-condensed-col-gap: ${PRINT_CONTENT_COL_GAP};
+    --cv-condensed-col-gap-ref: ${PRINT_CONTENT_COL_GAP_REF};
     display: grid;
     grid-template-columns:
-      calc((100% - var(--pe-col-gap-ref)) / 2)
-      minmax(0, calc((100% - var(--pe-col-gap-ref)) / 2 - (var(--pe-col-gap) - var(--pe-col-gap-ref))));
-    gap: var(--pe-col-gap);
+      calc((100% - var(--cv-condensed-col-gap-ref)) / 2)
+      minmax(
+        0,
+        calc(
+          (100% - var(--cv-condensed-col-gap-ref)) / 2 -
+            (var(--cv-condensed-col-gap) - var(--cv-condensed-col-gap-ref))
+        )
+      );
+    gap: var(--cv-condensed-col-gap);
     align-items: start;
   }
 
-  .pe-col {
+  .cv-condensed-col {
     min-width: 0;
   }
 
   /* ─── Section ─── */
 
-  .pe-section {
+  .cv-condensed-section {
     margin-bottom: 1.1rem;
   }
 
-  .pe-section:last-child {
+  .cv-condensed-section:last-child {
     margin-bottom: 0;
   }
 
@@ -247,7 +254,7 @@ export const condensedViewStyles = css`
 
   /* ─── Contact ─── */
 
-  .pe-contact-list {
+  .cv-condensed-contact-list {
     list-style: none;
     margin: 0 0 0.35rem;
     padding: 0;
@@ -260,7 +267,7 @@ export const condensedViewStyles = css`
     }
   }
 
-  .pe-contact-row {
+  .cv-condensed-contact-row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -272,7 +279,7 @@ export const condensedViewStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-contact-icon {
+  .cv-condensed-contact-icon {
     width: 1.05rem;
     height: 1.05rem;
     flex-shrink: 0;
@@ -282,14 +289,14 @@ export const condensedViewStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-contact-icon--mobile {
+  .cv-condensed-contact-icon--mobile {
     width: 1.157625rem;
     height: 1.157625rem;
     opacity: 0.82;
     margin-right: -0.15rem;
   }
 
-  .pe-work-rights {
+  .cv-condensed-work-rights {
     font-size: 0.75em;
     font-weight: 500;
     color: #333;
@@ -301,7 +308,7 @@ export const condensedViewStyles = css`
 
   /* ─── Profile ─── */
 
-  .pe-section-profile p {
+  .cv-condensed-section-profile p {
     font-size: 0.85em;
     line-height: 1.55;
     color: #333;
@@ -310,18 +317,18 @@ export const condensedViewStyles = css`
 
   /* ─── Technologies ─── */
 
-  .pe-tech-list {
+  .cv-condensed-tech-list {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
   }
 
-  .pe-tech-group {
+  .cv-condensed-tech-group {
     font-size: 0.82em;
     line-height: 1.4;
   }
 
-  .pe-tech-category {
+  .cv-condensed-tech-category {
     font-family: var(--cv-font-body);
     font-weight: 700;
     color: #555;
@@ -339,13 +346,13 @@ export const condensedViewStyles = css`
 
   /* ── Default: inline comma-separated ── */
 
-  .pe-tech-items-list:not(.pill) {
+  .cv-condensed-tech-items-list:not(.pill) {
     display: inline;
     font-size: 0.8em;
     line-height: 1.33;
   }
 
-  .pe-tech-item {
+  .cv-condensed-tech-item {
     color: ${PRIMARY};
     font-weight: 600;
     -webkit-print-color-adjust: exact;
@@ -358,16 +365,16 @@ export const condensedViewStyles = css`
     }
   }
 
-  /* ── Pill variant: add .pill to .pe-tech-items-list ── */
+  /* ── Pill variant: add .pill to .cv-condensed-tech-items-list ── */
 
-  .pe-tech-items-list.pill {
+  .cv-condensed-tech-items-list.pill {
     display: flex;
     flex-wrap: wrap;
     gap: 0.22rem;
     margin-top: 0.15rem;
   }
 
-  .pe-tech-items-list.pill .pe-tech-item {
+  .cv-condensed-tech-items-list.pill .cv-condensed-tech-item {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -389,20 +396,20 @@ export const condensedViewStyles = css`
 
   /* ─── Education ─── */
 
-  .pe-edu-institution {
+  .cv-condensed-edu-institution {
     font-weight: 600;
     font-size: 0.85em;
     color: #1a1a1a;
     margin: 0 0 0.1rem;
   }
 
-  .pe-edu-degree {
+  .cv-condensed-edu-degree {
     font-size: 0.8em;
     color: #555;
     margin: 0 0 0.1rem;
   }
 
-  .pe-edu-location {
+  .cv-condensed-edu-location {
     font-size: 0.76em;
     color: #999;
     margin: 0;
@@ -410,7 +417,7 @@ export const condensedViewStyles = css`
 
   /* ─── Languages ─── */
 
-  .pe-lang-list {
+  .cv-condensed-lang-list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -447,13 +454,13 @@ export const condensedViewStyles = css`
 
   /* ─── Work Experience ─── */
 
-  .pe-work-list {
+  .cv-condensed-work-list {
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
   }
 
-  .pe-work-list .cv-entry--condensed {
+  .cv-condensed-work-list .cv-entry--condensed {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #f0f0f0;
 
@@ -463,7 +470,7 @@ export const condensedViewStyles = css`
     }
   }
 
-  .pe-work-list .cv-entry--condensed .cv-entry__title {
+  .cv-condensed-work-list .cv-entry--condensed .cv-entry__title {
     margin: 0 0 0.22rem;
     padding: 0;
     font-family: var(--cv-font-body);
@@ -481,7 +488,7 @@ export const condensedViewStyles = css`
     }
   }
 
-  .pe-work-list .cv-entry--condensed .cv-entry__subtitle {
+  .cv-condensed-work-list .cv-entry--condensed .cv-entry__subtitle {
     margin: 0 0 0.18rem;
     font-family: var(--cv-font-body);
     font-size: 0.86em;
@@ -492,7 +499,7 @@ export const condensedViewStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-work-list .cv-entry--condensed .cv-entry__meta {
+  .cv-condensed-work-list .cv-entry--condensed .cv-entry__meta {
     margin: 0 0 0.42rem;
     font-family: var(--cv-font-body);
     font-size: 0.76em;
@@ -504,14 +511,14 @@ export const condensedViewStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-work-list .cv-entry--condensed .cv-entry__body p {
+  .cv-condensed-work-list .cv-entry--condensed .cv-entry__body p {
     font-size: 0.82em;
     line-height: 1.5;
     color: #333;
     margin: 0 0 0.28rem;
   }
 
-  .pe-work-list .cv-entry--condensed .cv-entry__tech {
+  .cv-condensed-work-list .cv-entry--condensed .cv-entry__tech {
     font-size: 0.76em;
     font-weight: 600;
     color: ${PRIMARY};
@@ -523,13 +530,13 @@ export const condensedViewStyles = css`
 
   /* ─── Projects ─── */
 
-  .pe-project-list {
+  .cv-condensed-project-list {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
   }
 
-  .pe-project-list .cv-entry--condensed {
+  .cv-condensed-project-list .cv-entry--condensed {
     padding-bottom: 0.65rem;
     border-bottom: 1px solid #f0f0f0;
 
@@ -539,7 +546,7 @@ export const condensedViewStyles = css`
     }
   }
 
-  .pe-project-list .cv-entry--condensed .cv-entry__title-row {
+  .cv-condensed-project-list .cv-entry--condensed .cv-entry__title-row {
     font-family: var(--cv-font-body);
     font-size: 0.88em;
     font-weight: 700;
@@ -555,7 +562,7 @@ export const condensedViewStyles = css`
     flex-wrap: wrap;
   }
 
-  .pe-project-list .cv-entry--condensed .cv-entry__title {
+  .cv-condensed-project-list .cv-entry--condensed .cv-entry__title {
     margin: 0;
     padding: 0;
     font: inherit;
@@ -568,7 +575,7 @@ export const condensedViewStyles = css`
     }
   }
 
-  .pe-project-list .cv-entry--condensed .cv-entry__meta--inline {
+  .cv-condensed-project-list .cv-entry--condensed .cv-entry__meta--inline {
     font-size: 0.76em;
     line-height: 1.2;
     color: var(--colors-secondary-lighter);
@@ -579,7 +586,7 @@ export const condensedViewStyles = css`
     print-color-adjust: exact;
   }
 
-  .pe-project-list .cv-entry--condensed .cv-entry__body p {
+  .cv-condensed-project-list .cv-entry--condensed .cv-entry__body p {
     font-size: 0.79em;
     line-height: 1.45;
     color: #444;
@@ -588,7 +595,7 @@ export const condensedViewStyles = css`
 
   /* ─── Engineering Philosophy ─── */
 
-  .pe-philosophy-list {
+  .cv-condensed-philosophy-list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -599,30 +606,30 @@ export const condensedViewStyles = css`
     line-height: 1.45;
   }
 
-  .pe-philosophy-list .cv-colon-list__label,
-  .pe-philosophy-list .cv-colon-list__colon,
-  .pe-philosophy-list .cv-colon-list__value {
+  .cv-condensed-philosophy-list .cv-colon-list__label,
+  .cv-condensed-philosophy-list .cv-colon-list__colon,
+  .cv-condensed-philosophy-list .cv-colon-list__value {
     display: inline;
   }
 
-  .pe-philosophy-list .cv-colon-list__label {
+  .cv-condensed-philosophy-list .cv-colon-list__label {
     color: #1a1a1a;
     font-weight: 700;
   }
 
-  .pe-philosophy-list .cv-colon-list__colon {
+  .cv-condensed-philosophy-list .cv-colon-list__colon {
     color: #b8b0a8;
     font-weight: 700;
     margin: 0 0.35rem 0 0;
   }
 
-  .pe-philosophy-list .cv-colon-list__value {
+  .cv-condensed-philosophy-list .cv-colon-list__value {
     color: #666;
   }
 
   /* ─── Multi-paragraph work description ─── */
 
-  .pe-work-desc-multi p,
+  .cv-condensed-work-desc-multi p,
   .cv-entry__body p {
     font-size: 0.82em;
     line-height: 1.5;
@@ -635,8 +642,8 @@ export const condensedViewStyles = css`
   }
 
   @media print {
-    .pe-work-desc-multi p,
-    .pe-work-list .cv-entry--condensed .cv-entry__body p {
+    .cv-condensed-work-desc-multi p,
+    .cv-condensed-work-list .cv-entry--condensed .cv-entry__body p {
       font-size: 0.78em !important;
       margin-bottom: 0.18rem !important;
     }

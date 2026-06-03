@@ -13,8 +13,8 @@ export function EducationEntry({ view = 'full', entry }: EducationEntryProps): R
   if (view === 'condensed' && entry.detail) {
     return (
       <>
-        <p className="pe-edu-institution">{entry.institution}</p>
-        <p className="pe-edu-degree">{entry.detail}</p>
+        <p className="cv-condensed-edu-institution">{entry.institution}</p>
+        <p className="cv-condensed-edu-degree">{entry.detail}</p>
       </>
     );
   }

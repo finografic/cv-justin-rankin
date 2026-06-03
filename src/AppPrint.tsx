@@ -31,8 +31,8 @@ export default function AppPrint(): ReactNode {
     <>
       <Global styles={condensedGlobalStyles} />
 
-      <div className="pe-shell">
-        <div className="pe-paper">
+      <div className="cv-condensed-shell">
+        <div className="cv-condensed-paper">
           <CVPrintHeader
             name={PRINT_CONTENT.headerContent.name}
             positioning={PRINT_CONTENT.headerContent.positioning}
@@ -47,8 +47,8 @@ export default function AppPrint(): ReactNode {
             }
           />
 
-          <div className="pe-content-grid">
-            <div className="pe-col pe-col--left">
+          <div className="cv-condensed-content-grid">
+            <div className="cv-condensed-col cv-condensed-col--left">
               <PrintSection sectionKey="contact" title="Contact">
                 <ContactInfo contact={PRINT_CONTENT.contact} view="condensed" />
               </PrintSection>
@@ -66,7 +66,7 @@ export default function AppPrint(): ReactNode {
               </PrintSection>
 
               <PrintSection sectionKey="projects" title="Technical Projects">
-                <div className="pe-project-list">
+                <div className="cv-condensed-project-list">
                   {PRINT_CONTENT.projects.map((project) => (
                     <ProjectEntry key={project.name} project={project} view="condensed" />
                   ))}
@@ -74,9 +74,9 @@ export default function AppPrint(): ReactNode {
               </PrintSection>
             </div>
 
-            <div className="pe-col pe-col--right">
+            <div className="cv-condensed-col cv-condensed-col--right">
               <PrintSection sectionKey="work" title="Work Experience">
-                <div className="pe-work-list">
+                <div className="cv-condensed-work-list">
                   {PRINT_CONTENT.employment.map((job) => (
                     <WorkExperienceEntry entry={job} key={job.company} view="condensed" />
                   ))}

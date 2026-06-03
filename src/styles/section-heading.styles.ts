@@ -34,7 +34,7 @@ export const webSectionHeading = css`
 `;
 
 export const printSectionHeadingStyles = css`
-  .pe-section-heading {
+  .cv-condensed-section-heading {
     margin: 0 0 0.5rem;
     ${sectionHeadingUnderline};
     color: var(--colors-primary);
@@ -47,7 +47,7 @@ export const printSectionHeadingStyles = css`
   }
 
   @media print {
-    .pe-section-heading {
+    .cv-condensed-section-heading {
       margin-top: 1.2rem !important;
       margin-bottom: 0.85rem !important;
       padding-bottom: 0.1rem !important;

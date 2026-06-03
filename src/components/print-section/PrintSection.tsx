@@ -8,8 +8,8 @@ interface PrintSectionProps {
 
 export function PrintSection({ children, sectionKey, title }: PrintSectionProps): ReactNode {
   return (
-    <section className={`pe-section pe-section-${sectionKey}`}>
-      <h2 className="pe-section-heading">{title}</h2>
+    <section className={`cv-condensed-section cv-condensed-section-${sectionKey}`}>
+      <h2 className="cv-condensed-section-heading">{title}</h2>
       {children}
     </section>
   );

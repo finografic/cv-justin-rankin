@@ -18,6 +18,8 @@ pnpm install
 pnpm dev
 ```
 
+**Condensed handout (local):** `http://localhost:5173/cv-justin-rankin/?view=condensed`
+
 ### Design system (`@finografic/design-system`)
 
 Panda must scan **compiled DS recipes** in `node_modules` (see `panda.config.ts`). The published
@@ -54,11 +56,21 @@ CV data is split across typed data files under `src/data/web/` and aggregated as
 | `content.data.ts`      | Header, contact, philosophy, education, languages                                           |
 | `profile.data.ts`      | Profile paragraphs                                                                          |
 
-Condensed handout copy lives under `src/data/print/` (`PRINT_CONTENT` in `src/data/print/index.ts`) with the same file names as web (`content`, `profile`, `employment`, `technologies`, `projects`).
-
-**Views:** `?view=full` (default) or `?view=condensed` — top nav also offers **PDF** (prints the current view). Legacy `?edition=print` redirects to condensed.
+Condensed handout copy lives under `src/data/print/` (`PRINT_CONTENT` in `src/data/print/index.ts`) with the same file names as web (`content`, `profile`, `employment`, `technologies`, `projects`). Changing prose often means editing both trees (or syncing from canonical markdown in the sibling `__CV_2026__` content repo — see `AGENTS.md`).
 
 TypeScript types are in `src/types/content.types.ts`.
+
+### Views
+
+| View               | URL                          | What you see                                                                                                                                                                                    |
+| ------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Full** (default) | `/` or `?view=full`          | Two-column web CV. Screen layout in `App.tsx`; print/PDF via `@media print` in `src/styles/print.styles.ts`.                                                                                    |
+| **Condensed**      | `?view=condensed`            | Print-oriented handout (`AppPrint.tsx`, `PRINT_CONTENT`, `src/styles/condensed.styles.ts`). Screen paper is **320mm** wide so layout matches Save as PDF; actual print uses A4 `@page` margins. |
+| **PDF**            | Top-right control (any view) | `window.print()` for the active view — not a separate generated file.                                                                                                                           |
+
+**Chrome:** Fixed top-right bar — **Condensed** switch (`SwitchDS` from `@finografic/design-system/forms`) and **PDF**. Legacy `?edition=print` still maps to condensed.
+
+**Public condensed:** The switch is wired today; you can hide or gate `ViewNav` in `src/main.tsx` later while keeping `?view=condensed` bookmarkable for handouts.
 
 ### Syncing project versions from GitHub
 
@@ -152,3 +164,5 @@ pnpm typecheck   # TypeScript
 pnpm lint        # oxlint
 pnpm format:check
 ```
+
+After `pnpm build`, `pnpm preview` and open full or condensed URLs to check layout before pushing to `master` (GitHub Pages deploy).

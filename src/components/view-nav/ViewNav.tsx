@@ -32,7 +32,7 @@ export function ViewNav({ view }: ViewNavProps): ReactNode {
           globalThis.location.assign(buildViewHref(checked ? 'condensed' : 'full'));
         }}
         palette="primary"
-        size="sm"
+        size="md"
       />
       <button
         className="cv-view-nav__pdf"

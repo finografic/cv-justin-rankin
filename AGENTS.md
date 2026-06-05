@@ -50,7 +50,7 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 
 ## Git Policy
 
-- IMPORTANT: NEVER include `Co-Authored-By` lines in commit messages. Non-negotiable.
+- Do not include `Co-Authored-By` lines in commit messages.
 - `.github/instructions/git/git-policy.instructions.md` (see Commits and Releases sections)
 
 ---

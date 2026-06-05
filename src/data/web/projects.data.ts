@@ -15,8 +15,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/oxc-config',
-        version: 'v2.6.7',
-        commits: 179,
+        version: 'v2.7.0',
+        commits: 181,
         visibility: 'public',
         status: 'active',
         description:
@@ -76,8 +76,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/lucide-manager',
-        version: 'v0.9.0',
-        commits: 62,
+        version: 'v0.12.10',
+        commits: 91,
         visibility: 'public',
         status: 'active',
         description:

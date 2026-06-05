@@ -56,7 +56,7 @@ CV data is split across typed data files under `src/data/web/` and aggregated as
 | `content.data.ts`      | Header, contact, philosophy, education, languages                                           |
 | `profile.data.ts`      | Profile paragraphs                                                                          |
 
-Condensed handout copy lives under `src/data/print/` (`PRINT_CONTENT` in `src/data/print/index.ts`) with the same file names as web (`content`, `profile`, `employment`, `technologies`, `projects`). Changing prose often means editing both trees (or syncing from canonical markdown in the sibling `__CV_2026__` content repo — see `AGENTS.md`).
+Condensed handout copy lives under `src/data/print/` (`PRINT_CONTENT` in `src/data/print/index.ts`) with the same file names as web (`content`, `profile`, `employment`, `technologies`, `projects`).
 
 TypeScript types are in `src/types/content.types.ts`.
 

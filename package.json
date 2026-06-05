@@ -64,7 +64,7 @@
     "update:md-lint": "pnpm update @finografic/md-lint --latest",
     "update:oxc-config": "pnpm update @finografic/oxc-config --latest && pnpm update oxfmt --latest && pnpm update oxlint --latest",
     "·········· DATA": "······················································",
-    "sync-git-metadata": "tsx scripts/sync-git-metadata.ts",
+    "sync-git-metadata": "tsx scripts/sync-git-metadata.ts && git add . && git commit -m 'chore: update git metadata'",
     "·········· UTILS": "·····················································",
     "tsc:debug": "tsc --pretty --project tsconfig.json",
     "typecheck": "tsc --project tsconfig.json --noEmit",

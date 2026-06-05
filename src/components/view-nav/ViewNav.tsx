@@ -50,7 +50,7 @@ export function ViewNav({ view }: ViewNavProps): ReactNode {
     >
       <SwitchDS
         checked={isCondensed}
-        label="Condensed"
+        label={isCondensed ? 'Condensed' : 'Full Version'}
         onChange={(checked) => {
           globalThis.location.assign(buildViewHref(checked ? 'condensed' : 'full'));
         }}

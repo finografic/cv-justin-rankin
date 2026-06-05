@@ -1,8 +1,11 @@
 import { SwitchDS } from '@finografic/design-system/forms';
+import { css } from '@emotion/react';
+import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 
 import type { CvView } from 'types/cv-view.types';
 
+import { VIEW_NAV_HIDE_AFTER_SCROLL_PX } from './view-nav.constants';
 import { styles } from './ViewNav.styles';
 
 function buildViewHref(view: CvView): string {
@@ -22,9 +25,29 @@ interface ViewNavProps {
 
 export function ViewNav({ view }: ViewNavProps): ReactNode {
   const isCondensed = view === 'condensed';
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = (): void => {
+      setScrollY(globalThis.scrollY);
+    };
+
+    onScroll();
+    globalThis.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      globalThis.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+  const hideNav = scrollY > VIEW_NAV_HIDE_AFTER_SCROLL_PX;
 
   return (
-    <nav aria-label="CV view" className="cv-view-nav" css={styles.bar}>
+    <nav
+      aria-hidden={hideNav}
+      aria-label="CV view"
+      className="cv-view-nav"
+      css={css(styles.bar, hideNav && styles.barHidden)}
+    >
       <SwitchDS
         checked={isCondensed}
         label="Condensed"

@@ -214,7 +214,7 @@ export const condensedViewStyles = css`
   @media not print {
     /* Extra gutter so fixed ViewNav does not overlap the paper (screen preview only). */
     .cv-condensed-shell {
-      padding-top: calc(1.25rem + 3.5rem);
+      padding-top: calc(0.85rem + 3.5rem);
       padding-bottom: calc(2rem + 3rem);
     }
 

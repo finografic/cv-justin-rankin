@@ -1,15 +1,17 @@
 import { css } from '@emotion/react';
 
+import { VIEW_NAV_OPACITY_TRANSITION } from './view-nav.constants';
+
 export const styles = {
   bar: css`
     position: fixed;
-    top: 0.75rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.66rem;
     z-index: 100;
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
     padding: 0.5rem 0.75rem;
     border-radius: 8px;
     background: color-mix(in srgb, #fff 92%, var(--colors-primary));
@@ -17,6 +19,8 @@ export const styles = {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
     font-family: var(--cv-font-body);
     font-size: 0.82rem;
+    opacity: 1;
+    transition: opacity ${VIEW_NAV_OPACITY_TRANSITION} ease;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 
@@ -52,6 +56,11 @@ export const styles = {
     @media print {
       display: none !important;
     }
+  `,
+
+  barHidden: css`
+    opacity: 0;
+    pointer-events: none;
   `,
 
   pdfButton: css`

@@ -10,7 +10,6 @@ import { styles } from './ViewNav.styles';
 
 function buildViewHref(view: CvView): string {
   const url = new URL(globalThis.location.href);
-  url.searchParams.delete('edition');
   if (view === 'condensed') {
     url.searchParams.set('view', 'condensed');
   } else {

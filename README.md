@@ -34,11 +34,6 @@ pnpm dev
 **Registry vs link:** `dist/**/*.recipe.js` in `include` is required for GitHub Packages installs.
 The `src/**` line is optional and helps when you `pnpm link` the monorepo checkout.
 
-**Automated:** `pnpm test:ds` — package resolves and DS components render.
-
-**Visual:** `http://localhost:5173/cv-justin-rankin/?ds-smoke=1` — Button, Badge, Callout, Card
-(recipes). Hidden from print.
-
 **Vite:** `vite.config.ts` aliases `@styled-system/css` and `@styled-system/jsx` so imports inside
 DS `dist/` resolve to this app’s generated `styled-system/` (required for production build).
 
@@ -68,7 +63,7 @@ TypeScript types are in `src/types/content.types.ts`.
 | **Condensed**      | `?view=condensed`            | Print-oriented handout (`AppPrint.tsx`, `PRINT_CONTENT`, `src/styles/condensed.styles.ts`). Screen paper is **320mm** wide so layout matches Save as PDF; actual print uses A4 `@page` margins. |
 | **PDF**            | Top-right control (any view) | `window.print()` for the active view — not a separate generated file.                                                                                                                           |
 
-**Chrome:** Fixed top-right bar — **Condensed** switch (`SwitchDS` from `@finografic/design-system/forms`) and **PDF**. Legacy `?edition=print` still maps to condensed.
+**Chrome:** Fixed top-right bar — **Condensed** / **Full Version** switch (`SwitchDS` from `@finografic/design-system/forms`) and **PDF**.
 
 **Public condensed:** The switch is wired today; you can hide or gate `ViewNav` in `src/main.tsx` later while keeping `?view=condensed` bookmarkable for handouts.
 
@@ -78,7 +73,7 @@ TypeScript types are in `src/types/content.types.ts`.
 pnpm sync-git-metadata
 ```
 
-Fetches the latest release tag and total commit count for every GitHub-hosted project from the public GitHub API, then updates `version` and `commits` in `src/data/web/projects.data.ts` and `src/data/print/projects.data.ts`. Web metadata renders as `vX.X.X · N commits`; print shows `version` or `status` only. Repos without releases (`touch-monorepo`, `LLAAB`, `monorepo-starter`) skip version sync but still get commit counts.
+Fetches the latest release tag and total commit count for every GitHub-hosted project from the public GitHub API, then updates `version` and `commits` in `src/data/web/projects.data.ts` and `src/data/print/projects.data.ts`. The script commits only those two files with a fixed message (`chore: update git metadata`). Web metadata renders as `vX.X.X · N commits`; print shows `version` or `status` only. Repos without releases (`touch-monorepo`, `LLAAB`, `monorepo-starter`) skip version sync but still get commit counts.
 
 ---
 
@@ -88,11 +83,12 @@ Colours and typography are defined in two places that work together.
 
 ### Emotion theme (`src/styles/theme.ts`)
 
-Used directly by Emotion styled components. All colours are OKLCH:
+Used directly by Emotion styled components. Accent colours resolve from Panda CSS variables; fixed neutrals stay in OKLCH:
 
 ```ts
 colors: {
-  accent: 'oklch(53% 0.085 53)',   // gold/copper — v1 palette
+  accent: 'var(--colors-primary)',
+  accentSoft: 'var(--colors-primary-lighter)',
   background: 'oklch(99.4% 0.007 75)',
   // ...
 },
@@ -106,16 +102,17 @@ Body fonts are self-hosted under `public/fonts/`: Roboto Regular/Bold/Italic (st
 
 ### Panda CSS token layer (`panda.config.ts`)
 
-Generates CSS custom properties (`--colors-primary-*` etc.) from the same gold/copper anchor via `createColorTokens`:
+Generates CSS custom properties (`--colors-primary-*` etc.) via `createColorTokens`:
 
 ```ts
 colors: createColorTokens({
-  primary: 'oklch(53% 0.085 53)',
+  primary: 'oklch(65.16% 0.0625 55.37)',
+  secondary: 'oklch(33.68% 0 58)',
   // ...
 }),
 ```
 
-To change the accent colour, update the `oklch(...)` value in **both** files. Run `pnpm build` to regenerate the token CSS.
+To change the accent colour, update `primary` (and related tokens) in `panda.config.ts`. Run `pnpm build` to regenerate the token CSS.
 
 ---
 

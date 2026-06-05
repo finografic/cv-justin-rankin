@@ -1,4 +1,4 @@
-import { configOverrides, oxlintClientConfig, testOverrides } from '@finografic/oxc-config/oxlint';
+import { configOverrides, oxlintClientConfig } from '@finografic/oxc-config/oxlint';
 import { defineConfig } from 'oxlint';
 import type { OxlintConfig } from 'oxlint';
 
@@ -11,5 +11,5 @@ export default defineConfig({
     // Side-effect CSS imports (Astro layouts, global styles) are intentional.
     'import/no-unassigned-import': ['warn', { allow: ['**/*.css'] }],
   },
-  overrides: [testOverrides, configOverrides],
+  overrides: [configOverrides],
 } satisfies OxlintConfig);

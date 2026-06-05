@@ -72,7 +72,7 @@ Task breakdowns, checklists, draft notes, manual test steps, and other throwaway
 
 ## Triaging agent output
 
-Agents may create planning artifacts in ad-hoc locations (`docs/superpowers/`, `.cursor/plans/`, `.claude/drafts/`, etc.). Use `pnpm triage:docs` to scan these locations and interactively move files to the correct destination. See `.github/skills/triage-docs/SKILL.md` for the full procedure.
+Agents may create planning artifacts in ad-hoc locations (`docs/superpowers/`, `.cursor/plans/`, `.claude/drafts/`, etc.). Move durable specs to `docs/specs/` and throwaway notes to `docs/drafts/` (gitignored).
 
 ## Cross-project applicability
 

@@ -20,10 +20,27 @@ export const styles = {
       @media screen {
         background-color: #fff;
       }
+
+      /* Mask AvatarDS elevated variant's grey ring (box-shadow/border) on print */
+      @media print {
+        border: none !important;
+        outline: 3px solid #fff !important;
+        outline-offset: 0;
+        box-shadow: 0 0 0 4px #fff !important;
+        background-color: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        transform: scale(1.1);
+        transform-origin: center center;
+      }
     }
 
     div:nth-of-type(2) {
       margin-left: 0.66rem;
+
+      @media print {
+        margin-left: 1.5rem;
+      }
     }
   `,
 

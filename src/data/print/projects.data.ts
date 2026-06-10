@@ -3,7 +3,7 @@ import type { Project } from 'types';
 export const projects: Project[] = [
   {
     name: 'LLAAB',
-    commits: 150,
+    commits: 243,
     status: 'active',
     titleHref: 'https://github.com/finografic/llaab',
     description:
@@ -11,8 +11,8 @@ export const projects: Project[] = [
   },
   {
     name: '@finografic/design-system',
-    version: 'v1.18.3',
-    commits: 425,
+    version: 'v1.19.1',
+    commits: 430,
     status: 'active',
     description:
       'Token-driven React design system on PandaCSS and Ark UI. 20+ components, OKLCH colour palette, semantic tokens, responsive viewport system, and icon management tooling.',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     name: 'touch-monorepo',
-    commits: 2931,
+    commits: 2932,
     status: 'production',
     titleHref: 'https://github.com/finografic/touch-monorepo',
     description:

@@ -67,8 +67,8 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/design-system',
-        version: 'v1.18.3',
-        commits: 425,
+        version: 'v1.19.1',
+        commits: 430,
         visibility: 'public',
         status: 'active',
         description:
@@ -76,8 +76,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/lucide-manager',
-        version: 'v0.12.10',
-        commits: 91,
+        version: 'v0.12.11',
+        commits: 93,
         visibility: 'public',
         status: 'active',
         description:
@@ -120,7 +120,7 @@ export const cliProjects: Project[] = [
 export const aiProjects: Project[] = [
   {
     name: 'LLAAB',
-    commits: 150,
+    commits: 243,
     visibility: 'public',
     status: 'active development',
     titleHref: 'https://github.com/finografic/llaab',
@@ -141,7 +141,7 @@ export const aiProjects: Project[] = [
 export const fullstackProjects: Project[] = [
   {
     name: 'touch-monorepo',
-    commits: 2931,
+    commits: 2932,
     titleHref: 'https://github.com/finografic/touch-monorepo',
     description:
       'Full-stack TypeScript monorepo for an IoT-connected product management and operational control system. React + React Router client with PandaCSS, Hono API server with Drizzle ORM + SQLite, hardware relay integration via USB HID, i18n with dynamic language support (EN/ES/CA), role-based auth, real-time timer and session management, and deployment tooling for Raspberry Pi. Uses pnpm workspaces, Turborepo, and consumes multiple @finografic packages in production.',

@@ -38,6 +38,6 @@ export const projects: Project[] = [
     commits: 101,
     status: 'active',
     description:
-      'Live full-stack demo built from monorepo-starter. React + Hono + Auth.js + Drizzle + i18n + design-system components. Includes AI-generated Markdown, Queensland TMR data visualisation, and supply-chain security scanner demos.',
+      'Live full-stack demo built from [monorepo-starter](https://github.com/finografic/monorepo-starter). React + Hono + Auth.js + Drizzle + i18n + design-system components. Includes AI-generated Markdown, Queensland TMR data visualisation, and supply-chain security scanner demos.',
   },
 ];

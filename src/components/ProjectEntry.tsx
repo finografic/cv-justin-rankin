@@ -1,3 +1,4 @@
+import { DescriptionText } from 'components/description-text/DescriptionText';
 import { PrintColumnBreak } from 'components/print-column-break/PrintColumnBreak';
 import { CVEntry } from 'layout/web/CVEntry';
 import { Fragment } from 'react';
@@ -25,7 +26,9 @@ export function ProjectEntry({ view = 'full', project }: ProjectEntryProps): Rea
         title={project.name}
         titleHref={resolveProjectTitleHref(project)}
       >
-        <p>{project.description}</p>
+        <p>
+          <DescriptionText text={project.description} view={view} />
+        </p>
       </CVEntry>
       {project.printBreakAfter ? <PrintColumnBreak when="after" /> : null}
     </Fragment>

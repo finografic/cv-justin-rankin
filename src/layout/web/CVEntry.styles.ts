@@ -66,5 +66,9 @@ export const styles = {
     p {
       margin: 0;
     }
+
+    .cv-entry__inline-link {
+      font-weight: 600;
+    }
   `,
 };

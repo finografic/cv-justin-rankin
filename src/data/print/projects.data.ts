@@ -31,13 +31,13 @@ export const projects: Project[] = [
     status: 'production',
     titleHref: 'https://github.com/finografic/touch-monorepo',
     description:
-      'Full-stack IoT product management system. React + Hono + Drizzle ORM + SQLite, hardware relay via USB HID, role-based auth, real-time session management, multi-locale (EN/ES/CA). Raspberry Pi deployment.',
+      'Full-stack IoT product management system. React + Hono + Drizzle ORM + SQLite, hardware relay via USB HID, role-based auth, real-time sessions, multi-locale support, and Raspberry Pi deployment.',
   },
   {
     name: 'monorepo-demo',
     commits: 101,
     status: 'active',
     description:
-      'Live full-stack demo built from [monorepo-starter](https://github.com/finografic/monorepo-starter). React + Hono + Auth.js + Drizzle + i18n + design-system components. Includes AI-generated Markdown, Queensland TMR data visualisation, and supply-chain security scanner demos.',
+      'Live full-stack demo at [https://finografic.github.io/monorepo-demo](https://finografic.github.io/monorepo-demo/), built from repo [@finografic/monorepo-starter](https://github.com/finografic/monorepo-starter). React + Hono + Auth.js + Drizzle + i18n + design-system components. Includes AI-generated Markdown, Queensland TMR data visualisation, and supply-chain security scanner demos.',
   },
 ];

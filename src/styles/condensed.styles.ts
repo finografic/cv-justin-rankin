@@ -601,6 +601,14 @@ export const condensedViewStyles = css`
     line-height: 1.45;
     color: #444;
     margin: 0;
+
+    .cv-entry__inline-link {
+      color: ${PRIMARY};
+      font-weight: 600;
+      text-decoration: none;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
   }
 
   /* ─── Engineering Philosophy ─── */

@@ -237,5 +237,12 @@ export const stylesPrint = css`
       color: inherit;
       text-decoration: none;
     }
+
+    .cv-entry__inline-link,
+    .cv-entry__title a {
+      color: var(--colors-primary) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
   }
 `;

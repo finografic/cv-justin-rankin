@@ -6,8 +6,8 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/genx',
-        version: 'v5.36.1',
-        commits: 710,
+        version: 'v5.36.4',
+        commits: 718,
         visibility: 'public',
         status: 'active',
         description:
@@ -15,8 +15,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/oxc-config',
-        version: 'v2.7.0',
-        commits: 181,
+        version: 'v2.8.2',
+        commits: 188,
         visibility: 'public',
         status: 'active',
         description:
@@ -24,8 +24,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/deps-policy',
-        version: 'v0.26.8',
-        commits: 165,
+        version: 'v0.26.9',
+        commits: 167,
         visibility: 'public',
         status: 'active',
         description:
@@ -43,8 +43,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/md-lint',
-        version: 'v0.16.4',
-        commits: 90,
+        version: 'v0.16.6',
+        commits: 94,
         visibility: 'public',
         status: 'active',
         description:
@@ -53,8 +53,8 @@ export const projects: ProjectCategory[] = [
       },
       {
         name: '@finografic/project-scripts',
-        version: 'v1.3.3',
-        commits: 54,
+        version: 'v1.5.4',
+        commits: 68,
         visibility: 'public',
         status: 'active',
         description:
@@ -67,8 +67,8 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/design-system',
-        version: 'v1.19.1',
-        commits: 430,
+        version: 'v1.19.2',
+        commits: 432,
         visibility: 'public',
         status: 'active',
         description:
@@ -120,7 +120,7 @@ export const cliProjects: Project[] = [
 export const aiProjects: Project[] = [
   {
     name: 'LLAAB',
-    commits: 243,
+    commits: 388,
     visibility: 'public',
     status: 'active development',
     titleHref: 'https://github.com/finografic/llaab',

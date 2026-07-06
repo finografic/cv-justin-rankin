@@ -3,7 +3,7 @@ import type { Project } from 'types';
 export const projects: Project[] = [
   {
     name: 'LLAAB',
-    commits: 243,
+    commits: 388,
     status: 'active',
     titleHref: 'https://github.com/finografic/llaab',
     description:
@@ -11,16 +11,16 @@ export const projects: Project[] = [
   },
   {
     name: '@finografic/design-system',
-    version: 'v1.19.1',
-    commits: 430,
+    version: 'v1.19.2',
+    commits: 432,
     status: 'active',
     description:
       'Token-driven React design system on PandaCSS and Ark UI. 20+ components, OKLCH colour palette, semantic tokens, responsive viewport system, and icon management tooling.',
   },
   {
     name: '@finografic/genx',
-    version: 'v5.36.1',
-    commits: 710,
+    version: 'v5.36.4',
+    commits: 718,
     status: 'active',
     description:
       'Project generator and codemod toolkit. Scaffolds packages, migrates conventions (OXC, AI configs, Vitest), audits repos for drift. The central tool tying the ecosystem together.',

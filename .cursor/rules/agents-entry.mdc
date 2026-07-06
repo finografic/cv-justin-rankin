@@ -1,0 +1,12 @@
+---
+description: Canonical agent entry point — AGENTS.md indexes all project rules
+alwaysApply: true
+---
+
+# Agent rules entry point
+
+**Read `AGENTS.md` at the start of non-trivial work** (including when the user pastes a handoff). It is the single index for this repo.
+
+`AGENTS.md` links every canonical instruction under `.github/instructions/`. When a task touches git, TypeScript, naming, documentation, or other topics listed there, **open and follow the linked file** before editing or committing.
+
+Do not rely on generic defaults or paraphrase rules in chat — apply the linked instructions.

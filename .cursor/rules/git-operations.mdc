@@ -1,0 +1,26 @@
+---
+description: Mandatory git commit, push, and release policy — read git-policy before acting
+alwaysApply: true
+---
+
+# Git operations (agents)
+
+**Before any commit, push, tag, or release-related action:** read and follow `.github/instructions/git/git-policy.instructions.md`.
+
+## Commits (checklist)
+
+- Subject: conventional `type(scope): subject` (allowed types in `commitlint.config.mjs`)
+- Body: terse `-` bullet points only — not prose paragraphs
+- Multiline messages: `git commit -F <message-file>` (not inline `-m` heredocs)
+- Optional `Verification:` section with short bullets
+- **Never** `Co-Authored-By`
+- Only commit when the user explicitly asks
+
+## Push / remote
+
+- Do not `git push` unless the user explicitly asks in the current message
+- Do not create remote branches or worktrees unless asked
+
+## Releases
+
+Human-only — see git-policy for the full deny list. Clarify ambiguous requests (e.g. "ship it") before acting.

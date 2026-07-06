@@ -41,6 +41,12 @@ Shared across Claude Code, Cursor, and GitHub Copilot.
 
 ---
 
+## Cursor
+
+- Always-on rules: `.cursor/rules/` (`alwaysApply` — entry point is `AGENTS.md`, same as `CLAUDE.md`)
+
+---
+
 ## Rules — Markdown Tables
 
 - Padded pipes: one space on each side of every `|`, including the separator row.

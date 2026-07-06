@@ -34,11 +34,10 @@ export const projects: Project[] = [
       'Full-stack IoT product management system. React + Hono + Drizzle ORM + SQLite, hardware relay via USB HID, role-based auth, real-time session management, multi-locale (EN/ES/CA). Raspberry Pi deployment.',
   },
   {
-    name: '@finografic/gli',
-    version: 'v1.25.4',
-    commits: 212,
+    name: 'monorepo-demo',
+    commits: 101,
     status: 'active',
     description:
-      'Git CLI with live-updating terminal PR dashboard. Interactive rebase, branch selection, multi-repo config, clickable PR links.',
+      'Live full-stack demo built from monorepo-starter. React + Hono + Auth.js + Drizzle + i18n + design-system components. Includes AI-generated Markdown, Queensland TMR data visualisation, and supply-chain security scanner demos.',
   },
 ];

@@ -73,7 +73,7 @@ TypeScript types are in `src/types/content.types.ts`.
 pnpm sync-git-metadata
 ```
 
-Fetches the latest release tag and total commit count for every GitHub-hosted project from the public GitHub API, then updates `version` and `commits` in `src/data/web/projects.data.ts` and `src/data/print/projects.data.ts`. The script commits only those two files with a fixed message (`chore: update git metadata`). Web metadata renders as `vX.X.X · N commits`; print shows `version` or `status` only. Repos without releases (`touch-monorepo`, `LLAAB`, `monorepo-starter`) skip version sync but still get commit counts.
+Fetches the latest release tag and total commit count for every GitHub-hosted project from the public GitHub API, then updates `version` and `commits` in `src/data/web/projects.data.ts` and `src/data/print/projects.data.ts`. The script commits only those two files with a fixed message (`chore: update git metadata`). Web metadata renders as `vX.X.X · N commits`; print shows `version` or `status` only. Repos without releases (`touch-monorepo`, `LLAAB`, `monorepo-demo`) skip version sync but still get commit counts.
 
 ---
 

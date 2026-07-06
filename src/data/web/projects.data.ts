@@ -151,7 +151,7 @@ export const fullstackProjects: Project[] = [
     commits: 101,
     titleHref: 'https://github.com/finografic/monorepo-demo',
     description:
-      'Live full-stack demo at https://finografic.github.io/monorepo-demo/, built from monorepo-starter, showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, design-system components, and API/RPC patterns. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',
+      'Live full-stack demo at https://finografic.github.io/monorepo-demo/, built from monorepo-starter (https://github.com/finografic/monorepo-starter), showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, design-system components, and API/RPC patterns. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',
   },
 ];
 

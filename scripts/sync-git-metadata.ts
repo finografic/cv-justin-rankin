@@ -5,9 +5,9 @@ const GITHUB_ORG = 'finografic';
 const API_BASE = 'https://api.github.com';
 
 /** Skip version fetch — no GitHub releases/tags yet. */
-const VERSION_BLOCKLIST = new Set(['touch-monorepo', 'LLAAB', 'monorepo-starter']);
+const VERSION_BLOCKLIST = new Set(['touch-monorepo', 'LLAAB', 'monorepo-demo']);
 
-const GITHUB_PROJECT_NAMES = new Set(['touch-monorepo', 'monorepo-starter', 'LLAAB']);
+const GITHUB_PROJECT_NAMES = new Set(['touch-monorepo', 'monorepo-demo', 'LLAAB']);
 
 const DATA_FILES = ['src/data/web/projects.data.ts', 'src/data/print/projects.data.ts'];
 

@@ -9,8 +9,9 @@ Rules for how agent-consumed files (AGENTS.md, instructions, skills, specs) refe
 All file references use paths relative to the project root — no leading slash, no traversal.
 
 ```md
-✅ `.github/instructions/documentation/documentation.instructions.md`
+✅ `.github/instructions/05-documentation.instructions.md`
 ✅ `AGENTS.md`
+✅ `.github/skills/maintain-agents/SKILL.md`
 
 ❌ `/AGENTS.md`
 ❌ `./helper.ts`
@@ -51,7 +52,7 @@ Default to backtick paths. A Markdown link signals "read this now" — use links
 
 # Exception — read-before-acting (use sparingly)
 
-[documentation](/.github/instructions/documentation/documentation.instructions.md)
+[maintain-agents](/.github/skills/maintain-agents/SKILL.md)
 ```
 
 When a Markdown link is used, it MUST still use a repo-root relative path.
@@ -61,8 +62,13 @@ When a Markdown link is used, it MUST still use a repo-root relative path.
 When listing multiple files, group them by purpose.
 
 ```md
+Skills:
+
+- `.github/skills/maintain-agents/SKILL.md`
+- `.github/skills/scaffold-cli-help/SKILL.md`
+
 Instructions:
 
-- `.github/instructions/documentation/documentation.instructions.md`
-- `.github/instructions/git/git-policy.instructions.md`
+- `.github/instructions/project/feature-patterns.instructions.md`
+- `.github/instructions/project/cli-help-patterns.instructions.md`
 ```

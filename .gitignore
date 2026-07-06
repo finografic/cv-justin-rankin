@@ -15,11 +15,11 @@ styled-system/
 .env.*.local
 
 # Agents
-.agents/
+.agents/*
+!.agents/
 !.agents/handoff.md
 .codex/
 .claude/
-!.claude/handoff.md
 !.claude/settings.json
 .worktrees/
 **/worktrees/

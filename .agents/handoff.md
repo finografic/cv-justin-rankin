@@ -4,7 +4,7 @@
 > Update after sessions that change architecture, add/remove features, resolve open questions, or shift priorities — not every session.
 > — Update only the sections that changed. Keep the total under 150 lines.
 > — Write in present tense. No code snippets — describe what exists, not how it works.
-> — `.claude/memory.md` = session work log. `.agents/handoff.md` = project state snapshot. Never duplicate between the two.
+> — `.agents/memory.md` = chronological working memory / session log. `.agents/handoff.md` = current project state snapshot. See `docs/process/PROJECT_MEMORY_MODEL.md`. Never duplicate between the two.
 
 ## Project
 

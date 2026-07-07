@@ -2,12 +2,11 @@
 
 ## Project Memory Model
 
-- `docs/todo/ROADMAP.md` = milestone plan and completed history.
-- `docs/todo/NEXT_STEPS.md` = near-term tasks and manual checks.
+- `docs/todo/ROADMAP.md` = milestone plan, near-term tasks, and completed history.
 - `.agents/handoff.md` = stable current project state.
 - `.agents/memory.md` = chronological session log.
 
-Promote durable findings from memory → handoff, priorities → roadmap, and concrete follow-ups → next steps.
+Promote durable findings from memory → handoff, priorities and follow-ups → roadmap.
 
 Reference: [`docs/process/PROJECT_MEMORY_MODEL.md`](./docs/process/PROJECT_MEMORY_MODEL.md)
 
@@ -16,7 +15,7 @@ Reference: [`docs/process/PROJECT_MEMORY_MODEL.md`](./docs/process/PROJECT_MEMOR
 ## Roadmap and Planning Docs
 
 - Check `ROADMAP.md` before proposing new initiatives.
-- Use `NEXT_STEPS.md` for small follow-ups and manual validation.
+- Use `ROADMAP.md#next` for small follow-ups and manual validation.
 - Keep detailed plans in `docs/todo/TODO_*.md`; graduate completed plans to `DONE_*.md`.
 - Follow `.github/instructions/documentation/todo-done-docs.instructions.md`.
 

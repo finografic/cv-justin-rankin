@@ -8,6 +8,8 @@
 
 > Software Engineer · TypeScript · React · Node.js
 
+**Strapline:** Front-end architecture, TypeScript systems, and tooling-led engineering for products that need to scale cleanly.
+
 ---
 
 ## 2. PROFILE SUMMARY
@@ -35,29 +37,29 @@ TypeScript · JavaScript · React · Node.js
 
 ### Architecture & Patterns
 
-Micro-frontends · Monorepo (pnpm workspaces, Turborepo) · Shared component systems · Design systems · ESM-first modules · @tanstack/query
+Micro-frontends · Monorepo (pnpm, Turborepo) · Shared component systems · Design systems · ESM-first modules · @tanstack/query
 
 ### Front-end & UI
 
-Accessibility (WCAG, ARIA) · Headless UI primitives (Ark UI, Radix UI) · React Hook Form · Schema validation (Zod, StandardSchema) · CSS-in-JS (PandaCSS, Emotion) · SASS/CSS · Responsive design · Mobile-first development · i18n / Localization
+Accessibility (WCAG, ARIA) · Headless UI (Ark UI, Radix UI) · React Hook Form · Schema validation (Zod) · CSS-in-JS (PandaCSS, Emotion) · SASS/CSS · Responsive & mobile-first · i18n / Localization
 
 ### Tooling & DX
 
-OXC (oxlint, oxfmt) · ESLint · Vite · tsdown · Vitest · @testing-library · CI/CD pipelines (TeamCity, GitHub Actions) · Git workflows · Docker · GitHub Packages · pnpm
+OXC (oxlint, oxfmt) · ESLint · Vite · tsdown · Vitest · @testing-library · CI/CD (TeamCity, GitHub Actions) · Git workflows · Docker · GitHub Packages · pnpm
 
 _OXC, tsdown, and Vite/Rolldown are part of the emerging Rust-native JavaScript toolchain._
 
 ### CLI & Developer Tools
 
-Custom CLI development (Commander, @clack/prompts) · TUI rendering · Code generation and codemod tooling · Dependency governance automation
+Custom CLI (Commander, @clack/prompts) · TUI rendering · Codemod tooling · Dependency governance
 
 ### AI & Agentic Development
 
-AI-assisted engineering workflows · Agentic coding (Claude Code, Cursor, Copilot) · LLM integration (Anthropic, Ollama) · MCP server development · Structured knowledge pipelines · Prompt engineering and system instruction design
+AI-assisted engineering workflows · Agentic coding (Claude Code, Cursor, Copilot) · LLM integration (Anthropic, Ollama) · MCP server development · Structured knowledge pipelines · Prompt & system instruction design
 
 ### Testing
 
-Vitest · @testing-library/react · Jest · Playwright (emerging)
+Vitest · @testing-library/react · Jest · Playwright
 
 ### Server & APIs
 
@@ -78,19 +80,19 @@ Linux · macOS · AWS · GitHub Actions · TeamCity CI/CD
 **Software Engineer**
 _2021 – 2026 · Barcelona, Spain_
 
-Front-end and full-stack development for enterprise SaaS products within Sage's Small Business Segment (SBS), focused on accounting, finance, invoicing, and administrative platforms, dashboards, and shared front-end infrastructure.
+Front-end and full-stack development for enterprise SaaS products within Sage Small Business Segment (SBS), focused on accounting, finance, invoicing, and administrative platforms, dashboards, and shared front-end infrastructure.
 
-Worked within a large-scale micro-frontend ecosystem spanning international squads across Europe, South Africa, Canada, and the United States. Collaborated across front-end, back-end, architecture, UX, product, and shared platform teams, contributing to customer-facing products, internal systems, and production prototypes.
+Worked within a large-scale micro-frontend ecosystem spanning international squads across Europe, South Africa, Canada, and the United States. Collaborated across front-end, back-end, architecture, UX, product, and shared platform teams on customer-facing products, internal systems, and production prototypes.
 
-Development of reusable front-end systems, shared UI functionality, and scalable component patterns using TypeScript, React, Node.js, internal Sage Design System tooling, and the Carbon component ecosystem.
+Developed reusable front-end systems, shared UI functionality, and scalable component patterns using TypeScript, React, Node.js, internal Sage Design System tooling, and the Carbon component ecosystem.
 
-Contributed to modernization and long-term maintainability initiatives across front-end platforms, including migration and refactor work involving shared dependencies, front-end form architecture, Node.js upgrades, security patching, accessibility improvements, and reduction of legacy technical debt. Unit testing, end-to-end testing, and integration testing as standard practice, with strict code coverage requirements across front-end applications.
+Contributed to modernization and long-term maintainability initiatives across front-end platforms, including migration and refactor work involving shared dependencies, front-end form architecture, Node.js upgrades, security patching, accessibility improvements, and reduction of legacy technical debt. Unit, end-to-end, and integration testing as standard practice, with strict code coverage requirements across front-end applications.
 
 Strong focus on engineering consistency, explicit architecture, developer experience, and maintainable patterns across large enterprise codebases. Daily involvement in pull-request reviews, refactoring initiatives, and front-end standards discussions across squads and shared engineering channels.
 
 Exploration and integration of AI-assisted and agentic development workflows, including complex debugging, task analysis, test generation, and automation. Independent research into modern AI tooling applied selectively within professional engineering context.
 
-**Technologies:** TypeScript, React, Node.js, micro-frontends, design systems, shared component systems, RESTful APIs, CI/CD workflows, GitHub workflows, accessibility standards, enterprise SaaS architecture.
+**Technologies:** TypeScript, React, Node.js, Micro-frontends, Design systems, Shared component systems, RESTful APIs, CI/CD workflows, GitHub workflows, Accessibility standards, Enterprise SaaS architecture.
 
 ---
 
@@ -103,7 +105,7 @@ Front-end development for one of Europe's largest online travel platforms, worki
 
 Cross-team engineering workflows involving code reviews, QA processes, release pipelines, and front-end application architecture across an international product organization.
 
-**Technologies:** JavaScript, Node.js, RESTful APIs, Docker, CI/CD pipelines, automated testing workflows, SASS/CSS.
+**Technologies:** JavaScript, Node.js, RESTful APIs, Docker, CI/CD pipelines, Automated testing workflows, SASS/CSS.
 
 ---
 
@@ -174,11 +176,11 @@ Development of websites, custom CMS platforms, operational business tools, publi
 
 ## 5. ENGINEERING PHILOSOPHY
 
-- **Explicit architecture, self-documenting code** - clear naming, semantic conventions, visible structure, readable intent. JSDoc for complex logic and AST usage.
-- **Strong typing** - TypeScript for safety, documentation, and developer experience in one.
-- **Maintainability** - reusable code with limited, purposeful abstraction. Easy to read, easy to navigate, easy to change next year.
-- **Developer experience** - tooling, linting, CI, and onboarding friction directly affect what ships.
-- **ESM-first, monorepo-native** - modern module resolution and workspace architecture as defaults.
+- **Explicit architecture, self-documenting code:** Clear naming, semantic conventions, visible structure, readable intent. JSDoc for complex logic and AST usage.
+- **Strong typing:** TypeScript for safety, documentation, and developer experience in one.
+- **Maintainability:** Reusable code with limited, purposeful abstraction. Easy to read, easy to navigate, easy to change next year.
+- **Developer experience:** Tooling, linting, CI, and onboarding friction directly affect what ships.
+- **ESM-first, monorepo-native:** Modern module resolution and workspace architecture as defaults.
 
 ---
 
@@ -190,35 +192,35 @@ _Active development · [github.com/finografic](https://github.com/finografic)_
 
 A suite of TypeScript-first packages published via GitHub Packages, built to enforce consistency, reduce boilerplate, and codify architectural decisions across projects. Each package is its own repo, maintained with shared conventions managed by the ecosystem's own tooling.
 
-#### Architecture & Configuration
-
-- **@finografic/genx** (v5.24) - Project generator and codemod toolkit. Scaffolds new packages, migrates conventions (OXC, AI agent configs, git hooks, vitest), audits existing repos for drift, and keeps structure consistent across the ecosystem. The central tool that ties everything together.
-- **@finografic/oxc-config** (v2.5) - Shared oxfmt and oxlint configuration for the Rust-powered OXC toolchain. Composable presets for formatting (TypeScript, React, CSS, JSON, markdown) and linting (with role-specific presets for client, server, CLI, and library packages).
-- **@finografic/deps-policy** (v0.20) - Central dependency version policy consumed by genx and other tooling. Includes its own CLI for auditing, updating, and snapshotting dependency state across the ecosystem.
-- **@finografic/core** (v0.15) - Shared TypeScript utilities, type-level primitives (casing transforms, object key utilities, enum helpers), type guards, and time/string formatting functions.
-- **@finografic/md-lint** (v0.9) - Structural markdown linter with two scoped rule sets: strict rules for human-facing docs, relaxed rules for AI agent instruction files (CLAUDE.md, AGENTS.md). Auto-classifies files by path.
-- **@finografic/project-scripts** (v1.3) - Monorepo utility scripts: build artifact cleanup, SQLite database setup and migration, cross-platform deployment packaging, and GitHub release automation.
-
-#### CLI & Developer Tools
-
-- **@finografic/gli** (v1.23) - Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, clickable PR links. Built on the GitHub CLI.
-- **@finografic/cli-kit** (v1.4) - Composable CLI primitives shared across all @finografic CLI tools. Flag parsing, interactive prompts, TUI table rendering, file diff display, XDG config paths. The single hard dependency for every CLI in the ecosystem.
-- **@finografic/macos-layouts** (v0.17) - macOS window layout manager. Save, list, and apply window arrangements via Hammerspoon IPC. TypeScript CLI generating Lua for window positioning, with display-aware resolution matching.
-
-#### Front-end & Design System
-
-- **@finografic/design-system** - Token-driven React design system built on PandaCSS and Ark UI headless primitives. 20+ components (accordion, dialog, data-table, toast, tabs, forms), OKLCH color palette, semantic tokens, responsive viewport system, and a companion icon management tool.
-- **@finografic/lucide-manager** (v0.7) - Dev tool for managing a Lucide icon registry. Browser-based picker UI for selecting from 1500+ icons, generating strongly-typed TypeScript registry files for the design system package.
-- **@finografic/zustand-context-creator** (v1.2) - Lightweight utility for creating type-safe Zustand stores with React Context integration. Auto-generated setters, persistence, DevTools support. Inspired by patterns from Matt Pocock's TypeScript work.
-
 #### AI & Experimentation
 
-- **LLAAB** (private, active development) - "Learning Loop & Agent Architecture Base." A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.
-- **@finografic/harness** (v0.0, early stage) - Deterministic, composable pipeline for preprocessing inputs before LLM usage. Extract, reduce, structure, then optionally pass to an LLM. Designed to maximize the value of each token by doing as much work as possible before the model sees the input.
+- **LLAAB** (243 commits) - Learning Loop & Agent Architecture Base. A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.
+- **@finografic/ai-harness** (v0.1.0 · 13 commits) - Deterministic, composable pipeline for preprocessing inputs before LLM usage. Extract, reduce, structure, then optionally pass to an LLM. Designed to maximize the value of each token by doing as much work as possible before the model sees the input.
 
 #### Full-stack Application
 
-- **touch-monorepo** (private) - Full-stack TypeScript monorepo for an IoT-connected product management and operational control system. React + React Router client with PandaCSS, Hono API server with Drizzle ORM + SQLite, hardware relay integration via USB HID, i18n with dynamic language support (EN/ES/CA), role-based auth, real-time timer and session management, and deployment tooling for Raspberry Pi. Uses pnpm workspaces, Turborepo, and consumes multiple @finografic packages in production.
+- **touch-monorepo** (2,932 commits) - Full-stack TypeScript monorepo for an IoT-connected product management and operational control system. React + React Router client with PandaCSS, Hono API server with Drizzle ORM + SQLite, hardware relay integration via USB HID, i18n with dynamic language support (EN/ES/CA), role-based auth, real-time timer and session management, and deployment tooling for Raspberry Pi. Uses pnpm workspaces, Turborepo, and consumes multiple @finografic packages in production.
+- **monorepo-demo** (101 commits) - Live full-stack demo at [finografic.github.io/monorepo-demo](https://finografic.github.io/monorepo-demo/), built from [monorepo-starter](https://github.com/finografic/monorepo-starter), showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, design-system components, and API/RPC patterns. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.
+
+#### CLI & Developer Tools
+
+- **@finografic/gli** (v1.25.4 · 212 commits) - Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, clickable PR links. Built on the GitHub CLI.
+- **@finografic/cli-kit** (v1.4.0 · 48 commits) - Composable CLI primitives shared across all @finografic CLI tools. Flag parsing, interactive prompts, TUI table rendering, file diff display, XDG config paths. The single hard dependency for every CLI in the ecosystem.
+
+#### Architecture & Configuration
+
+- **@finografic/genx** (v5.36.1 · 710 commits) - Project generator and codemod toolkit. Scaffolds new packages, migrates conventions (OXC, AI agent configs, git hooks, vitest), audits existing repos for drift, and keeps structure consistent across the ecosystem. The central tool that ties everything together.
+- **@finografic/oxc-config** (v2.7.0 · 181 commits) - Shared oxfmt and oxlint configuration for the Rust-powered OXC toolchain. Composable presets for formatting (TypeScript, React, CSS, JSON, markdown) and linting (with role-specific presets for client, server, CLI, and library packages).
+- **@finografic/deps-policy** (v0.26.8 · 165 commits) - Central dependency version policy consumed by genx and other tooling. Includes its own CLI for auditing, updating, and snapshotting dependency state across the ecosystem.
+- **@finografic/core** (v0.15.0 · 145 commits) - Shared TypeScript utilities, type-level primitives (casing transforms, object key utilities, enum helpers), type guards, and time/string formatting functions.
+- **@finografic/md-lint** (v0.16.4 · 90 commits) - Structural markdown linter with two scoped rule sets: strict rules for human-facing docs, relaxed rules for AI agent instruction files (CLAUDE.md, AGENTS.md). Auto-classifies files by path.
+- **@finografic/project-scripts** (v1.3.3 · 54 commits) - Monorepo utility scripts: build artifact cleanup, SQLite database setup and migration, cross-platform deployment packaging, and GitHub release automation.
+
+#### Front-end & Design System
+
+- **@finografic/design-system** (v1.19.1 · 430 commits) - Token-driven React design system built on PandaCSS and Ark UI headless primitives. 20+ components (accordion, dialog, data-table, toast, tabs, forms), OKLCH color palette, semantic tokens, responsive viewport system, and a companion icon management tool.
+- **@finografic/lucide-manager** (v0.12.11 · 93 commits) - Dev tool for managing a Lucide icon registry. Browser-based picker UI for selecting from 1500+ icons, generating strongly-typed TypeScript registry files for the design system package.
+- **@finografic/zustand-context-creator** (v1.2.0 · 45 commits) - Lightweight utility for creating type-safe Zustand stores with React Context integration. Auto-generated setters, persistence, DevTools support. Inspired by patterns from Matt Pocock's TypeScript work.
 
 ---
 
@@ -235,17 +237,18 @@ Multidisciplinary program covering core design principles, graphic design, multi
 
 ## 8. LANGUAGES
 
-- **English** - native
-- **Spanish** - fluent (spoken + written)
-- **Catalan** - conversational
+- **English:** Native
+- **Spanish:** Fluent (spoken + written)
+- **Catalan:** Conversational
 
 ---
 
 ## 9. CONTACT & LOCATION
 
 - Brisbane, Australia
+- [+61 483 757 098](tel:+61483757098)
+- [justin.blair.rankin@gmail.com](mailto:justin.blair.rankin@gmail.com)
 - [linkedin.com/in/rankinjustin](https://linkedin.com/in/rankinjustin)
 - [github.com/finografic](https://github.com/finografic)
 - [finografic.github.io/cv-justin-rankin](https://finografic.github.io/cv-justin-rankin)
-- [justin.blair.rankin@gmail.com](mailto:justin.blair.rankin@gmail.com)
-- [+61 483 757 098](tel:+61483757098)
+- NZ citizen with full Australian work rights (Subclass 444). VEVO verification available on request.

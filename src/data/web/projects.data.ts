@@ -6,8 +6,8 @@ export const projects: ProjectCategory[] = [
     projects: [
       {
         name: '@finografic/genx',
-        version: 'v5.36.4',
-        commits: 718,
+        version: 'v5.40.3',
+        commits: 745,
         visibility: 'public',
         status: 'active',
         description:
@@ -49,7 +49,7 @@ export const projects: ProjectCategory[] = [
         status: 'active',
         description:
           'Structural markdown linter with two scoped rule sets: strict rules for human-facing docs, relaxed rules for AI agent instruction files (CLAUDE.md, AGENTS.md). Auto-classifies files by path.',
-        printBreakAfter: true,
+        // printBreakAfter: true,
       },
       {
         name: '@finografic/project-scripts',
@@ -68,7 +68,7 @@ export const projects: ProjectCategory[] = [
       {
         name: '@finografic/design-system',
         version: 'v1.19.2',
-        commits: 432,
+        commits: 434,
         visibility: 'public',
         status: 'active',
         description:
@@ -86,7 +86,7 @@ export const projects: ProjectCategory[] = [
       {
         name: '@finografic/zustand-context-creator',
         version: 'v1.2.0',
-        commits: 45,
+        commits: 47,
         visibility: 'public',
         status: 'active',
         description:
@@ -100,7 +100,7 @@ export const cliProjects: Project[] = [
   {
     name: '@finografic/gli',
     version: 'v1.25.4',
-    commits: 212,
+    commits: 213,
     visibility: 'public',
     status: 'active',
     description:
@@ -120,12 +120,12 @@ export const cliProjects: Project[] = [
 export const aiProjects: Project[] = [
   {
     name: 'LLAAB',
-    commits: 388,
+    commits: 508,
     visibility: 'public',
     status: 'active development',
     titleHref: 'https://github.com/finografic/llaab',
     description:
-      'Learning Loop & Agent Architecture Base. A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.',
+      'Learning Loop & Agent Automation Base. A local-first AI knowledge system for turning unstructured media into reviewed, source-backed knowledge artifacts. TypeScript pnpm/Turborepo monorepo with Vite + React Router SPA, Hono + Bun API server, Zod schemas, typed Hono RPC client/server contracts, and a file-based markdown vault of typed nodes. Supports YouTube transcript ingestion, LLM extraction, canonical-idea consolidation, durable RunNode traces, configurable LLM routing across OpenCode, Ollama, Anthropic, and LM Studio, plus MCP/CLI/operator surfaces. Recent work adds review-gated wiki generation: selected canonical ideas compile into vault drafts, then explicitly promote into knowledge/wikis/ with citations, revision-safe updates, derived graph exports, and no automatic Git mutation.',
   },
   {
     name: '@finografic/ai-harness',
@@ -151,7 +151,7 @@ export const fullstackProjects: Project[] = [
     commits: 101,
     titleHref: 'https://github.com/finografic/monorepo-demo',
     description:
-      'Live full-stack demo at <a href="https://finografic.github.io/monorepo-demo/">https://finografic.github.io/monorepo-demo</a>, built from repo <a href="https://github.com/finografic/monorepo-starter">@fingorafic/monorepo-starter</a>, showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, design-system components, and API/RPC patterns. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',
+      'Live full-stack demo at <a href="https://finografic.github.io/monorepo-demo/">https://finografic.github.io/monorepo-demo</a>, built from <a href="https://github.com/finografic/monorepo-starter">monorepo-starter</a>, showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, and design-system components. API layer uses Hono RPC for end-to-end type-safe client/server contracts, with the typed client inferred directly from server route definitions. Server currently deployed to AWS App Runner; database migration from SQLite to Postgres in progress. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',
   },
 ];
 

@@ -1,5 +1,4 @@
 import { Global } from '@emotion/react';
-import { PrintColumnBreak } from 'components/print-column-break/PrintColumnBreak';
 import type { ReactNode } from 'react';
 
 import { ContactInfo } from './components/contact-info/ContactInfo';
@@ -69,7 +68,7 @@ export default function App(): ReactNode {
           </div>
         </div>
       </CVSection>
-      <PrintColumnBreak />
+      {/* <PrintColumnBreak /> */}
       <CVSection sectionKey="education" title="Education" variant="compact">
         <div css={styles.stack}>
           {CONTENT.education.map((entry) => (

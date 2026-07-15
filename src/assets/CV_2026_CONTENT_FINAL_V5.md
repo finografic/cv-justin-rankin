@@ -1,4 +1,4 @@
-# CV 2026 — Content Final V4
+# CV 2026 — Content Final V5
 
 ## Justin Rankin · Software Engineer
 
@@ -84,15 +84,17 @@ Front-end and full-stack development for enterprise SaaS products within Sage Sm
 
 Worked within a large-scale micro-frontend ecosystem spanning international squads across Europe, South Africa, Canada, and the United States. Collaborated across front-end, back-end, architecture, UX, product, and shared platform teams on customer-facing products, internal systems, and production prototypes.
 
-Developed reusable front-end systems, shared UI functionality, and scalable component patterns using TypeScript, React, Node.js, internal Sage Design System tooling, and the Carbon component ecosystem.
+Developed reusable front-end systems, shared UI functionality, and scalable component patterns using TypeScript, React, Node.js, internal Sage Design System tooling, and the Carbon component ecosystem. Front-end work was tightly integrated with backend-developed RESTful API services, consuming defined API contracts for data fetching and mutation, with @tanstack/query used for client-side caching and UI performance optimization.
 
 Contributed to modernization and long-term maintainability initiatives across front-end platforms, including migration and refactor work involving shared dependencies, front-end form architecture, Node.js upgrades, security patching, accessibility improvements, and reduction of legacy technical debt. Unit, end-to-end, and integration testing as standard practice, with strict code coverage requirements across front-end applications.
+
+Front-end applications were containerized with Docker and deployed to AWS-hosted infrastructure; container-level authentication credentials against AWS services were configured and maintained as part of front-end delivery work, with console-level infrastructure and service configuration owned by a dedicated shared-platform squad.
 
 Strong focus on engineering consistency, explicit architecture, developer experience, and maintainable patterns across large enterprise codebases. Daily involvement in pull-request reviews, refactoring initiatives, and front-end standards discussions across squads and shared engineering channels.
 
 Exploration and integration of AI-assisted and agentic development workflows, including complex debugging, task analysis, test generation, and automation. Independent research into modern AI tooling applied selectively within professional engineering context.
 
-**Technologies:** TypeScript, React, Node.js, Micro-frontends, Design systems, Shared component systems, RESTful APIs, CI/CD workflows, GitHub workflows, Accessibility standards, Enterprise SaaS architecture.
+**Technologies:** TypeScript, React, Node.js, Micro-frontends, Design systems, Shared component systems, RESTful API integration, @tanstack/query, Docker, AWS-hosted containerized deployment, CI/CD workflows, GitHub workflows, Accessibility standards, Enterprise SaaS architecture.
 
 ---
 
@@ -114,11 +116,11 @@ Cross-team engineering workflows involving code reviews, QA processes, release p
 **Senior Software Engineer**
 _2018 – 2019 · Barcelona, Spain_
 
-Development and architectural refactor of B2B front-end platform and supporting APIs, preparing client and server systems for global expansion and multi-locale support.
+Development and architectural refactor of B2B front-end platform and supporting APIs, preparing client and server systems for global expansion and multi-locale support. Front-end integrated with RESTful services built on Node.js, backed by MongoDB and MySQL data stores.
 
-Development and maintenance of internal operational dashboard used across multiple departments, with a focus on workflow optimization, platform usability, and scalable front-end/back-end architecture.
+Development and maintenance of internal operational dashboard used across multiple departments, with a focus on workflow optimization, platform usability, and scalable front-end/back-end architecture. Hands-on AWS and Linux server administration across the stack, including S3 for storage.
 
-**Technologies:** JavaScript, Angular, Node.js, MongoDB, MySQL, RESTful APIs, PHP, AWS, Linux server administration, SASS/CSS.
+**Technologies:** JavaScript, Angular, Node.js, MongoDB, MySQL, RESTful API integration, PHP, AWS (S3, hosting infrastructure), Linux server administration, SASS/CSS.
 
 ---
 
@@ -194,13 +196,13 @@ A suite of TypeScript-first packages published via GitHub Packages, built to enf
 
 #### AI & Experimentation
 
-- **LLAAB** (243 commits) - Learning Loop & Agent Architecture Base. A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.
+- **LLAAB** (243 commits) - Learning Loop & Agent Automation Base. A local-first AI knowledge system for turning unstructured media into reviewed, source-backed knowledge artifacts. TypeScript pnpm/Turborepo monorepo with Vite + React Router SPA, Hono + Bun API server, Zod schemas, typed Hono RPC client/server contracts, and a file-based markdown vault of typed nodes. Supports YouTube transcript ingestion, LLM extraction, canonical-idea consolidation, durable RunNode traces, configurable LLM routing across OpenCode, Ollama, Anthropic, and LM Studio, plus MCP/CLI/operator surfaces. Recent work adds review-gated wiki generation: selected canonical ideas compile into vault drafts, then explicitly promote into knowledge/wikis/ with citations, revision-safe updates, derived graph exports, and no automatic Git mutation.
 - **@finografic/ai-harness** (v0.1.0 · 13 commits) - Deterministic, composable pipeline for preprocessing inputs before LLM usage. Extract, reduce, structure, then optionally pass to an LLM. Designed to maximize the value of each token by doing as much work as possible before the model sees the input.
 
 #### Full-stack Application
 
 - **touch-monorepo** (2,932 commits) - Full-stack TypeScript monorepo for an IoT-connected product management and operational control system. React + React Router client with PandaCSS, Hono API server with Drizzle ORM + SQLite, hardware relay integration via USB HID, i18n with dynamic language support (EN/ES/CA), role-based auth, real-time timer and session management, and deployment tooling for Raspberry Pi. Uses pnpm workspaces, Turborepo, and consumes multiple @finografic packages in production.
-- **monorepo-demo** (101 commits) - Live full-stack demo at [finografic.github.io/monorepo-demo](https://finografic.github.io/monorepo-demo/), built from [monorepo-starter](https://github.com/finografic/monorepo-starter), showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, design-system components, and API/RPC patterns. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.
+- **monorepo-demo** (101 commits) - Live full-stack demo at [finografic.github.io/monorepo-demo](https://finografic.github.io/monorepo-demo/), built from [monorepo-starter](https://github.com/finografic/monorepo-starter), showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, and design-system components. API layer uses Hono RPC for end-to-end type-safe client/server contracts, with the typed client inferred directly from server route definitions. Server currently deployed to AWS App Runner; database migration from SQLite to Postgres in progress. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.
 
 #### CLI & Developer Tools
 

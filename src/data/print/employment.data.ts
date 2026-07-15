@@ -9,11 +9,11 @@ export const employment: WorkEntry[] = [
     location: 'Barcelona, Spain',
     description: [
       "Full-stack development for enterprise SaaS products within Sage's Small Business Segment (SBS), focused on accounting, finance, invoicing, and administrative platforms across a large-scale micro-frontend ecosystem.",
-      'Collaborated across international squads (Europe, South Africa, Canada, US) spanning front-end, back-end, architecture, UX, product, and shared platform teams. Built reusable front-end systems, shared UI functionality, and scalable component patterns using Sage Design System tooling and the Carbon component ecosystem.',
-      'Contributed to modernization initiatives including dependency migration, front-end form architecture, security patching, and accessibility improvements. Unit, e2e, and integration testing with strict code coverage requirements. Daily pull-request reviews, refactoring initiatives, and front-end standards discussions across squads.',
+      'Collaborated across international squads (Europe, South Africa, Canada, US) spanning front-end, back-end, architecture, UX, product, and shared platform teams. Built reusable front-end systems, shared UI functionality, and scalable component patterns using Sage Design System tooling and the Carbon component ecosystem. Front-end integrated with RESTful API services via defined contracts, using @tanstack/query for client-side caching and UI performance.',
+      'Contributed to modernization initiatives including dependency migration, front-end form architecture, security patching, and accessibility improvements. Unit, e2e, and integration testing with strict code coverage requirements. Dockerized front-end apps deployed to AWS-hosted infrastructure; maintained container auth credentials as part of front-end delivery. Daily pull-request reviews, refactoring initiatives, and front-end standards discussions across squads.',
       'Explored and integrated AI-assisted and agentic development workflows into engineering processes. Independent research into modern AI tooling applied selectively within professional engineering context.',
     ],
-    tech: 'TypeScript, React, Node.js, Micro-frontends, Design systems, RESTful APIs, CI/CD, GitHub workflows, Accessibility',
+    tech: 'TypeScript, React, Node.js, Micro-frontends, Design systems, RESTful API integration, @tanstack/query, Docker, AWS, CI/CD, GitHub workflows, Accessibility',
   },
   {
     company: 'eDreams ODIGEO',
@@ -33,9 +33,9 @@ export const employment: WorkEntry[] = [
     period: '2018 – 2019',
     location: 'Barcelona, Spain',
     description: [
-      'B2B front-end platform refactor and internal operational dashboard serving multiple departments. Prepared client and server systems for global expansion with multi-locale support and scalable full-stack architecture.',
+      'B2B front-end platform refactor and internal operational dashboard serving multiple departments. Prepared client and server systems for global expansion with multi-locale support; front-end integrated with Node.js RESTful services backed by MongoDB and MySQL. Hands-on AWS (S3) and Linux server administration across the stack.',
     ],
-    tech: 'JavaScript, Angular, Node.js, MongoDB, MySQL, PHP, AWS',
+    tech: 'JavaScript, Angular, Node.js, MongoDB, MySQL, RESTful API integration, PHP, AWS (S3), Linux, SASS/CSS',
   },
   {
     company: 'Econocom / Digital Dimension',

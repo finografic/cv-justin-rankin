@@ -1,7 +1,6 @@
 import { Global } from '@emotion/react';
 import { ContactInfo } from 'components/contact-info/ContactInfo';
 import { EducationEntry } from 'components/EducationEntry';
-import { LanguageList } from 'components/language-list/LanguageList';
 import { PhilosophyList } from 'components/philosophy-list/PhilosophyList';
 import { PrintSection } from 'components/print-section/PrintSection';
 import { ProfileParagraphs } from 'components/profile-paragraphs/ProfileParagraphs';
@@ -85,10 +84,6 @@ export default function AppPrint(): ReactNode {
 
               <PrintSection sectionKey="education" title="Education">
                 <EducationEntry entry={PRINT_CONTENT.education} view="condensed" />
-              </PrintSection>
-
-              <PrintSection sectionKey="languages" title="Languages">
-                <LanguageList items={PRINT_CONTENT.languages} view="condensed" />
               </PrintSection>
             </div>
           </div>

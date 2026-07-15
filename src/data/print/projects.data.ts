@@ -7,7 +7,7 @@ export const projects: Project[] = [
     status: 'active',
     titleHref: 'https://github.com/finografic/llaab',
     description:
-      'Local-first AI agent architecture base. Structured knowledge vault with typed markdown nodes, LLM router (Anthropic + Ollama), agent orchestration, and MCP server. Built to formalise AI-assisted workflows in TypeScript engineering.',
+      'Local-first AI agent architecture base. Structured knowledge vault with typed markdown nodes, LLM router (Anthropic + Ollama), agent orchestration, MCP server, and Hono RPC for type-safe client/server contracts. Built to formalise AI-assisted workflows in TypeScript engineering.',
   },
   {
     name: '@finografic/design-system',
@@ -38,6 +38,6 @@ export const projects: Project[] = [
     commits: 101,
     status: 'active',
     description:
-      'Live full-stack demo at [https://finografic.github.io/monorepo-demo](https://finografic.github.io/monorepo-demo/), built from repo [@finografic/monorepo-starter](https://github.com/finografic/monorepo-starter). React + Hono + Auth.js + Drizzle + i18n + design-system components. Includes AI-generated Markdown, Queensland TMR data visualisation, and supply-chain security scanner demos.',
+      'Live full-stack demo at [https://finografic.github.io/monorepo-demo](https://finografic.github.io/monorepo-demo/), built from repo [@finografic/monorepo-starter](https://github.com/finografic/monorepo-starter). React + Hono + Auth.js + Drizzle + i18n + design-system; Hono RPC type-safe contracts; AWS App Runner; SQLite→Postgres migration in progress. Includes AI-generated Markdown, Queensland TMR data visualisation, and supply-chain security scanner demos.',
   },
 ];

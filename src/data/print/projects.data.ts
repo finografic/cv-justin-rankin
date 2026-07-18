@@ -35,7 +35,7 @@ export const projects: Project[] = [
   },
   {
     name: 'monorepo-demo',
-    commits: 101,
+    commits: 156,
     status: 'active',
     description:
       'Live full-stack monorepo demo at https://d2h3ihm2ddi3lx.cloudfront.net, React/Vite + Hono/Auth.js API with typed RPC (Tanstack Query), deployed on Terraform-managed AWS (CloudFront, S3, EC2, RDS). Portfolio of 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',

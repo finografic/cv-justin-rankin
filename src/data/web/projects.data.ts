@@ -148,7 +148,7 @@ export const fullstackProjects: Project[] = [
   },
   {
     name: 'monorepo-demo',
-    commits: 101,
+    commits: 156,
     titleHref: 'https://github.com/finografic/monorepo-demo',
     description:
       'Live full-stack monorepo demo at <a href="https://d2h3ihm2ddi3lx.cloudfront.net/">https://d2h3ihm2ddi3lx.cloudfront.net</a>, built from <a href="https://github.com/finografic/monorepo-starter">monorepo-starter</a>, React/Vite + Hono/Auth.js API with typed RPC (Tanstack Query), deployed on Terraform-managed AWS (CloudFront, S3, EC2, RDS). Portfolio of 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',

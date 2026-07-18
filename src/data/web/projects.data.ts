@@ -105,6 +105,7 @@ export const cliProjects: Project[] = [
     status: 'active',
     description:
       'Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, clickable PR links. Built on the GitHub CLI.',
+    printBreakAfter: true,
   },
   {
     name: '@finografic/cli-kit',

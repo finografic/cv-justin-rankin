@@ -151,7 +151,7 @@ export const fullstackProjects: Project[] = [
     commits: 101,
     titleHref: 'https://github.com/finografic/monorepo-demo',
     description:
-      'Live full-stack demo at <a href="https://finografic.github.io/monorepo-demo/">https://finografic.github.io/monorepo-demo</a>, built from <a href="https://github.com/finografic/monorepo-starter">monorepo-starter</a>, showcasing a reusable TypeScript monorepo architecture with React, Hono, Auth.js, Drizzle ORM, i18n, and design-system components. API layer uses Hono RPC for end-to-end type-safe client/server contracts, with the typed client inferred directly from server route definitions. Server currently deployed to AWS App Runner; database migration from SQLite to Postgres in progress. Includes 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',
+      'Live full-stack monorepo demo at <a href="https://d2h3ihm2ddi3lx.cloudfront.net/">https://d2h3ihm2ddi3lx.cloudfront.net</a>, built from <a href="https://github.com/finografic/monorepo-starter">monorepo-starter</a>, React/Vite + Hono/Auth.js API with typed RPC (Tanstack Query), deployed on Terraform-managed AWS (CloudFront, S3, EC2, RDS). Portfolio of 3 interactive demos: AI-generated Markdown pipeline, Queensland TMR data visualisation, and supply-chain security scanner demo.',
   },
 ];
 

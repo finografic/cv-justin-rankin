@@ -94,7 +94,7 @@ Strong focus on engineering consistency, explicit architecture, developer experi
 
 Exploration and integration of AI-assisted and agentic development workflows, including complex debugging, task analysis, test generation, and automation. Independent research into modern AI tooling applied selectively within professional engineering context.
 
-**Technologies:** TypeScript, React, Node.js, Micro-frontends, Design systems, Shared component systems, RESTful API integration, @tanstack/query, Docker, AWS-hosted containerized deployment, CI/CD workflows, GitHub workflows, Accessibility standards, Enterprise SaaS architecture.
+**Technologies:** TypeScript, React, Node.js, micro-frontend architecture, design systems, RESTful APIs, Jest unit tests, Playwright e2e tests, Docker, AWS, CI/CD, WCAG accessibility standards, enterprise SaaS architecture.
 
 ---
 
@@ -118,9 +118,9 @@ _2018 – 2019 · Barcelona, Spain_
 
 Development and architectural refactor of B2B front-end platform and supporting APIs, preparing client and server systems for global expansion and multi-locale support. Front-end integrated with RESTful services built on Node.js, backed by MongoDB and MySQL data stores.
 
-Development and maintenance of internal operational dashboard used across multiple departments, with a focus on workflow optimization, platform usability, and scalable front-end/back-end architecture. Hands-on AWS and Linux server administration across the stack, including S3 for storage.
+Development and maintenance of internal operational dashboard used across multiple departments, with a focus on workflow optimization, platform usability, and scalable front-end/back-end architecture. AWS and Linux server administration across the stack, including S3 for storage.
 
-**Technologies:** JavaScript, Angular, Node.js, MongoDB, MySQL, RESTful API integration, PHP, AWS (S3, hosting infrastructure), Linux server administration, SASS/CSS.
+**Technologies:** JavaScript, Angular, Node.js, MongoDB, MySQL, RESTful APIs, PHP, AWS (S3, hosting infrastructure), Linux server administration, SASS/CSS.
 
 ---
 
@@ -196,7 +196,7 @@ A suite of TypeScript-first packages published via GitHub Packages, built to enf
 
 #### AI & Experimentation
 
-- **LLAAB** (243 commits) - Learning Loop & Agent Automation Base. A local-first AI knowledge system for turning unstructured media into reviewed, source-backed knowledge artifacts. TypeScript pnpm/Turborepo monorepo with Vite + React Router SPA, Hono + Bun API server, Zod schemas, typed Hono RPC client/server contracts, and a file-based markdown vault of typed nodes. Supports YouTube transcript ingestion, LLM extraction, canonical-idea consolidation, durable RunNode traces, configurable LLM routing across OpenCode, Ollama, Anthropic, and LM Studio, plus MCP/CLI/operator surfaces. Recent work adds review-gated wiki generation: selected canonical ideas compile into vault drafts, then explicitly promote into knowledge/wikis/ with citations, revision-safe updates, derived graph exports, and no automatic Git mutation.
+- **LLAAB** (243 commits) - Learning Loop & Agent Architecture Base. A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. API layer uses Hono RPC for end-to-end type-safe client/server contracts. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.
 - **@finografic/ai-harness** (v0.1.0 · 13 commits) - Deterministic, composable pipeline for preprocessing inputs before LLM usage. Extract, reduce, structure, then optionally pass to an LLM. Designed to maximize the value of each token by doing as much work as possible before the model sees the input.
 
 #### Full-stack Application

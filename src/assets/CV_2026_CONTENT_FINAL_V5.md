@@ -94,7 +94,7 @@ Strong focus on engineering consistency, explicit architecture, developer experi
 
 Exploration and integration of AI-assisted and agentic development workflows, including complex debugging, task analysis, test generation, and automation. Independent research into modern AI tooling applied selectively within professional engineering context.
 
-**Technologies:** TypeScript, React, Node.js, micro-frontend architecture, design systems, RESTful APIs, Jest unit tests, Playwright e2e tests, Docker, AWS, CI/CD, WCAG accessibility standards, enterprise SaaS architecture.
+**Technologies:** TypeScript, React, Node.js, Micro-frontends, Design systems, Shared component systems, RESTful API integration, @tanstack/query, Docker, AWS-hosted containerised deployment, CI/CD workflows, GitHub workflows, Accessibility standards, Enterprise SaaS architecture.
 
 ---
 
@@ -118,9 +118,9 @@ _2018 – 2019 · Barcelona, Spain_
 
 Development and architectural refactor of B2B front-end platform and supporting APIs, preparing client and server systems for global expansion and multi-locale support. Front-end integrated with RESTful services built on Node.js, backed by MongoDB and MySQL data stores.
 
-Development and maintenance of internal operational dashboard used across multiple departments, with a focus on workflow optimization, platform usability, and scalable front-end/back-end architecture. AWS and Linux server administration across the stack, including S3 for storage.
+Development and maintenance of internal operational dashboard used across multiple departments, with a focus on workflow optimization, platform usability, and scalable front-end/back-end architecture. Hands-on AWS and Linux server administration across the stack, including S3 for storage.
 
-**Technologies:** JavaScript, Angular, Node.js, MongoDB, MySQL, RESTful APIs, PHP, AWS (S3, hosting infrastructure), Linux server administration, SASS/CSS.
+**Technologies:** JavaScript, Angular, Node.js, MongoDB, MySQL, RESTful API integration, PHP, AWS (S3, hosting infrastructure), Linux server administration, SASS/CSS.
 
 ---
 
@@ -196,33 +196,33 @@ A suite of TypeScript-first packages published via GitHub Packages, built to enf
 
 #### AI & Experimentation
 
-- **LLAAB** (243 commits) - Learning Loop & Agent Architecture Base. A local-first system for turning unstructured content into structured, executable knowledge. Monorepo with Astro client, Hono server, structured vault (typed markdown nodes with frontmatter schemas), YouTube transcript ingestion pipeline, LLM router (Anthropic + Ollama), agent orchestration layer, and MCP server. API layer uses Hono RPC for end-to-end type-safe client/server contracts. Built to explore and formalize how AI-assisted workflows integrate into a TypeScript engineering practice.
+- **LLAAB** (508 commits) - Learning Loop & Agent Automation Base. A local-first AI knowledge system for turning unstructured media into reviewed, source-backed knowledge artifacts. TypeScript pnpm/Turborepo monorepo with Vite + React Router SPA, Hono + Bun API server, Zod schemas, typed Hono RPC client/server contracts, and a file-based markdown vault of typed nodes. Supports YouTube transcript ingestion, LLM extraction, canonical-idea consolidation, durable RunNode traces, configurable LLM routing across OpenCode, Ollama, Anthropic, and LM Studio, plus MCP/CLI/operator surfaces. Recent work adds review-gated wiki generation: selected canonical ideas compile into vault drafts, then explicitly promote into knowledge/wikis/ with citations, revision-safe updates, derived graph exports, and no automatic Git mutation.
 - **@finografic/ai-harness** (v0.1.0 · 13 commits) - Deterministic, composable pipeline for preprocessing inputs before LLM usage. Extract, reduce, structure, then optionally pass to an LLM. Designed to maximize the value of each token by doing as much work as possible before the model sees the input.
 
 #### Full-stack Application
 
 - **touch-monorepo** (2,932 commits) - Full-stack TypeScript monorepo for an IoT-connected product management and operational control system. React + React Router client with PandaCSS, Hono API server with Drizzle ORM + SQLite, hardware relay integration via USB HID, i18n with dynamic language support (EN/ES/CA), role-based auth, real-time timer and session management, and deployment tooling for Raspberry Pi. Uses pnpm workspaces, Turborepo, and consumes multiple @finografic packages in production.
-- **monorepo-demo** (101 commits) - Live full-stack demo at [https://d2h3ihm2ddi3lx.cloudfront.net/](https://d2h3ihm2ddi3lx.cloudfront.net/), built from [monorepo-starter](https://github.com/finografic/monorepo-starter), React/Vite + Hono/Auth.js API with typed RPC (Tanstack Query), deployed on Terraform-managed AWS (CloudFront, S3, EC2, RDS). Demos span AI markdown streaming, Queensland TMR data visualisation, and dependency security scanning.
+- **monorepo-demo** (156 commits) - Live full-stack demo at [https://d2h3ihm2ddi3lx.cloudfront.net/](https://d2h3ihm2ddi3lx.cloudfront.net/), built from [monorepo-starter](https://github.com/finografic/monorepo-starter), React/Vite + Hono/Auth.js API with typed RPC (Tanstack Query), deployed on Terraform-managed AWS (CloudFront, S3, EC2, RDS). Demos span AI markdown streaming, Queensland TMR data visualisation, and dependency security scanning.
 
 #### CLI & Developer Tools
 
-- **@finografic/gli** (v1.25.4 · 212 commits) - Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, clickable PR links. Built on the GitHub CLI.
+- **@finografic/gli** (v1.25.4 · 213 commits) - Git CLI with live-updating terminal PR dashboard (like htop for pull requests). Interactive rebase, branch selection, multi-repo config, clickable PR links. Built on the GitHub CLI.
 - **@finografic/cli-kit** (v1.4.0 · 48 commits) - Composable CLI primitives shared across all @finografic CLI tools. Flag parsing, interactive prompts, TUI table rendering, file diff display, XDG config paths. The single hard dependency for every CLI in the ecosystem.
 
 #### Architecture & Configuration
 
-- **@finografic/genx** (v5.36.1 · 710 commits) - Project generator and codemod toolkit. Scaffolds new packages, migrates conventions (OXC, AI agent configs, git hooks, vitest), audits existing repos for drift, and keeps structure consistent across the ecosystem. The central tool that ties everything together.
-- **@finografic/oxc-config** (v2.7.0 · 181 commits) - Shared oxfmt and oxlint configuration for the Rust-powered OXC toolchain. Composable presets for formatting (TypeScript, React, CSS, JSON, markdown) and linting (with role-specific presets for client, server, CLI, and library packages).
-- **@finografic/deps-policy** (v0.26.8 · 165 commits) - Central dependency version policy consumed by genx and other tooling. Includes its own CLI for auditing, updating, and snapshotting dependency state across the ecosystem.
+- **@finografic/genx** (v5.40.3 · 745 commits) - Project generator and codemod toolkit. Scaffolds new packages, migrates conventions (OXC, AI agent configs, git hooks, vitest), audits existing repos for drift, and keeps structure consistent across the ecosystem. The central tool that ties everything together.
+- **@finografic/oxc-config** (v2.8.2 · 188 commits) - Shared oxfmt and oxlint configuration for the Rust-powered OXC toolchain. Composable presets for formatting (TypeScript, React, CSS, JSON, markdown) and linting (with role-specific presets for client, server, CLI, and library packages).
+- **@finografic/deps-policy** (v0.26.9 · 167 commits) - Central dependency version policy consumed by genx and other tooling. Includes its own CLI for auditing, updating, and snapshotting dependency state across the ecosystem.
 - **@finografic/core** (v0.15.0 · 145 commits) - Shared TypeScript utilities, type-level primitives (casing transforms, object key utilities, enum helpers), type guards, and time/string formatting functions.
-- **@finografic/md-lint** (v0.16.4 · 90 commits) - Structural markdown linter with two scoped rule sets: strict rules for human-facing docs, relaxed rules for AI agent instruction files (CLAUDE.md, AGENTS.md). Auto-classifies files by path.
-- **@finografic/project-scripts** (v1.3.3 · 54 commits) - Monorepo utility scripts: build artifact cleanup, SQLite database setup and migration, cross-platform deployment packaging, and GitHub release automation.
+- **@finografic/md-lint** (v0.16.6 · 94 commits) - Structural markdown linter with two scoped rule sets: strict rules for human-facing docs, relaxed rules for AI agent instruction files (CLAUDE.md, AGENTS.md). Auto-classifies files by path.
+- **@finografic/project-scripts** (v1.5.4 · 68 commits) - Monorepo utility scripts: build artifact cleanup, SQLite database setup and migration, cross-platform deployment packaging, and GitHub release automation.
 
 #### Front-end & Design System
 
-- **@finografic/design-system** (v1.19.1 · 430 commits) - Token-driven React design system built on PandaCSS and Ark UI headless primitives. 20+ components (accordion, dialog, data-table, toast, tabs, forms), OKLCH color palette, semantic tokens, responsive viewport system, and a companion icon management tool.
+- **@finografic/design-system** (v1.19.2 · 434 commits) - Token-driven React design system built on PandaCSS and Ark UI headless primitives. 20+ components (accordion, dialog, data-table, toast, tabs, forms), OKLCH color palette, semantic tokens, responsive viewport system, and a companion icon management tool.
 - **@finografic/lucide-manager** (v0.12.11 · 93 commits) - Dev tool for managing a Lucide icon registry. Browser-based picker UI for selecting from 1500+ icons, generating strongly-typed TypeScript registry files for the design system package.
-- **@finografic/zustand-context-creator** (v1.2.0 · 45 commits) - Lightweight utility for creating type-safe Zustand stores with React Context integration. Auto-generated setters, persistence, DevTools support. Inspired by patterns from Matt Pocock's TypeScript work.
+- **@finografic/zustand-context-creator** (v1.2.0 · 47 commits) - Lightweight utility for creating type-safe Zustand stores with React Context integration. Auto-generated setters, persistence, DevTools support. Inspired by patterns from Matt Pocock's TypeScript work.
 
 ---
 

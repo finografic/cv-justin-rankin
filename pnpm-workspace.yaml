@@ -1,2 +1,5 @@
 allowBuilds:
   esbuild: true
+  # Transitive via next, which this Vite app does not use. Nothing imports sharp, and its
+  # prebuilt @img/sharp-* binaries resolve as separate packages, so the build script is dead weight.
+  sharp: false

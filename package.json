@@ -80,7 +80,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@finografic/md-lint": "^0.16.6",
-    "@finografic/oxc-config": "^2.8.2",
+    "@finografic/oxc-config": "^2.9.1",
     "@pandacss/dev": "^1.11.1",
     "@types/node": "24.12.0",
     "@types/react": "^19.2.2",
@@ -100,7 +100,7 @@
     "@finografic/design-system_REMOTE": "^1.17.0",
     "@finografic/design-system_LOCAL": "link:/Users/justin/repos-finografic/@finografic-design-system/packages/design-system"
   },
-  "packageManager": "pnpm@11.14.0",
+  "packageManager": "pnpm@11.21.0",
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs}": [
       "oxfmt --no-error-on-unmatched-pattern",
@@ -115,6 +115,6 @@
     ]
   },
   "engines": {
-    "node": ">=24.16.0"
+    "node": ">=24.19.0"
   }
 }

@@ -5,7 +5,7 @@
       "Bash(pnpm add:*)",
       "Bash(pnpm build:*)",
       "Bash(pnpm lint:*)",
-      "Bash(pnpm lint.fix:*)",
+      "Bash(pnpm lint:fix:*)",
       "Bash(pnpm typecheck:*)"
     ]
   }

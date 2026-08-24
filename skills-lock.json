@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "apply-design-md": {
+      "source": "finografic/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/apply-design-md/SKILL.md",
+      "computedHash": "688ce29c7b9fed45707f57293c19ccc2c8148b83023aadfb47185a2cf3784f2d"
+    },
+    "generate-design-md": {
+      "source": "finografic/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/generate-design-md/SKILL.md",
+      "computedHash": "1065c18a75a550cb47489cedca8121e2e645379b551fc34f135469fffb7699d1"
+    },
+    "maintain-agents": {
+      "source": "finografic/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/maintain-agents/SKILL.md",
+      "computedHash": "bb082cc71295c09670151a849d476c579622bc2e193c60b644f5d929d8d0e96a"
+    },
+    "scaffold-cli-help": {
+      "source": "finografic/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/scaffold-cli-help/SKILL.md",
+      "computedHash": "665c306ef54cc4799281accc688916232192480189888b53508e747cf532c7df"
+    },
+    "scaffold-core-module": {
+      "source": "finografic/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/scaffold-core-module/SKILL.md",
+      "computedHash": "ed515f2ff3373490e37e4adaa4371bf380f214c441a93a9075592e5433107b2b"
+    }
+  }
+}

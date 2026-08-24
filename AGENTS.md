@@ -23,7 +23,7 @@ Reference: [`docs/process/PROJECT_MEMORY_MODEL.md`](./docs/process/PROJECT_MEMOR
 
 ## Rules — Project-Specific
 
-- Project-specific rules live in `.github/instructions/project/**/*.instructions.md`.
+- Project-specific rules live in `.agents/instructions/project/**/*.instructions.md`.
 - Do not reference `@workspace/*` — all imports and deps must use published package names.
 
 ## Rules — Global

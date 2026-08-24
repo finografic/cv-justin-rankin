@@ -27,21 +27,30 @@
     "react",
     "vite"
   ],
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "---------- DEV_AND_BUILD": "---------------------------------------------",
     "dev": "concurrently -n panda,vite \"pnpm panda:watch\" \"vite\"",
+    "link": "pnpm build && pnpm add -g .",
+    "unlink": "pnpm remove -g $npm_package_name",
     "build": "pnpm panda:codegen && tsc --project tsconfig.json && vite build",
-    "preview": "vite preview",
-    "·········· PANDA": "·····················································",
-    "panda:watch": "panda --watch",
-    "panda:codegen": "panda codegen",
-    "panda:clean": "panda codegen --clean",
+    "·········· TESTING": "···················································",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "·········· LINTING": "···················································",
     "lint": "oxlint -c oxlint.config.ts",
     "lint:fix": "oxlint -c oxlint.config.ts --fix",
     "lint:ci": "oxlint -c oxlint.config.ts --quiet",
-    "lint:md": "md-lint",
-    "lint:md:fix": "md-lint --fix",
     "·········· FORMATTING": "················································",
     "format:check": "oxfmt --check",
     "format:fix": "oxfmt",
@@ -54,24 +63,24 @@
     "·········· REGISTRIES": "················································",
     "view:registry:github": "pnpm view @finografic/cv-justin-rankin --registry=https://npm.pkg.github.com",
     "·········· PACKAGES": "··················································",
-    "update:deps:all": "pnpm update --latest",
-    "update:design-system": "pnpm update @finografic/design-system --latest @finografic/icons --latest",
-    "update:md-lint": "pnpm update @finografic/md-lint --latest",
     "update:oxc-config": "pnpm update @finografic/oxc-config --latest && pnpm update oxfmt --latest && pnpm update oxlint --latest",
-    "·········· DATA": "······················································",
-    "sync-git-metadata": "tsx scripts/sync-git-metadata.ts && git add src/data/web/projects.data.ts src/data/print/projects.data.ts && git commit -m 'chore: update git metadata'",
+    "update:deps:all": "pnpm update --latest",
     "·········· UTILS": "·····················································",
     "tsc:debug": "tsc --pretty --project tsconfig.json",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "prepare": "husky && pnpm panda:codegen"
-  },
-  "dependencies": {
-    "@finografic/design-system": "^1.18.2",
-    "@finografic/icons": "^1.18.2",
-    "geist": "^1.7.1",
-    "qrcode.react": "^4.2.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "prepack": "pnpm build",
+    "prepare": "husky && pnpm panda:codegen",
+    "preview": "vite preview",
+    "·········· PANDA": "·····················································",
+    "panda:watch": "panda --watch",
+    "panda:codegen": "panda codegen",
+    "panda:clean": "panda codegen --clean",
+    "lint:md": "md-lint",
+    "lint:md:fix": "md-lint --fix",
+    "update:design-system": "pnpm update @finografic/design-system --latest @finografic/icons --latest",
+    "update:md-lint": "pnpm update @finografic/md-lint --latest",
+    "·········· DATA": "······················································",
+    "sync-git-metadata": "tsx scripts/sync-git-metadata.ts && git add src/data/web/projects.data.ts src/data/print/projects.data.ts && git commit -m 'chore: update git metadata'"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.2",
@@ -96,9 +105,8 @@
     "typescript": "7.0.2",
     "vite": "^7.1.10"
   },
-  "LOCAL_DEP_EXAMPLE": {
-    "@finografic/design-system_REMOTE": "^1.17.0",
-    "@finografic/design-system_LOCAL": "link:/Users/justin/repos-finografic/@finografic-design-system/packages/design-system"
+  "engines": {
+    "node": ">=24.19.0"
   },
   "packageManager": "pnpm@11.21.0",
   "lint-staged": {
@@ -114,7 +122,16 @@
       "oxfmt --no-error-on-unmatched-pattern"
     ]
   },
-  "engines": {
-    "node": ">=24.19.0"
+  "dependencies": {
+    "@finografic/design-system": "^1.18.2",
+    "@finografic/icons": "^1.18.2",
+    "geist": "^1.7.1",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "LOCAL_DEP_EXAMPLE": {
+    "@finografic/design-system_REMOTE": "^1.17.0",
+    "@finografic/design-system_LOCAL": "link:/Users/justin/repos-finografic/@finografic-design-system/packages/design-system"
   }
 }

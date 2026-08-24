@@ -15,11 +15,17 @@ build/
 .agents/*
 !.agents/
 !.agents/handoff.md
+!.agents/instructions/
+!.agents/instructions/**
+!.agents/skills/
+!.agents/skills/**
 .codex/
 .claude/*
 !.claude/settings.json
 !.claude/commands/
 !.claude/commands/**
+!.claude/skills/
+!.claude/skills/**
 .worktrees/
 
 # IDE

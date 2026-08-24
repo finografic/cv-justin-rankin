@@ -26,7 +26,7 @@ Reference: [`docs/process/PROJECT_MEMORY_MODEL.md`](./docs/process/PROJECT_MEMOR
 - Check `ROADMAP.md` before proposing new initiatives.
 - Use `ROADMAP.md#next` for small follow-ups and manual validation.
 - Keep detailed plans in `docs/todo/TODO_*.md`; graduate completed plans to `DONE_*.md`.
-- Follow `.github/instructions/documentation/todo-done-docs.instructions.md`.
+- Follow `.agents/instructions/documentation/todo-done-docs.instructions.md`.
 ```
 
 ---
@@ -35,7 +35,7 @@ Reference: [`docs/process/PROJECT_MEMORY_MODEL.md`](./docs/process/PROJECT_MEMOR
 
 For TODO/DONE naming, lifecycle, and formatting rules, use:
 
-- `.github/instructions/documentation/todo-done-docs.instructions.md`
+- `.agents/instructions/documentation/todo-done-docs.instructions.md`
 
 ### `docs/todo/ROADMAP.md`
 

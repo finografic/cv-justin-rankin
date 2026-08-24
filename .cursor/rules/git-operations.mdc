@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Git operations (agents)
 
-**Before any commit, push, tag, or release-related action:** read and follow `.github/instructions/git/git-policy.instructions.md`.
+**Before any commit, push, tag, or release-related action:** read and follow `.agents/instructions/git/git-policy.instructions.md`.
 
 ## Commits (checklist)
 

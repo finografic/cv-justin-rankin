@@ -1,5 +1,6 @@
 {
   "npm.packageManager": "pnpm",
+
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.defaultFormatter": "oxc.oxc-vscode",
@@ -9,13 +10,16 @@
     "source.sortImports": "explicit",
     "source.addMissingImports": "explicit"
   },
+
   "eslint.enable": false,
-  "eslint.validate": ["javascript", "typescript"],
   "prettier.enable": false,
+
   "oxc.typeAware": true,
   "oxc.lint.run": "onSave",
+
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
+
   "[javascript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
@@ -53,22 +57,8 @@
     "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.formatOnSave": true
   },
-  "markdownlint.config": {
-    "default": true,
-    "MD013": {
-      "line_length": 120,
-      "tables": false,
-      "code_blocks": false
-    },
-    "MD024": false,
-    "MD025": false,
-    "MD033": false,
-    "MD036": false,
-    "MD040": false,
-    "MD041": false,
-    "MD060": {
-      "style": "aligned"
-    }
-  },
+
+  "eslint.validate": ["javascript", "typescript"],
+
   "markdown.styles": ["node_modules/@finografic/md-lint/styles/markdown-github-light.css"]
 }

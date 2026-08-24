@@ -12,14 +12,24 @@ interface LanguageListProps {
 }
 
 export function LanguageList({ view = 'full', items }: LanguageListProps): ReactNode {
-  const colonItems = items.map((entry) => ({
-    label: entry.language,
-    value: entry.level,
-  }));
-
   if (view === 'condensed') {
-    return <ColonList items={colonItems} listClassName="cv-colon-list cv-condensed-lang-list" />;
+    return (
+      <ColonList
+        items={items}
+        labelKey="language"
+        valueKey="level"
+        listClassName="cv-colon-list cv-condensed-lang-list"
+      />
+    );
   }
 
-  return <ColonList items={colonItems} listClassName="cv-colon-list" listCss={colonStyles.languageList} />;
+  return (
+    <ColonList
+      items={items}
+      labelKey="language"
+      valueKey="level"
+      listClassName="cv-colon-list"
+      listCss={colonStyles.languageList}
+    />
+  );
 }

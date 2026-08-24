@@ -11,15 +11,12 @@ interface PhilosophyListProps {
 }
 
 export function PhilosophyList({ view = 'full', items }: PhilosophyListProps): ReactNode {
-  const colonItems = items.map((item) => ({
-    label: item.title,
-    value: item.description,
-  }));
-
   if (view === 'condensed') {
     return (
       <ColonList
-        items={colonItems}
+        items={items}
+        labelKey="title"
+        valueKey="description"
         listClassName="cv-colon-list cv-condensed-philosophy-list"
         valueCss={colonStyles.philosophyValue}
       />
@@ -28,7 +25,9 @@ export function PhilosophyList({ view = 'full', items }: PhilosophyListProps): R
 
   return (
     <ColonList
-      items={colonItems}
+      items={items}
+      labelKey="title"
+      valueKey="description"
       listClassName="cv-colon-list"
       listCss={colonStyles.philosophyList}
       valueCss={colonStyles.philosophyValue}
